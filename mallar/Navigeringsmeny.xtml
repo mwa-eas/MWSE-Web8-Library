@@ -1,0 +1,572 @@
+﻿<Template type="ViewElement" id="cd3747fe-f8cf-4956-bcea-98d1d74ac672" version="1.0.0" name="Navigeringsmeny" description="Menyn som topplistens menyknapp öppnar. Varje rad öppnar en vy som väljs i Actions." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Sida\Navigering" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <StaticVariables>
+    <StaticVariable name="visaMeny" value="0" />
+  </StaticVariables>
+  <Resources>
+    <Resource name="Media/MWSE_Scrim.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSJibGFjayIgZmlsbC1vcGFjaXR5PSIwLjM4Ii8+Cjwvc3ZnPgo=" />
+    <Resource name="Media/MWSE_CloseButton.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMyIgZmlsbD0iIzc1Nzc3QSIgZmlsbC1vcGFjaXR5PSIwLjA4Ii8+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcng9IjMiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxtYXNrIGlkPSJtYXNrMF82NjFfNTMyIiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgo8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNEOUQ5RDkiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzY2MV81MzIpIj4KPHBhdGggZD0iTTE0LjQgMjdMMTMgMjUuNkwxOC42IDIwTDEzIDE0LjRMMTQuNCAxM0wyMCAxOC42TDI1LjYgMTNMMjcgMTQuNEwyMS40IDIwTDI3IDI1LjZMMjUuNiAyN0wyMCAyMS40TDE0LjQgMjdaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_NavButton.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMjAwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB4PSIxIiB5PSIxIiB3aWR0aD0iMTk4IiBoZWlnaHQ9IjM4IiByeD0iMyIgZmlsbD0iIzc1Nzc3QSIgZmlsbC1vcGFjaXR5PSIwLjA4Ii8+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIxOTgiIGhlaWdodD0iMzgiIHJ4PSIzIiBzdHJva2U9IiM2MzZFN0MiIHN0cm9rZS13aWR0aD0iMiIvPgo8bWFzayBpZD0ibWFzazBfMTY0XzkxNyIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMTY5IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgo8cmVjdCB4PSIxNjkiIHk9IjgiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iI0Q5RDlEOSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfMTY0XzkxNykiPgo8cGF0aCBkPSJNMTg1LjE3NSAyMUgxNzNWMTlIMTg1LjE3NUwxNzkuNTc1IDEzLjRMMTgxIDEyTDE4OSAyMEwxODEgMjhMMTc5LjU3NSAyNi42TDE4NS4xNzUgMjFaIiBmaWxsPSIjMUMxQjFGIi8+CjwvZz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_Home.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg2NSIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84NjUpIj4KPHBhdGggZD0iTTYgMTlIOVYxM0gxNVYxOUgxOFYxMEwxMiA1LjVMNiAxMFYxOVpNNCAyMVY5TDEyIDNMMjAgOVYyMUgxM1YxNUgxMVYyMUg0WiIgZmlsbD0iIzFCMjMyRiIvPgo8L2c+Cjwvc3ZnPgo=" />
+    <Resource name="Media/MWSE_Notifications.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg4MyIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84ODMpIj4KPHBhdGggZD0iTTQgMTlWMTdINlYxMEM2IDguNjE2NjcgNi40MTY2NyA3LjM4NzUgNy4yNSA2LjMxMjVDOC4wODMzMyA1LjIzNzUgOS4xNjY2NyA0LjUzMzMzIDEwLjUgNC4yVjMuNUMxMC41IDMuMDgzMzMgMTAuNjQ1OCAyLjcyOTE3IDEwLjkzNzUgMi40Mzc1QzExLjIyOTIgMi4xNDU4MyAxMS41ODMzIDIgMTIgMkMxMi40MTY3IDIgMTIuNzcwOCAyLjE0NTgzIDEzLjA2MjUgMi40Mzc1QzEzLjM1NDIgMi43MjkxNyAxMy41IDMuMDgzMzMgMTMuNSAzLjVWNC4yQzE0LjgzMzMgNC41MzMzMyAxNS45MTY3IDUuMjM3NSAxNi43NSA2LjMxMjVDMTcuNTgzMyA3LjM4NzUgMTggOC42MTY2NyAxOCAxMFYxN0gyMFYxOUg0Wk0xMiAyMkMxMS40NSAyMiAxMC45NzkyIDIxLjgwNDIgMTAuNTg3NSAyMS40MTI1QzEwLjE5NTggMjEuMDIwOCAxMCAyMC41NSAxMCAyMEgxNEMxNCAyMC41NSAxMy44MDQyIDIxLjAyMDggMTMuNDEyNSAyMS40MTI1QzEzLjAyMDggMjEuODA0MiAxMi41NSAyMiAxMiAyMlpNOCAxN0gxNlYxMEMxNiA4LjkgMTUuNjA4MyA3Ljk1ODMzIDE0LjgyNSA3LjE3NUMxNC4wNDE3IDYuMzkxNjcgMTMuMSA2IDEyIDZDMTAuOSA2IDkuOTU4MzMgNi4zOTE2NyA5LjE3NSA3LjE3NUM4LjM5MTY3IDcuOTU4MzMgOCA4LjkgOCAxMFYxN1oiIGZpbGw9IiMxQjIzMkYiLz4KPC9nPgo8L3N2Zz4K" />
+    <Resource name="Media/MWSE_Settings.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg3NCIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84NzQpIj4KPHBhdGggZD0iTTkuMjUgMjJMOC44NSAxOC44QzguNjMzMzMgMTguNzE2NyA4LjQyOTE3IDE4LjYxNjcgOC4yMzc1IDE4LjVDOC4wNDU4MyAxOC4zODMzIDcuODU4MzMgMTguMjU4MyA3LjY3NSAxOC4xMjVMNC43IDE5LjM3NUwxLjk1IDE0LjYyNUw0LjUyNSAxMi42NzVDNC41MDgzMyAxMi41NTgzIDQuNSAxMi40NDU4IDQuNSAxMi4zMzc1VjExLjY2MjVDNC41IDExLjU1NDIgNC41MDgzMyAxMS40NDE3IDQuNTI1IDExLjMyNUwxLjk1IDkuMzc1TDQuNyA0LjYyNUw3LjY3NSA1Ljg3NUM3Ljg1ODMzIDUuNzQxNjcgOC4wNSA1LjYxNjY3IDguMjUgNS41QzguNDUgNS4zODMzMyA4LjY1IDUuMjgzMzMgOC44NSA1LjJMOS4yNSAySDE0Ljc1TDE1LjE1IDUuMkMxNS4zNjY3IDUuMjgzMzMgMTUuNTcwOCA1LjM4MzMzIDE1Ljc2MjUgNS41QzE1Ljk1NDIgNS42MTY2NyAxNi4xNDE3IDUuNzQxNjcgMTYuMzI1IDUuODc1TDE5LjMgNC42MjVMMjIuMDUgOS4zNzVMMTkuNDc1IDExLjMyNUMxOS40OTE3IDExLjQ0MTcgMTkuNSAxMS41NTQyIDE5LjUgMTEuNjYyNVYxMi4zMzc1QzE5LjUgMTIuNDQ1OCAxOS40ODMzIDEyLjU1ODMgMTkuNDUgMTIuNjc1TDIyLjAyNSAxNC42MjVMMTkuMjc1IDE5LjM3NUwxNi4zMjUgMTguMTI1QzE2LjE0MTcgMTguMjU4MyAxNS45NSAxOC4zODMzIDE1Ljc1IDE4LjVDMTUuNTUgMTguNjE2NyAxNS4zNSAxOC43MTY3IDE1LjE1IDE4LjhMMTQuNzUgMjJIOS4yNVpNMTEgMjBIMTIuOTc1TDEzLjMyNSAxNy4zNUMxMy44NDE3IDE3LjIxNjcgMTQuMzIwOCAxNy4wMjA4IDE0Ljc2MjUgMTYuNzYyNUMxNS4yMDQyIDE2LjUwNDIgMTUuNjA4MyAxNi4xOTE3IDE1Ljk3NSAxNS44MjVMMTguNDUgMTYuODVMMTkuNDI1IDE1LjE1TDE3LjI3NSAxMy41MjVDMTcuMzU4MyAxMy4yOTE3IDE3LjQxNjcgMTMuMDQ1OCAxNy40NSAxMi43ODc1QzE3LjQ4MzMgMTIuNTI5MiAxNy41IDEyLjI2NjcgMTcuNSAxMkMxNy41IDExLjczMzMgMTcuNDgzMyAxMS40NzA4IDE3LjQ1IDExLjIxMjVDMTcuNDE2NyAxMC45NTQyIDE3LjM1ODMgMTAuNzA4MyAxNy4yNzUgMTAuNDc1TDE5LjQyNSA4Ljg1TDE4LjQ1IDcuMTVMMTUuOTc1IDguMkMxNS42MDgzIDcuODE2NjcgMTUuMjA0MiA3LjQ5NTgzIDE0Ljc2MjUgNy4yMzc1QzE0LjMyMDggNi45NzkxNyAxMy44NDE3IDYuNzgzMzMgMTMuMzI1IDYuNjVMMTMgNEgxMS4wMjVMMTAuNjc1IDYuNjVDMTAuMTU4MyA2Ljc4MzMzIDkuNjc5MTcgNi45NzkxNyA5LjIzNzUgNy4yMzc1QzguNzk1ODMgNy40OTU4MyA4LjM5MTY3IDcuODA4MzMgOC4wMjUgOC4xNzVMNS41NSA3LjE1TDQuNTc1IDguODVMNi43MjUgMTAuNDVDNi42NDE2NyAxMC43IDYuNTgzMzMgMTAuOTUgNi41NSAxMS4yQzYuNTE2NjcgMTEuNDUgNi41IDExLjcxNjcgNi41IDEyQzYuNSAxMi4yNjY3IDYuNTE2NjcgMTIuNTI1IDYuNTUgMTIuNzc1QzYuNTgzMzMgMTMuMDI1IDYuNjQxNjcgMTMuMjc1IDYuNzI1IDEzLjUyNUw0LjU3NSAxNS4xNUw1LjU1IDE2Ljg1TDguMDI1IDE1LjhDOC4zOTE2NyAxNi4xODMzIDguNzk1ODMgMTYuNTA0MiA5LjIzNzUgMTYuNzYyNUM5LjY3OTE3IDE3LjAyMDggMTAuMTU4MyAxNy4yMTY3IDEwLjY3NSAxNy4zNUwxMSAyMFpNMTIuMDUgMTUuNUMxMy4wMTY3IDE1LjUgMTMuODQxNyAxNS4xNTgzIDE0LjUyNSAxNC40NzVDMTUuMjA4MyAxMy43OTE3IDE1LjU1IDEyLjk2NjcgMTUuNTUgMTJDMTUuNTUgMTEuMDMzMyAxNS4yMDgzIDEwLjIwODMgMTQuNTI1IDkuNTI1QzEzLjg0MTcgOC44NDE2NyAxMy4wMTY3IDguNSAxMi4wNSA4LjVDMTEuMDY2NyA4LjUgMTAuMjM3NSA4Ljg0MTY3IDkuNTYyNSA5LjUyNUM4Ljg4NzUgMTAuMjA4MyA4LjU1IDExLjAzMzMgOC41NSAxMkM4LjU1IDEyLjk2NjcgOC44ODc1IDEzLjc5MTcgOS41NjI1IDE0LjQ3NUMxMC4yMzc1IDE1LjE1ODMgMTEuMDY2NyAxNS41IDEyLjA1IDE1LjVaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_Info.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg2NyIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84NjcpIj4KPHBhdGggZD0iTTExIDE3SDEzVjExSDExVjE3Wk0xMiA5QzEyLjI4MzMgOSAxMi41MjA4IDguOTA0MTcgMTIuNzEyNSA4LjcxMjVDMTIuOTA0MiA4LjUyMDgzIDEzIDguMjgzMzMgMTMgOEMxMyA3LjcxNjY3IDEyLjkwNDIgNy40NzkxNyAxMi43MTI1IDcuMjg3NUMxMi41MjA4IDcuMDk1ODMgMTIuMjgzMyA3IDEyIDdDMTEuNzE2NyA3IDExLjQ3OTIgNy4wOTU4MyAxMS4yODc1IDcuMjg3NUMxMS4wOTU4IDcuNDc5MTcgMTEgNy43MTY2NyAxMSA4QzExIDguMjgzMzMgMTEuMDk1OCA4LjUyMDgzIDExLjI4NzUgOC43MTI1QzExLjQ3OTIgOC45MDQxNyAxMS43MTY3IDkgMTIgOVpNMTIgMjJDMTAuNjE2NyAyMiA5LjMxNjY3IDIxLjczNzUgOC4xIDIxLjIxMjVDNi44ODMzMyAyMC42ODc1IDUuODI1IDE5Ljk3NSA0LjkyNSAxOS4wNzVDNC4wMjUgMTguMTc1IDMuMzEyNSAxNy4xMTY3IDIuNzg3NSAxNS45QzIuMjYyNSAxNC42ODMzIDIgMTMuMzgzMyAyIDEyQzIgMTAuNjE2NyAyLjI2MjUgOS4zMTY2NyAyLjc4NzUgOC4xQzMuMzEyNSA2Ljg4MzMzIDQuMDI1IDUuODI1IDQuOTI1IDQuOTI1QzUuODI1IDQuMDI1IDYuODgzMzMgMy4zMTI1IDguMSAyLjc4NzVDOS4zMTY2NyAyLjI2MjUgMTAuNjE2NyAyIDEyIDJDMTMuMzgzMyAyIDE0LjY4MzMgMi4yNjI1IDE1LjkgMi43ODc1QzE3LjExNjcgMy4zMTI1IDE4LjE3NSA0LjAyNSAxOS4wNzUgNC45MjVDMTkuOTc1IDUuODI1IDIwLjY4NzUgNi44ODMzMyAyMS4yMTI1IDguMUMyMS43Mzc1IDkuMzE2NjcgMjIgMTAuNjE2NyAyMiAxMkMyMiAxMy4zODMzIDIxLjczNzUgMTQuNjgzMyAyMS4yMTI1IDE1LjlDMjAuNjg3NSAxNy4xMTY3IDE5Ljk3NSAxOC4xNzUgMTkuMDc1IDE5LjA3NUMxOC4xNzUgMTkuOTc1IDE3LjExNjcgMjAuNjg3NSAxNS45IDIxLjIxMjVDMTQuNjgzMyAyMS43Mzc1IDEzLjM4MzMgMjIgMTIgMjJaTTEyIDIwQzE0LjIzMzMgMjAgMTYuMTI1IDE5LjIyNSAxNy42NzUgMTcuNjc1QzE5LjIyNSAxNi4xMjUgMjAgMTQuMjMzMyAyMCAxMkMyMCA5Ljc2NjY3IDE5LjIyNSA3Ljg3NSAxNy42NzUgNi4zMjVDMTYuMTI1IDQuNzc1IDE0LjIzMzMgNCAxMiA0QzkuNzY2NjcgNCA3Ljg3NSA0Ljc3NSA2LjMyNSA2LjMyNUM0Ljc3NSA3Ljg3NSA0IDkuNzY2NjcgNCAxMkM0IDE0LjIzMzMgNC43NzUgMTYuMTI1IDYuMzI1IDE3LjY3NUM3Ljg3NSAxOS4yMjUgOS43NjY2NyAyMCAxMiAyMFoiIGZpbGw9IiMxQjIzMkYiLz4KPC9nPgo8L3N2Zz4K" />
+    <Resource name="Media/MWSE_AccountCircle.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg4MiIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84ODIpIj4KPHBhdGggZD0iTTUuODUgMTcuMUM2LjcgMTYuNDUgNy42NSAxNS45Mzc1IDguNyAxNS41NjI1QzkuNzUgMTUuMTg3NSAxMC44NSAxNSAxMiAxNUMxMy4xNSAxNSAxNC4yNSAxNS4xODc1IDE1LjMgMTUuNTYyNUMxNi4zNSAxNS45Mzc1IDE3LjMgMTYuNDUgMTguMTUgMTcuMUMxOC43MzMzIDE2LjQxNjcgMTkuMTg3NSAxNS42NDE3IDE5LjUxMjUgMTQuNzc1QzE5LjgzNzUgMTMuOTA4MyAyMCAxMi45ODMzIDIwIDEyQzIwIDkuNzgzMzMgMTkuMjIwOCA3Ljg5NTgzIDE3LjY2MjUgNi4zMzc1QzE2LjEwNDIgNC43NzkxNyAxNC4yMTY3IDQgMTIgNEM5Ljc4MzMzIDQgNy44OTU4MyA0Ljc3OTE3IDYuMzM3NSA2LjMzNzVDNC43NzkxNyA3Ljg5NTgzIDQgOS43ODMzMyA0IDEyQzQgMTIuOTgzMyA0LjE2MjUgMTMuOTA4MyA0LjQ4NzUgMTQuNzc1QzQuODEyNSAxNS42NDE3IDUuMjY2NjcgMTYuNDE2NyA1Ljg1IDE3LjFaTTEyIDEzQzExLjAxNjcgMTMgMTAuMTg3NSAxMi42NjI1IDkuNTEyNSAxMS45ODc1QzguODM3NSAxMS4zMTI1IDguNSAxMC40ODMzIDguNSA5LjVDOC41IDguNTE2NjcgOC44Mzc1IDcuNjg3NSA5LjUxMjUgNy4wMTI1QzEwLjE4NzUgNi4zMzc1IDExLjAxNjcgNiAxMiA2QzEyLjk4MzMgNiAxMy44MTI1IDYuMzM3NSAxNC40ODc1IDcuMDEyNUMxNS4xNjI1IDcuNjg3NSAxNS41IDguNTE2NjcgMTUuNSA5LjVDMTUuNSAxMC40ODMzIDE1LjE2MjUgMTEuMzEyNSAxNC40ODc1IDExLjk4NzVDMTMuODEyNSAxMi42NjI1IDEyLjk4MzMgMTMgMTIgMTNaTTEyIDIyQzEwLjYxNjcgMjIgOS4zMTY2NyAyMS43Mzc1IDguMSAyMS4yMTI1QzYuODgzMzMgMjAuNjg3NSA1LjgyNSAxOS45NzUgNC45MjUgMTkuMDc1QzQuMDI1IDE4LjE3NSAzLjMxMjUgMTcuMTE2NyAyLjc4NzUgMTUuOUMyLjI2MjUgMTQuNjgzMyAyIDEzLjM4MzMgMiAxMkMyIDEwLjYxNjcgMi4yNjI1IDkuMzE2NjcgMi43ODc1IDguMUMzLjMxMjUgNi44ODMzMyA0LjAyNSA1LjgyNSA0LjkyNSA0LjkyNUM1LjgyNSA0LjAyNSA2Ljg4MzMzIDMuMzEyNSA4LjEgMi43ODc1QzkuMzE2NjcgMi4yNjI1IDEwLjYxNjcgMiAxMiAyQzEzLjM4MzMgMiAxNC42ODMzIDIuMjYyNSAxNS45IDIuNzg3NUMxNy4xMTY3IDMuMzEyNSAxOC4xNzUgNC4wMjUgMTkuMDc1IDQuOTI1QzE5Ljk3NSA1LjgyNSAyMC42ODc1IDYuODgzMzMgMjEuMjEyNSA4LjFDMjEuNzM3NSA5LjMxNjY3IDIyIDEwLjYxNjcgMjIgMTJDMjIgMTMuMzgzMyAyMS43Mzc1IDE0LjY4MzMgMjEuMjEyNSAxNS45QzIwLjY4NzUgMTcuMTE2NyAxOS45NzUgMTguMTc1IDE5LjA3NSAxOS4wNzVDMTguMTc1IDE5Ljk3NSAxNy4xMTY3IDIwLjY4NzUgMTUuOSAyMS4yMTI1QzE0LjY4MzMgMjEuNzM3NSAxMy4zODMzIDIyIDEyIDIyWk0xMiAyMEMxMi44ODMzIDIwIDEzLjcxNjcgMTkuODcwOCAxNC41IDE5LjYxMjVDMTUuMjgzMyAxOS4zNTQyIDE2IDE4Ljk4MzMgMTYuNjUgMTguNUMxNiAxOC4wMTY3IDE1LjI4MzMgMTcuNjQ1OCAxNC41IDE3LjM4NzVDMTMuNzE2NyAxNy4xMjkyIDEyLjg4MzMgMTcgMTIgMTdDMTEuMTE2NyAxNyAxMC4yODMzIDE3LjEyOTIgOS41IDE3LjM4NzVDOC43MTY2NyAxNy42NDU4IDggMTguMDE2NyA3LjM1IDE4LjVDOCAxOC45ODMzIDguNzE2NjcgMTkuMzU0MiA5LjUgMTkuNjEyNUMxMC4yODMzIDE5Ljg3MDggMTEuMTE2NyAyMCAxMiAyMFpNMTIgMTFDMTIuNDMzMyAxMSAxMi43OTE3IDEwLjg1ODMgMTMuMDc1IDEwLjU3NUMxMy4zNTgzIDEwLjI5MTcgMTMuNSA5LjkzMzMzIDEzLjUgOS41QzEzLjUgOS4wNjY2NyAxMy4zNTgzIDguNzA4MzMgMTMuMDc1IDguNDI1QzEyLjc5MTcgOC4xNDE2NyAxMi40MzMzIDggMTIgOEMxMS41NjY3IDggMTEuMjA4MyA4LjE0MTY3IDEwLjkyNSA4LjQyNUMxMC42NDE3IDguNzA4MzMgMTAuNSA5LjA2NjY3IDEwLjUgOS41QzEwLjUgOS45MzMzMyAxMC42NDE3IDEwLjI5MTcgMTAuOTI1IDEwLjU3NUMxMS4yMDgzIDEwLjg1ODMgMTEuNTY2NyAxMSAxMiAxMVoiIGZpbGw9IiMxQjIzMkYiLz4KPC9nPgo8L3N2Zz4K" />
+  </Resources>
+  <Element id="09687b31-c853-4b0c-bcc0-2f935b6b8515" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Navigeringsmeny">
+    <Conditions>
+      <ConditionLogic id="9ab2fd9f-5c5f-4b12-8143-7846cc7201de" name="Öppen" operator="And">
+        <Condition leftType="Container" leftContainer="cd3747fe-f8cf-4956-bcea-98d1d74ac672" leftName="visaMeny" operator="Equal" rightType="Constant" rightValue="1" />
+      </ConditionLogic>
+    </Conditions>
+    <Properties>
+      <ConditionPriority>
+        <Condition id="9ab2fd9f-5c5f-4b12-8143-7846cc7201de" />
+      </ConditionPriority>
+      <Property name="Name" source="C" value="Navigeringsmeny" type="string" />
+      <Property name="Hidden" source="C" value="True" type="bool" />
+      <Property name="DisableEvents" source="C" value="True" type="bool" />
+      <Property name="Hidden" source="C" condition="9ab2fd9f-5c5f-4b12-8143-7846cc7201de" value="False" type="bool" />
+      <Property name="DisableEvents" source="C" condition="9ab2fd9f-5c5f-4b12-8143-7846cc7201de" value="False" type="bool" />
+    </Properties>
+    <Element id="f3a06f36-60b8-436a-a285-75f48c1febd0" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Scrim">
+      <Properties>
+        <Property name="Name" source="C" value="Scrim" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="1020" type="double" />
+        <Property name="Height" source="C" value="552" type="double" />
+        <Property name="ScaleMode" source="C" value="Stretch" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_Scrim.svg" />
+        </Property>
+        <Property name="MouseDown" source="C" type="Event">
+          <Instruction name="WriteValueToVariable">
+            <Parameter name="Value" value="0" type="C" />
+            <Parameter name="Destination" value="visaMeny" type="LV" />
+          </Instruction>
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="01b9397e-df96-49aa-853e-4561e5d42814" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
+      <Properties>
+        <Property name="Name" source="C" value="Bakgrund" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="248" type="double" />
+        <Property name="Height" source="C" value="552" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="37a9de34-d871-4c3f-bd6f-b5b886168a89" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rubrik">
+      <Properties>
+        <Property name="Name" source="C" value="Rubrik" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Meny" type="string" />
+        <Property name="X" source="C" value="16" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="176" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Font" source="C" value="Arial Bold 12" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="aad2656e-8dca-427b-a6fb-1243cf29732a" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Stäng">
+      <Properties>
+        <Property name="Name" source="C" value="Stäng" type="string" />
+      </Properties>
+      <Element id="6fb5923c-54b3-422e-9745-4d3c62138ddf" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+        <Properties>
+          <Property name="Name" source="C" value="Ikon" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="204" type="double" />
+          <Property name="Y" source="C" value="4" type="double" />
+          <Property name="Width" source="C" value="40" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_CloseButton.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="665ff8f4-1b9d-4376-b220-85ab1c26fbfb" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+        <Properties>
+          <Property name="Name" source="C" value="Knapp" type="string" />
+          <Property name="X" source="C" value="200" type="double" />
+          <Property name="Y" source="C" value="0" type="double" />
+          <Property name="Width" source="C" value="48" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
+          <Property name="Content" source="C" type="string" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event">
+            <Instruction name="WriteValueToVariable">
+              <Parameter name="Value" value="0" type="C" />
+              <Parameter name="Destination" value="visaMeny" type="LV" />
+            </Instruction>
+          </Property>
+        </Properties>
+      </Element>
+    </Element>
+    <Element id="f58933d3-e2b3-47e1-b698-23837c242fd2" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Översikt">
+      <Properties>
+        <Property name="Name" source="C" value="Översikt" type="string" />
+      </Properties>
+      <Element id="2b4c9eda-d66b-46a4-937a-c1bb55316842" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Knappbild">
+        <Properties>
+          <Property name="Name" source="C" value="Knappbild" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="60" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_NavButton.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="21efd150-1073-41fa-adf6-cf712b1965b5" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+        <Properties>
+          <Property name="Name" source="C" value="Ikon" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="32" type="double" />
+          <Property name="Y" source="C" value="68" type="double" />
+          <Property name="Width" source="C" value="24" type="double" />
+          <Property name="Height" source="C" value="24" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_Home.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="8c80bc8d-f45f-4260-8dd2-5611a4df699a" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+        <Properties>
+          <Property name="Name" source="C" value="Text" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Text" source="C" value="Översikt" type="string" />
+          <Property name="X" source="C" value="64" type="double" />
+          <Property name="Y" source="C" value="56" type="double" />
+          <Property name="Width" source="C" value="120" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="958d95ec-0202-4df8-8b7d-bf8efb8bf837" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+        <Functions>
+          <Function id="6717f67b-39ec-4dca-9228-cbcc429df7a7" name="Navigera">
+            <Instruction macro="ShowView">
+              <Parameter type="Constant" value="Start" viewName="Start" name="ViewName" />
+            </Instruction>
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="0" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="visaMeny" />
+              </Parameter>
+            </Instruction>
+          </Function>
+        </Functions>
+        <Properties>
+          <Property name="Name" source="C" value="Knapp" type="string" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="56" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
+          <Property name="Content" source="C" type="string" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event" value="6717f67b-39ec-4dca-9228-cbcc429df7a7" />
+        </Properties>
+      </Element>
+    </Element>
+    <Element id="0fc50355-c8a1-489c-9e71-4d4ae1c4c1c3" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Larm">
+      <Properties>
+        <Property name="Name" source="C" value="Larm" type="string" />
+      </Properties>
+      <Element id="1b83b625-5f08-46f4-abec-e649589ba3ec" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Knappbild">
+        <Properties>
+          <Property name="Name" source="C" value="Knappbild" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="108" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_NavButton.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="a559a00c-6fc8-460b-89a7-5a9860202868" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+        <Properties>
+          <Property name="Name" source="C" value="Ikon" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="32" type="double" />
+          <Property name="Y" source="C" value="116" type="double" />
+          <Property name="Width" source="C" value="24" type="double" />
+          <Property name="Height" source="C" value="24" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_Notifications.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="0e2aee6d-075f-4b6a-b2e0-b5454ecb7954" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+        <Properties>
+          <Property name="Name" source="C" value="Text" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Text" source="C" value="Larm" type="string" />
+          <Property name="X" source="C" value="64" type="double" />
+          <Property name="Y" source="C" value="104" type="double" />
+          <Property name="Width" source="C" value="120" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="58820447-2f22-4f5b-adff-c1b4cb995a9f" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+        <Functions>
+          <Function id="7e41d15e-54b3-4444-a2f3-5dac501a34ef" name="Navigera">
+            <Instruction macro="ShowView">
+              <Parameter type="Constant" value="Larm" viewName="Larm" name="ViewName" />
+            </Instruction>
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="0" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="visaMeny" />
+              </Parameter>
+            </Instruction>
+          </Function>
+        </Functions>
+        <Properties>
+          <Property name="Name" source="C" value="Knapp" type="string" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="104" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
+          <Property name="Content" source="C" type="string" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event" value="7e41d15e-54b3-4444-a2f3-5dac501a34ef" />
+        </Properties>
+      </Element>
+    </Element>
+    <Element id="e841afd7-4792-463e-805c-dc8a24b3032c" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Inställningar">
+      <Properties>
+        <Property name="Name" source="C" value="Inställningar" type="string" />
+      </Properties>
+      <Element id="feb3718d-67f9-4b09-bc82-9392ebe8b285" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Knappbild">
+        <Properties>
+          <Property name="Name" source="C" value="Knappbild" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="156" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_NavButton.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="d37f6b0a-ce0e-447c-8818-b8c27042e805" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+        <Properties>
+          <Property name="Name" source="C" value="Ikon" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="32" type="double" />
+          <Property name="Y" source="C" value="164" type="double" />
+          <Property name="Width" source="C" value="24" type="double" />
+          <Property name="Height" source="C" value="24" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_Settings.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="c65b9d85-6581-43e6-bdf3-c0bf68bacdc6" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+        <Properties>
+          <Property name="Name" source="C" value="Text" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Text" source="C" value="Inställningar" type="string" />
+          <Property name="X" source="C" value="64" type="double" />
+          <Property name="Y" source="C" value="152" type="double" />
+          <Property name="Width" source="C" value="120" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="86a7c385-5164-48f6-9d43-c8240f05e5ae" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+        <Functions>
+          <Function id="0b6a9635-a6c4-4c3d-8842-6dfd89b2f51b" name="Navigera">
+            <Instruction macro="ShowView">
+              <Parameter type="Constant" value="Inställningar" viewName="Inställningar" name="ViewName" />
+            </Instruction>
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="0" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="visaMeny" />
+              </Parameter>
+            </Instruction>
+          </Function>
+        </Functions>
+        <Properties>
+          <Property name="Name" source="C" value="Knapp" type="string" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="152" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
+          <Property name="Content" source="C" type="string" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event" value="0b6a9635-a6c4-4c3d-8842-6dfd89b2f51b" />
+        </Properties>
+      </Element>
+    </Element>
+    <Element id="d8416b91-0e00-466d-90e5-eb3fa42ec86d" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Info">
+      <Properties>
+        <Property name="Name" source="C" value="Info" type="string" />
+      </Properties>
+      <Element id="2e4c027a-b3d1-42b2-8544-8307abf6fbb4" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Knappbild">
+        <Properties>
+          <Property name="Name" source="C" value="Knappbild" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="204" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_NavButton.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="a5e5456f-14b8-43df-9851-93925d41e605" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+        <Properties>
+          <Property name="Name" source="C" value="Ikon" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="32" type="double" />
+          <Property name="Y" source="C" value="212" type="double" />
+          <Property name="Width" source="C" value="24" type="double" />
+          <Property name="Height" source="C" value="24" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_Info.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="92955e65-7cdd-492e-a56d-92d43763ce40" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+        <Properties>
+          <Property name="Name" source="C" value="Text" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Text" source="C" value="Info" type="string" />
+          <Property name="X" source="C" value="64" type="double" />
+          <Property name="Y" source="C" value="200" type="double" />
+          <Property name="Width" source="C" value="120" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="a3b377e8-bdbe-4af7-bf89-4b0a220a7b9f" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+        <Functions>
+          <Function id="139960fe-d172-4c3c-bec2-901201ae5919" name="Navigera">
+            <Instruction macro="ShowView">
+              <Parameter type="Constant" value="Info" viewName="Info" name="ViewName" />
+            </Instruction>
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="0" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="visaMeny" />
+              </Parameter>
+            </Instruction>
+          </Function>
+        </Functions>
+        <Properties>
+          <Property name="Name" source="C" value="Knapp" type="string" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="200" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
+          <Property name="Content" source="C" type="string" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event" value="139960fe-d172-4c3c-bec2-901201ae5919" />
+        </Properties>
+      </Element>
+    </Element>
+    <Element id="734b6789-4dc6-41c4-a4ea-7d7d38f5fb3a" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Inloggning">
+      <Properties>
+        <Property name="Name" source="C" value="Inloggning" type="string" />
+      </Properties>
+      <Element id="417045d5-48e6-4eab-af72-5173ad0211dd" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Knappbild">
+        <Properties>
+          <Property name="Name" source="C" value="Knappbild" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="252" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_NavButton.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="5753d88a-dd94-431b-8242-77629b7b62d0" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+        <Properties>
+          <Property name="Name" source="C" value="Ikon" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="32" type="double" />
+          <Property name="Y" source="C" value="260" type="double" />
+          <Property name="Width" source="C" value="24" type="double" />
+          <Property name="Height" source="C" value="24" type="double" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="Media/MWSE_AccountCircle.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="881d4865-d05c-4e86-8dea-cf06f04a1314" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+        <Properties>
+          <Property name="Name" source="C" value="Text" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Text" source="C" value="Inloggning" type="string" />
+          <Property name="X" source="C" value="64" type="double" />
+          <Property name="Y" source="C" value="248" type="double" />
+          <Property name="Width" source="C" value="120" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="17d30749-f482-4713-98d8-254d74478f84" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+        <Functions>
+          <Function id="c6fa97fd-3023-4a18-a482-6d050bb1d095" name="Navigera">
+            <Instruction macro="ShowView">
+              <Parameter type="Constant" value="login" viewName="login" name="ViewName" />
+            </Instruction>
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="0" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="cd3747fe-f8cf-4956-bcea-98d1d74ac672" name="visaMeny" />
+              </Parameter>
+            </Instruction>
+          </Function>
+        </Functions>
+        <Properties>
+          <Property name="Name" source="C" value="Knapp" type="string" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="248" type="double" />
+          <Property name="Width" source="C" value="200" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
+          <Property name="Content" source="C" type="string" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event" value="c6fa97fd-3023-4a18-a482-6d050bb1d095" />
+        </Properties>
+      </Element>
+    </Element>
+  </Element>
+</Template>

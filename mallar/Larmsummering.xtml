@@ -1,0 +1,88 @@
+﻿<Template type="ViewElement" id="84c16cc3-c58b-4796-afc0-ff840a5a0526" version="1.0.0" name="Larmsummering" description="Antal larm i en larmlista, för varje sida. Röd när något larm är aktivt; ett klick öppnar larmvyn." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Sida\Larm" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <RemoteVariables>
+    <RemoteVariable name="Namn.antal" />
+  </RemoteVariables>
+  <Resources>
+    <Resource name="Media/MWSE_Notifications_Default.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMyIgZmlsbD0iIzc1Nzc3QSIgZmlsbC1vcGFjaXR5PSIwLjA4Ii8+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcng9IjMiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxtYXNrIGlkPSJtYXNrMF8xMThfNTczIiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgo8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNEOUQ5RDkiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzExOF81NzMpIj4KPHBhdGggZD0iTTEyIDI3VjI1SDE0VjE4QzE0IDE2LjYxNjcgMTQuNDE2NyAxNS4zODc1IDE1LjI1IDE0LjMxMjVDMTYuMDgzMyAxMy4yMzc1IDE3LjE2NjcgMTIuNTMzMyAxOC41IDEyLjJWMTEuNUMxOC41IDExLjA4MzMgMTguNjQ1OCAxMC43MjkyIDE4LjkzNzUgMTAuNDM3NUMxOS4yMjkyIDEwLjE0NTggMTkuNTgzMyAxMCAyMCAxMEMyMC40MTY3IDEwIDIwLjc3MDggMTAuMTQ1OCAyMS4wNjI1IDEwLjQzNzVDMjEuMzU0MiAxMC43MjkyIDIxLjUgMTEuMDgzMyAyMS41IDExLjVWMTIuMkMyMi44MzMzIDEyLjUzMzMgMjMuOTE2NyAxMy4yMzc1IDI0Ljc1IDE0LjMxMjVDMjUuNTgzMyAxNS4zODc1IDI2IDE2LjYxNjcgMjYgMThWMjVIMjhWMjdIMTJaTTIwIDMwQzE5LjQ1IDMwIDE4Ljk3OTIgMjkuODA0MiAxOC41ODc1IDI5LjQxMjVDMTguMTk1OCAyOS4wMjA4IDE4IDI4LjU1IDE4IDI4SDIyQzIyIDI4LjU1IDIxLjgwNDIgMjkuMDIwOCAyMS40MTI1IDI5LjQxMjVDMjEuMDIwOCAyOS44MDQyIDIwLjU1IDMwIDIwIDMwWk0xNiAyNUgyNFYxOEMyNCAxNi45IDIzLjYwODMgMTUuOTU4MyAyMi44MjUgMTUuMTc1QzIyLjA0MTcgMTQuMzkxNyAyMS4xIDE0IDIwIDE0QzE4LjkgMTQgMTcuOTU4MyAxNC4zOTE3IDE3LjE3NSAxNS4xNzVDMTYuMzkxNyAxNS45NTgzIDE2IDE2LjkgMTYgMThWMjVaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_Notifications_Danger.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMyIgZmlsbD0iI0VGQUQ5QyIvPgo8cmVjdCB4PSIxIiB5PSIxIiB3aWR0aD0iMzgiIGhlaWdodD0iMzgiIHJ4PSIzIiBzdHJva2U9IiNCMTAwMDAiIHN0cm9rZS13aWR0aD0iMiIvPgo8bWFzayBpZD0ibWFzazBfMTE4XzYwNyIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iOCIgeT0iOCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xMThfNjA3KSI+CjxwYXRoIGQ9Ik0xMCAxOEMxMCAxNi4zMzMzIDEwLjM3MDggMTQuODA0MiAxMS4xMTI1IDEzLjQxMjVDMTEuODU0MiAxMi4wMjA4IDEyLjg1IDEwLjg2NjcgMTQuMSA5Ljk1MDAxTDE1LjI3NSAxMS41NUMxNC4yNzUgMTIuMjgzMyAxMy40NzkyIDEzLjIwODMgMTIuODg3NSAxNC4zMjVDMTIuMjk1OCAxNS40NDE3IDEyIDE2LjY2NjcgMTIgMThIMTBaTTI4IDE4QzI4IDE2LjY2NjcgMjcuNzA0MiAxNS40NDE3IDI3LjExMjUgMTQuMzI1QzI2LjUyMDggMTMuMjA4MyAyNS43MjUgMTIuMjgzMyAyNC43MjUgMTEuNTVMMjUuOSA5Ljk1MDAxQzI3LjE1IDEwLjg2NjcgMjguMTQ1OCAxMi4wMjA4IDI4Ljg4NzUgMTMuNDEyNUMyOS42MjkyIDE0LjgwNDIgMzAgMTYuMzMzMyAzMCAxOEgyOFpNMTIgMjdWMjVIMTRWMThDMTQgMTYuNjE2NyAxNC40MTY3IDE1LjM4NzUgMTUuMjUgMTQuMzEyNUMxNi4wODMzIDEzLjIzNzUgMTcuMTY2NyAxMi41MzMzIDE4LjUgMTIuMlYxMS41QzE4LjUgMTEuMDgzMyAxOC42NDU4IDEwLjcyOTIgMTguOTM3NSAxMC40Mzc1QzE5LjIyOTIgMTAuMTQ1OCAxOS41ODMzIDEwIDIwIDEwQzIwLjQxNjcgMTAgMjAuNzcwOCAxMC4xNDU4IDIxLjA2MjUgMTAuNDM3NUMyMS4zNTQyIDEwLjcyOTIgMjEuNSAxMS4wODMzIDIxLjUgMTEuNVYxMi4yQzIyLjgzMzMgMTIuNTMzMyAyMy45MTY3IDEzLjIzNzUgMjQuNzUgMTQuMzEyNUMyNS41ODMzIDE1LjM4NzUgMjYgMTYuNjE2NyAyNiAxOFYyNUgyOFYyN0gxMlpNMjAgMzBDMTkuNDUgMzAgMTguOTc5MiAyOS44MDQyIDE4LjU4NzUgMjkuNDEyNUMxOC4xOTU4IDI5LjAyMDggMTggMjguNTUgMTggMjhIMjJDMjIgMjguNTUgMjEuODA0MiAyOS4wMjA4IDIxLjQxMjUgMjkuNDEyNUMyMS4wMjA4IDI5LjgwNDIgMjAuNTUgMzAgMjAgMzBaTTE2IDI1SDI0VjE4QzI0IDE2LjkgMjMuNjA4MyAxNS45NTgzIDIyLjgyNSAxNS4xNzVDMjIuMDQxNyAxNC4zOTE3IDIxLjEgMTQgMjAgMTRDMTguOSAxNCAxNy45NTgzIDE0LjM5MTcgMTcuMTc1IDE1LjE3NUMxNi4zOTE3IDE1Ljk1ODMgMTYgMTYuOSAxNiAxOFYyNVoiIGZpbGw9IiNCMTAwMDAiLz4KPC9nPgo8L3N2Zz4K" />
+  </Resources>
+  <Element id="1498d8e1-e2e2-4acf-a03d-cc14871b881f" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Larmsummering">
+    <Conditions>
+      <ConditionLogic id="da95a1fe-f1e1-4d7a-936b-efb4deb83ee5" name="Larm" operator="And">
+        <Condition leftType="PDP" leftContainer="84c16cc3-c58b-4796-afc0-ff840a5a0526" leftName="Namn.antal" operator="Greater" rightType="Constant" rightValue="0" />
+      </ConditionLogic>
+    </Conditions>
+    <Properties>
+      <Property name="Name" source="C" value="Larmsummering" type="string" />
+    </Properties>
+    <Element id="48b84659-4738-4d80-b353-69de0508a0c5" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+      <Properties>
+        <ConditionPriority>
+          <Condition id="da95a1fe-f1e1-4d7a-936b-efb4deb83ee5" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Ikon" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="4" type="double" />
+        <Property name="Y" source="C" value="4" type="double" />
+        <Property name="Width" source="C" value="40" type="double" />
+        <Property name="Height" source="C" value="40" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="84c16cc3-c58b-4796-afc0-ff840a5a0526" name="Media/MWSE_Notifications_Default.svg" />
+        </Property>
+        <Property name="Content" source="File" condition="da95a1fe-f1e1-4d7a-936b-efb4deb83ee5" type="ResourceAddress">
+          <Address container="84c16cc3-c58b-4796-afc0-ff840a5a0526" name="Media/MWSE_Notifications_Danger.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="fd01d86f-b018-4430-8315-61af45040da5" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Antal">
+      <Properties>
+        <ConditionPriority>
+          <Condition id="da95a1fe-f1e1-4d7a-936b-efb4deb83ee5" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Antal" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="RV" value="Namn.antal" type="PcdVariableAddress" />
+        <Property name="X" source="C" value="52" type="double" />
+        <Property name="Y" source="C" value="4" type="double" />
+        <Property name="Width" source="C" value="52" type="double" />
+        <Property name="Height" source="C" value="40" type="double" />
+        <Property name="Font" source="C" value="Arial Bold 16" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="FontColor" source="C" condition="da95a1fe-f1e1-4d7a-936b-efb4deb83ee5" value="95 21 6" type="Color" />
+      </Properties>
+    </Element>
+    <Element id="7d422154-8786-44eb-9ba9-9521fd4911e1" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+      <Properties>
+        <Property name="Name" source="C" value="Knapp" type="string" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="104" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Use3DFrame" source="C" value="False" type="bool" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="False" type="bool" />
+        <Property name="Content" source="C" type="string" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="MouseUp" source="C" type="Event">
+          <Instruction name="ShowView">
+            <Parameter name="ViewName" value="Larm" viewName="Larm" type="C" />
+          </Instruction>
+        </Property>
+      </Properties>
+    </Element>
+  </Element>
+</Template>

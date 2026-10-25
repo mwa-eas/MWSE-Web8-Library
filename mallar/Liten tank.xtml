@@ -1,0 +1,62 @@
+﻿<Template type="ViewElement" id="d3e3e7ef-f1ae-4dc2-b877-4cb692dcfdd0" version="1.0.0" name="Liten tank" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <LocalVariables>
+    <LocalVariable name="doljNamn" value="0" />
+  </LocalVariables>
+  <Resources>
+    <Resource name="Media/MWSE_TankSmall.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA0MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwIDNDMjQuMjk2NSAzIDI4LjEzNjkgMy44NzI3NCAzMC44NjYyIDUuMjM3M0MzMy42NTUzIDYuNjMxODcgMzUgOC4zNzM2OSAzNSAxMEMzNSAxMS42MjYzIDMzLjY1NTMgMTMuMzY4MSAzMC44NjYyIDE0Ljc2MjdDMjguMTM2OSAxNi4xMjczIDI0LjI5NjUgMTcgMjAgMTdDMTUuNzAzNSAxNyAxMS44NjMxIDE2LjEyNzMgOS4xMzM3OSAxNC43NjI3QzYuMzQ0NjYgMTMuMzY4MSA1IDExLjYyNjMgNSAxMEM1IDguMzczNjkgNi4zNDQ2NiA2LjYzMTg3IDkuMTMzNzkgNS4yMzczQzExLjg2MzEgMy44NzI3NCAxNS43MDM1IDMgMjAgM1oiIGZpbGw9IiNGMEYzRjciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yMCA0M0MyNC4yOTY1IDQzIDI4LjEzNjkgNDMuODcyNyAzMC44NjYyIDQ1LjIzNzNDMzMuNjU1MyA0Ni42MzE5IDM1IDQ4LjM3MzcgMzUgNTBDMzUgNTEuNjI2MyAzMy42NTUzIDUzLjM2ODEgMzAuODY2MiA1NC43NjI3QzI4LjEzNjkgNTYuMTI3MyAyNC4yOTY1IDU3IDIwIDU3QzE1LjcwMzUgNTcgMTEuODYzMSA1Ni4xMjczIDkuMTMzNzkgNTQuNzYyN0M2LjM0NDY2IDUzLjM2ODEgNSA1MS42MjYzIDUgNTBDNSA0OC4zNzM3IDYuMzQ0NjYgNDYuNjMxOSA5LjEzMzc5IDQ1LjIzNzNDMTEuODYzMSA0My44NzI3IDE1LjcwMzUgNDMgMjAgNDNaIiBmaWxsPSIjRjBGM0Y3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8cmVjdCB4PSI1IiB5PSIxMSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjRjBGM0Y3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
+  </Resources>
+  <Element id="9f9fcf23-a24e-4b50-ad44-3a095a459b33" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Liten tank">
+    <Properties>
+      <Property name="Name" source="C" value="Liten tank" type="string" />
+    </Properties>
+    <Element id="d95460cc-c2cc-4f2c-b023-89d61c9ab22f" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+      <Properties>
+        <Property name="Name" source="C" value="Symbol" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="20" type="double" />
+        <Property name="Y" source="C" value="20" type="double" />
+        <Property name="Width" source="C" value="40" type="double" />
+        <Property name="Height" source="C" value="60" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="d3e3e7ef-f1ae-4dc2-b877-4cb692dcfdd0" name="Media/MWSE_TankSmall.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="dad5502f-01ea-4bac-bf0b-0748bc16a08e" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+      <Conditions>
+        <ConditionLogic id="1b2a8920-5d77-4cfb-a9f5-972580d4a170" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="d3e3e7ef-f1ae-4dc2-b877-4cb692dcfdd0" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="1b2a8920-5d77-4cfb-a9f5-972580d4a170" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Namn" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Namn" type="string" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="80" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="25 27 30" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="1b2a8920-5d77-4cfb-a9f5-972580d4a170" value="True" type="bool" />
+      </Properties>
+    </Element>
+  </Element>
+</Template>

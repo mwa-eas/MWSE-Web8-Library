@@ -1,0 +1,62 @@
+﻿<Template type="ViewElement" id="b9b2c755-56d0-4ba0-82e1-196afe3b10f0" version="1.0.0" name="Värmetank" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <LocalVariables>
+    <LocalVariable name="doljNamn" value="0" />
+  </LocalVariables>
+  <Resources>
+    <Resource name="Media/MWSE_HeatingTank.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDEwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01MCAxMkM2MS4wMDAyIDEyIDcwLjkzMTQgMTIuODkyIDc4LjA4NzkgMTQuMzIzMkM4MS42NzQyIDE1LjA0MDUgODQuNTExOSAxNS44ODM3IDg2LjQyODcgMTYuNzlDODcuMzg5NSAxNy4yNDQ0IDg4LjA2NjIgMTcuNjkgODguNDg4MyAxOC4xMDI1Qzg4LjkwODcgMTguNTEzNSA4OSAxOC44MTE0IDg5IDE5Qzg5IDE5LjE4ODYgODguOTA4NyAxOS40ODY1IDg4LjQ4ODMgMTkuODk3NUM4OC4wNjYyIDIwLjMxIDg3LjM4OTUgMjAuNzU1NiA4Ni40Mjg3IDIxLjIxQzg0LjUxMTkgMjIuMTE2MyA4MS42NzQyIDIyLjk1OTUgNzguMDg3OSAyMy42NzY4QzcwLjkzMTQgMjUuMTA4IDYxLjAwMDIgMjYgNTAgMjZDMzguOTk5OCAyNiAyOS4wNjg2IDI1LjEwOCAyMS45MTIxIDIzLjY3NjhDMTguMzI1OCAyMi45NTk1IDE1LjQ4ODEgMjIuMTE2MyAxMy41NzEzIDIxLjIxQzEyLjYxMDUgMjAuNzU1NiAxMS45MzM4IDIwLjMxIDExLjUxMTcgMTkuODk3NUMxMS4wOTEzIDE5LjQ4NjUgMTEgMTkuMTg4NiAxMSAxOUMxMSAxOC44MTE0IDExLjA5MTMgMTguNTEzNSAxMS41MTE3IDE4LjEwMjVDMTEuOTMzOCAxNy42OSAxMi42MTA1IDE3LjI0NDQgMTMuNTcxMyAxNi43OUMxNS40ODgxIDE1Ljg4MzcgMTguMzI1OCAxNS4wNDA1IDIxLjkxMjEgMTQuMzIzMkMyOS4wNjg2IDEyLjg5MiAzOC45OTk4IDEyIDUwIDEyWiIgZmlsbD0iI0YwRjNGNyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTUwIDEyNEM2MS4wMDAyIDEyNCA3MC45MzE0IDEyNC44OTIgNzguMDg3OSAxMjYuMzIzQzgxLjY3NDIgMTI3LjA0MSA4NC41MTE5IDEyNy44ODQgODYuNDI4NyAxMjguNzlDODcuMzg5NSAxMjkuMjQ0IDg4LjA2NjIgMTI5LjY5IDg4LjQ4ODMgMTMwLjEwM0M4OC45MDg3IDEzMC41MTMgODkgMTMwLjgxMSA4OSAxMzFDODkgMTMxLjE4OSA4OC45MDg3IDEzMS40ODcgODguNDg4MyAxMzEuODk3Qzg4LjA2NjIgMTMyLjMxIDg3LjM4OTUgMTMyLjc1NiA4Ni40Mjg3IDEzMy4yMUM4NC41MTE5IDEzNC4xMTYgODEuNjc0MiAxMzQuOTU5IDc4LjA4NzkgMTM1LjY3N0M3MC45MzE0IDEzNy4xMDggNjEuMDAwMiAxMzggNTAgMTM4QzM4Ljk5OTggMTM4IDI5LjA2ODYgMTM3LjEwOCAyMS45MTIxIDEzNS42NzdDMTguMzI1OCAxMzQuOTU5IDE1LjQ4ODEgMTM0LjExNiAxMy41NzEzIDEzMy4yMUMxMi42MTA1IDEzMi43NTYgMTEuOTMzOCAxMzIuMzEgMTEuNTExNyAxMzEuODk3QzExLjA5MTMgMTMxLjQ4NyAxMSAxMzEuMTg5IDExIDEzMUMxMSAxMzAuODExIDExLjA5MTMgMTMwLjUxMyAxMS41MTE3IDEzMC4xMDNDMTEuOTMzOCAxMjkuNjkgMTIuNjEwNSAxMjkuMjQ0IDEzLjU3MTMgMTI4Ljc5QzE1LjQ4ODEgMTI3Ljg4NCAxOC4zMjU4IDEyNy4wNDEgMjEuOTEyMSAxMjYuMzIzQzI5LjA2ODYgMTI0Ljg5MiAzOC45OTk4IDEyNCA1MCAxMjRaIiBmaWxsPSIjRjBGM0Y3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8cmVjdCB4PSIxMSIgeT0iMjAiIHdpZHRoPSI3OCIgaGVpZ2h0PSIxMTAiIGZpbGw9IiNGMEYzRjciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjE4IiB5PSIyNyIgd2lkdGg9IjY0IiBoZWlnaHQ9Ijk2IiByeD0iOCIgZmlsbD0iI0RGRTJFQSIvPgo8bGluZSB4MT0iMjcuMTU4NSIgeTE9IjM2LjE4ODgiIHgyPSI3Mi40NTk2IiB5Mj0iNDQuMTc2NyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8bGluZSB4MT0iMjcuMTU4NSIgeTE9IjQwLjE4ODgiIHgyPSI3Mi40NTk2IiB5Mj0iNDguMTc2NyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8bGluZSB4MT0iMjcuMTU4NSIgeTE9IjQ0LjE4ODgiIHgyPSI3Mi40NTk2IiB5Mj0iNTIuMTc2NyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8bGluZSB4MT0iMjcuMTU4NSIgeTE9IjQ4LjE4ODgiIHgyPSI3Mi40NTk2IiB5Mj0iNTYuMTc2NyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8bGluZSB4MT0iMSIgeTE9Ii0xIiB4Mj0iNDciIHkyPSItMSIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuOTg0ODA4IDAuMTczNjQ4IDAuMTczNjQ4IDAuOTg0ODA4IDczLjI3MDggNTcpIiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSIyNy4xNTg1IiB5MT0iNjQuMTg4OCIgeDI9IjcyLjQ1OTYiIHkyPSI3Mi4xNzY3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSIyNy4xNTg1IiB5MT0iNjguMTg4OCIgeDI9IjcyLjQ1OTYiIHkyPSI3Ni4xNzY3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSIyNy4xNTg1IiB5MT0iNzIuMTg4OCIgeDI9IjcyLjQ1OTYiIHkyPSI4MC4xNzY3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSIyNy4xNTg1IiB5MT0iNzYuMTg4OCIgeDI9IjcyLjQ1OTYiIHkyPSI4NC4xNzY3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSIxIiB5MT0iLTEiIHgyPSI0NyIgeTI9Ii0xIiB0cmFuc2Zvcm09Im1hdHJpeCgtMC45ODQ4MDggMC4xNzM2NDggMC4xNzM2NDggMC45ODQ4MDggNzMuMjcwOCA4NSkiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjI3LjE1ODUiIHkxPSI5Mi4xODg4IiB4Mj0iNzIuNDU5NiIgeTI9IjEwMC4xNzciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjI3LjE1ODUiIHkxPSI5Ni4xODg4IiB4Mj0iNzIuNDU5NiIgeTI9IjEwNC4xNzciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjI3LjE1ODUiIHkxPSIxMDAuMTg5IiB4Mj0iNzIuNDU5NiIgeTI9IjEwOC4xNzciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjI3LjE1ODUiIHkxPSIxMDQuMTg5IiB4Mj0iNzIuNDU5NiIgeTI9IjExMi4xNzciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==" />
+  </Resources>
+  <Element id="c06d8231-2632-4e4f-a0b5-f96632ff52b3" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Värmetank">
+    <Properties>
+      <Property name="Name" source="C" value="Värmetank" type="string" />
+    </Properties>
+    <Element id="dd7ea17a-a78a-4b8e-ad93-6c594eb817ee" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+      <Properties>
+        <Property name="Name" source="C" value="Symbol" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="20" type="double" />
+        <Property name="Width" source="C" value="100" type="double" />
+        <Property name="Height" source="C" value="150" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="b9b2c755-56d0-4ba0-82e1-196afe3b10f0" name="Media/MWSE_HeatingTank.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="e9da853a-490d-4e2a-8f7f-effa3b01758c" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+      <Conditions>
+        <ConditionLogic id="b34a9c23-c6b1-4458-8cf1-524445a56c31" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="b9b2c755-56d0-4ba0-82e1-196afe3b10f0" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="b34a9c23-c6b1-4458-8cf1-524445a56c31" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Namn" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Namn" type="string" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="80" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="25 27 30" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="b34a9c23-c6b1-4458-8cf1-524445a56c31" value="True" type="bool" />
+      </Properties>
+    </Element>
+  </Element>
+</Template>

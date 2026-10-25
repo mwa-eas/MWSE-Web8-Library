@@ -1,0 +1,62 @@
+﻿<Template type="ViewElement" id="210e2511-cbb4-4c10-851b-0acdfae9b9ec" version="1.0.0" name="Värmeväxlare X" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <LocalVariables>
+    <LocalVariable name="doljNamn" value="0" />
+  </LocalVariables>
+  <Resources>
+    <Resource name="Media/MWSE_XExchanger.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjIxMCIgdmlld0JveD0iMCAwIDI1MCAyMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjQxLjQxNDIiIHk9IjEwNSIgd2lkdGg9IjExOCIgaGVpZ2h0PSIxMTgiIHRyYW5zZm9ybT0icm90YXRlKC00NSA0MS40MTQyIDEwNSkiIGZpbGw9IiNGMEYzRjciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjEyNSIgY3k9IjYzIiByPSIxMSIgZmlsbD0iI0YwRjNGNyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjEyNSIgeTE9IjU4IiB4Mj0iMTI1IiB5Mj0iNjQiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjEyMiIgeTE9IjYxIiB4Mj0iMTI4IiB5Mj0iNjEiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjEyMiIgeTE9IjY4IiB4Mj0iMTI4IiB5Mj0iNjgiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTAgMjBINDBMMjEwIDE5MEgyNTAiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjExOCIgeT0iMTA1IiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHRyYW5zZm9ybT0icm90YXRlKC00NSAxMTggMTA1KSIgZmlsbD0iI0YwRjNGNyIvPgo8cGF0aCBkPSJNMCAxOTBINDBMMjEwIDIwSDI1MCIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==" />
+  </Resources>
+  <Element id="eb678e7d-afe3-45b6-897c-75e94cdbe557" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Värmeväxlare X">
+    <Properties>
+      <Property name="Name" source="C" value="Värmeväxlare X" type="string" />
+    </Properties>
+    <Element id="d9f6b9dc-08cb-4c53-a5d0-8ed9ebf39ab2" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+      <Properties>
+        <Property name="Name" source="C" value="Symbol" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="20" type="double" />
+        <Property name="Width" source="C" value="250" type="double" />
+        <Property name="Height" source="C" value="210" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="210e2511-cbb4-4c10-851b-0acdfae9b9ec" name="Media/MWSE_XExchanger.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="2384bfe3-12d8-4f76-9e85-a41612ba28ad" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+      <Conditions>
+        <ConditionLogic id="7d684119-a65a-49ad-b57c-994a36600908" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="210e2511-cbb4-4c10-851b-0acdfae9b9ec" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="7d684119-a65a-49ad-b57c-994a36600908" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Namn" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Namn" type="string" />
+        <Property name="X" source="C" value="85" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="80" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="25 27 30" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="7d684119-a65a-49ad-b57c-994a36600908" value="True" type="bool" />
+      </Properties>
+    </Element>
+  </Element>
+</Template>

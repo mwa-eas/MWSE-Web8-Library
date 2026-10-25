@@ -1,0 +1,106 @@
+﻿<Template type="ViewElement" id="1e897c9b-7d24-46dc-b165-74f8edd89d36" version="1.0.0" name="Panelknapp" description="Öppnar panelen som är bunden till samma grupp, t.ex. Regulatorpanel eller en handpanel. Texten ändras som en symbols namn." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Knapp" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <StaticVariables>
+    <StaticVariable name="valdSymbol" />
+  </StaticVariables>
+  <Resources>
+    <Resource name="Media/MWSE_ArrowForward.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg5NyIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84OTcpIj4KPHBhdGggZD0iTTE2LjE3NSAxM0g0VjExSDE2LjE3NUwxMC41NzUgNS40TDEyIDRMMjAgMTJMMTIgMjBMMTAuNTc1IDE4LjZMMTYuMTc1IDEzWiIgZmlsbD0iIzFCMjMyRiIvPgo8L2c+Cjwvc3ZnPgo=" />
+  </Resources>
+  <Element id="e361e24a-bc27-441e-9ba9-218cc0f4300f" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Panelknapp">
+    <Conditions>
+      <ConditionLogic id="6d05412e-f24d-4ebe-a120-08dddbab5b9c" name="Vald" operator="And">
+        <Condition leftType="Container" leftContainer="1e897c9b-7d24-46dc-b165-74f8edd89d36" leftName="valdSymbol" operator="Equal" rightType="Constant" rightValue="A.MWSE.Namn." />
+      </ConditionLogic>
+    </Conditions>
+    <Properties>
+      <Property name="Name" source="C" value="Panelknapp" type="string" />
+    </Properties>
+    <Element id="219f3f60-d5be-4109-8cb3-b41cce087986" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
+      <Properties>
+        <ConditionPriority>
+          <Condition id="6d05412e-f24d-4ebe-a120-08dddbab5b9c" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Bakgrund" type="string" />
+        <Property name="FillColor" source="C" value="215 217 225" type="Color" />
+        <Property name="OutlineColor" source="C" value="99 110 124" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="160" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+        <Property name="FillColor" source="C" condition="6d05412e-f24d-4ebe-a120-08dddbab5b9c" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" condition="6d05412e-f24d-4ebe-a120-08dddbab5b9c" value="30 84 164" type="Color" />
+      </Properties>
+    </Element>
+    <Element id="6ce2e918-418a-4a31-bc4c-9d15949dd3df" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+      <Properties>
+        <ConditionPriority>
+          <Condition id="6d05412e-f24d-4ebe-a120-08dddbab5b9c" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Namn" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Namn" type="string" />
+        <Property name="X" source="C" value="16" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="104" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="FontColor" source="C" condition="6d05412e-f24d-4ebe-a120-08dddbab5b9c" value="30 84 164" type="Color" />
+      </Properties>
+    </Element>
+    <Element id="6ad087f8-2bb9-4559-95a5-e11af6068889" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+      <Properties>
+        <Property name="Name" source="C" value="Ikon" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="124" type="double" />
+        <Property name="Y" source="C" value="12" type="double" />
+        <Property name="Width" source="C" value="24" type="double" />
+        <Property name="Height" source="C" value="24" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="1e897c9b-7d24-46dc-b165-74f8edd89d36" name="Media/MWSE_ArrowForward.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="ff33aaa8-5dd3-42db-8600-a80d95750580" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+      <Properties>
+        <Property name="Name" source="C" value="Knapp" type="string" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="160" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Use3DFrame" source="C" value="False" type="bool" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="False" type="bool" />
+        <Property name="Content" source="C" type="string" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="MouseUp" source="C" type="Event">
+          <Instruction name="NOP" />
+        </Property>
+        <Property name="MouseDown" source="C" type="Event">
+          <Instruction name="ToggleVariable">
+            <Parameter name="Destination" value="valdSymbol" type="LV" />
+            <Parameter name="Values" value="A.MWSE.Namn.;" type="C" />
+          </Instruction>
+        </Property>
+      </Properties>
+    </Element>
+  </Element>
+</Template>

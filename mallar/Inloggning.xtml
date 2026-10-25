@@ -1,0 +1,862 @@
+﻿<Template type="ViewElement" id="ed58e32b-3cfe-494c-8bcf-143259d60c65" version="1.0.0" name="Inloggning" description="Inloggningsruta för Web Editors användardatabas, byggd på Saia Burgess Controls Login 1.1.5 som labbets GUI använder." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="Saia-Burgess Controls AG" _category="MWSE\Sida\Inloggning" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <StaticVariables>
+    <StaticVariable name="?S_G_User" value="" />
+    <StaticVariable name="?S_LoggedIn" value="0" />
+    <StaticVariable name="?S_TPassword" value="" />
+    <StaticVariable name="?S_TSHAPassword" value="" />
+    <StaticVariable name="?S_TSHAUser" value="" />
+    <StaticVariable name="?S_TStartPage" value="" />
+    <StaticVariable name="?S_TU_PasswordVisible" />
+    <StaticVariable name="?S_TUser" value="" />
+    <StaticVariable name="?S_TUserLogged" value="" />
+    <StaticVariable name="?S_TUserRights" value="" />
+    <StaticVariable name="?S_User_L0" value="" />
+    <StaticVariable name="?S_User_L1" value="" />
+    <StaticVariable name="?S_User_L10" value="" />
+    <StaticVariable name="?S_User_L11" value="" />
+    <StaticVariable name="?S_User_L12" value="" />
+    <StaticVariable name="?S_User_L13" value="" />
+    <StaticVariable name="?S_User_L14" value="" />
+    <StaticVariable name="?S_User_L15" value="" />
+    <StaticVariable name="?S_User_L2" value="" />
+    <StaticVariable name="?S_User_L3" value="" />
+    <StaticVariable name="?S_User_L4" value="" />
+    <StaticVariable name="?S_User_L5" value="" />
+    <StaticVariable name="?S_User_L6" value="" />
+    <StaticVariable name="?S_User_L7" value="" />
+    <StaticVariable name="?S_User_L8" value="" />
+    <StaticVariable name="?S_User_L9" value="" />
+    <StaticVariable name="@LANGUAGE" value="" />
+    <StaticVariable name="_NOINITSESSCO_18" />
+    <StaticVariable name="_NOINITSESSCO_19" />
+    <StaticVariable name="felInloggning" />
+    <StaticVariable name="skicka" />
+  </StaticVariables>
+  <LocalVariables>
+    <LocalVariable name="vantar" value="0" />
+  </LocalVariables>
+  <RemoteVariables>
+    <RemoteVariable name="NT-WebCsv,user,compare,@CO_?S_TUser@,hash,@CO_?S_TSHAPassword@" />
+    <RemoteVariable name="NT-WebCsv,user,display,@CO_?S_TUser@,2" />
+    <RemoteVariable name="NT-WebCsv,user,display,@CO_?S_TUser@,3" />
+    <RemoteVariable name="NT-WebCsv,user,display,@CO_?S_TUser@,4" />
+  </RemoteVariables>
+  <Resources>
+    <Resource name="Media/MWSE_VisibilityButton__Show.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMyIgZmlsbD0iIzc1Nzc3QSIgZmlsbC1vcGFjaXR5PSIwLjA4Ii8+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcng9IjMiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxtYXNrIGlkPSJtYXNrMF81NjlfMzkyIiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgo8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNEOUQ5RDkiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzU2OV8zOTIpIj4KPHBhdGggZD0iTTIzLjE4NzUgMjIuNjg3NUMyNC4wNjI1IDIxLjgxMjUgMjQuNSAyMC43NSAyNC41IDE5LjVDMjQuNSAxOC4yNSAyNC4wNjI1IDE3LjE4NzUgMjMuMTg3NSAxNi4zMTI1QzIyLjMxMjUgMTUuNDM3NSAyMS4yNSAxNSAyMCAxNUMxOC43NSAxNSAxNy42ODc1IDE1LjQzNzUgMTYuODEyNSAxNi4zMTI1QzE1LjkzNzUgMTcuMTg3NSAxNS41IDE4LjI1IDE1LjUgMTkuNUMxNS41IDIwLjc1IDE1LjkzNzUgMjEuODEyNSAxNi44MTI1IDIyLjY4NzVDMTcuNjg3NSAyMy41NjI1IDE4Ljc1IDI0IDIwIDI0QzIxLjI1IDI0IDIyLjMxMjUgMjMuNTYyNSAyMy4xODc1IDIyLjY4NzVaTTE4LjA4NzUgMjEuNDEyNUMxNy41NjI1IDIwLjg4NzUgMTcuMyAyMC4yNSAxNy4zIDE5LjVDMTcuMyAxOC43NSAxNy41NjI1IDE4LjExMjUgMTguMDg3NSAxNy41ODc1QzE4LjYxMjUgMTcuMDYyNSAxOS4yNSAxNi44IDIwIDE2LjhDMjAuNzUgMTYuOCAyMS4zODc1IDE3LjA2MjUgMjEuOTEyNSAxNy41ODc1QzIyLjQzNzUgMTguMTEyNSAyMi43IDE4Ljc1IDIyLjcgMTkuNUMyMi43IDIwLjI1IDIyLjQzNzUgMjAuODg3NSAyMS45MTI1IDIxLjQxMjVDMjEuMzg3NSAyMS45Mzc1IDIwLjc1IDIyLjIgMjAgMjIuMkMxOS4yNSAyMi4yIDE4LjYxMjUgMjEuOTM3NSAxOC4wODc1IDIxLjQxMjVaTTEzLjM1IDI0Ljk2MjVDMTEuMzUgMjMuNjA0MiA5LjkgMjEuNzgzMyA5IDE5LjVDOS45IDE3LjIxNjcgMTEuMzUgMTUuMzk1OCAxMy4zNSAxNC4wMzc1QzE1LjM1IDEyLjY3OTIgMTcuNTY2NyAxMiAyMCAxMkMyMi40MzMzIDEyIDI0LjY1IDEyLjY3OTIgMjYuNjUgMTQuMDM3NUMyOC42NSAxNS4zOTU4IDMwLjEgMTcuMjE2NyAzMSAxOS41QzMwLjEgMjEuNzgzMyAyOC42NSAyMy42MDQyIDI2LjY1IDI0Ljk2MjVDMjQuNjUgMjYuMzIwOCAyMi40MzMzIDI3IDIwIDI3QzE3LjU2NjcgMjcgMTUuMzUgMjYuMzIwOCAxMy4zNSAyNC45NjI1Wk0yNS4xODc1IDIzLjUxMjVDMjYuNzYyNSAyMi41MjA4IDI3Ljk2NjcgMjEuMTgzMyAyOC44IDE5LjVDMjcuOTY2NyAxNy44MTY3IDI2Ljc2MjUgMTYuNDc5MiAyNS4xODc1IDE1LjQ4NzVDMjMuNjEyNSAxNC40OTU4IDIxLjg4MzMgMTQgMjAgMTRDMTguMTE2NyAxNCAxNi4zODc1IDE0LjQ5NTggMTQuODEyNSAxNS40ODc1QzEzLjIzNzUgMTYuNDc5MiAxMi4wMzMzIDE3LjgxNjcgMTEuMiAxOS41QzEyLjAzMzMgMjEuMTgzMyAxMy4yMzc1IDIyLjUyMDggMTQuODEyNSAyMy41MTI1QzE2LjM4NzUgMjQuNTA0MiAxOC4xMTY3IDI1IDIwIDI1QzIxLjg4MzMgMjUgMjMuNjEyNSAyNC41MDQyIDI1LjE4NzUgMjMuNTEyNVoiIGZpbGw9IiMxQjIzMkYiLz4KPC9nPgo8L3N2Zz4K" />
+    <Resource name="Media/MWSE_VisibilityButton__Hide.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMyIgZmlsbD0iIzc1Nzc3QSIgZmlsbC1vcGFjaXR5PSIwLjA4Ii8+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcng9IjMiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxtYXNrIGlkPSJtYXNrMF81NjlfMzkwIiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgo8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNEOUQ5RDkiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzU2OV8zOTApIj4KPHBhdGggZD0iTTI0LjEgMjEuM0wyMi42NSAxOS44NUMyMi44IDE5LjA2NjcgMjIuNTc1IDE4LjMzMzMgMjEuOTc1IDE3LjY1QzIxLjM3NSAxNi45NjY3IDIwLjYgMTYuNyAxOS42NSAxNi44NUwxOC4yIDE1LjRDMTguNDgzMyAxNS4yNjY3IDE4Ljc3MDggMTUuMTY2NyAxOS4wNjI1IDE1LjFDMTkuMzU0MiAxNS4wMzMzIDE5LjY2NjcgMTUgMjAgMTVDMjEuMjUgMTUgMjIuMzEyNSAxNS40Mzc1IDIzLjE4NzUgMTYuMzEyNUMyNC4wNjI1IDE3LjE4NzUgMjQuNSAxOC4yNSAyNC41IDE5LjVDMjQuNSAxOS44MzMzIDI0LjQ2NjcgMjAuMTQ1OCAyNC40IDIwLjQzNzVDMjQuMzMzMyAyMC43MjkyIDI0LjIzMzMgMjEuMDE2NyAyNC4xIDIxLjNaTTI3LjMgMjQuNDVMMjUuODUgMjMuMDVDMjYuNDgzMyAyMi41NjY3IDI3LjA0NTggMjIuMDM3NSAyNy41Mzc1IDIxLjQ2MjVDMjguMDI5MiAyMC44ODc1IDI4LjQ1IDIwLjIzMzMgMjguOCAxOS41QzI3Ljk2NjcgMTcuODE2NyAyNi43NzA4IDE2LjQ3OTIgMjUuMjEyNSAxNS40ODc1QzIzLjY1NDIgMTQuNDk1OCAyMS45MTY3IDE0IDIwIDE0QzE5LjUxNjcgMTQgMTkuMDQxNyAxNC4wMzMzIDE4LjU3NSAxNC4xQzE4LjEwODMgMTQuMTY2NyAxNy42NSAxNC4yNjY3IDE3LjIgMTQuNEwxNS42NSAxMi44NUMxNi4zMzMzIDEyLjU2NjcgMTcuMDMzMyAxMi4zNTQyIDE3Ljc1IDEyLjIxMjVDMTguNDY2NyAxMi4wNzA4IDE5LjIxNjcgMTIgMjAgMTJDMjIuNTE2NyAxMiAyNC43NTgzIDEyLjY5NTggMjYuNzI1IDE0LjA4NzVDMjguNjkxNyAxNS40NzkyIDMwLjExNjcgMTcuMjgzMyAzMSAxOS41QzMwLjYxNjcgMjAuNDgzMyAzMC4xMTI1IDIxLjM5NTggMjkuNDg3NSAyMi4yMzc1QzI4Ljg2MjUgMjMuMDc5MiAyOC4xMzMzIDIzLjgxNjcgMjcuMyAyNC40NVpNMjcuOCAzMC42TDIzLjYgMjYuNDVDMjMuMDE2NyAyNi42MzMzIDIyLjQyOTIgMjYuNzcwOCAyMS44Mzc1IDI2Ljg2MjVDMjEuMjQ1OCAyNi45NTQyIDIwLjYzMzMgMjcgMjAgMjdDMTcuNDgzMyAyNyAxNS4yNDE3IDI2LjMwNDIgMTMuMjc1IDI0LjkxMjVDMTEuMzA4MyAyMy41MjA4IDkuODgzMzMgMjEuNzE2NyA5IDE5LjVDOS4zNSAxOC42MTY3IDkuNzkxNjcgMTcuNzk1OCAxMC4zMjUgMTcuMDM3NUMxMC44NTgzIDE2LjI3OTIgMTEuNDY2NyAxNS42IDEyLjE1IDE1TDkuNCAxMi4yTDEwLjggMTAuOEwyOS4yIDI5LjJMMjcuOCAzMC42Wk0xMy41NSAxNi40QzEzLjA2NjcgMTYuODMzMyAxMi42MjUgMTcuMzA4MyAxMi4yMjUgMTcuODI1QzExLjgyNSAxOC4zNDE3IDExLjQ4MzMgMTguOSAxMS4yIDE5LjVDMTIuMDMzMyAyMS4xODMzIDEzLjIyOTIgMjIuNTIwOCAxNC43ODc1IDIzLjUxMjVDMTYuMzQ1OCAyNC41MDQyIDE4LjA4MzMgMjUgMjAgMjVDMjAuMzMzMyAyNSAyMC42NTgzIDI0Ljk3OTIgMjAuOTc1IDI0LjkzNzVDMjEuMjkxNyAyNC44OTU4IDIxLjYxNjcgMjQuODUgMjEuOTUgMjQuOEwyMS4wNSAyMy44NUMyMC44NjY3IDIzLjkgMjAuNjkxNyAyMy45Mzc1IDIwLjUyNSAyMy45NjI1QzIwLjM1ODMgMjMuOTg3NSAyMC4xODMzIDI0IDIwIDI0QzE4Ljc1IDI0IDE3LjY4NzUgMjMuNTYyNSAxNi44MTI1IDIyLjY4NzVDMTUuOTM3NSAyMS44MTI1IDE1LjUgMjAuNzUgMTUuNSAxOS41QzE1LjUgMTkuMzE2NyAxNS41MTI1IDE5LjE0MTcgMTUuNTM3NSAxOC45NzVDMTUuNTYyNSAxOC44MDgzIDE1LjYgMTguNjMzMyAxNS42NSAxOC40NUwxMy41NSAxNi40WiIgZmlsbD0iIzFCMjMyRiIvPgo8L2c+Cjwvc3ZnPgo=" />
+  </Resources>
+  <Element id="2963fe47-aca0-41c0-8542-1c21c989ae0c" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Inloggning">
+    <Conditions>
+      <ConditionLogic id="9b16fc3b-9b1c-42a8-b5f6-e24fffd5f961" name="Get User Information" operator="Or">
+        <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="vantar" operator="Greater" rightType="Constant" rightValue="0" />
+        <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="skicka" operator="Equal" rightType="Constant" rightValue="1" />
+      </ConditionLogic>
+    </Conditions>
+    <Properties>
+      <Property name="Name" source="C" value="Inloggning" type="string" />
+    </Properties>
+    <Element id="a641daec-c726-4126-81ff-3b09c1513863" type="365164dc-5073-11e0-8201-b603e0d72085" name="Back">
+      <Properties>
+        <Property name="Name" source="C" value="Back" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="360" type="double" />
+        <Property name="Height" source="C" value="296" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="c43c8c22-1057-4026-bf9d-3edc132aac60" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="LoginButton">
+      <Conditions>
+        <ConditionLogic id="b6735285-f4d0-4f47-b059-6b0659b1311f" name="Logging in" operator="Or">
+          <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="skicka" operator="Equal" rightType="Constant" rightValue="1" />
+          <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="vantar" operator="Greater" rightType="Constant" rightValue="0" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="b6735285-f4d0-4f47-b059-6b0659b1311f" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="LoginButton" type="string" />
+        <Property name="FillColor" source="C" value="34 42 53" type="Color" />
+        <Property name="OutlineColor" source="C" value="245 247 250" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="24" type="double" />
+        <Property name="Y" source="C" value="232" type="double" />
+        <Property name="Width" source="C" value="312" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Use3DFrame" source="C" value="False" type="bool" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+        <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
+        <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+        <Property name="Content" source="C" value="Logga in" type="string" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="MouseUp" source="C" type="Event">
+          <Instruction name="WriteValueToVariable">
+            <Parameter name="Value" value="1" type="C" />
+            <Parameter name="Destination" value="skicka" type="LV" />
+          </Instruction>
+        </Property>
+        <Property name="DisableEvents" source="C" condition="b6735285-f4d0-4f47-b059-6b0659b1311f" value="True" type="bool" />
+        <Property name="Content" source="C" condition="b6735285-f4d0-4f47-b059-6b0659b1311f" value="Loggar in …" type="string" />
+        <Property name="OutlineColor" source="C" condition="b6735285-f4d0-4f47-b059-6b0659b1311f" value="232 234 240" type="Color" />
+        <Property name="FillColor" source="C" condition="b6735285-f4d0-4f47-b059-6b0659b1311f" value="145 150 159" type="Color" />
+        <Property name="HasOutline" source="C" condition="b6735285-f4d0-4f47-b059-6b0659b1311f" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="f3f8fe69-30a0-442c-a983-f9f91dfc339f" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="HelperText">
+      <Conditions>
+        <ConditionLogic id="6662f8c5-cf65-411b-807d-06d2bafebe1e" name="Failed" operator="And">
+          <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="felInloggning" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="6662f8c5-cf65-411b-807d-06d2bafebe1e" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="HelperText" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Fel användarnamn eller lösenord" type="string" />
+        <Property name="X" source="C" value="24" type="double" />
+        <Property name="Y" source="C" value="192" type="double" />
+        <Property name="Width" source="C" value="312" type="double" />
+        <Property name="Height" source="C" value="24" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="95 21 6" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Hidden" source="C" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="6662f8c5-cf65-411b-807d-06d2bafebe1e" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="294aaab4-5645-4ac7-b6f3-28d4ad5ecf44" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="User">
+      <Properties>
+        <Property name="Name" source="C" value="User" type="string" />
+      </Properties>
+      <Element id="b78139cb-0706-4561-8f47-597b907d29dc" type="365164dc-5073-11e0-8201-b603e0d72085" name="Back">
+        <Conditions>
+          <ConditionLogic id="026458d7-068f-4d41-b4da-8c9e8ab1bafe" name="Failed" operator="And">
+            <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="felInloggning" operator="Equal" rightType="Constant" rightValue="1" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="026458d7-068f-4d41-b4da-8c9e8ab1bafe" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="Back" type="string" />
+          <Property name="FillColor" source="C" value="233 235 241" type="Color" />
+          <Property name="OutlineColor" source="C" value="99 110 124" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="72" type="double" />
+          <Property name="Width" source="C" value="312" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="True" type="bool" />
+          <Property name="OutlineColor" source="C" condition="026458d7-068f-4d41-b4da-8c9e8ab1bafe" value="177 0 0" type="Color" />
+        </Properties>
+      </Element>
+      <Element id="19314bcd-a442-4863-aba8-c8122434a363" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="UserPlaceholder">
+        <Conditions>
+          <ConditionLogic id="2280c5cf-40d4-40a3-8489-958b6848640c" name="?S_TUser" operator="And">
+            <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUser" operator="NotEqual" rightType="Constant" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="2280c5cf-40d4-40a3-8489-958b6848640c" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="UserPlaceholder" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Text" source="C" value="Användarnamn" type="string" />
+          <Property name="X" source="C" value="36" type="double" />
+          <Property name="Y" source="C" value="72" type="double" />
+          <Property name="Width" source="C" value="288" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="FontColor" source="C" value="66 77 89" type="Color" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Hidden" source="C" value="False" type="bool" />
+          <Property name="Hidden" source="C" condition="2280c5cf-40d4-40a3-8489-958b6848640c" value="True" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="10645873-d4ab-4a44-a955-7da5b70d0cc9" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="UserEntry">
+        <Properties>
+          <Property name="Name" source="C" value="UserEntry" type="string" />
+          <Property name="FillColor" source="C" value="233 235 241" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="0" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
+          <Property name="X" source="C" value="34" type="double" />
+          <Property name="Y" source="C" value="74" type="double" />
+          <Property name="Width" source="C" value="298" type="double" />
+          <Property name="Height" source="C" value="44" type="double" />
+          <Property name="Password" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Text" source="LV" type="InternalVariableAddress">
+            <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TUser" />
+          </Property>
+        </Properties>
+      </Element>
+    </Element>
+    <Element id="8ac427e0-fda6-4e2a-b2d5-3f7f2f512892" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Password">
+      <Properties>
+        <Property name="Name" source="C" value="Password" type="string" />
+      </Properties>
+      <Element id="6e6aed24-fd0c-4d1a-8c13-16eb59c88924" type="365164dc-5073-11e0-8201-b603e0d72085" name="Back">
+        <Conditions>
+          <ConditionLogic id="832f8f80-fe37-46c0-9561-4bde0aedeac4" name="Failed" operator="And">
+            <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="felInloggning" operator="Equal" rightType="Constant" rightValue="1" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="832f8f80-fe37-46c0-9561-4bde0aedeac4" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="Back" type="string" />
+          <Property name="FillColor" source="C" value="233 235 241" type="Color" />
+          <Property name="OutlineColor" source="C" value="99 110 124" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="136" type="double" />
+          <Property name="Width" source="C" value="312" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="True" type="bool" />
+          <Property name="OutlineColor" source="C" condition="832f8f80-fe37-46c0-9561-4bde0aedeac4" value="177 0 0" type="Color" />
+        </Properties>
+      </Element>
+      <Element id="de91425a-b869-45bf-bd54-fd4dc4900765" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="ShowPasswordButton">
+        <Conditions>
+          <ConditionLogic id="a670fda4-4318-4086-98fe-d1be89308a02" name="Visible" operator="And">
+            <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TU_PasswordVisible" operator="Equal" rightType="Constant" rightValue="1" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="a670fda4-4318-4086-98fe-d1be89308a02" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="ShowPasswordButton" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="288" type="double" />
+          <Property name="Y" source="C" value="136" type="double" />
+          <Property name="Width" source="C" value="48" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
+          <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+          <Property name="Font" source="C" value="Arial Normal 9" type="FontInfo" />
+          <Property name="Content" source="File" type="ResourceAddress">
+            <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="Media/MWSE_VisibilityButton__Show.svg" />
+          </Property>
+          <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseDown" source="C" type="Event">
+            <Instruction name="WriteValueToVariable">
+              <Parameter name="Value" value="1" type="C" />
+              <Parameter name="Destination" value="?S_TU_PasswordVisible" type="LV" />
+            </Instruction>
+          </Property>
+          <Property name="MouseUp" source="C" type="Event">
+            <Instruction name="WriteValueToVariable">
+              <Parameter name="Value" value="0" type="C" />
+              <Parameter name="Destination" value="?S_TU_PasswordVisible" type="LV" />
+            </Instruction>
+          </Property>
+          <Property name="Content" source="File" condition="a670fda4-4318-4086-98fe-d1be89308a02" type="ResourceAddress">
+            <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="Media/MWSE_VisibilityButton__Hide.svg" />
+          </Property>
+        </Properties>
+      </Element>
+      <Element id="72b018d9-a260-4124-b125-b1abc6b64ac8" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="PasswordPlaceholder">
+        <Conditions>
+          <ConditionLogic id="5424000a-4a14-4cdf-a73d-0e7bbe9758e7" name="?S_TPassword" operator="Or">
+            <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TPassword" operator="NotEqual" rightType="Constant" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="5424000a-4a14-4cdf-a73d-0e7bbe9758e7" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="PasswordPlaceholder" type="string" />
+          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Text" source="C" value="Lösenord" type="string" />
+          <Property name="X" source="C" value="36" type="double" />
+          <Property name="Y" source="C" value="136" type="double" />
+          <Property name="Width" source="C" value="236" type="double" />
+          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="FontColor" source="C" value="66 77 89" type="Color" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Hidden" source="C" value="False" type="bool" />
+          <Property name="Hidden" source="C" condition="5424000a-4a14-4cdf-a73d-0e7bbe9758e7" value="True" type="bool" />
+          <Property name="Font" source="C" condition="5424000a-4a14-4cdf-a73d-0e7bbe9758e7" value="Arial 12" type="FontInfo" />
+        </Properties>
+      </Element>
+      <Element id="a5ae2560-f292-41f7-983a-48cdd55c79d2" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="PasswordEntry">
+        <Conditions>
+          <ConditionLogic id="5307af4a-9a62-437e-82ad-4ba7207542cf" name="Visible" operator="And">
+            <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TU_PasswordVisible" operator="Equal" rightType="Constant" rightValue="1" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="5307af4a-9a62-437e-82ad-4ba7207542cf" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="PasswordEntry" type="string" />
+          <Property name="FillColor" source="C" value="233 235 241" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="0" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
+          <Property name="X" source="C" value="34" type="double" />
+          <Property name="Y" source="C" value="138" type="double" />
+          <Property name="Width" source="C" value="248" type="double" />
+          <Property name="Height" source="C" value="44" type="double" />
+          <Property name="Password" source="C" value="True" type="bool" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="Text" source="LV" type="InternalVariableAddress">
+            <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TPassword" />
+          </Property>
+          <Property name="Password" source="C" condition="5307af4a-9a62-437e-82ad-4ba7207542cf" value="False" type="bool" />
+        </Properties>
+      </Element>
+    </Element>
+    <Element id="03828f1a-354a-4524-8e30-e8935d4c4c2c" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Title">
+      <Properties>
+        <Property name="Name" source="C" value="Title" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Logga in" type="string" />
+        <Property name="X" source="C" value="24" type="double" />
+        <Property name="Y" source="C" value="16" type="double" />
+        <Property name="Width" source="C" value="312" type="double" />
+        <Property name="Height" source="C" value="40" type="double" />
+        <Property name="Font" source="C" value="Arial 18" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="6dc73865-8681-493f-afbd-a2d3d4492ef5" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Create SHA256" activeCondition="da90ff1b-11c6-430d-a03c-f99061f40961">
+      <Functions>
+        <Function id="9245235d-60da-4302-879a-a2ee37113fe5" name="Convert to SHA">
+          <Instruction macro="CalculateSHA256">
+            <Parameter type="Container" name="Value">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TUser" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TSHAUser" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="CalculateSHA256">
+            <Parameter type="Container" name="Value">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TPassword" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TSHAPassword" />
+            </Parameter>
+          </Instruction>
+        </Function>
+      </Functions>
+      <Conditions>
+        <ConditionLogic id="da90ff1b-11c6-430d-a03c-f99061f40961" name="Create SHA256" operator="And">
+          <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="skicka" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="da90ff1b-11c6-430d-a03c-f99061f40961" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Create SHA256" type="string" />
+        <Property name="Repaint" source="C" value="9245235d-60da-4302-879a-a2ee37113fe5" type="Event" />
+        <Property name="FocusGained" source="C" type="Event">
+          <Instruction name="NOP" />
+        </Property>
+        <Property name="DisableEvents" source="C" value="True" type="bool" />
+        <Property name="DisableEvents" source="C" condition="da90ff1b-11c6-430d-a03c-f99061f40961" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="77e69102-1e8c-4262-af26-b5bd2c22887e" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Check User" activeCondition="c3801a89-9ec2-4b29-afcb-50424c7713bd">
+      <Functions>
+        <Function id="af8b2259-3121-4a92-864e-18d721ad093d" name="Check User">
+          <Instruction macro="CalculateSHA256">
+            <Parameter type="Container" name="Value">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TUser" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TSHAUser" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="CalculateSHA256">
+            <Parameter type="Container" name="Value">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TPassword" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TSHAPassword" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="PDP" value="NT-WebCsv,user,compare,@CO_?S_TUser@,hash,@CO_?S_TSHAPassword@" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TUserLogged" />
+            </Parameter>
+          </Instruction>
+        </Function>
+      </Functions>
+      <Conditions>
+        <ConditionLogic id="c3801a89-9ec2-4b29-afcb-50424c7713bd" name="Check User" operator="And">
+          <Condition leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="skicka" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="c3801a89-9ec2-4b29-afcb-50424c7713bd" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Check User" type="string" />
+        <Property name="Repaint" source="C" value="af8b2259-3121-4a92-864e-18d721ad093d" type="Event" />
+        <Property name="DisableEvents" source="C" value="True" type="bool" />
+        <Property name="DisableEvents" source="C" condition="c3801a89-9ec2-4b29-afcb-50424c7713bd" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="9987c78f-ea05-4892-9e42-45decae69a8b" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Do Login" activeCondition="9b16fc3b-9b1c-42a8-b5f6-e24fffd5f961">
+      <Functions>
+        <Function id="2a58649c-b279-4bb4-9e26-f9629493372b" name="Login User">
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="PDP" value="NT-WebCsv,user,display,@CO_?S_TUser@,2" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TUserRights" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="PDP" value="NT-WebCsv,user,display,@CO_?S_TUser@,4" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="@LANGUAGE" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="PDP" value="NT-WebCsv,user,display,@CO_?S_TUser@,3" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TStartPage" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="-" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_G_User" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_LoggedIn" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L15" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L14" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L13" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L12" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L11" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L10" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L9" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L8" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L7" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L6" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L5" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L4" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L3" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L2" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L1" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L0" />
+            </Parameter>
+          </Instruction>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="32768">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L15" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="16384">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L14" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="8192">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L13" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="4096">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L12" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="2048">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L11" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="1024">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L10" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="512">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L9" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="256">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L8" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="128">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L7" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="64">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L6" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="32">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L5" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="16">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L4" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="8">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L3" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="4">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L2" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="2">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L1" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserRights" operator="AndEqual" rightType="Constant" rightValue="1">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_User_L0" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Instruction macro="IncrementVariable">
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="vantar" />
+            </Parameter>
+          </Instruction>
+          <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="vantar" operator="GreaterEqual" rightType="Constant" rightValue="2">
+            <Expression type="None">
+              <Instruction macro="WriteValueToVariable">
+                <Parameter type="Container" name="Value">
+                  <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TUser" />
+                </Parameter>
+                <Parameter type="Container" name="Destination">
+                  <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_G_User" />
+                </Parameter>
+              </Instruction>
+              <Instruction macro="WriteValueToVariable">
+                <Parameter type="Container" name="Value">
+                  <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TUser" />
+                </Parameter>
+                <Parameter type="Container" name="Destination">
+                  <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="_NOINITSESSCO_18" />
+                </Parameter>
+              </Instruction>
+              <Instruction macro="WriteValueToVariable">
+                <Parameter type="Container" name="Value">
+                  <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TSHAPassword" />
+                </Parameter>
+                <Parameter type="Container" name="Destination">
+                  <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="_NOINITSESSCO_19" />
+                </Parameter>
+              </Instruction>
+              <Instruction macro="WriteValueToVariable">
+                <Parameter type="Constant" value="1" name="Value" />
+                <Parameter type="Container" name="Destination">
+                  <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_LoggedIn" />
+                </Parameter>
+              </Instruction>
+              <Expression type="If" leftType="Container" leftContainer="ed58e32b-3cfe-494c-8bcf-143259d60c65" leftName="?S_TUserLogged" operator="Equal" rightType="Constant" rightValue="1">
+                <Instruction macro="WriteValueToVariable">
+                  <Parameter type="Constant" name="Value" />
+                  <Parameter type="Container" name="Destination">
+                    <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TPassword" />
+                  </Parameter>
+                </Instruction>
+                <Instruction macro="WriteValueToVariable">
+                  <Parameter type="Constant" name="Value" />
+                  <Parameter type="Container" name="Destination">
+                    <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TSHAPassword" />
+                  </Parameter>
+                </Instruction>
+                <Instruction macro="WriteValueToVariable">
+                  <Parameter type="Constant" name="Value" />
+                  <Parameter type="Container" name="Destination">
+                    <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TSHAUser" />
+                  </Parameter>
+                </Instruction>
+                <Instruction macro="ShowView">
+                  <Parameter type="Container" name="ViewName">
+                    <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TStartPage" />
+                  </Parameter>
+                </Instruction>
+              </Expression>
+            </Expression>
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="1" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="felInloggning" />
+              </Parameter>
+            </Instruction>
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="0" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="skicka" />
+              </Parameter>
+            </Instruction>
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="0" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="vantar" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+        </Function>
+        <Function id="c0aee76f-6a16-408f-a78d-aa77e16b11f7" name="Clear temp values">
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TSHAUser" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TSHAPassword" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TPassword" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="?S_TUser" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="vantar" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="skicka" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" value="0" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="ed58e32b-3cfe-494c-8bcf-143259d60c65" name="felInloggning" />
+            </Parameter>
+          </Instruction>
+        </Function>
+      </Functions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="9b16fc3b-9b1c-42a8-b5f6-e24fffd5f961" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Do Login" type="string" />
+        <Property name="DisableEvents" source="C" value="True" type="bool" />
+        <Property name="Repaint" source="C" value="2a58649c-b279-4bb4-9e26-f9629493372b" type="Event" />
+        <Property name="FocusLost" source="C" value="c0aee76f-6a16-408f-a78d-aa77e16b11f7" type="Event" />
+        <Property name="FocusGained" source="C" value="c0aee76f-6a16-408f-a78d-aa77e16b11f7" type="Event" />
+        <Property name="DisableEvents" source="C" condition="9b16fc3b-9b1c-42a8-b5f6-e24fffd5f961" value="False" type="bool" />
+      </Properties>
+    </Element>
+  </Element>
+</Template>

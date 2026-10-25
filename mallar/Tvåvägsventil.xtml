@@ -1,0 +1,187 @@
+﻿<Template type="ViewElement" id="5c179df8-ec8e-44ae-97de-c8f7a3a979c9" version="2.0.0" name="Tvåvägsventil" description="" templateNameId="_2_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Ställdon" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="480" type="absolute" />
+    <OffsetY value="215" type="absolute" />
+  </InitialLayout>
+  <StaticVariables>
+    <StaticVariable name="valdSymbol" />
+  </StaticVariables>
+  <LocalVariables>
+    <LocalVariable name="doljNamn" value="0" />
+  </LocalVariables>
+  <RemoteVariables>
+    <RemoteVariable name="A.MWSE.Namn.MV_Ut" format="DEC.1" />
+    <RemoteVariable name="A.MWSE.Namn.Man" />
+  </RemoteVariables>
+  <Resources>
+    <Resource name="Media/MWSE_ValveLinearTwoWay_Idle.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0YwRjNGNyIvPgo8cGF0aCBkPSJNMjEgMzUuMTk2M0wyMSAyNC44MDM3TDMwIDMwTDIxIDM1LjE5NjNaIiBmaWxsPSIjRTdFQkYwIiBzdHJva2U9IiM2MzZFN0MiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMzkgMjQuODAzN0wzOSAzNS4xOTYzTDMwIDMwTDM5IDI0LjgwMzdaIiBmaWxsPSIjRTdFQkYwIiBzdHJva2U9IiM2MzZFN0MiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iMzAiIHkxPSIzMCIgeDI9IjMwIiB5Mj0iMjIiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjI3IiB5PSIxNyIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI0U3RUJGMCIgc3Ryb2tlPSIjNjM2RTdDIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_ValveLinearTwoWay_Active.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIgZmlsbD0iI0YwRjNGNyIvPgo8cGF0aCBkPSJNMjEgMzUuMTk2M0wyMSAyNC44MDM3TDMwIDMwTDIxIDM1LjE5NjNaIiBmaWxsPSIjRTdFQkYwIiBzdHJva2U9IiM2MzZFN0MiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMzkgMjQuODAzN0wzOSAzNS4xOTYzTDMwIDMwTDM5IDI0LjgwMzdaIiBmaWxsPSIjRTdFQkYwIiBzdHJva2U9IiM2MzZFN0MiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iMzAiIHkxPSIzMCIgeDI9IjMwIiB5Mj0iMjIiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjI3IiB5PSIxNyIgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iIzlCQ0Y5QyIgc3Ryb2tlPSIjMDA3MTFCIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_Manual_Indicator.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNSIgY3k9IjUiIHI9IjUiIGZpbGw9IiM1MTIxOEQiLz4KPHBhdGggZD0iTTQgMlYyLjVMNSAzLjVMNiAyLjVWMkg4VjhINlY0LjVMNSA1LjVMNCA0LjVWOEgyVjJINFoiIGZpbGw9IiNGNUVGRkYiLz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_Selected.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgb3BhY2l0eT0iMC41IiB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iMy41IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMUU1NEE0Ii8+Cjwvc3ZnPgo=" />
+  </Resources>
+  <Element id="eb231bee-46ea-4917-a778-7a6dffee86aa" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Tvåvägsventil">
+    <Properties>
+      <Property name="Name" source="C" value="Tvåvägsventil" type="string" />
+    </Properties>
+    <Element id="36f87318-eaf6-4f30-9453-c9ffe6102c40" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+      <Properties>
+        <Property name="Name" source="C" value="Knapp" type="string" />
+        <Property name="FillColor" source="C" value="204 204 204" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="15" type="double" />
+        <Property name="Width" source="C" value="60" type="double" />
+        <Property name="Height" source="C" value="60" type="double" />
+        <Property name="Use3DFrame" source="C" value="False" type="bool" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="False" type="bool" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="Font" source="C" value="Arial Normal 9" type="FontInfo" />
+        <Property name="Content" source="C" type="string" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="MouseUp" source="C" type="Event">
+          <Instruction name="NOP" />
+        </Property>
+        <Property name="MouseDown" source="C" type="Event">
+          <Instruction name="ToggleVariable">
+            <Parameter name="Destination" value="valdSymbol" type="LV" />
+            <Parameter name="Values" value="A.MWSE.Namn.;" type="C" />
+          </Instruction>
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="c9bff0ba-e721-4614-a187-83ee7032c7af" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Vald">
+      <Conditions>
+        <ConditionLogic id="90c929b3-ca0e-41af-8c9d-ba380be8f29d" name="Selected" operator="And">
+          <Condition leftType="Container" leftContainer="5c179df8-ec8e-44ae-97de-c8f7a3a979c9" leftName="valdSymbol" operator="Equal" rightType="Constant" rightValue="A.MWSE.Namn." />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="90c929b3-ca0e-41af-8c9d-ba380be8f29d" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Vald" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="15" type="double" />
+        <Property name="Y" source="C" value="20" type="double" />
+        <Property name="Width" source="C" value="50" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="5c179df8-ec8e-44ae-97de-c8f7a3a979c9" name="Media/MWSE_Selected.svg" />
+        </Property>
+        <Property name="Hidden" source="C" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="90c929b3-ca0e-41af-8c9d-ba380be8f29d" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="4349958e-5f9d-4af3-b472-6de608585d6d" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+      <Conditions>
+        <ConditionLogic id="973fa6be-7f9e-4150-868b-ca8a0c83f3a3" name="Aktiv" operator="And">
+          <Condition leftType="PDP" leftContainer="5c179df8-ec8e-44ae-97de-c8f7a3a979c9" leftName="A.MWSE.Namn.MV_Ut" operator="Greater" rightType="Constant" rightValue="0" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="973fa6be-7f9e-4150-868b-ca8a0c83f3a3" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Symbol" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="15" type="double" />
+        <Property name="Width" source="C" value="60" type="double" />
+        <Property name="Height" source="C" value="60" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="5c179df8-ec8e-44ae-97de-c8f7a3a979c9" name="Media/MWSE_ValveLinearTwoWay_Idle.svg" />
+        </Property>
+        <Property name="Content" source="File" condition="973fa6be-7f9e-4150-868b-ca8a0c83f3a3" type="ResourceAddress">
+          <Address container="5c179df8-ec8e-44ae-97de-c8f7a3a979c9" name="Media/MWSE_ValveLinearTwoWay_Active.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="44d729d0-0623-417c-b47c-4f12518f2c5e" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+      <Conditions>
+        <ConditionLogic id="03d4924d-a5b7-46b6-967d-0bb43673739b" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="5c179df8-ec8e-44ae-97de-c8f7a3a979c9" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="03d4924d-a5b7-46b6-967d-0bb43673739b" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Namn" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Namn" type="string" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="80" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="25 27 30" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="03d4924d-a5b7-46b6-967d-0bb43673739b" value="True" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="ff648c52-63fb-4b0c-b5e9-54404ad1e3cb" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Utsignal">
+      <Properties>
+        <Property name="Name" source="C" value="Utsignal" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="RV" value="A.MWSE.Namn.MV_Ut" type="PcdVariableAddress" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="70" type="double" />
+        <Property name="Width" source="C" value="80" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="25 27 30" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="8ca9b4ca-ffc2-4a49-8a06-a45c0417a397" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Hand">
+      <Conditions>
+        <ConditionLogic id="f53756f0-6dff-4b49-8323-0df864a93516" name="Hand" operator="And">
+          <Condition leftType="PDP" leftContainer="5c179df8-ec8e-44ae-97de-c8f7a3a979c9" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="f53756f0-6dff-4b49-8323-0df864a93516" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Hand" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="50" type="double" />
+        <Property name="Y" source="C" value="25" type="double" />
+        <Property name="Width" source="C" value="10" type="double" />
+        <Property name="Height" source="C" value="10" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="5c179df8-ec8e-44ae-97de-c8f7a3a979c9" name="Media/MWSE_Manual_Indicator.svg" />
+        </Property>
+        <Property name="Hidden" source="C" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="f53756f0-6dff-4b49-8323-0df864a93516" value="False" type="bool" />
+      </Properties>
+    </Element>
+  </Element>
+</Template>

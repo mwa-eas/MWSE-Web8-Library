@@ -1,0 +1,62 @@
+﻿<Template type="ViewElement" id="95ab33c8-b4a2-4518-8c1c-b3a5390f0122" version="1.0.0" name="Tank" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <LocalVariables>
+    <LocalVariable name="doljNamn" value="0" />
+  </LocalVariables>
+  <Resources>
+    <Resource name="Media/MWSE_Tank.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjExMCIgdmlld0JveD0iMCAwIDEwMCAxMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01MCAxMUM2MC45ODg2IDExIDcwLjkwMzUgMTIuMTE0OCA3OC4wNDIgMTMuODk5NEM4MS42MTg4IDE0Ljc5MzYgODQuNDQyMyAxNS44NDI2IDg2LjM0NzcgMTYuOTY4OEM4OC4zMTk5IDE4LjEzNDUgODkgMTkuMTkxMSA4OSAyMEM4OSAyMC44MDg5IDg4LjMxOTkgMjEuODY1NSA4Ni4zNDc3IDIzLjAzMTJDODQuNDQyMyAyNC4xNTc0IDgxLjYxODggMjUuMjA2NCA3OC4wNDIgMjYuMTAwNkM3MC45MDM1IDI3Ljg4NTIgNjAuOTg4NiAyOSA1MCAyOUMzOS4wMTE0IDI5IDI5LjA5NjUgMjcuODg1MiAyMS45NTggMjYuMTAwNkMxOC4zODEyIDI1LjIwNjQgMTUuNTU3NyAyNC4xNTc0IDEzLjY1MjMgMjMuMDMxMkMxMS42ODAxIDIxLjg2NTUgMTEgMjAuODA4OSAxMSAyMEMxMSAxOS4xOTExIDExLjY4MDEgMTguMTM0NSAxMy42NTIzIDE2Ljk2ODhDMTUuNTU3NyAxNS44NDI2IDE4LjM4MTIgMTQuNzkzNiAyMS45NTggMTMuODk5NEMyOS4wOTY1IDEyLjExNDggMzkuMDExNCAxMSA1MCAxMVoiIGZpbGw9IiNGMEYzRjciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik01MCA4MUM2MC45ODg2IDgxIDcwLjkwMzUgODIuMTE0OCA3OC4wNDIgODMuODk5NEM4MS42MTg4IDg0Ljc5MzYgODQuNDQyMyA4NS44NDI2IDg2LjM0NzcgODYuOTY4OEM4OC4zMTk5IDg4LjEzNDUgODkgODkuMTkxMSA4OSA5MEM4OSA5MC44MDg5IDg4LjMxOTkgOTEuODY1NSA4Ni4zNDc3IDkzLjAzMTJDODQuNDQyMyA5NC4xNTc0IDgxLjYxODggOTUuMjA2NCA3OC4wNDIgOTYuMTAwNkM3MC45MDM1IDk3Ljg4NTIgNjAuOTg4NiA5OSA1MCA5OUMzOS4wMTE0IDk5IDI5LjA5NjUgOTcuODg1MiAyMS45NTggOTYuMTAwNkMxOC4zODEyIDk1LjIwNjQgMTUuNTU3NyA5NC4xNTc0IDEzLjY1MjMgOTMuMDMxMkMxMS42ODAxIDkxLjg2NTUgMTEgOTAuODA4OSAxMSA5MEMxMSA4OS4xOTExIDExLjY4MDEgODguMTM0NSAxMy42NTIzIDg2Ljk2ODhDMTUuNTU3NyA4NS44NDI2IDE4LjM4MTIgODQuNzkzNiAyMS45NTggODMuODk5NEMyOS4wOTY1IDgyLjExNDggMzkuMDExNCA4MSA1MCA4MVoiIGZpbGw9IiNGMEYzRjciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjExIiB5PSIyMSIgd2lkdGg9Ijc4IiBoZWlnaHQ9IjY4IiBmaWxsPSIjRjBGM0Y3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
+  </Resources>
+  <Element id="eb2e3840-e338-4e10-960f-6d1f3c186fc3" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Tank">
+    <Properties>
+      <Property name="Name" source="C" value="Tank" type="string" />
+    </Properties>
+    <Element id="f3b6108c-f5f3-4b09-9517-4a1dd40cca4f" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+      <Properties>
+        <Property name="Name" source="C" value="Symbol" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="20" type="double" />
+        <Property name="Width" source="C" value="100" type="double" />
+        <Property name="Height" source="C" value="110" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="95ab33c8-b4a2-4518-8c1c-b3a5390f0122" name="Media/MWSE_Tank.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="7d8dfe99-a029-47c5-92cb-a48c572e64a7" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+      <Conditions>
+        <ConditionLogic id="35ce99f3-7f17-4f41-a38b-35aab0e9b40b" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="95ab33c8-b4a2-4518-8c1c-b3a5390f0122" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="35ce99f3-7f17-4f41-a38b-35aab0e9b40b" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Namn" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Namn" type="string" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="80" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="25 27 30" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="35ce99f3-7f17-4f41-a38b-35aab0e9b40b" value="True" type="bool" />
+      </Properties>
+    </Element>
+  </Element>
+</Template>

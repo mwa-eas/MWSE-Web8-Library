@@ -1,0 +1,655 @@
+﻿<Template type="ViewElement" id="9b7273f6-0402-47e2-8ae7-65fcbf00960b" version="1.0.0" name="Digitalsignalpanel" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Panel\Hand" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="770" type="absolute" />
+    <OffsetY value="50" type="absolute" />
+  </InitialLayout>
+  <StaticVariables>
+    <StaticVariable name="valdSymbol" />
+  </StaticVariables>
+  <RemoteVariables>
+    <RemoteVariable name="A.MWSE.Namn.Man" />
+    <RemoteVariable name="A.MWSE.Namn.ManV" />
+    <RemoteVariable name="A.MWSE.Namn.Invertering" />
+    <RemoteVariable name="A.MWSE.Namn.StartF_tid" />
+    <RemoteVariable name="A.MWSE.Namn.StartF_enhet" />
+    <RemoteVariable name="A.MWSE.Namn.StoppF_tid" />
+    <RemoteVariable name="A.MWSE.Namn.StoppF_enhet" />
+  </RemoteVariables>
+  <Resources>
+    <Resource name="Media/MWSE_Close.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg3NSIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84NzUpIj4KPHBhdGggZD0iTTYuNCAxOUw1IDE3LjZMMTAuNiAxMkw1IDYuNEw2LjQgNUwxMiAxMC42TDE3LjYgNUwxOSA2LjRMMTMuNCAxMkwxOSAxNy42TDE3LjYgMTlMMTIgMTMuNEw2LjQgMTlaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_dropDownButton.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCAzMCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjNzU3NzdBIiBmaWxsLW9wYWNpdHk9IjAuMDgiIHN0cm9rZT0iIzgxODM4NiIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxtYXNrIGlkPSJtYXNrMF83MjFfMjc4IiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIzIiB5PSIxMyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3QgeD0iMyIgeT0iMTMiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iI0Q5RDlEOSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfNzIxXzI3OCkiPgo8cGF0aCBkPSJNMTUgMjhMMTAgMjNIMjBMMTUgMjhaIiBmaWxsPSIjMTkxQjFFIi8+CjwvZz4KPC9zdmc+Cg==" />
+  </Resources>
+  <Element id="331a1dba-6270-4f31-9184-ab2896e5698f" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Digitalsignalpanel">
+    <Conditions>
+      <ConditionLogic id="62244f30-8aab-4730-9114-7f6c047183ea" name="Vald" operator="And">
+        <Condition leftType="Container" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="valdSymbol" operator="Equal" rightType="Constant" rightValue="A.MWSE.Namn." />
+      </ConditionLogic>
+    </Conditions>
+    <Properties>
+      <ConditionPriority>
+        <Condition id="62244f30-8aab-4730-9114-7f6c047183ea" />
+      </ConditionPriority>
+      <Property name="Name" source="C" value="Digitalsignalpanel" type="string" />
+      <Property name="Hidden" source="C" value="True" type="bool" />
+      <Property name="DisableEvents" source="C" value="True" type="bool" />
+      <Property name="Hidden" source="C" condition="62244f30-8aab-4730-9114-7f6c047183ea" value="False" type="bool" />
+      <Property name="DisableEvents" source="C" condition="62244f30-8aab-4730-9114-7f6c047183ea" value="False" type="bool" />
+    </Properties>
+    <Element id="9878fe76-3220-4ee0-abd2-812cb3c90a3d" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
+      <Properties>
+        <Property name="Name" source="C" value="Bakgrund" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="250" type="double" />
+        <Property name="Height" source="C" value="480" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="616fd3b0-726c-4183-b4fe-4d7a2c81ef27" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+      <Properties>
+        <Property name="Name" source="C" value="Namn" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Namn" type="string" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="10" type="double" />
+        <Property name="Width" source="C" value="170" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="a29565de-c332-429b-a76f-7b76c2565f04" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Tagg">
+      <Properties>
+        <Property name="Name" source="C" value="Tagg" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="A.MWSE.Namn." type="string" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="30" type="double" />
+        <Property name="Width" source="C" value="160" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="66 77 89" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="77a47503-d930-42aa-981c-f34adbdf18b2" type="365164dc-5073-11e0-8201-b603e0d72085" name="Line">
+      <Properties>
+        <Property name="Name" source="C" value="Line" type="string" />
+        <Property name="FillColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="60" type="double" />
+        <Property name="Width" source="C" value="230" type="double" />
+        <Property name="Height" source="C" value="1" type="double" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="d98c7e67-45ae-480f-aebe-7c37cdb959db" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Läge">
+      <Properties>
+        <Property name="Name" source="C" value="Läge" type="string" />
+      </Properties>
+      <Element id="08b0d2c1-2f7e-45a1-8c6f-8cbd92ad3edc" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Hand">
+        <Conditions>
+          <ConditionLogic id="583367df-38ac-4cf4-ae34-07fd6225da75" name="Active" operator="And">
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="1" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="583367df-38ac-4cf4-ae34-07fd6225da75" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="Hand" type="string" />
+          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="130" type="double" />
+          <Property name="Y" source="C" value="90" type="double" />
+          <Property name="Width" source="C" value="110" type="double" />
+          <Property name="Height" source="C" value="50" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="HasFillColor" source="C" value="True" type="bool" />
+          <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
+          <Property name="Font" source="C" value="Arial Bold 12" type="FontInfo" />
+          <Property name="Content" source="C" value="Hand" type="string" />
+          <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event">
+            <Instruction name="WriteValueToVariable">
+              <Parameter name="Value" value="1" type="C" />
+              <Parameter name="Destination" value="A.MWSE.Namn.Man" type="RV" />
+            </Instruction>
+          </Property>
+          <Property name="FillColor" source="C" condition="583367df-38ac-4cf4-ae34-07fd6225da75" value="211 183 255" type="Color" />
+          <Property name="HasFillColor" source="C" condition="583367df-38ac-4cf4-ae34-07fd6225da75" value="True" type="bool" />
+          <Property name="HasOutline" source="C" condition="583367df-38ac-4cf4-ae34-07fd6225da75" value="True" type="bool" />
+          <Property name="OutlineColor" source="C" condition="583367df-38ac-4cf4-ae34-07fd6225da75" value="63 25 113" type="Color" />
+        </Properties>
+      </Element>
+      <Element id="77d8a1fa-0179-4130-8b7b-62fd1a210007" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Auto">
+        <Conditions>
+          <ConditionLogic id="e65ba6ea-f542-4c78-939c-fea63db2798c" name="Active" operator="And">
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="0" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="e65ba6ea-f542-4c78-939c-fea63db2798c" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="Auto" type="string" />
+          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="10" type="double" />
+          <Property name="Y" source="C" value="90" type="double" />
+          <Property name="Width" source="C" value="110" type="double" />
+          <Property name="Height" source="C" value="50" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="HasFillColor" source="C" value="True" type="bool" />
+          <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
+          <Property name="Font" source="C" value="Arial Bold 12" type="FontInfo" />
+          <Property name="Content" source="C" value="Auto" type="string" />
+          <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event">
+            <Instruction name="WriteValueToVariable">
+              <Parameter name="Value" value="0" type="C" />
+              <Parameter name="Destination" value="A.MWSE.Namn.Man" type="RV" />
+            </Instruction>
+          </Property>
+          <Property name="FillColor" source="C" condition="e65ba6ea-f542-4c78-939c-fea63db2798c" value="155 207 156" type="Color" />
+          <Property name="HasFillColor" source="C" condition="e65ba6ea-f542-4c78-939c-fea63db2798c" value="True" type="bool" />
+          <Property name="HasOutline" source="C" condition="e65ba6ea-f542-4c78-939c-fea63db2798c" value="True" type="bool" />
+          <Property name="OutlineColor" source="C" condition="e65ba6ea-f542-4c78-939c-fea63db2798c" value="0 113 27" type="Color" />
+        </Properties>
+      </Element>
+      <Element id="dc73718d-d99f-4aff-a122-afc3231c29fc" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+        <Properties>
+          <Property name="Name" source="C" value="Text" type="string" />
+          <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+          <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Text" source="CSV" value="Läge" type="string" />
+          <Property name="X" source="C" value="10" type="double" />
+          <Property name="Y" source="C" value="70" type="double" />
+          <Property name="Width" source="C" value="230" type="double" />
+          <Property name="Height" source="C" value="20" type="double" />
+          <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        </Properties>
+      </Element>
+    </Element>
+    <Element id="31be8330-743d-4ea0-b56b-b853bd409c1e" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Utsignal">
+      <Properties>
+        <Property name="Name" source="C" value="Utsignal" type="string" />
+      </Properties>
+      <Element id="6077bc7f-ada2-433d-8285-3585089ebc99" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+        <Properties>
+          <Property name="Name" source="C" value="Text" type="string" />
+          <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+          <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+          <Property name="OutlineWidth" source="C" value="1" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="Text" source="CSV" value="Utsignal" type="string" />
+          <Property name="X" source="C" value="10" type="double" />
+          <Property name="Y" source="C" value="150" type="double" />
+          <Property name="Width" source="C" value="230" type="double" />
+          <Property name="Height" source="C" value="20" type="double" />
+          <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+          <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+          <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="1cb70f69-6602-4898-a45d-d9f044547fa4" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Till">
+        <Conditions>
+          <ConditionLogic id="3142f120-00c1-4e7e-b5dd-202aef2e7c05" name="Hand Active" operator="And">
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.ManV" operator="Equal" rightType="Constant" rightValue="1" />
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="1" />
+          </ConditionLogic>
+          <ConditionLogic id="d2680f87-fe9c-420f-9c21-372aaa182df1" name="Auto Active" operator="And">
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.ManV" operator="Equal" rightType="Constant" rightValue="1" />
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="0" />
+          </ConditionLogic>
+          <ConditionLogic id="a9c77ad4-ec18-4e3e-90f2-3cb9e7afe3ee" name="Auto Inactive" operator="And">
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.ManV" operator="Equal" rightType="Constant" rightValue="0" />
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="0" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="3142f120-00c1-4e7e-b5dd-202aef2e7c05" />
+            <Condition id="d2680f87-fe9c-420f-9c21-372aaa182df1" />
+            <Condition id="a9c77ad4-ec18-4e3e-90f2-3cb9e7afe3ee" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="Till" type="string" />
+          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="10" type="double" />
+          <Property name="Y" source="C" value="170" type="double" />
+          <Property name="Width" source="C" value="110" type="double" />
+          <Property name="Height" source="C" value="50" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="HasFillColor" source="C" value="True" type="bool" />
+          <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
+          <Property name="Font" source="C" value="Arial Bold 12" type="FontInfo" />
+          <Property name="Content" source="CSV" value="Till" type="string" />
+          <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event">
+            <Instruction name="WriteValueToVariable">
+              <Parameter name="Value" value="1" type="C" />
+              <Parameter name="Destination" value="A.MWSE.Namn.ManV" type="RV" />
+            </Instruction>
+          </Property>
+          <Property name="FillColor" source="C" condition="3142f120-00c1-4e7e-b5dd-202aef2e7c05" value="211 183 255" type="Color" />
+          <Property name="HasFillColor" source="C" condition="3142f120-00c1-4e7e-b5dd-202aef2e7c05" value="True" type="bool" />
+          <Property name="HasOutline" source="C" condition="3142f120-00c1-4e7e-b5dd-202aef2e7c05" value="True" type="bool" />
+          <Property name="OutlineColor" source="C" condition="3142f120-00c1-4e7e-b5dd-202aef2e7c05" value="63 25 113" type="Color" />
+          <Property name="FillColor" source="C" condition="d2680f87-fe9c-420f-9c21-372aaa182df1" value="218 209 242" type="Color" />
+          <Property name="OutlineColor" source="C" condition="d2680f87-fe9c-420f-9c21-372aaa182df1" value="159 146 186" type="Color" />
+          <Property name="DisableEvents" source="C" condition="d2680f87-fe9c-420f-9c21-372aaa182df1" value="False" type="bool" />
+          <Property name="FillColor" source="C" condition="a9c77ad4-ec18-4e3e-90f2-3cb9e7afe3ee" value="220 222 230" type="Color" />
+          <Property name="OutlineColor" source="C" condition="a9c77ad4-ec18-4e3e-90f2-3cb9e7afe3ee" value="145 150 159" type="Color" />
+          <Property name="DisableEvents" source="C" condition="a9c77ad4-ec18-4e3e-90f2-3cb9e7afe3ee" value="False" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="e714567c-8166-4ff2-9ea1-e281fd0c8c6a" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Från">
+        <Conditions>
+          <ConditionLogic id="fca6e0c3-a12a-40a8-b60b-391ffed4d552" name="Hand Active" operator="And">
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.ManV" operator="Equal" rightType="Constant" rightValue="0" />
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="1" />
+          </ConditionLogic>
+          <ConditionLogic id="6e1946da-931f-45ac-b45a-92bbc0ab8784" name="Auto Active" operator="And">
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.ManV" operator="Equal" rightType="Constant" rightValue="0" />
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="0" />
+          </ConditionLogic>
+          <ConditionLogic id="688c59c3-b692-4eef-b376-514abc9e8baf" name="Auto Inactive" operator="And">
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.ManV" operator="Equal" rightType="Constant" rightValue="1" />
+            <Condition leftType="PDP" leftContainer="9b7273f6-0402-47e2-8ae7-65fcbf00960b" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="0" />
+          </ConditionLogic>
+        </Conditions>
+        <Properties>
+          <ConditionPriority>
+            <Condition id="fca6e0c3-a12a-40a8-b60b-391ffed4d552" />
+            <Condition id="6e1946da-931f-45ac-b45a-92bbc0ab8784" />
+            <Condition id="688c59c3-b692-4eef-b376-514abc9e8baf" />
+          </ConditionPriority>
+          <Property name="Name" source="C" value="Från" type="string" />
+          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
+          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="130" type="double" />
+          <Property name="Y" source="C" value="170" type="double" />
+          <Property name="Width" source="C" value="110" type="double" />
+          <Property name="Height" source="C" value="50" type="double" />
+          <Property name="Use3DFrame" source="C" value="False" type="bool" />
+          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="HasFillColor" source="C" value="True" type="bool" />
+          <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
+          <Property name="Font" source="C" value="Arial Bold 12" type="FontInfo" />
+          <Property name="Content" source="CSV" value="Från" type="string" />
+          <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="MouseUp" source="C" type="Event">
+            <Instruction name="WriteValueToVariable">
+              <Parameter name="Value" value="0" type="C" />
+              <Parameter name="Destination" value="A.MWSE.Namn.ManV" type="RV" />
+            </Instruction>
+          </Property>
+          <Property name="FillColor" source="C" condition="fca6e0c3-a12a-40a8-b60b-391ffed4d552" value="211 183 255" type="Color" />
+          <Property name="HasFillColor" source="C" condition="fca6e0c3-a12a-40a8-b60b-391ffed4d552" value="True" type="bool" />
+          <Property name="HasOutline" source="C" condition="fca6e0c3-a12a-40a8-b60b-391ffed4d552" value="True" type="bool" />
+          <Property name="OutlineColor" source="C" condition="fca6e0c3-a12a-40a8-b60b-391ffed4d552" value="63 25 113" type="Color" />
+          <Property name="FillColor" source="C" condition="6e1946da-931f-45ac-b45a-92bbc0ab8784" value="218 209 242" type="Color" />
+          <Property name="OutlineColor" source="C" condition="6e1946da-931f-45ac-b45a-92bbc0ab8784" value="159 146 186" type="Color" />
+          <Property name="DisableEvents" source="C" condition="6e1946da-931f-45ac-b45a-92bbc0ab8784" value="False" type="bool" />
+          <Property name="FillColor" source="C" condition="688c59c3-b692-4eef-b376-514abc9e8baf" value="220 222 230" type="Color" />
+          <Property name="OutlineColor" source="C" condition="688c59c3-b692-4eef-b376-514abc9e8baf" value="145 150 159" type="Color" />
+          <Property name="DisableEvents" source="C" condition="688c59c3-b692-4eef-b376-514abc9e8baf" value="False" type="bool" />
+        </Properties>
+      </Element>
+    </Element>
+    <Element id="9e75894e-f4a6-4f4e-8736-f42d4519d898" type="365164dc-5073-11e0-8201-b603e0d72085" name="Line">
+      <Properties>
+        <Property name="Name" source="C" value="Line" type="string" />
+        <Property name="FillColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="230" type="double" />
+        <Property name="Width" source="C" value="230" type="double" />
+        <Property name="Height" source="C" value="1" type="double" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="e56b3d60-8b9f-4640-b934-fbad1b19216b" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+      <Properties>
+        <Property name="Name" source="C" value="Text" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="CSV" value="Invertering" type="TranslationAddress" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="240" type="double" />
+        <Property name="Width" source="C" value="230" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="278e84af-19d9-457b-bc7c-e51c4c111204" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+      <Properties>
+        <Property name="Name" source="C" value="Rectangle" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="260" type="double" />
+        <Property name="Width" source="C" value="230" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="1eda4999-d3c8-4304-af03-0acbde3d5b2b" type="845eac71-34f0-4077-92d2-9b579e288b89" name="Dropdown Box">
+      <Properties>
+        <Property name="Name" source="C" value="Dropdown Box" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="260" type="double" />
+        <Property name="Width" source="C" value="230" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="False" type="bool" />
+        <Property name="WriteIndex" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
+        <Property name="Destination" source="RV" type="PcdVariableAddress">
+          <Address container="9b7273f6-0402-47e2-8ae7-65fcbf00960b" name="A.MWSE.Namn.Invertering" />
+        </Property>
+        <Property name="HasDropDownImage" source="C" value="True" type="bool" />
+        <Property name="Items" source="CSV" value="Normal&#xA;Inverterad" type="TranslationAddress" />
+        <Property name="DropDownImage" source="File" type="ResourceAddress">
+          <Address container="9b7273f6-0402-47e2-8ae7-65fcbf00960b" name="Media/MWSE_dropDownButton.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="68ab165e-17aa-40f8-97b6-cf84d44bd1fe" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+      <Properties>
+        <Property name="Name" source="C" value="Text" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="CSV" value="Tillslagsfördröjning" type="TranslationAddress" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="320" type="double" />
+        <Property name="Width" source="C" value="230" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="656bc88c-046b-4a8d-aac5-2131062d9386" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+      <Properties>
+        <Property name="Name" source="C" value="Rectangle" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="340" type="double" />
+        <Property name="Width" source="C" value="110" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="e62d8c50-e040-419c-a1f3-fad18fe9ae2a" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+      <Properties>
+        <Property name="Name" source="C" value="Edit Box" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="0" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
+        <Property name="X" source="C" value="20" type="double" />
+        <Property name="Y" source="C" value="341" type="double" />
+        <Property name="Width" source="C" value="90" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Password" source="C" value="False" type="bool" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="False" type="bool" />
+        <Property name="Use3DFrame" source="C" value="False" type="bool" />
+        <Property name="TextAlignment" source="C" value="Right Center" type="TextPosition" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Text" source="RV" type="PcdVariableAddress">
+          <Address container="9b7273f6-0402-47e2-8ae7-65fcbf00960b" name="A.MWSE.Namn.StartF_tid" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="f031f45e-e134-4704-a1a8-b1547a610440" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+      <Properties>
+        <Property name="Name" source="C" value="Rectangle" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="130" type="double" />
+        <Property name="Y" source="C" value="340" type="double" />
+        <Property name="Width" source="C" value="110" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="5ff930d2-e12d-4a1a-a4e6-68820e12be7f" type="845eac71-34f0-4077-92d2-9b579e288b89" name="Dropdown Box">
+      <Properties>
+        <Property name="Name" source="C" value="Dropdown Box" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="130" type="double" />
+        <Property name="Y" source="C" value="340" type="double" />
+        <Property name="Width" source="C" value="110" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="False" type="bool" />
+        <Property name="WriteIndex" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
+        <Property name="Destination" source="RV" type="PcdVariableAddress">
+          <Address container="9b7273f6-0402-47e2-8ae7-65fcbf00960b" name="A.MWSE.Namn.StartF_enhet" />
+        </Property>
+        <Property name="HasDropDownImage" source="C" value="True" type="bool" />
+        <Property name="Items" source="CSV" value="Sekunder&#xA;Minuter&#xA;Timmar" type="TranslationAddress" />
+        <Property name="DropDownImage" source="File" type="ResourceAddress">
+          <Address container="9b7273f6-0402-47e2-8ae7-65fcbf00960b" name="Media/MWSE_dropDownButton.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="f381f056-973b-47ea-a5a1-b504e1a17ab2" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+      <Properties>
+        <Property name="Name" source="C" value="Text" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="CSV" value="Frånslagsfördröjning" type="TranslationAddress" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="400" type="double" />
+        <Property name="Width" source="C" value="230" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="27 35 47" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="e1cd9988-9fe6-4257-bac8-37e69b6e9cb0" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+      <Properties>
+        <Property name="Name" source="C" value="Rectangle" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="10" type="double" />
+        <Property name="Y" source="C" value="420" type="double" />
+        <Property name="Width" source="C" value="110" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="25ae4d1c-b7b0-4595-9ae2-bb8b327d28c2" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+      <Properties>
+        <Property name="Name" source="C" value="Edit Box" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="0" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
+        <Property name="X" source="C" value="20" type="double" />
+        <Property name="Y" source="C" value="421" type="double" />
+        <Property name="Width" source="C" value="90" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Password" source="C" value="False" type="bool" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="False" type="bool" />
+        <Property name="Use3DFrame" source="C" value="False" type="bool" />
+        <Property name="TextAlignment" source="C" value="Right Center" type="TextPosition" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Text" source="RV" type="PcdVariableAddress">
+          <Address container="9b7273f6-0402-47e2-8ae7-65fcbf00960b" name="A.MWSE.Namn.StoppF_tid" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="3c51babd-c30e-46b9-a6cc-4ff711075432" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+      <Properties>
+        <Property name="Name" source="C" value="Rectangle" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="130" type="double" />
+        <Property name="Y" source="C" value="420" type="double" />
+        <Property name="Width" source="C" value="110" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="fa7801b3-de2e-45c3-b7a2-c43b79beb253" type="845eac71-34f0-4077-92d2-9b579e288b89" name="Dropdown Box">
+      <Properties>
+        <Property name="Name" source="C" value="Dropdown Box" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="2" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="130" type="double" />
+        <Property name="Y" source="C" value="420" type="double" />
+        <Property name="Width" source="C" value="110" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="False" type="bool" />
+        <Property name="WriteIndex" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
+        <Property name="Destination" source="RV" type="PcdVariableAddress">
+          <Address container="9b7273f6-0402-47e2-8ae7-65fcbf00960b" name="A.MWSE.Namn.StoppF_enhet" />
+        </Property>
+        <Property name="HasDropDownImage" source="C" value="True" type="bool" />
+        <Property name="Items" source="CSV" value="Sekunder&#xA;Minuter&#xA;Timmar" type="TranslationAddress" />
+        <Property name="DropDownImage" source="File" type="ResourceAddress">
+          <Address container="9b7273f6-0402-47e2-8ae7-65fcbf00960b" name="Media/MWSE_dropDownButton.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="4f2c4df1-939d-42ed-95e8-8d8723946a3a" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Stäng">
+      <Properties>
+        <Property name="Name" source="C" value="Stäng" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="214.0" type="double" />
+        <Property name="Y" source="C" value="12.0" type="double" />
+        <Property name="Width" source="C" value="24" type="double" />
+        <Property name="Height" source="C" value="24" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="9b7273f6-0402-47e2-8ae7-65fcbf00960b" name="Media/MWSE_Close.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="699f034f-749a-4e01-8a21-18f0a10082c6" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="StängKnapp">
+      <Properties>
+        <Property name="Name" source="C" value="StängKnapp" type="string" />
+        <Property name="X" source="C" value="202.0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="48" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Use3DFrame" source="C" value="False" type="bool" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="False" type="bool" />
+        <Property name="Content" source="C" type="string" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="MouseDown" source="C" type="Event">
+          <Instruction name="WriteValueToVariable">
+            <Parameter name="Value" type="C" />
+            <Parameter name="Destination" value="valdSymbol" type="LV" />
+          </Instruction>
+        </Property>
+      </Properties>
+    </Element>
+  </Element>
+</Template>

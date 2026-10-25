@@ -1,0 +1,68 @@
+name: Fel eller förslag
+description: Rapportera ett fel i en mall eller i guiden, eller föreslå en förbättring.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Förrådet är publikt.** Allt du skriver här kan läsas av alla. Skriv inte anläggningsnamn,
+        kundnamn, adresser, IP-adresser, inloggningar eller annat som pekar ut en anläggning.
+        Byt ut sådant mot påhittade namn, och beskär eller maskera skärmbilder.
+
+        Behöver du dela uppgifter som inte ska vara offentliga, kontakta vår tekniska support i stället:
+        support@mwa.se eller +46 8 594 118 40, vardagar kl. 08–16.
+  - type: dropdown
+    id: typ
+    attributes:
+      label: Typ
+      options:
+        - Fel i en mall
+        - Fel i guiden
+        - Förslag
+        - Fråga
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Bibliotekets version
+      description: Står i zip-filens namn, MWSE-Web8-Library-<version>.zip.
+    validations:
+      required: true
+  - type: input
+    id: mall
+    attributes:
+      label: Mall eller avsnitt i guiden
+      placeholder: "Till exempel Ventilpanel, eller guiden avsnitt 5.2"
+  - type: input
+    id: miljo
+    attributes:
+      label: Miljö
+      description: PG5- och Web Editor 8-version, PCD-typ och firmware, MWSE FBox-bibliotekets version.
+      placeholder: "Till exempel PG5 2.3.196, PCD3.M5360 med COSinus 1.28.51, MWSE_V25_10_003"
+  - type: textarea
+    id: beskrivning
+    attributes:
+      label: Vad hände, och vad väntade du dig?
+      description: För ett förslag, beskriv vad du vill kunna göra.
+    validations:
+      required: true
+  - type: textarea
+    id: steg
+    attributes:
+      label: Så här gör man för att få fram felet
+      placeholder: |
+        1. Placera ...
+        2. Byt A.MWSE.Namn. mot ...
+        3. ...
+  - type: textarea
+    id: bilder
+    attributes:
+      label: Skärmbilder
+      description: Dra in bilder här. Kontrollera först att de inte visar anläggningsnamn eller adresser.
+  - type: checkboxes
+    id: inga-uppgifter
+    attributes:
+      label: Kontroll
+      options:
+        - label: Jag har inte skrivit anläggningsnamn, kunduppgifter, IP-adresser eller inloggningar.
+          required: true
