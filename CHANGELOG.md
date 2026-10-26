@@ -78,6 +78,9 @@ Värmeväxlare X och Värmeväxlare V. Kategori `MWSE\Symbol\Statisk`, mallversi
 | Spjällinställning | `MWSE\Inställning\Spjäll` | 1.0.0 | Spjäll (`MWSE_Lflaps2`): larmfördröjningar |
 | Kurvinställning 2, 3, 4, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | 1.0.0 | Börvärdeskurva med 2–10 punkter (`MWSE_BvK2` … `MWSE_BvK10`), med min och max |
 | Kurvinställning med sänkning 2, 5, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | 1.0.0 | Börvärdeskurva med sänkning (`MWSE_BvK2s`, `MWSE_BvK5s` … `MWSE_BvK10s`) |
+| Kurvdiagram | `MWSE\Inställning\Börvärdeskurva` | 1.0.0 | Börvärdeskurva 5 (`MWSE_BvK5`): kurvan ritad med aktuella värden |
+| Kurvdiagram 2, 3, 4, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | 1.0.0 | Börvärdeskurva med 2–10 punkter (`MWSE_BvK2` … `MWSE_BvK10`): kurvan ritad med aktuella värden |
+| Kurvdiagram med sänkning 2, 5, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | 1.0.0 | Börvärdeskurva med sänkning (`MWSE_BvK2s`, `MWSE_BvK5s` … `MWSE_BvK10s`): kurvan och den sänkta kurvan |
 | Veckoschemainställning | `MWSE\Inställning\Tidkanal` | 1.0.0 | Tidkanal, veckoschema (`MWSE_TKref`, `MWSE_TKing`) |
 | Veckodagsinställning | `MWSE\Inställning\Tidkanal` | 1.0.0 | Tidkanal, en veckodag (`MWSE_TKM`) |
 | Veckopulsinställning | `MWSE\Inställning\Tidkanal` | 1.0.0 | Veckopuls (`MWSE_Vpuls`) |

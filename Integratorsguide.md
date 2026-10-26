@@ -24,19 +24,21 @@ markerat som slutsats.
 
 ## 1. Vad biblioteket innehåller
 
-Biblioteket har 81 mallar:
+Biblioteket har 99 mallar:
 
 - **15 symboler med signaler:** pump, fläkt, motor, kompressor, spjäll, brandspjäll, tre ventiler
   (tvåväg, treväg, trepunkt), fyra givare, roterande värmeväxlare och Panelknapp. En symbol visar
   vila, drift/aktiv och i förekommande fall fel, hand och larm. Ett klick öppnar objektets
   faceplate.
-- **13 statiska symboler:** batterier, filter, radiator, tankar, kretsar och plattvärmeväxlare.
+- **13 statiska symboler:** batterier, filter, radiator, tankar, kretsar och två värmeväxlare för ventilation.
   Bara en bild och en namnetikett, utan signaler.
 - **9 faceplates** (manöverpaneler) för motor, givare, ventil, spjäll, trepunktsventil,
   regulator och handstyrning.
 - **39 inställnings- och statusblock** för larmgränser, fördröjningar, skalning, regulatorer,
   börvärdeskurvor, tidkanaler och handstatus. De är alltid synliga.
-- **5 sidmallar:** larmlista, larmsummering, topplist, navigeringsmeny och inloggning.
+- **16 kurvdiagram** som ritar börvärdeskurvorna med aktuella värden, ett per kurv-FBox.
+- **7 sidmallar:** larmlista, larmsummering, topplist, navigeringsmeny, sidofält, inloggning och
+  inloggningsbakgrund.
 
 Symboler, faceplates och inställningsblock läser och skriver MWSE-FBoxarnas A-symboler, som heter
 `A.MWSE.<anläggning>.<objekt>.<signal>`, till exempel `A.MWSE.VS01.P01.R_Ut`. I mallarna står
@@ -101,7 +103,7 @@ felmeddelande när importen är klar. Om något går fel visas en importlogg.
 I ett prov med de första 21 mallarna kom alla in, och **Libraries** visade namnen med å, ä och ö
 rätt. Filnamnen i zip-filen är därför skrivna utan å, ä och ö.
 
-> **Ännu inte verifierat:** importen av alla 81 mallar. Tills vidare: om importen misslyckas,
+> **Ännu inte verifierat:** importen av alla 99 mallar. Tills vidare: om importen misslyckas,
 > importera de lösa filerna i `mallar/` enligt [3.2](#32-alternativ-lösa-mallfiler).
 
 *Källa: Web Editor 8-hjälpen, Windows, s. 25–26 (Libraries Window: Import..., Importing
@@ -756,6 +758,46 @@ Behöver vyn fler åtgärder i samma händelse, lägg dem i en funktion.
 *Källa: Web Editor 8-hjälpen, Windows, s. 7 (instruktionen Write) och s. 20–21 (Actions Tab).
 Händelsens och fältens namn i editorn: prövat 2026-10-23.*
 
+### 6.9 Kurvdiagram
+
+Ett kurvdiagram ritar en börvärdeskurva med PCD:ns aktuella värden: utetemperatur längs botten,
+framledningstemperatur uppåt. Det finns ett diagram per kurv-FBox, med samma nummer som
+inställningsblocket:
+
+| Mall | FBox | Ritar |
+|---|---|---|
+| Kurvdiagram | Börvärdeskurva 5 (`MWSE_BvK5`) | Kurvan |
+| Kurvdiagram 2, 3, 4, 6, 7, 8, 9, 10 | Börvärdeskurva 2–10 (`MWSE_BvK<n>`) | Kurvan |
+| Kurvdiagram med sänkning 2, 5, 6, 7, 8, 9, 10 | Börvärdesk. m. sänkning (`MWSE_BvK<n>s`) | Kurvan och den sänkta kurvan, streckad |
+
+Kategorin är `MWSE\Inställning\Börvärdeskurva`. Diagrammet är 310 × 260 px, lika brett som
+inställningsblockets kolumn och med samma rubrikrad. Placera det bredvid kurvans inställningsblock
+och koppla det på samma sätt, till samma grupp ([6.6](#66-inställningsblock)). Det läser bara och
+skriver inget.
+
+- **Axlarna är fasta:** utetemperatur −30 till +20 °C, framledning 0 till 100 °C, med stödlinjer
+  vid etiketterna. De följer inte kurvans värden.
+- **En punkt utanför axlarna döljs**, liksom kurvdelarna till och från den. Labbets kurva har till
+  exempel X1 = +32 °C; den punkten och kurvdelen till X2 syns inte.
+- Diagrammet ritas om inom ungefär en sekund när ett värde ändras, till exempel från
+  inställningsblocket.
+- Flera diagram i samma vy påverkar inte varandra, även två av samma mall.
+- Diagrammet visar ingen aktuell driftpunkt. Kurv-FBoxarna publicerar inte sin ingång
+  (utetemperaturen) eller utgång (börvärdet) som A-symboler.
+
+**Prövat** 2026-10-26: alla 16 mot en simulerad PCD, och Kurvdiagram mot PCD:n på labbets
+Börvärdeskurva 5 (`A.MWSE.VS01.BvK.`).
+
+> **Ännu inte verifierat:** visningen i TEQ och andra visningar än HTML5, som inte är prövade.
+> Inte heller placering och Find and Replace i editorn: i testbygget är diagrammen placerade så
+> som editorn placerar mallar. Tills vidare: kontrollera efter nedladdning att kurvan står där
+> inställningsblockets värden säger.
+
+*Källa: Web Editor-manualen, Part 29 ("Event Box": On Refresh; "X/Y Offset" och "Width/Height
+Offset": en förskjutning kan vara en intern variabel) och Part 09 ("Floating Point Arithmetic
+Instructions"). Signalerna: FBox-makrona i `MWSEFamilyAllmant.lib`, blocket "Skapa A-Symboler"
+i varje kurvmakro.*
+
 ## 7. Sidmallar
 
 Sidmallarna bygger själva sidan: larmlista, larmsummering, topplist, meny, sidofält och
@@ -944,7 +986,8 @@ En sida med alla sidmallar, för en vy på 1020 × 600 px:
 1. **Topplist** överst i vyn, på (0, 0).
 2. **Larmsummering** på (916, 0) relativt topplisten, i samma lager och **efter** Topplist, så att
    den ritas ovanpå.
-3. **Sidofält** på (770, 48), i ett lager under `Paneler`. Spalten är fast på varje vy: alla
+3. **Sidofält** på (770, 48), i ett lager under `Paneler`, på varje vy som har faceplates eller
+   panelknappar. Vyer utan dem, som larmvyn, använder hela bredden. I sidofältet öppnas alla
    faceplates öppnas överst i den, på (770, 50) i lagret `Paneler`
    ([6.1](#61-lager-för-faceplates)), och panelknapparna läggs under dem, från (770, 408) och
    56 px nedåt per knapp. Digitalsignalpanel är 480 px hög och täcker knapparna medan den är
@@ -1118,6 +1161,9 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Kurvinställning | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva 5 (`MWSE_BvK5`) | `BPX1`–`BPX5`, `BPY1`–`BPY5` | 1.0.0 |
 | Kurvinställning 2, 3, 4, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva *n* (`MWSE_BvK<n>`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `YminV`, `YmaxV` | 1.0.0 |
 | Kurvinställning med sänkning 2, 5, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdesk. m. sänkning *n* (`MWSE_BvK<n>s`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `BPY1n`–`BPY<n>n`, `YminV`, `YmaxV` | 1.0.0 |
+| Kurvdiagram | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva 5 (`MWSE_BvK5`) | `BPX1`–`BPX5`, `BPY1`–`BPY5` (läser) | 1.0.0 |
+| Kurvdiagram 2, 3, 4, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva *n* (`MWSE_BvK<n>`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>` (läser) | 1.0.0 |
+| Kurvdiagram med sänkning 2, 5, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdesk. m. sänkning *n* (`MWSE_BvK<n>s`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `BPY1n`–`BPY<n>n` (läser) | 1.0.0 |
 | Pumpstartinställning | `MWSE\Inställning\Pumpstart` | Pumpstart (`MWSE_Pumpst`) | `StartGrD`, `StartGr`, `StartF_tid`, `StartF_enhet`, `StoppGr`, `StoppF_tid`, `StoppF_enhet` | 1.0.0 |
 | Veckoschemainställning | `MWSE\Inställning\Tidkanal` | Tidkanal m. referens eller m. ingångar (`MWSE_TKref`, `MWSE_TKing`) | `månTill`, `månFrån`, `tisTill`, `tisFrån`, `onsTill`, `onsFrån`, `torsTill`, `torsFrån`, `freTill`, `freFrån`, `lörTill`, `lörFrån`, `sönTill`, `sönFrån`, `dfhTill`, `dfhFrån`, `hdTill`, `hdFrån` | 1.0.0 |
 | Veckodagsinställning | `MWSE\Inställning\Tidkanal` | Tidkanal, veckodag (`MWSE_TKM`) | `Dag`, `TidT`, `TidF` | 1.0.0 |
@@ -1199,7 +1245,8 @@ slutsats.
 PCD3.M5360 med COSinus 1.28.51 och MWSE FBox-biblioteket `MWSE_V25_10_003`. Prov mot PCD gjordes
 2026-10-23 med de första 21 mallarna. De övriga 60 är prövade samma dag mot en simulerad PCD och i
 ett testbygge, och 2026-10-25 mot PCD:n, där labbprogrammet har FBoxen
-([avsnitt 10](#10-mallar-och-fbox-signaler)).
+([avsnitt 10](#10-mallar-och-fbox-signaler)). De 16 kurvdiagrammen är prövade 2026-10-26 på
+samma sätt ([6.9](#69-kurvdiagram)).
 
 ## 12. Support
 
