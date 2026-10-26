@@ -27,7 +27,7 @@
         <Property name="X" source="C" value="0" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
         <Property name="Width" source="C" value="310" type="double" />
-        <Property name="Height" source="C" value="506" type="double" />
+        <Property name="Height" source="C" value="490" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
@@ -231,7 +231,7 @@
         <Property name="OutlineWidth" source="C" value="2" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="130" type="double" />
-        <Property name="Y" source="C" value="196" type="double" />
+        <Property name="Y" source="C" value="190" type="double" />
         <Property name="Width" source="C" value="160" type="double" />
         <Property name="Height" source="C" value="50" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -248,7 +248,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
         <Property name="X" source="C" value="140" type="double" />
-        <Property name="Y" source="C" value="198" type="double" />
+        <Property name="Y" source="C" value="192" type="double" />
         <Property name="Width" source="C" value="140" type="double" />
         <Property name="Height" source="C" value="46" type="double" />
         <Property name="Password" source="C" value="False" type="bool" />
@@ -269,7 +269,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="CSV" value="P-faktor" type="string" />
         <Property name="X" source="C" value="20" type="double" />
-        <Property name="Y" source="C" value="211" type="double" />
+        <Property name="Y" source="C" value="205" type="double" />
         <Property name="Width" source="C" value="110" type="double" />
         <Property name="Height" source="C" value="20" type="double" />
         <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
@@ -286,7 +286,7 @@
         <Property name="OutlineWidth" source="C" value="2" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="130" type="double" />
-        <Property name="Y" source="C" value="256" type="double" />
+        <Property name="Y" source="C" value="250" type="double" />
         <Property name="Width" source="C" value="160" type="double" />
         <Property name="Height" source="C" value="50" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -303,7 +303,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
         <Property name="X" source="C" value="140" type="double" />
-        <Property name="Y" source="C" value="258" type="double" />
+        <Property name="Y" source="C" value="252" type="double" />
         <Property name="Width" source="C" value="140" type="double" />
         <Property name="Height" source="C" value="46" type="double" />
         <Property name="Password" source="C" value="False" type="bool" />
@@ -324,7 +324,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="CSV" value="I-tid" type="string" />
         <Property name="X" source="C" value="20" type="double" />
-        <Property name="Y" source="C" value="271" type="double" />
+        <Property name="Y" source="C" value="265" type="double" />
         <Property name="Width" source="C" value="110" type="double" />
         <Property name="Height" source="C" value="20" type="double" />
         <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
@@ -341,7 +341,7 @@
         <Property name="OutlineWidth" source="C" value="2" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="130" type="double" />
-        <Property name="Y" source="C" value="316" type="double" />
+        <Property name="Y" source="C" value="310" type="double" />
         <Property name="Width" source="C" value="160" type="double" />
         <Property name="Height" source="C" value="50" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -358,7 +358,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
         <Property name="X" source="C" value="140" type="double" />
-        <Property name="Y" source="C" value="318" type="double" />
+        <Property name="Y" source="C" value="312" type="double" />
         <Property name="Width" source="C" value="140" type="double" />
         <Property name="Height" source="C" value="46" type="double" />
         <Property name="Password" source="C" value="False" type="bool" />
@@ -379,7 +379,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="CSV" value="D-tid" type="string" />
         <Property name="X" source="C" value="20" type="double" />
-        <Property name="Y" source="C" value="331" type="double" />
+        <Property name="Y" source="C" value="325" type="double" />
         <Property name="Width" source="C" value="110" type="double" />
         <Property name="Height" source="C" value="20" type="double" />
         <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
@@ -396,7 +396,7 @@
         <Property name="OutlineWidth" source="C" value="2" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="130" type="double" />
-        <Property name="Y" source="C" value="376" type="double" />
+        <Property name="Y" source="C" value="370" type="double" />
         <Property name="Width" source="C" value="160" type="double" />
         <Property name="Height" source="C" value="50" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -413,7 +413,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
         <Property name="X" source="C" value="140" type="double" />
-        <Property name="Y" source="C" value="378" type="double" />
+        <Property name="Y" source="C" value="372" type="double" />
         <Property name="Width" source="C" value="140" type="double" />
         <Property name="Height" source="C" value="46" type="double" />
         <Property name="Password" source="C" value="False" type="bool" />
@@ -434,7 +434,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="CSV" value="Filtertid" type="string" />
         <Property name="X" source="C" value="20" type="double" />
-        <Property name="Y" source="C" value="391" type="double" />
+        <Property name="Y" source="C" value="385" type="double" />
         <Property name="Width" source="C" value="110" type="double" />
         <Property name="Height" source="C" value="20" type="double" />
         <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
@@ -451,7 +451,7 @@
         <Property name="OutlineWidth" source="C" value="2" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="130" type="double" />
-        <Property name="Y" source="C" value="436" type="double" />
+        <Property name="Y" source="C" value="430" type="double" />
         <Property name="Width" source="C" value="160" type="double" />
         <Property name="Height" source="C" value="50" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -468,7 +468,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
         <Property name="X" source="C" value="140" type="double" />
-        <Property name="Y" source="C" value="438" type="double" />
+        <Property name="Y" source="C" value="432" type="double" />
         <Property name="Width" source="C" value="140" type="double" />
         <Property name="Height" source="C" value="46" type="double" />
         <Property name="Password" source="C" value="False" type="bool" />
@@ -489,7 +489,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="CSV" value="Offset" type="string" />
         <Property name="X" source="C" value="20" type="double" />
-        <Property name="Y" source="C" value="451" type="double" />
+        <Property name="Y" source="C" value="445" type="double" />
         <Property name="Width" source="C" value="110" type="double" />
         <Property name="Height" source="C" value="20" type="double" />
         <Property name="Font" source="C" value="Arial 10" type="FontInfo" />

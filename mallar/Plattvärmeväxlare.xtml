@@ -1,0 +1,62 @@
+﻿<Template type="ViewElement" id="d754700c-4f96-4685-ae68-6e79159c2558" version="1.0.0" name="Plattvärmeväxlare" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <LocalVariables>
+    <LocalVariable name="doljNamn" value="0" />
+  </LocalVariables>
+  <Resources>
+    <Resource name="Media/MWSE_PlateExchanger.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjIxMCIgdmlld0JveD0iMCAwIDI1MCAyMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjgxIiB5PSIxMSIgd2lkdGg9Ijg4IiBoZWlnaHQ9IjE4OCIgZmlsbD0iI0YwRjNGNyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTEyNSAxMS41TDEzNSAyMy4xODhMMTE1IDQ2LjU2M0wxMzUgNjkuOTM4TDExNSA5My4zMTNMMTM1IDExNi42ODhMMTE1IDE0MC4wNjNMMTM1IDE2My40MzhMMTE1IDE4Ni44MTNMMTI1IDE5OC41IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMCAyMEg4MCIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTAgMTkwSDgwIiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMTcwIDIwSDI1MCIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE3MCAxOTBIMjUwIiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
+  </Resources>
+  <Element id="b4fafd39-12f6-43a3-96c1-88bbd87e6765" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Plattvärmeväxlare">
+    <Properties>
+      <Property name="Name" source="C" value="Plattvärmeväxlare" type="string" />
+    </Properties>
+    <Element id="dc678556-2961-4af0-b512-efc1a87c813c" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+      <Properties>
+        <Property name="Name" source="C" value="Symbol" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="20" type="double" />
+        <Property name="Width" source="C" value="250" type="double" />
+        <Property name="Height" source="C" value="210" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="d754700c-4f96-4685-ae68-6e79159c2558" name="Media/MWSE_PlateExchanger.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="c588298a-180a-484b-a30f-76909a0170fe" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+      <Conditions>
+        <ConditionLogic id="e6e244ba-065e-4d4c-b4c3-a609d8768929" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="d754700c-4f96-4685-ae68-6e79159c2558" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="e6e244ba-065e-4d4c-b4c3-a609d8768929" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Namn" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Namn" type="string" />
+        <Property name="X" source="C" value="85" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="80" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="25 27 30" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="e6e244ba-065e-4d4c-b4c3-a609d8768929" value="True" type="bool" />
+      </Properties>
+    </Element>
+  </Element>
+</Template>

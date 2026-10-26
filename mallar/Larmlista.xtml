@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" version="1.0.0" name="Larmlista" description="Visar larmen i en larmlista från FBoxen Alarm PCD init. Bygger på Saia Burgess Controls Online Alarm List (Alarm (Online) 1.0.8, generation 1), med MWSE:s färger och svenska knappar." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="Saia-Burgess Controls AG" _category="MWSE\Sida\Larm" icon="icons.template.png">
+﻿<Template type="ViewElement" id="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" version="1.0.0" name="Larmlista" description="Visar larmen i en larmlista från FBoxen Alarm PCD init, det senaste larmet överst. Bygger på Saia Burgess Controls Online Alarm List (Alarm (Online) 1.0.8, generation 1), med MWSE:s färger och svenska knappar." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="Saia-Burgess Controls AG" _category="MWSE\Sida\Larm" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
@@ -18,17 +18,14 @@
     <Translation key="Time On" t1="Time On" t2="Temps sur" t3="Tijd op" t4="Einzeit" t5="Interruttore" t6="Kommande" />
     <Translation key="Time Off" t1="Time Off" t2="Temps libre" t3="Tijd Uit" t4="Auszeit" t5="Fuori tempo" t6="Gående" />
     <Translation key="ACK" t1="ACK" t2="ACK" t3="ACK" t4="ACK" t5="ACK" t6="Kvitt" />
-    <Translation key="Hide" t1="Hide" t2="Cacher" t3="Verbergen" t4="Verstecken" t5="Nascondere" t6="Dölj" />
-    <Translation key="Project Default" t1="Project Default" t2="Projet défaut" t3="Project Default" t4="Projekt-Standard" t5="Progetto di default" t6="Standardkolumner" />
+    <Translation key="Hide" t1="Hide" t2="Cacher" t3="Verbergen" t4="Verstecken" t5="Nascondere" />
+    <Translation key="Project Default" t1="Project Default" t2="Projet défaut" t3="Project Default" t4="Projekt-Standard" t5="Progetto di default" />
     <Translation key="Total Alarms" t1="Total Alarms" t2="Total des alarmes" t3="Totaal alarmen" t4="Alle Alarme" t5="Totale Allarmi" />
     <Translation key="Page" t1="Page" t2="Page" t3="Pagina" t4="Seite" t5="Pagina" />
   </Translations>
   <Resources>
     <Resource name="Media/MWSE_ArrowUp.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4XzkwMCIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF85MDApIj4KPHBhdGggZD0iTTEyIDEwLjhMNy40IDE1LjRMNiAxNEwxMiA4TDE4IDE0TDE2LjYgMTUuNEwxMiAxMC44WiIgZmlsbD0iIzFCMjMyRiIvPgo8L2c+Cjwvc3ZnPgo=" />
     <Resource name="Media/MWSE_ArrowDown.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg5NCIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84OTQpIj4KPHBhdGggZD0iTTEyIDE1LjRMNiA5LjRMNy40IDhMMTIgMTIuNkwxNi42IDhMMTggOS40TDEyIDE1LjRaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
-    <Resource name="Media/MWSE_ChevronBack.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg5MiIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84OTIpIj4KPHBhdGggZD0iTTE0IDE4TDggMTJMMTQgNkwxNS40IDcuNEwxMC44IDEyTDE1LjQgMTYuNkwxNCAxOFoiIGZpbGw9IiMxQjIzMkYiLz4KPC9nPgo8L3N2Zz4K" />
-    <Resource name="Media/MWSE_ChevronForward.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg5NSIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84OTUpIj4KPHBhdGggZD0iTTEyLjYgMTJMOCA3LjRMOS40IDZMMTUuNCAxMkw5LjQgMThMOCAxNi42TDEyLjYgMTJaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
-    <Resource name="Media/MWSE_Check.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg2NCIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84NjQpIj4KPHBhdGggZD0iTTkuNTUgMThMMy44NSAxMi4zTDUuMjc1IDEwLjg3NUw5LjU1IDE1LjE1TDE4LjcyNSA1Ljk3NUwyMC4xNSA3LjRMOS41NSAxOFoiIGZpbGw9IiMxQjIzMkYiLz4KPC9nPgo8L3N2Zz4K" />
   </Resources>
   <CompilerExtensions>
     <CompilerExtension id="8b2a9a85-45ca-4e15-996d-7e6efce0e35c">
@@ -44,12 +41,12 @@
     <LocalVariable name="@MACROALRDEFONAlarmsListHeaderSP." value="" />
     <LocalVariable name="@MACROALRDEFONAlarmsListHeader." value="" />
     <LocalVariable name="?S_Col_Width_0" value="120" />
-    <LocalVariable name="?S_Col_Width_1" value="0" />
+    <LocalVariable name="?S_Col_Width_1" value="1" />
     <LocalVariable name="?S_Col_Width_2" value="5" />
-    <LocalVariable name="?S_Col_Width_3" value="10" />
-    <LocalVariable name="?S_Col_Width_4" value="50" />
-    <LocalVariable name="?S_Col_Width_5" value="70" />
-    <LocalVariable name="?S_Col_Width_6" value="90" />
+    <LocalVariable name="?S_Col_Width_3" value="7" />
+    <LocalVariable name="?S_Col_Width_4" value="59" />
+    <LocalVariable name="?S_Col_Width_5" value="76" />
+    <LocalVariable name="?S_Col_Width_6" value="93" />
     <LocalVariable name="MACROALRDEFONSelAlrTypeID" value="0" />
     <LocalVariable name="MACROALRDEFONSelAlrName" value="0" />
     <LocalVariable name="MACROALRDEFONSelAlrItem" value="0" />
@@ -67,8 +64,8 @@
     <LocalVariable name="@MACROALRDEFONStateOnAckedColor." value="253,235,236" />
     <LocalVariable name="@MACROALRDEFONStateOffNackedColor." value="240,243,247" />
     <LocalVariable name="@MACROALRDEFONStateOffAckedColor." value="240,243,247" />
-    <LocalVariable name="@MACROALRDEFONSortMode." value="0" />
-    <LocalVariable name="@MACROALRDEFONFilterMode." value="0" />
+    <LocalVariable name="@MACROALRDEFONSortMode." value="1" />
+    <LocalVariable name="@MACROALRDEFONFilterMode." value="3" />
     <LocalVariable name="@MACROALRDEFONAlarmsListNr." value="" />
     <LocalVariable name="@MACROALRDEFONSelAlrTypeID." value="" />
     <LocalVariable name="@MACROALRDEFONActionTemp." value="" />
@@ -168,7 +165,7 @@
         <Option name="MaxPoints" type="uint" value="0" />
       </Options>
     </Property>
-    <Property name="SortMode" _display="Sort" type="string" flags="None" sources="Constant" default="0" _category="Filter - Sort Default Settings">
+    <Property name="SortMode" _display="Sort" type="string" flags="None" sources="Constant" default="1" _category="Filter - Sort Default Settings">
       <Choices>
         <Choice _display="Not Sorted" value="0" />
         <Choice _display="Active Time Sorted" value="1" />
@@ -180,7 +177,7 @@
         <Option name="MaxPoints" type="uint" value="0" />
       </Options>
     </Property>
-    <Property name="FilterMode" _display="Filter Default Value" type="string" flags="None" sources="Constant" default="0" _category="Filter - Sort Default Settings">
+    <Property name="FilterMode" _display="Filter Default Value" type="string" flags="None" sources="Constant" default="3" _category="Filter - Sort Default Settings">
       <Choices>
         <Choice _display="No Filter" value="0" />
         <Choice _display="Active Alarms" value="1" />
@@ -198,12 +195,12 @@
   <Properties>
     <Property name="Columns" source="C" type="ColumnInfos">
       <ColumnInfo active="False" name="StateColor" position="120" defaultPosition="120" />
-      <ColumnInfo active="True" name="ID" position="0" defaultPosition="0" />
+      <ColumnInfo active="True" name="ID" position="1" defaultPosition="1" />
       <ColumnInfo active="False" name="Empty" position="5" defaultPosition="120" />
-      <ColumnInfo active="True" name="Alarmtext" position="10" defaultPosition="10" />
-      <ColumnInfo active="True" name="Time On" position="50" defaultPosition="50" />
-      <ColumnInfo active="True" name="Time Off" position="70" defaultPosition="70" />
-      <ColumnInfo active="True" name="ACK" position="90" defaultPosition="90" />
+      <ColumnInfo active="True" name="Alarmtext" position="7" defaultPosition="7" />
+      <ColumnInfo active="True" name="Time On" position="59" defaultPosition="59" />
+      <ColumnInfo active="True" name="Time Off" position="76" defaultPosition="76" />
+      <ColumnInfo active="True" name="ACK" position="93" defaultPosition="93" />
     </Property>
     <Property name="AlarmListPcdVariable" source="RV" value="A.Alarm.Namn.MyName" type="PcdVariableAddress" />
     <Property name="AlarmNoStateColor" source="C" value="240 243 247" type="Color" />
@@ -211,6 +208,8 @@
     <Property name="AlarmOnAckedColor" source="C" value="253 235 236" type="Color" />
     <Property name="AlarmOffNackedColor" source="C" value="240 243 247" type="Color" />
     <Property name="AlarmOffAckedColor" source="C" value="240 243 247" type="Color" />
+    <Property name="SortMode" source="C" value="1" type="string" />
+    <Property name="FilterMode" source="C" value="3" type="string" />
   </Properties>
   <Element id="48cb31b5-6c8d-4228-902a-37962af4e2ef" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Alarming Online">
     <Properties>
@@ -230,6 +229,38 @@
       <Property name="LockedInEditor" source="C" value="False" type="bool" />
       <Property name="Description" source="C" type="string" />
     </Properties>
+    <Element id="127c1ccf-885d-425e-99ef-109a79c2a296" type="365164dc-5073-11e0-8201-b603e0d72085" name="Kort">
+      <Properties>
+        <Property name="Name" source="C" value="Kort" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="1004" type="double" />
+        <Property name="Height" source="C" value="508" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="3c16c4fd-819d-4482-bd69-63b9d08cf23e" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rubrikband">
+      <Properties>
+        <Property name="Name" source="C" value="Rubrikband" type="string" />
+        <Property name="FillColor" source="C" value="219 222 230" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="1004" type="double" />
+        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
     <Element id="506560ca-e82d-4631-aae7-a2a5d3cbffb8" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Init">
       <Functions>
         <Function id="d6116ae7-011a-49b6-a50d-b7cc1756ec94" ref="2e4879b5-4619-4b86-8a09-0c761825dc5e" name="On view open">
@@ -502,23 +533,23 @@
       <Element id="862215be-b4e6-4ca9-a895-f2aba658eea2" type="266fe87d-6aac-48a1-9aab-83b882a60ce8" name="Header">
         <Properties>
           <Property name="Name" source="C" value="Header" type="string" />
-          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+          <Property name="FillColor" source="C" value="219 222 230" type="Color" />
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="896" type="double" />
-          <Property name="Height" source="C" value="32" type="double" />
+          <Property name="X" source="C" value="16" type="double" />
+          <Property name="Y" source="C" value="14" type="double" />
+          <Property name="Width" source="C" value="916" type="double" />
+          <Property name="Height" source="C" value="24" type="double" />
           <Property name="HasOutline" source="C" value="False" type="bool" />
           <Property name="ItemTargets" source="C" type="ItemTargets" />
           <Property name="IndexTargets" source="C" type="IndexTargets" />
-          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-          <Property name="HasFillColor" source="C" value="True" type="bool" />
+          <Property name="Font" source="C" value="Arial Bold 12" type="FontInfo" />
+          <Property name="HasFillColor" source="C" value="False" type="bool" />
           <Property name="Content" source="LV" type="InternalVariableAddress">
             <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
           </Property>
-          <Property name="ShowRow" source="C" value="True" type="bool" />
+          <Property name="ShowRow" source="C" value="False" type="bool" />
           <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />
           <Property name="Hidden" source="C" value="False" type="bool" />
           <Property name="OffsetX" source="RV" type="double" />
@@ -557,24 +588,24 @@
           <Property name="OutlineColor" source="C" value="66 77 89" type="Color" />
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="32" type="double" />
-          <Property name="Width" source="C" value="896" type="double" />
-          <Property name="Height" source="C" value="320" type="double" />
-          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="X" source="C" value="16" type="double" />
+          <Property name="Y" source="C" value="48" type="double" />
+          <Property name="Width" source="C" value="916" type="double" />
+          <Property name="Height" source="C" value="380" type="double" />
+          <Property name="HasOutline" source="C" value="False" type="bool" />
           <Property name="ItemTargets" source="C" type="ItemTargets">
             <Target type="LV" value="MACROALRDEFONSelAlrName" column="2" />
             <Target type="LV" value="MACROALRDEFONSelAlrItem" column="0" />
             <Target type="LV" value="MACROALRDEFONSelAlrTypeID" column="1" />
           </Property>
           <Property name="IndexTargets" source="C" type="IndexTargets" />
-          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+          <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
           <Property name="HasFillColor" source="C" value="True" type="bool" />
           <Property name="Content" source="LV" type="InternalVariableAddress">
             <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsList." />
           </Property>
           <Property name="ShowLine" source="C" value="True" type="bool" />
-          <Property name="ShowRow" source="C" value="True" type="bool" />
+          <Property name="ShowRow" source="C" value="False" type="bool" />
           <Property name="SelectIndexOnce" source="LV" type="InternalVariableAddress">
             <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectIndexesOnce." />
           </Property>
@@ -587,7 +618,7 @@
           <Property name="AccessBitmask" source="C" type="AccessBitmask" />
           <Property name="Description" source="C" type="string" />
           <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="PaintSrcConXLines" source="C" value="1" type="int" />
+          <Property name="PaintSrcConXLines" source="C" value="2" type="int" />
           <Property name="ReloadFilePeriod" source="C" type="string" />
           <Property name="HasReloadFilePeriod" source="C" value="False" type="bool" />
           <Property name="EnableAutoAdjust" source="C" type="bool" />
@@ -660,8 +691,8 @@
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="908" type="double" />
-          <Property name="Y" source="C" value="4" type="double" />
+          <Property name="X" source="C" value="940" type="double" />
+          <Property name="Y" source="C" value="48" type="double" />
           <Property name="Width" source="C" value="48" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -732,8 +763,8 @@
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="908" type="double" />
-          <Property name="Y" source="C" value="300" type="double" />
+          <Property name="X" source="C" value="940" type="double" />
+          <Property name="Y" source="C" value="380" type="double" />
           <Property name="Width" source="C" value="48" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -763,899 +794,6 @@
           <Property name="Content" source="C" condition="4295186a-e208-4657-9a90-91f8a3e53343" type="string" />
           <Property name="FillColor" source="C" condition="4295186a-e208-4657-9a90-91f8a3e53343" value="220 222 230" type="Color" />
         </Properties>
-      </Element>
-    </Element>
-    <Element id="7b402dd2-7d4a-4ebb-8c48-9a8992aa67b8" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Edit Colums" activeCondition="7e992860-77ce-4f4a-837d-b2c4ed540a33">
-      <Conditions>
-        <ConditionLogic id="7e992860-77ce-4f4a-837d-b2c4ed540a33" ref="b5dedcc0-a66b-41ed-9cce-55895cf5371e" name="Hide" operator="And">
-          <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONAdvanced" operator="Equal" rightType="Constant" rightValue="0" />
-        </ConditionLogic>
-      </Conditions>
-      <Properties>
-        <ConditionPriority>
-          <Condition id="7e992860-77ce-4f4a-837d-b2c4ed540a33" />
-        </ConditionPriority>
-        <Property name="Name" source="C" value="Edit Colums" type="string" />
-        <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="DisableEvents" source="C" value="False" type="bool" />
-        <Property name="X" source="C" value="0" type="double" />
-        <Property name="Y" source="C" value="0" type="double" />
-        <Property name="Width" source="C" value="0" type="double" />
-        <Property name="Height" source="C" value="0" type="double" />
-        <Property name="OffsetX" source="RV" type="double" />
-        <Property name="OffsetY" source="RV" type="double" />
-        <Property name="WidthOffset" source="RV" type="double" />
-        <Property name="HeightOffset" source="RV" type="double" />
-        <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-        <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-        <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Description" source="C" type="string" />
-        <Property name="Hidden" source="C" condition="7e992860-77ce-4f4a-837d-b2c4ed540a33" value="True" type="bool" />
-        <Property name="DisableEvents" source="C" condition="7e992860-77ce-4f4a-837d-b2c4ed540a33" value="True" type="bool" />
-      </Properties>
-      <Element id="fe2cdf8d-381f-4d7e-94db-8dfd80bbfd7e" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Scroll Columns">
-        <Functions>
-          <Function id="69b8fad7-e1f7-4e32-948d-316aa1b50aa7" ref="ed7260bb-e8bd-48b3-8e0d-63055171a9a9" name="Scroll ">
-            <Expression type="If" leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_DecrementColums" operator="Equal" rightType="Constant" rightValue="1">
-              <Expression type="If" leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Col_Width_@CO_?S_Column_To_Change@" operator="Greater" rightType="Constant" rightValue="0">
-                <Instruction macro="DecrementVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_@CO_?S_Column_To_Change@" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-            </Expression>
-            <Expression type="If" leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_IncrementColums" operator="Equal" rightType="Constant" rightValue="1">
-              <Expression type="If" leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Col_Width_@CO_?S_Column_To_Change@" operator="LesserEqual" rightType="Constant" rightValue="120">
-                <Instruction macro="IncrementVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_@CO_?S_Column_To_Change@" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-            </Expression>
-          </Function>
-        </Functions>
-        <Properties>
-          <Property name="Name" source="C" value="Scroll Columns" type="string" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="Repaint" source="C" value="69b8fad7-e1f7-4e32-948d-316aa1b50aa7" type="Event" />
-          <Property name="FocusGained" source="C" type="Event" />
-          <Property name="FocusLost" source="C" type="Event" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-        </Properties>
-      </Element>
-      <Element id="d1621efb-5188-453a-98f9-360667be095b" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Values">
-        <Properties>
-          <Property name="Name" source="C" value="Values" type="string" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="0" type="double" />
-          <Property name="Height" source="C" value="0" type="double" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-        </Properties>
-        <Element id="1a5624e1-2b7d-451c-b771-2d36eb8a006e" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="IID">
-          <Conditions>
-            <ConditionLogic id="20d12da3-f81d-4aa9-8d50-7805f84ec7b3" ref="1dcabf0e-948c-4e5a-a9f5-05c5be67be39" name="Selected" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Column_To_Change" operator="Equal" rightType="Constant" rightValue="1" />
-            </ConditionLogic>
-          </Conditions>
-          <Functions>
-            <Function id="84a2f29c-0df2-490a-b94b-fc5465ec8117" ref="56bca446-6ffe-424b-92d6-09b7c7da702f" name="Scroll column 2">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="1" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Column_To_Change" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <ConditionPriority>
-              <Condition id="20d12da3-f81d-4aa9-8d50-7805f84ec7b3" />
-            </ConditionPriority>
-            <Property name="Name" source="C" value="IID" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="56" type="double" />
-            <Property name="Y" source="C" value="40" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="ID" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="84a2f29c-0df2-490a-b94b-fc5465ec8117" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Font" source="C" condition="20d12da3-f81d-4aa9-8d50-7805f84ec7b3" value="Arial 11" type="FontInfo" />
-            <Property name="OutlineColor" source="C" condition="20d12da3-f81d-4aa9-8d50-7805f84ec7b3" value="30 84 164" type="Color" />
-            <Property name="FillColor" source="C" condition="20d12da3-f81d-4aa9-8d50-7805f84ec7b3" value="255 255 255" type="Color" />
-          </Properties>
-        </Element>
-        <Element id="af405d20-69c7-447a-9166-7b377a5ffec4" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Alamtext">
-          <Conditions>
-            <ConditionLogic id="267cc834-06d1-4f6c-8e8d-3d1911cee4af" ref="488654a5-21b5-42a3-a168-b089c8343a8d" name="Selected" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Column_To_Change" operator="Equal" rightType="Constant" rightValue="3" />
-            </ConditionLogic>
-          </Conditions>
-          <Functions>
-            <Function id="b14033e8-1b18-4e58-be87-0263f259d4ef" ref="e5685ef1-9335-4631-bba8-e6e67d8bcc02" name="Scroll column 4">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="3" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Column_To_Change" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <ConditionPriority>
-              <Condition id="267cc834-06d1-4f6c-8e8d-3d1911cee4af" />
-            </ConditionPriority>
-            <Property name="Name" source="C" value="Alamtext" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="214" type="double" />
-            <Property name="Y" source="C" value="40" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Larmtext" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="b14033e8-1b18-4e58-be87-0263f259d4ef" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Font" source="C" condition="267cc834-06d1-4f6c-8e8d-3d1911cee4af" value="Arial 11" type="FontInfo" />
-            <Property name="OutlineColor" source="C" condition="267cc834-06d1-4f6c-8e8d-3d1911cee4af" value="30 84 164" type="Color" />
-            <Property name="FillColor" source="C" condition="267cc834-06d1-4f6c-8e8d-3d1911cee4af" value="255 255 255" type="Color" />
-          </Properties>
-        </Element>
-        <Element id="b2a1e625-2e08-4df4-9fc4-84b2c79f470b" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Time On">
-          <Conditions>
-            <ConditionLogic id="78ecda4a-c397-4d72-8c36-e4a5991c38d2" ref="17dbe38f-6afb-462f-b4f9-31c30a2c3125" name="Selected" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Column_To_Change" operator="Equal" rightType="Constant" rightValue="4" />
-            </ConditionLogic>
-          </Conditions>
-          <Functions>
-            <Function id="f8109ac9-c5a8-4144-87e2-5e40383150f8" ref="3a118a2f-a877-4929-8715-0eac58511ba3" name="Scroll column 5">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="4" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Column_To_Change" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <ConditionPriority>
-              <Condition id="78ecda4a-c397-4d72-8c36-e4a5991c38d2" />
-            </ConditionPriority>
-            <Property name="Name" source="C" value="Time On" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="372" type="double" />
-            <Property name="Y" source="C" value="40" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Kommande" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="f8109ac9-c5a8-4144-87e2-5e40383150f8" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Font" source="C" condition="78ecda4a-c397-4d72-8c36-e4a5991c38d2" value="Arial 11" type="FontInfo" />
-            <Property name="OutlineColor" source="C" condition="78ecda4a-c397-4d72-8c36-e4a5991c38d2" value="30 84 164" type="Color" />
-            <Property name="FillColor" source="C" condition="78ecda4a-c397-4d72-8c36-e4a5991c38d2" value="255 255 255" type="Color" />
-          </Properties>
-        </Element>
-        <Element id="d5871474-e525-4bcc-be58-287b44c199af" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Time Off">
-          <Conditions>
-            <ConditionLogic id="73955c00-2021-484e-9cbe-e2591432838e" ref="70652794-7a91-4226-b9a6-3bc2c5f4926a" name="Selected" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Column_To_Change" operator="Equal" rightType="Constant" rightValue="5" />
-            </ConditionLogic>
-          </Conditions>
-          <Functions>
-            <Function id="cda94e09-f45d-45b0-8f52-4482df049497" ref="294267d0-2cdf-44f4-b6e4-6efe0179a979" name="Scoll column 6">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="5" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Column_To_Change" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <ConditionPriority>
-              <Condition id="73955c00-2021-484e-9cbe-e2591432838e" />
-            </ConditionPriority>
-            <Property name="Name" source="C" value="Time Off" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="530" type="double" />
-            <Property name="Y" source="C" value="40" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Gående" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="cda94e09-f45d-45b0-8f52-4482df049497" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Font" source="C" condition="73955c00-2021-484e-9cbe-e2591432838e" value="Arial 11" type="FontInfo" />
-            <Property name="OutlineColor" source="C" condition="73955c00-2021-484e-9cbe-e2591432838e" value="30 84 164" type="Color" />
-            <Property name="FillColor" source="C" condition="73955c00-2021-484e-9cbe-e2591432838e" value="255 255 255" type="Color" />
-          </Properties>
-        </Element>
-        <Element id="9bc6de09-62a9-4e53-8d02-90acda5f6135" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="ACK">
-          <Conditions>
-            <ConditionLogic id="52d54bf8-5a6f-4e85-91a9-f47f8fddd227" ref="0f2d83f4-299a-4663-9bb4-ce15db0a6e13" name="Selected" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Column_To_Change" operator="Equal" rightType="Constant" rightValue="6" />
-            </ConditionLogic>
-          </Conditions>
-          <Functions>
-            <Function id="29ddac9c-7960-472b-94dc-acb08f1b34c9" ref="6acb7a4f-489b-4e8b-b203-027360f8c977" name="Scoll column 7">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="6" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Column_To_Change" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <ConditionPriority>
-              <Condition id="52d54bf8-5a6f-4e85-91a9-f47f8fddd227" />
-            </ConditionPriority>
-            <Property name="Name" source="C" value="ACK" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="688" type="double" />
-            <Property name="Y" source="C" value="40" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Kvitt" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="29ddac9c-7960-472b-94dc-acb08f1b34c9" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Font" source="C" condition="52d54bf8-5a6f-4e85-91a9-f47f8fddd227" value="Arial 11" type="FontInfo" />
-            <Property name="OutlineColor" source="C" condition="52d54bf8-5a6f-4e85-91a9-f47f8fddd227" value="30 84 164" type="Color" />
-            <Property name="FillColor" source="C" condition="52d54bf8-5a6f-4e85-91a9-f47f8fddd227" value="255 255 255" type="Color" />
-          </Properties>
-        </Element>
-        <Element id="66edec20-9c24-4263-a219-d2ad7d1ae51c" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Left">
-          <Functions>
-            <Function id="28a16c00-0863-4f98-ae0b-78e81a3a234d" ref="bcaa55af-4648-436a-917b-2f7aee25801b" name="Edit Selected Column">
-              <Expression type="If" leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Col_Width_@CO_?S_Column_To_Change@" operator="Greater" rightType="Constant" rightValue="0">
-                <Instruction macro="DecrementVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_@CO_?S_Column_To_Change@" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="Left" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="0" type="double" />
-            <Property name="Y" source="C" value="40" type="double" />
-            <Property name="Width" source="C" value="48" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="File" type="ResourceAddress">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="Media/MWSE_ChevronBack.svg" />
-            </Property>
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="MouseDown" source="C" type="Event">
-              <Instruction name="WriteValueToVariable">
-                <Parameter name="Value" value="1" type="C" />
-                <Parameter name="Destination" type="LV">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_DecrementColums" />
-                </Parameter>
-              </Instruction>
-            </Property>
-            <Property name="MouseUp" source="C" type="Event">
-              <Instruction name="WriteValueToVariable">
-                <Parameter name="Value" value="0" type="C" />
-                <Parameter name="Destination" type="LV">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_DecrementColums" />
-                </Parameter>
-              </Instruction>
-            </Property>
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-          </Properties>
-        </Element>
-        <Element id="81c8958b-7ce5-4a00-9009-411f78b7075f" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Right">
-          <Functions>
-            <Function id="c5fc306f-6ff1-49a5-acd2-8c839cd4621a" ref="2f9db39d-6d95-4704-b936-e1009d6f04c4" name="Edit Selected Column">
-              <Expression type="If" leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Col_Width_@CO_?S_Column_To_Change@" operator="LesserEqual" rightType="Constant" rightValue="120">
-                <Instruction macro="IncrementVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_@CO_?S_Column_To_Change@" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="Right" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="848" type="double" />
-            <Property name="Y" source="C" value="40" type="double" />
-            <Property name="Width" source="C" value="48" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="File" type="ResourceAddress">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="Media/MWSE_ChevronForward.svg" />
-            </Property>
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="MouseDown" source="C" type="Event">
-              <Instruction name="WriteValueToVariable">
-                <Parameter name="Value" value="1" type="C" />
-                <Parameter name="Destination" type="LV">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_IncrementColums" />
-                </Parameter>
-              </Instruction>
-            </Property>
-            <Property name="MouseUp" source="C" type="Event">
-              <Instruction name="WriteValueToVariable">
-                <Parameter name="Value" value="0" type="C" />
-                <Parameter name="Destination" type="LV">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_IncrementColums" />
-                </Parameter>
-              </Instruction>
-            </Property>
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-          </Properties>
-        </Element>
-      </Element>
-      <Element id="07cf6cb0-8b44-4a20-9a31-cd7c96554938" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Hide">
-        <Properties>
-          <Property name="Name" source="C" value="Hide" type="string" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="0" type="double" />
-          <Property name="Height" source="C" value="0" type="double" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-        </Properties>
-        <Element id="0bd2cf3b-d3a2-44ae-b70f-8a974bf49142" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="IID">
-          <Functions>
-            <Function id="3126a41c-d34c-43d2-a85b-b96b4a305fe7" ref="a898ed95-b929-4bb2-8103-b134bd0aa9ad" name="Hide column 2">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="120" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_1" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="IID" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="56" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Dölj" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="3126a41c-d34c-43d2-a85b-b96b4a305fe7" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          </Properties>
-        </Element>
-        <Element id="d5efa11e-2e73-4c3b-baac-47e84b1f0ed2" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Alamtext">
-          <Functions>
-            <Function id="7cbdef8c-8d42-474b-a49f-ae46600812aa" ref="6a7ffdfc-02bd-4d51-a584-dc1ff0f4f5dd" name="Hide column 4">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="120" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_3" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="Alamtext" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="214" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Dölj" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="7cbdef8c-8d42-474b-a49f-ae46600812aa" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          </Properties>
-        </Element>
-        <Element id="b1648092-bd62-4324-bc26-e9cd71712181" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Time On">
-          <Functions>
-            <Function id="01dc4398-743b-4a28-8e66-5c801ae650db" ref="f85cd306-ea46-448a-92eb-b10de33d8155" name="Hide column 5">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="120" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_4" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="Time On" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="372" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Dölj" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="01dc4398-743b-4a28-8e66-5c801ae650db" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          </Properties>
-        </Element>
-        <Element id="abcc9aae-b446-441c-8f42-9faa46793793" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Time Off">
-          <Functions>
-            <Function id="4bf4cc07-959b-4292-8443-bb67c92d2b1f" ref="09d663a8-be4f-4e4d-85ff-68d16a7d0a02" name="Hide column 6">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="120" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_5" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="Time Off" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="530" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Dölj" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="4bf4cc07-959b-4292-8443-bb67c92d2b1f" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          </Properties>
-        </Element>
-        <Element id="91b23caf-6b37-440d-bbf5-a8399bf97753" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="ACK">
-          <Functions>
-            <Function id="4f2f0a64-7f85-4d82-9aeb-6cae49156b05" ref="5a382e74-e30b-453f-b247-19f3ad04d68d" name="Hide column 7">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="120" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_6" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="ACK" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="688" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
-            <Property name="Width" source="C" value="150" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Dölj" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="4f2f0a64-7f85-4d82-9aeb-6cae49156b05" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          </Properties>
-        </Element>
-      </Element>
-      <Element id="d33e94d6-406c-4ad8-b985-88f50b27c161" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Functions">
-        <Properties>
-          <Property name="Name" source="C" value="Functions" type="string" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="0" type="double" />
-          <Property name="Height" source="C" value="0" type="double" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-        </Properties>
-        <Element id="3b8668cf-1ade-4411-857f-f1c6406129e1" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Save">
-          <Functions>
-            <Function id="28422f06-bd49-4ee8-997d-9aa9397d3f81" ref="832b96fd-6bfc-4a5b-8506-2266e7af27c5" name="Save Column">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="0" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAdvanced" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="0" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAdvancedID" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteAddResultToVariableInt">
-                <Parameter type="Constant" value="1" name="FirstValue" />
-                <Parameter type="Container" name="SecondValue">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONMaxPageNr." />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONPageNr." />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="Save" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="848" type="double" />
-            <Property name="Y" source="C" value="152" type="double" />
-            <Property name="Width" source="C" value="48" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="File" type="ResourceAddress">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="Media/MWSE_Check.svg" />
-            </Property>
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="28422f06-bd49-4ee8-997d-9aa9397d3f81" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-          </Properties>
-        </Element>
-        <Element id="abe56488-6aea-4571-a5b4-950c0b6b4f41" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Default all Colums">
-          <Functions>
-            <Function id="79546c25-bcf9-4c0d-9305-6262c21ca88a" ref="fb9d9cce-c4f3-45e3-8f55-f0dd8f7dd87f" name="Default column 2">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Def_Width_0" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_0" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Def_Width_1" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_1" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Def_Width_2" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_2" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Def_Width_3" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_3" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Def_Width_4" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_4" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Def_Width_5" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_5" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Def_Width_6" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_6" />
-                </Parameter>
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="Default all Colums" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="56" type="double" />
-            <Property name="Y" source="C" value="152" type="double" />
-            <Property name="Width" source="C" value="782" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Standardkolumner" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="79546c25-bcf9-4c0d-9305-6262c21ca88a" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          </Properties>
-        </Element>
       </Element>
     </Element>
     <Element id="6190d914-f04c-40ce-951a-26055f88f0e7" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Menue">
@@ -1693,9 +831,9 @@
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="360" type="double" />
-          <Property name="Width" source="C" value="128" type="double" />
+          <Property name="X" source="C" value="16" type="double" />
+          <Property name="Y" source="C" value="444" type="double" />
+          <Property name="Width" source="C" value="160" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -1737,9 +875,9 @@
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="272" type="double" />
-          <Property name="Y" source="C" value="360" type="double" />
-          <Property name="Width" source="C" value="128" type="double" />
+          <Property name="X" source="C" value="184" type="double" />
+          <Property name="Y" source="C" value="444" type="double" />
+          <Property name="Width" source="C" value="160" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -1787,9 +925,9 @@
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="136" type="double" />
-          <Property name="Y" source="C" value="360" type="double" />
-          <Property name="Width" source="C" value="128" type="double" />
+          <Property name="X" source="C" value="660" type="double" />
+          <Property name="Y" source="C" value="444" type="double" />
+          <Property name="Width" source="C" value="160" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -1837,9 +975,9 @@
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="408" type="double" />
-          <Property name="Y" source="C" value="360" type="double" />
-          <Property name="Width" source="C" value="128" type="double" />
+          <Property name="X" source="C" value="828" type="double" />
+          <Property name="Y" source="C" value="444" type="double" />
+          <Property name="Width" source="C" value="160" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -1863,559 +1001,6 @@
           <Property name="DisableEvents" source="C" value="False" type="bool" />
           <Property name="MouseDown" source="C" type="Event" />
         </Properties>
-      </Element>
-      <Element id="87db93e1-a1e0-488c-918c-bc870adeaa06" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Advanced">
-        <Conditions>
-          <ConditionLogic id="1af499cd-e2a0-45d6-92eb-e7e6f6885473" ref="e89adc30-1c7b-46a5-bf5c-d678a27c589d" name="Is Enabled" operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONAdvanced" operator="Equal" rightType="Constant" rightValue="1" />
-          </ConditionLogic>
-        </Conditions>
-        <Functions>
-          <Function id="5d822d8f-761b-4a47-b2b7-4a32b72556d1" ref="14c4d8fb-e709-463b-b5a2-e4142eea775e" name="Show Advanced">
-            <Expression type="If" leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONAdvancedID" operator="Equal" rightType="Constant" rightValue="0">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="1" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAdvanced" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_0" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_0" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_1" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_1" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_2" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_2" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_3" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_3" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_4" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_4" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_5" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_5" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_6" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_6" />
-                </Parameter>
-              </Instruction>
-            </Expression>
-            <Expression type="If" leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONAdvancedID" operator="Equal" rightType="Constant" rightValue="1">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="0" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAdvanced" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_0" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_0" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_1" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_1" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_2" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_2" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_3" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_3" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_4" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_4" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_5" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_5" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="B?S_Col_Width_6" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_6" />
-                </Parameter>
-              </Instruction>
-            </Expression>
-            <Instruction macro="ToggleVariable">
-              <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAdvancedID" />
-              </Parameter>
-              <Parameter type="Constant" value="0;1" name="Values" />
-            </Instruction>
-          </Function>
-        </Functions>
-        <Properties>
-          <ConditionPriority>
-            <Condition id="1af499cd-e2a0-45d6-92eb-e7e6f6885473" />
-          </ConditionPriority>
-          <Property name="Name" source="C" value="Advanced" type="string" />
-          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-          <Property name="OutlineWidth" source="C" value="2" type="double" />
-          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="832" type="double" />
-          <Property name="Y" source="C" value="416" type="double" />
-          <Property name="Width" source="C" value="128" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
-          <Property name="Use3DFrame" source="C" value="False" type="bool" />
-          <Property name="HasOutline" source="C" value="True" type="bool" />
-          <Property name="HasFillColor" source="C" value="True" type="bool" />
-          <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-          <Property name="Content" source="C" value="Kolumner" type="string" />
-          <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="MouseDown" source="C" type="Event" />
-          <Property name="MouseUp" source="C" value="5d822d8f-761b-4a47-b2b7-4a32b72556d1" type="Event" />
-          <Property name="FunctionKey" source="C" type="FunctionKey" />
-          <Property name="ImageRotation" source="C" value="0" type="double" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="Description" source="C" type="string" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="Content" source="C" condition="1af499cd-e2a0-45d6-92eb-e7e6f6885473" value="Kolumner" type="string" />
-          <Property name="FillColor" source="C" condition="1af499cd-e2a0-45d6-92eb-e7e6f6885473" value="255 255 255" type="Color" />
-          <Property name="HasFillColor" source="C" condition="1af499cd-e2a0-45d6-92eb-e7e6f6885473" value="True" type="bool" />
-          <Property name="OutlineColor" source="C" condition="1af499cd-e2a0-45d6-92eb-e7e6f6885473" value="30 84 164" type="Color" />
-        </Properties>
-      </Element>
-      <Element id="814edeb9-6975-42e5-b9bd-51ac97594958" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Filter and Sort">
-        <Conditions>
-          <ConditionLogic id="f3f32ad6-7304-423e-8c41-05057fdca82f" ref="53cbc668-6b06-4a10-b0d5-ffc578a20aff" name="Filter activ active alarms" operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONFilterMode." operator="Equal" rightType="Constant" rightValue="1" />
-          </ConditionLogic>
-          <ConditionLogic id="386fa4b2-1710-423f-a769-c1dd613a441a" ref="81485b4f-d0b7-4487-a761-e5257b8ea461" name="Filter activ NAK alarms" operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONFilterMode." operator="Equal" rightType="Constant" rightValue="3" />
-          </ConditionLogic>
-        </Conditions>
-        <Properties>
-          <Property name="Name" source="C" value="Filter and Sort" type="string" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="0" type="double" />
-          <Property name="Height" source="C" value="0" type="double" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-        </Properties>
-        <Element id="d0625a9e-5b11-4f85-ad3f-97c7d218ac1f" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Sort">
-          <Properties>
-            <Property name="Name" source="C" value="Sort" type="string" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="X" source="C" value="0" type="double" />
-            <Property name="Y" source="C" value="0" type="double" />
-            <Property name="Width" source="C" value="0" type="double" />
-            <Property name="Height" source="C" value="0" type="double" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="Description" source="C" type="string" />
-          </Properties>
-          <Element id="1479078f-1c6c-4fe7-99c5-414dada548d8" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Time">
-            <Conditions>
-              <ConditionLogic id="c94aaa9f-c85f-4903-81c2-8dabafb22edd" ref="7ae0e796-4943-4cc3-a52e-2806d4a06e4c" name="FilterMode" operator="And">
-                <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONSortMode." operator="Equal" rightType="Constant" rightValue="1" />
-              </ConditionLogic>
-            </Conditions>
-            <Functions>
-              <Function id="15b53e1c-dfac-4dfa-87f0-b1f891d4ba53" ref="db59d4a8-36ae-42ca-a53b-bd9ba8277226" name="Activ time sorted">
-                <Instruction macro="ToggleVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSortMode." />
-                  </Parameter>
-                  <Parameter type="Constant" value="0;1" name="Values" />
-                </Instruction>
-              </Function>
-            </Functions>
-            <Properties>
-              <ConditionPriority>
-                <Condition id="c94aaa9f-c85f-4903-81c2-8dabafb22edd" />
-              </ConditionPriority>
-              <Property name="Name" source="C" value="Time" type="string" />
-              <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-              <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-              <Property name="OutlineWidth" source="C" value="2" type="double" />
-              <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-              <Property name="X" source="C" value="0" type="double" />
-              <Property name="Y" source="C" value="416" type="double" />
-              <Property name="Width" source="C" value="128" type="double" />
-              <Property name="Height" source="C" value="48" type="double" />
-              <Property name="Use3DFrame" source="C" value="False" type="bool" />
-              <Property name="HasOutline" source="C" value="True" type="bool" />
-              <Property name="HasFillColor" source="C" value="True" type="bool" />
-              <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-              <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-              <Property name="Content" source="C" value="Senaste först" type="string" />
-              <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-              <Property name="LockedInEditor" source="C" value="False" type="bool" />
-              <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-              <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-              <Property name="ImageRotation" source="C" value="0" type="double" />
-              <Property name="DisableEvents" source="C" value="False" type="bool" />
-              <Property name="Hidden" source="C" value="False" type="bool" />
-              <Property name="OffsetX" source="RV" type="double" />
-              <Property name="OffsetY" source="RV" type="double" />
-              <Property name="WidthOffset" source="RV" type="double" />
-              <Property name="HeightOffset" source="RV" type="double" />
-              <Property name="Description" source="C" type="string" />
-              <Property name="MouseDown" source="C" type="Event" />
-              <Property name="MouseUp" source="C" value="15b53e1c-dfac-4dfa-87f0-b1f891d4ba53" type="Event" />
-              <Property name="FunctionKey" source="C" type="FunctionKey" />
-              <Property name="Content" source="C" condition="c94aaa9f-c85f-4903-81c2-8dabafb22edd" value="Senaste först" type="string" />
-              <Property name="FillColor" source="C" condition="c94aaa9f-c85f-4903-81c2-8dabafb22edd" value="255 255 255" type="Color" />
-              <Property name="OutlineColor" source="C" condition="c94aaa9f-c85f-4903-81c2-8dabafb22edd" value="30 84 164" type="Color" />
-            </Properties>
-          </Element>
-          <Element id="3642aa41-0f43-4357-b5f8-5e33ff95bfeb" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Count">
-            <Conditions>
-              <ConditionLogic id="4a6c6da5-f691-403a-9452-6572aed3dc24" ref="aeef1e92-67d6-4b11-a582-206c03acf128" name="Count Alarms" operator="And">
-                <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONFilterMode." operator="Equal" rightType="Constant" rightValue="2" />
-              </ConditionLogic>
-            </Conditions>
-            <Functions>
-              <Function id="bffc2895-74e4-4225-baac-1ca62344089d" ref="c1b5a8b3-cd8d-4832-98d7-81ca772d4729" name="Count Alarms">
-                <Instruction macro="ToggleVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONFilterMode." />
-                  </Parameter>
-                  <Parameter type="Constant" value="0;2" name="Values" />
-                </Instruction>
-              </Function>
-            </Functions>
-            <Properties>
-              <ConditionPriority>
-                <Condition id="4a6c6da5-f691-403a-9452-6572aed3dc24" />
-                <Condition id="f3f32ad6-7304-423e-8c41-05057fdca82f" />
-                <Condition id="386fa4b2-1710-423f-a769-c1dd613a441a" />
-              </ConditionPriority>
-              <Property name="Name" source="C" value="Count" type="string" />
-              <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-              <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-              <Property name="OutlineWidth" source="C" value="2" type="double" />
-              <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-              <Property name="X" source="C" value="136" type="double" />
-              <Property name="Y" source="C" value="416" type="double" />
-              <Property name="Width" source="C" value="128" type="double" />
-              <Property name="Height" source="C" value="48" type="double" />
-              <Property name="Use3DFrame" source="C" value="False" type="bool" />
-              <Property name="HasOutline" source="C" value="True" type="bool" />
-              <Property name="HasFillColor" source="C" value="True" type="bool" />
-              <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-              <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-              <Property name="Content" source="C" value="Inträffade" type="string" />
-              <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-              <Property name="LockedInEditor" source="C" value="False" type="bool" />
-              <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-              <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-              <Property name="ImageRotation" source="C" value="0" type="double" />
-              <Property name="DisableEvents" source="C" value="False" type="bool" />
-              <Property name="Hidden" source="C" value="False" type="bool" />
-              <Property name="OffsetX" source="RV" type="double" />
-              <Property name="OffsetY" source="RV" type="double" />
-              <Property name="WidthOffset" source="RV" type="double" />
-              <Property name="HeightOffset" source="RV" type="double" />
-              <Property name="Description" source="C" type="string" />
-              <Property name="MouseDown" source="C" type="Event" />
-              <Property name="MouseUp" source="C" value="bffc2895-74e4-4225-baac-1ca62344089d" type="Event" />
-              <Property name="FunctionKey" source="C" type="FunctionKey" />
-              <Property name="Content" source="C" condition="4a6c6da5-f691-403a-9452-6572aed3dc24" value="Inträffade" type="string" />
-              <Property name="DisableEvents" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="True" type="bool" />
-              <Property name="Hidden" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="False" type="bool" />
-              <Property name="Content" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="Inträffade" type="string" />
-              <Property name="OutlineColor" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="145 150 159" type="Color" />
-              <Property name="Content" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="Inträffade" type="string" />
-              <Property name="OutlineColor" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="145 150 159" type="Color" />
-              <Property name="DisableEvents" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="True" type="bool" />
-              <Property name="Hidden" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="False" type="bool" />
-              <Property name="FillColor" source="C" condition="4a6c6da5-f691-403a-9452-6572aed3dc24" value="255 255 255" type="Color" />
-              <Property name="OutlineColor" source="C" condition="4a6c6da5-f691-403a-9452-6572aed3dc24" value="30 84 164" type="Color" />
-              <Property name="FillColor" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="220 222 230" type="Color" />
-              <Property name="FillColor" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="220 222 230" type="Color" />
-            </Properties>
-          </Element>
-        </Element>
-        <Element id="c02a06d0-1452-4a20-a7c6-a901af42774d" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Filter" activeCondition="f3f32ad6-7304-423e-8c41-05057fdca82f">
-          <Properties>
-            <ConditionPriority>
-              <Condition id="f3f32ad6-7304-423e-8c41-05057fdca82f" />
-              <Condition id="386fa4b2-1710-423f-a769-c1dd613a441a" />
-            </ConditionPriority>
-            <Property name="Name" source="C" value="Filter" type="string" />
-            <Property name="Hidden" source="C" value="True" type="bool" />
-            <Property name="DisableEvents" source="C" value="True" type="bool" />
-            <Property name="X" source="C" value="0" type="double" />
-            <Property name="Y" source="C" value="0" type="double" />
-            <Property name="Width" source="C" value="0" type="double" />
-            <Property name="Height" source="C" value="0" type="double" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="Hidden" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="False" type="bool" />
-            <Property name="DisableEvents" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="False" type="bool" />
-            <Property name="Hidden" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="False" type="bool" />
-            <Property name="DisableEvents" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="False" type="bool" />
-          </Properties>
-          <Element id="13de1835-cf93-400b-bea3-0fb6ef9ded8b" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Activ">
-            <Conditions>
-              <ConditionLogic id="f7799998-11f6-44e3-b521-9839a5bff240" ref="bdc7faa9-d513-4dae-a476-50217f246f97" name="Activ Alarms" operator="And">
-                <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONFilterMode." operator="Equal" rightType="Constant" rightValue="1" />
-              </ConditionLogic>
-            </Conditions>
-            <Functions>
-              <Function id="dfb93814-4010-4f07-b52d-a4f2bdf593e4" ref="e8658cfd-7874-42e2-9358-98473d553c86" name="Activ Alarms">
-                <Instruction macro="WriteValueToVariable">
-                  <Parameter type="Constant" value="1" name="Value" />
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONFilterMode." />
-                  </Parameter>
-                </Instruction>
-              </Function>
-            </Functions>
-            <Properties>
-              <ConditionPriority>
-                <Condition id="f7799998-11f6-44e3-b521-9839a5bff240" />
-              </ConditionPriority>
-              <Property name="Name" source="C" value="Activ" type="string" />
-              <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-              <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-              <Property name="OutlineWidth" source="C" value="2" type="double" />
-              <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-              <Property name="X" source="C" value="376" type="double" />
-              <Property name="Y" source="C" value="416" type="double" />
-              <Property name="Width" source="C" value="96" type="double" />
-              <Property name="Height" source="C" value="48" type="double" />
-              <Property name="Use3DFrame" source="C" value="False" type="bool" />
-              <Property name="HasOutline" source="C" value="True" type="bool" />
-              <Property name="HasFillColor" source="C" value="True" type="bool" />
-              <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-              <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-              <Property name="Content" source="C" value="Aktiva" type="string" />
-              <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-              <Property name="LockedInEditor" source="C" value="False" type="bool" />
-              <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-              <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-              <Property name="ImageRotation" source="C" value="0" type="double" />
-              <Property name="DisableEvents" source="C" value="False" type="bool" />
-              <Property name="Hidden" source="C" value="False" type="bool" />
-              <Property name="OffsetX" source="RV" type="double" />
-              <Property name="OffsetY" source="RV" type="double" />
-              <Property name="WidthOffset" source="RV" type="double" />
-              <Property name="HeightOffset" source="RV" type="double" />
-              <Property name="Description" source="C" type="string" />
-              <Property name="MouseDown" source="C" type="Event" />
-              <Property name="MouseUp" source="C" value="dfb93814-4010-4f07-b52d-a4f2bdf593e4" type="Event" />
-              <Property name="FunctionKey" source="C" type="FunctionKey" />
-              <Property name="Content" source="C" condition="f7799998-11f6-44e3-b521-9839a5bff240" value="Aktiva" type="string" />
-              <Property name="FillColor" source="C" condition="f7799998-11f6-44e3-b521-9839a5bff240" value="255 255 255" type="Color" />
-              <Property name="OutlineColor" source="C" condition="f7799998-11f6-44e3-b521-9839a5bff240" value="30 84 164" type="Color" />
-            </Properties>
-          </Element>
-          <Element id="5099074b-1194-4e74-a46a-abd47c98dd33" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="NAK">
-            <Conditions>
-              <ConditionLogic id="e716fdf6-4350-47b3-8836-647da1560ad3" ref="3b536a9d-47c7-446e-aea3-c5472edd1583" name="Count Alarms" operator="And">
-                <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONFilterMode." operator="Equal" rightType="Constant" rightValue="3" />
-              </ConditionLogic>
-            </Conditions>
-            <Functions>
-              <Function id="8ab4f9d1-276f-41ae-b2ca-d1d8b896d608" ref="a9c89a4d-3a4b-406e-9440-7a4aab5ac528" name="Actic or NAK Alarms">
-                <Instruction macro="WriteValueToVariable">
-                  <Parameter type="Constant" value="3" name="Value" />
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONFilterMode." />
-                  </Parameter>
-                </Instruction>
-              </Function>
-            </Functions>
-            <Properties>
-              <ConditionPriority>
-                <Condition id="e716fdf6-4350-47b3-8836-647da1560ad3" />
-              </ConditionPriority>
-              <Property name="Name" source="C" value="NAK" type="string" />
-              <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-              <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-              <Property name="OutlineWidth" source="C" value="2" type="double" />
-              <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-              <Property name="X" source="C" value="480" type="double" />
-              <Property name="Y" source="C" value="416" type="double" />
-              <Property name="Width" source="C" value="200" type="double" />
-              <Property name="Height" source="C" value="48" type="double" />
-              <Property name="Use3DFrame" source="C" value="False" type="bool" />
-              <Property name="HasOutline" source="C" value="True" type="bool" />
-              <Property name="HasFillColor" source="C" value="True" type="bool" />
-              <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-              <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-              <Property name="Content" source="C" value="Aktiva/okvitterade" type="string" />
-              <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-              <Property name="LockedInEditor" source="C" value="False" type="bool" />
-              <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-              <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-              <Property name="ImageRotation" source="C" value="0" type="double" />
-              <Property name="DisableEvents" source="C" value="False" type="bool" />
-              <Property name="Hidden" source="C" value="False" type="bool" />
-              <Property name="OffsetX" source="RV" type="double" />
-              <Property name="OffsetY" source="RV" type="double" />
-              <Property name="WidthOffset" source="RV" type="double" />
-              <Property name="HeightOffset" source="RV" type="double" />
-              <Property name="Description" source="C" type="string" />
-              <Property name="MouseDown" source="C" type="Event" />
-              <Property name="MouseUp" source="C" value="8ab4f9d1-276f-41ae-b2ca-d1d8b896d608" type="Event" />
-              <Property name="FunctionKey" source="C" type="FunctionKey" />
-              <Property name="Content" source="C" condition="e716fdf6-4350-47b3-8836-647da1560ad3" value="Aktiva/okvitterade" type="string" />
-              <Property name="FillColor" source="C" condition="e716fdf6-4350-47b3-8836-647da1560ad3" value="255 255 255" type="Color" />
-              <Property name="OutlineColor" source="C" condition="e716fdf6-4350-47b3-8836-647da1560ad3" value="30 84 164" type="Color" />
-            </Properties>
-          </Element>
-        </Element>
-        <Element id="96a0f8bc-fd18-4faa-afa1-7fa950b30f38" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Filter">
-          <Conditions>
-            <ConditionLogic id="74236b64-df2b-4c23-99cc-e2dfeca7708b" ref="b22badf8-6a5f-4df0-8e44-6baa8d128948" name="Sort Alarm Count" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONFilterMode." operator="Equal" rightType="Constant" rightValue="2" />
-            </ConditionLogic>
-          </Conditions>
-          <Functions>
-            <Function id="39987a50-70db-44a9-bebe-5bc3a9017508" ref="2ca3f769-7dbb-43ab-90d5-c51d78f860a3" name="Enable Filter">
-              <Instruction macro="ToggleVariable">
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONFilterMode." />
-                </Parameter>
-                <Parameter type="Constant" value="0;1" name="Values" />
-              </Instruction>
-            </Function>
-          </Functions>
-          <Properties>
-            <ConditionPriority>
-              <Condition id="f3f32ad6-7304-423e-8c41-05057fdca82f" />
-              <Condition id="386fa4b2-1710-423f-a769-c1dd613a441a" />
-              <Condition id="74236b64-df2b-4c23-99cc-e2dfeca7708b" />
-            </ConditionPriority>
-            <Property name="Name" source="C" value="Filter" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="272" type="double" />
-            <Property name="Y" source="C" value="416" type="double" />
-            <Property name="Width" source="C" value="96" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" value="Filter" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" value="39987a50-70db-44a9-bebe-5bc3a9017508" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="Content" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="Filter" type="string" />
-            <Property name="Content" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="Filter" type="string" />
-            <Property name="Content" source="C" condition="74236b64-df2b-4c23-99cc-e2dfeca7708b" value="Filter" type="string" />
-            <Property name="OutlineColor" source="C" condition="74236b64-df2b-4c23-99cc-e2dfeca7708b" value="145 150 159" type="Color" />
-            <Property name="DisableEvents" source="C" condition="74236b64-df2b-4c23-99cc-e2dfeca7708b" value="True" type="bool" />
-            <Property name="FillColor" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="255 255 255" type="Color" />
-            <Property name="OutlineColor" source="C" condition="f3f32ad6-7304-423e-8c41-05057fdca82f" value="30 84 164" type="Color" />
-            <Property name="FillColor" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="255 255 255" type="Color" />
-            <Property name="OutlineColor" source="C" condition="386fa4b2-1710-423f-a769-c1dd613a441a" value="30 84 164" type="Color" />
-            <Property name="FillColor" source="C" condition="74236b64-df2b-4c23-99cc-e2dfeca7708b" value="220 222 230" type="Color" />
-          </Properties>
-        </Element>
       </Element>
     </Element>
   </Element>

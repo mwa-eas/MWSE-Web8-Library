@@ -40,7 +40,7 @@
         <Property name="X" source="C" value="0" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
         <Property name="Width" source="C" value="250" type="double" />
-        <Property name="Height" source="C" value="270" type="double" />
+        <Property name="Height" source="C" value="350" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />

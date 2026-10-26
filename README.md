@@ -23,7 +23,9 @@ Mallarna, bilderna och guiden finns också direkt i det här förrådet.
 ## MWSE FBox-biblioteket
 
 Mallarna är byggda och prövade mot MWSE FBox-biblioteket **V20.6.001**. Alla A-symboler som
-mallarna använder finns kvar med samma namn i V25.10.003. Nyare versioner är inte prövade.
+mallarna använder finns kvar med samma namn i V25.10.003 och V26.09.015, men se
+integratörsguidens avsnitt 2 om Givarskalningsinställning. Mallarna är inte prövade mot dessa
+versioner.
 
 ## Kom igång
 

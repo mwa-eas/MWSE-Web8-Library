@@ -24,14 +24,14 @@ markerat som slutsats.
 
 ## 1. Vad biblioteket innehåller
 
-Biblioteket har 99 mallar:
+Biblioteket har 100 mallar:
 
 - **15 symboler med signaler:** pump, fläkt, motor, kompressor, spjäll, brandspjäll, tre ventiler
   (tvåväg, treväg, trepunkt), fyra givare, roterande värmeväxlare och Panelknapp. En symbol visar
   vila, drift/aktiv och i förekommande fall fel, hand och larm. Ett klick öppnar objektets
   faceplate.
-- **13 statiska symboler:** batterier, filter, radiator, tankar, kretsar och två värmeväxlare för ventilation.
-  Bara en bild och en namnetikett, utan signaler.
+- **14 statiska symboler:** batterier, filter, radiator, tankar, kretsar, två värmeväxlare för
+  ventilation och en plattvärmeväxlare för vatten. Bara en bild och en namnetikett, utan signaler.
 - **9 faceplates** (manöverpaneler) för motor, givare, ventil, spjäll, trepunktsventil,
   regulator och handstyrning.
 - **39 inställnings- och statusblock** för larmgränser, fördröjningar, skalning, regulatorer,
@@ -51,14 +51,20 @@ Alla mallar, kategorier och signaler finns i [avsnitt 10](#10-mallar-och-fbox-si
 ## 2. Förutsättningar i PG5-programmet
 
 1. PCD-programmet använder MWSE FBox-biblioteket. Mallarna är byggda och prövade mot version
-   **V20.6.001**. A-symbolerna i V25.10.003 är jämförda med den: alla som mallarna använder finns
-   kvar med samma namn. V25.10.003 har också nya FBoxar och signaler som mallarna inte använder
-   än, till exempel Verkningsgrad V2 och `GfErsätt` i Analog ingång. Versioner efter V25.10.003
-   är inte jämförda.
+   **V20.6.001**. A-symbolerna i V25.10.003 och V26.09.015 är jämförda med den: alla namn som
+   mallarna använder finns kvar. De nya versionerna har också nya FBoxar och signaler som mallarna
+   inte använder än, till exempel Verkningsgrad V2 och `GfErsätt` i Analog ingång.
 
-   *Källa: FBox-makrona i MWSEFamilyAllmant.lib, V20.6.001 och V25.10.003, jämförda
-   2026-10-26.* **Ännu inte verifierat:** mallarna mot en PCD vars program är byggt med
-   V25.10.003.
+   **Undantag: Givarskalningsinställning.** I V25.10.003 och V26.09.015 skapar Analog ingång
+   (`MWSE_InAnaL`) brytpunkterna `BPX1`, `BPX2`, `BPY1` och `BPY2` i två block med samma villkor,
+   FBox-version före 21.05.001; det andra blocket byter plats på `BPX2` och `BPY1`. En Analog
+   ingång av version 21.05.001 eller senare får då inga av de fyra A-symbolerna, och
+   blockets fält blir tomma. Använd Givarskalningsinställning bara med en Analog ingång från
+   V20.6.001 tills FBox-biblioteket är rättat.
+
+   *Källa: FBox-makrona i MWSEFamilyAllmant.lib, V20.6.001, V25.10.003 och V26.09.015, jämförda
+   2026-10-26. Undantaget är en slutsats ur makrot, inte prövat i ett bygge.* **Ännu inte
+   verifierat:** mallarna mot en PCD vars program är byggt med V25.10.003 eller V26.09.015.
 2. Varje objekt som ska visas har en MWSE-FBox **med namn** i Fupla. FBoxen skapar A-symbolerna
    `A.MWSE.<namn>.<signal>` först när ett namn anges på den. Ge FBoxen namnet
    `<anläggning>.<objekt>`, till exempel `VS01.P01`, så får signalerna namn som
@@ -112,7 +118,7 @@ felmeddelande när importen är klar. Om något går fel visas en importlogg.
 I ett prov med de första 21 mallarna kom alla in, och **Libraries** visade namnen med å, ä och ö
 rätt. Filnamnen i zip-filen är därför skrivna utan å, ä och ö.
 
-> **Ännu inte verifierat:** importen av alla 99 mallar. Tills vidare: om importen misslyckas,
+> **Ännu inte verifierat:** importen av alla 100 mallar. Tills vidare: om importen misslyckas,
 > importera de lösa filerna i `mallar/` enligt [3.2](#32-alternativ-lösa-mallfiler).
 
 *Källa: Web Editor 8-hjälpen, Windows, s. 25–26 (Libraries Window: Import..., Importing
@@ -414,9 +420,18 @@ klick. De behöver ingen koppling: placera, skriv namnet i `Namn` och dölj det 
 | Krets, Krets med bypass, Krets med backventil | 60 × 130 |
 | Tank | 100 × 110 |
 | Liten tank | 40 × 60 |
-| Värmeväxlare X, Värmeväxlare V | 250 × 210 |
+| Värmeväxlare X, Värmeväxlare V, Plattvärmeväxlare | 250 × 210 |
 
 Etiketten ligger ovanför bilden, så mallen är 20 px högre än bilden och minst 80 px bred.
+
+**Plattvärmeväxlare** är växlaren vatten–vatten, till exempel i en fjärrvärmecentral: primärsidan
+ansluter till vänster och sekundärsidan till höger. Anslutningarna ligger på samma höjd som på
+Värmeväxlare X, 20 och 190 px ner i bilden, så ledningarna kan dras rakt in.
+
+**Kretsarna** placeras under sitt batteri eller sin radiator, centrerade under den, med kretsens
+övre del strax under batteriets underkant. De ska inte gå in i kanalen. Lägg reglerventilen på
+den vågräta tilloppsledningen som går in i kretsens framledningsben, inte bredvid kretsen:
+ventilernas bilder är ritade för vågrät ledning, och kretsens ben är lodräta.
 
 **Panelknapp** (kategori `MWSE\Symbol\Knapp`, 250 × 48 px) öppnar den faceplate som är kopplad
 till samma grupp, för de faceplates som ingen symbol öppnar: Regulatorpanel, Handpanel digital,
@@ -441,8 +456,8 @@ visar sig bara när `valdSymbol` är lika med dess grupp; annars är den dold oc
 klick. Den stängs med krysset uppe till höger, eller med ett nytt klick på symbolen. Krysset
 skriver ingenting till PCD:n.
 Vyn behöver därför **en faceplate-instans per objekt**, kopplad till samma grupp som objektets
-symbol eller Panelknapp. Motorpanel, Givarpanel och Ventilpanel är 250 × 350 px; övriga
-storlekar står i [6.5](#65-fler-faceplates).
+symbol eller Panelknapp. Alla faceplates är 250 × 350 px, så att de öppnas på samma plats
+([7.6](#76-placering-och-lagerordning)).
 
 Ett inställningsblock är alltid synligt ([6.6](#66-inställningsblock)).
 
@@ -544,12 +559,12 @@ Placering och koppling som för Motorpanel ([6.2](#62-motorpanel)). Alla har tag
 
 | Mall | Kategori | Öppnas av | Visar | Skriver | Storlek (px) |
 |---|---|---|---|---|---|
-| Spjällpanel | `MWSE\Panel\Spjäll` | Spjäll, Brandspjäll | Lägesfel (`LA_Ut`), Läge Hand/Auto (`Man`), Handkommando Öppna/Stäng (`ManV`) | `Man`, `ManV` | 250 × 270 |
-| Trepunktsventilpanel | `MWSE\Panel\Ventil` | Trepunktsventil | Beräknat ärvärde som värde och stapel 0–100 % (`BeräknVärde`), Manöver: Ökar, Minskar, Kalibrerar eller Stilla (`IncUt`, `DecUt`, `KalUt`) | inget | 250 × 180 |
+| Spjällpanel | `MWSE\Panel\Spjäll` | Spjäll, Brandspjäll | Lägesfel (`LA_Ut`), Läge Hand/Auto (`Man`), Handkommando Öppna/Stäng (`ManV`) | `Man`, `ManV` | 250 × 350 |
+| Trepunktsventilpanel | `MWSE\Panel\Ventil` | Trepunktsventil | Beräknat ärvärde som värde och stapel 0–100 % (`BeräknVärde`), Manöver: Ökar, Minskar, Kalibrerar eller Stilla (`IncUt`, `DecUt`, `KalUt`) | inget | 250 × 350 |
 | Regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Utsignal som stapel och värde (`YOut`) mellan `LimLow` och `LimHigh`, Läge Hand/Auto (`Mode`), Handvärde (`ManVal`) | `Mode`, `ManVal` | 250 × 350 |
-| Handpanel digital | `MWSE\Panel\Hand` | Panelknapp | Läge Hand/Auto (`Man`), Utsignal Till/Från (`ManV`) | `Man`, `ManV` | 250 × 230 |
-| Handpanel analog | `MWSE\Panel\Hand` | Panelknapp | Läge Hand/Auto (`Man`), Utsignal som inmatningsruta (`ManV`) | `Man`, `ManV` | 250 × 230 |
-| Digitalsignalpanel | `MWSE\Panel\Hand` | Panelknapp | Läge och Utsignal som Handpanel digital, Invertering, till- och frånslagsfördröjning med enhet | `Man`, `ManV`, `Invertering`, `StartF_tid`, `StartF_enhet`, `StoppF_tid`, `StoppF_enhet` | 250 × 480 |
+| Handpanel digital | `MWSE\Panel\Hand` | Panelknapp | Läge Hand/Auto (`Man`), Utsignal Till/Från (`ManV`) | `Man`, `ManV` | 250 × 350 |
+| Handpanel analog | `MWSE\Panel\Hand` | Panelknapp | Läge Hand/Auto (`Man`), Utsignal som inmatningsruta (`ManV`) | `Man`, `ManV` | 250 × 350 |
+| Digitalsignalpanel | `MWSE\Panel\Hand` | Panelknapp | Läge och Utsignal som Handpanel digital, Invertering, till- och frånslagsfördröjning med enhet | `Man`, `ManV`, `Invertering`, `StartF_tid`, `StartF_enhet`, `StoppF_tid`, `StoppF_enhet` | 250 × 350 |
 
 Binda och använda:
 
@@ -565,7 +580,7 @@ Binda och använda:
 - **Trepunktsventilpanel** skriver ingenting: FBoxen har inget handläge. Ge inte en Utgång,
   analog och en Beräknat ärvärde samma FBox-namn; då öppnas Ventilpanel och Trepunktsventilpanel
   samtidigt.
-- Enheten i Digitalsignalpanels listor är Sekunder, Minuter eller Timmar.
+- Enheten i Digitalsignalpanels listor är s, min eller h (sekunder, minuter, timmar).
 
 **Prövat mot PCD 2026-10-25:** Regulatorpanel på labbets PI-regulator `VS01.Reg`. Värdena visades
 med rätt decimaler, och skrivningarna nådde bara regulatorns egna symboler.
@@ -705,7 +720,7 @@ Larm, frysvakt (Part 12), avsnitt "A-symboler". `ResetDT` och `LarmVal`: lästa 
 
 | Mall | FBox | Visar | Skriver | Storlek (px) |
 |---|---|---|---|---|
-| PID-regulatorinställning | Regulator PID (`MWSE_heaPID3`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac00`), I-tid, D-tid, filtertid, offset | 310 × 506 |
+| PID-regulatorinställning | Regulator PID (`MWSE_heaPID3`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac00`), I-tid, D-tid, filtertid, offset | 310 × 490 |
 | P-regulatorinställning | Regulator P (`MWSE_heaPP2`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac`), arbetspunkt (`PtIni`) | 310 × 380 |
 
 Hjälpen listar inte regulatorernas A-symboler; namnen är lästa ur FBox-makrot. Faceplate för
@@ -814,7 +829,7 @@ inloggning. De binder inte under `A.MWSE.Namn.`:
 
 | Mall | Kategori | Storlek (px) | Kopplas till |
 |---|---|---|---|
-| Larmlista | `MWSE\Sida\Larm` | 960 × 464 | Larmlistan i en Alarm PCD init-FBox, under `Namn.` |
+| Larmlista | `MWSE\Sida\Larm` | 1004 × 508 | Larmlistan i en Alarm PCD init-FBox, under `Namn.` |
 | Larmsummering | `MWSE\Sida\Larm` | 104 × 48 | Antalet larm, symbolen `<grupp>.antal`, under `Namn.`; öppnar vyn `Larm` |
 | Topplist | `MWSE\Sida\Navigering` | 1020 × 48 | Web8:s inloggningsvariabler, HEAVAC:s klocka, `sidTitel`, `visaMeny`; utloggningen öppnar vyn `login` |
 | Navigeringsmeny | `MWSE\Sida\Navigering` | 1020 × 1032 | `visaMeny`; raderna öppnar vyerna `Start`, `Larm`, `Inställningar`, `Info` och `login` |
@@ -857,31 +872,54 @@ view") och Jump Back. Namnen i labbprogrammet: lästa ur dess symbolfil och Fupl
 
 ### 7.2 Larmlista och Larmsummering
 
-**Larmlista** visar larmen i en larmlista från FBoxen Alarm PCD init. Larm-FBoxen skapar symbolen
-`A.Alarm.<FBox-namn>.MyName`; mallen har `A.Alarm.Namn.MyName`.
+**Larmlista** visar larmen i en larmlista från FBoxen Alarm PCD init, det senaste larmet överst.
+Larm-FBoxen skapar symbolen `A.Alarm.<FBox-namn>.MyName`; mallen har `A.Alarm.Namn.MyName`.
+Mallen är ritad som ett inställningsblock: ett kort med ett band överst som bär kolumnrubrikerna,
+listan under bandet, bläddringspilarna till höger och en rad med fyra knappar längst ner. Den får
+plats under Topplist i en vy på 1020 × 600; placera den på (8, 56).
 
 1. Placera `Larmlista` i larmvyn, den vy som Larmsummering och menyn öppnar.
 2. Markera mallen, öppna fliken **Template** i Properties och sätt **Alarm List PPO Name** till
    larmlistans symbol, till exempel `A.Alarm.Larmlista.MyName`. Det går också att byta
    `A.Alarm.Namn.` mot `A.Alarm.Larmlista.` med **Replace All** i Cross-Reference.
-3. Sätt **Alarm List Size** till antalet larm i larm-FBoxen (mallen har 10). Får larmen inte
-   plats bläddrar pilarna till höger sida för sida; en pil blir grå vid första och sista sidan.
+3. Sätt **Alarm List Size** till samma antal larm som larmlistan i PCD:n har (mallen har 10). Den
+   styr bara hur många texttaggar Web8 skapar. Hur många larm listan rymmer bestäms i
+   PG5-programmet, se nedan.
 4. Larmtexterna läses från en CSV-fil (**Alarm Texts From CSV File** är på). Bygg projektet en
    gång, så skapas taggarna `<symbol>_0` till `<symbol>_<N−1>`, till exempel
    `A.Alarm.Larmlista.MyName_0`. Skriv larmtexten för varje tagg i CSV-filen. Utan text visar
    listan taggen.
 
-Kolumnerna heter ID, Larmtext, Kommande, Gående och Kvitt. Knapparna:
+**Fler larm än tio.** Larmlistan finns i PCD:n och skapas av FBoxen Alarm PCD init. Dess
+flaggfält (Flags, och Ack, Del och Text om de används) är fält i den lokala symboltabellen, och
+fältets storlek är det största antalet larm. Labbets larmlista har `F1001[10]`, alltså tio. För
+fler larm:
+
+1. Gör fälten större i PG5, alla lika stora, till exempel `[30]`.
+2. Koppla varje larm till listan med en FBox 1 alarm, 10 alarms eller 20 alarms. Varje larm får
+   ett eget nummer (**Idx**) från 1 till fältets storlek.
+3. Sätt **Alarm List Size** i Web8 till samma antal, bygg och skriv texterna för de nya taggarna.
+
+*Källa: Alarming-FBoxarnas hjälp (`Alarming_en.chm`), sidorna Alarm PCD init ("The size of this
+array defines the max. number of alarms") och 10 alarms ("The first index number is 1, and the
+last is the Number of alarms entered into the Init FBox"); Web Editor 8-hjälpen, Library, Online
+Alarm List, steg 4 (CSV-taggarna `{Alarm-PPO-Name}_[0..N]`).*
+
+Kolumnerna heter ID, Larmtext, Kommande, Gående och Kvitt. Raderna är 38 px höga, så att en
+rad går att välja med fingret, och en lång larmtext bryts till två rader. Knapparna:
 
 - **Kvittera vald** kvitterar den valda raden, **Kvittera alla** alla rader. Gångna larm som
   kvitteras försvinner ur listan.
-- **Filter** visar bara aktiva larm; **Aktiva/okvitterade** visar aktiva och okvitterade larm.
+- **Radera vald** raderar den valda radens larm, **Radera alla** hela larmlistan.
 
-En rad i taget kan väljas. Saias rubrikrad med flervalsknappen och den valda radens text är
-borttagen, eftersom texten redan står i raden.
+Sorteringen är **Sort** = Active Time Sorted (egenskapen `SortMode` = 1): det senaste larmet
+överst. Filtret är **Filter Default Value** = Active or NAK Alarms (egenskapen `FilterMode` = 3):
+listan visar bara aktiva larm och gångna larm som inte är kvitterade; normala larm syns inte.
+Mallen har inga knappar för filter, sortering eller kolumner, som labbets förenklade larmlista. Ska kolumnerna flyttas, gör det i egenskapen **Columns** på fliken **Template**.
 
-Kvitt-kolumnen visar körningens egna `NAK` och `ACK`, och den valda raden ritas svart med vit
-text. Båda kommer från Web8:s körning, inte från mallens egenskaper.
+En rad i taget kan väljas. Kvitt-kolumnen visar körningens egna `NAK` och `ACK`, och den valda
+raden ritas svart med vit text. Text i en rad står överst i raden. Allt detta kommer från Web8:s
+körning, inte från mallens egenskaper.
 
 **Larmsummering** visar antalet larm med en klocka, i normalfärg när antalet är 0 och i
 larmfärg när det är större. Ett klick öppnar vyn `Larm`. Den läser symbolen `Namn.antal`:
@@ -894,21 +932,27 @@ larmfärg när det är större. Ett klick öppnar vyn `Larm`. Den läser symbole
    **Replace All**.
 4. Rikta om vyn `Larm` om larmvyn heter något annat ([7.1](#71-koppla-en-sidmall)).
 
-**Prövat mot PCD 2026-10-25:** larm som löser ut och går tillbaka via ingångar visas och
-försvinner, `antal` följer (1, 2, 1), larmens status ändras efter Kvittera vald och Kvittera alla,
-och båda filtren gör som ovan. Larmsummering räknar på `LARMLISTA.antal`, visar larmläget över 0,
-och ett klick öppnar larmvyn.
+**Prövat mot PCD 2026-10-25** (förra utförandet, med filter och sortering som knappar): larm som
+löser ut och går tillbaka via ingångar visas och försvinner, `antal` följer (1, 2, 1) och larmens
+status ändras efter Kvittera vald och Kvittera alla. Larmsummering räknar på `LARMLISTA.antal`,
+visar larmläget över 0, och ett klick öppnar larmvyn. Det nya utförandet är prövat mot en
+simulerad PCD 2026-10-26: listan begär sorteringen 1, och kvittering, radering och bläddring
+fram och tillbaka fungerar.
 
-> **Ännu inte verifierat:** att Replace All i editorn når mallens egenskap Alarm List PPO Name,
-> och Larmsummerings läge vid 0 larm, som inte syntes på PCD:n eftersom ett gammalt larm stod
-> kvar. Tills vidare: sätt egenskapen direkt på fliken **Template** enligt steg 2.
+> **Ännu inte verifierat:** det nya utförandet på PCD:n, däribland att PCD:n sorterar det senaste
+> larmet överst och bläddrar i den ordningen; att Replace All i editorn når mallens egenskap
+> Alarm List PPO Name; och Larmsummerings läge vid 0 larm, som inte syntes på PCD:n eftersom ett
+> gammalt larm stod kvar. Tills vidare: sätt egenskapen direkt på fliken **Template** enligt steg
+> 2, och kontrollera ordningen med två larm efter nedladdning.
 
 *Källa: Web Editor-manualen, del 19, Online Alarm List: Configure The Template (Alarm List PPO
 Name, till exempel `A.Alarm.ThisAlarmList.MyName`; symbolen skapas av larm-FBoxen och får dess
 namn) och Configure Alarm Texts (CSV-taggen för varje larmtext har formen
 `{Alarm-PPO-Name}_[0..N]`; bygg först för att skapa taggarna); del 18, Defining the Alarm Texts.
-Utgången Num och `LARMLISTA.antal`: lästa ur labbprogrammet. Knapparna, rubrikraden, `NAK`/`ACK`
-och den svarta raden: prövat mot PCD 2026-10-25.*
+Sortering: del 19, Sort Mode ("Active Time Sorted: Show the newest alarm on top"); körningen
+skickar valet till PCD:n i larmförfrågan. Kolumnerna: del 19, Configure Table Columns.
+Utgången Num och `LARMLISTA.antal`: lästa ur labbprogrammet. `NAK`/`ACK` och den svarta raden:
+prövat mot PCD 2026-10-25.*
 
 ### 7.3 Topplist och sidtitel
 
@@ -996,10 +1040,9 @@ En sida med alla sidmallar, för en vy på 1020 × 600 px:
    den ritas ovanpå.
 3. **Sidofält** på (770, 48), i ett lager under `Paneler`, på varje vy som har faceplates eller
    panelknappar. Vyer utan dem, som larmvyn, använder hela bredden. I sidofältet öppnas alla
-   faceplates öppnas överst i den, på (770, 50) i lagret `Paneler`
+   faceplates överst, på (770, 50) i lagret `Paneler`
    ([6.1](#61-lager-för-faceplates)), och panelknapparna läggs under dem, från (770, 408) och
-   56 px nedåt per knapp. Digitalsignalpanel är 480 px hög och täcker knapparna medan den är
-   öppen.
+   56 px nedåt per knapp.
 4. Vyns symboler och inställningsblock under topplisten och till vänster om sidofältet, x under
    770.
 5. **Navigeringsmeny** på (0, 48), direkt under topplisten, och **sist**: efter alla faceplates i
@@ -1008,6 +1051,13 @@ En sida med alla sidmallar, för en vy på 1020 × 600 px:
    lägre vy går de utanför vyn i editorn, men i körningen skärs de av vid vyns kant.
 6. **Larmlista** i larmvyn. I inloggningsvyn: **Bakgrund** på (0, 0) först och **Inloggning**
    ovanpå den.
+
+Låt knapparnas utseende säga vad de gör, på alla vyer:
+
+- **Till en annan vy:** en knapp med pil, som menyns rader.
+- **Öppnar en faceplate:** Panelknapp, utan pil, i sidofältet.
+- **Byter mellan undersidor på samma sida**, till exempel inställningssidor: flikar i en rad
+  överst, utan pil, där fliken för den sida som visas är markerad som vald.
 
 *Källa: Web Editor-manualen, del 7, Document Outline Window (det översta elementet i översikten
 är överst i körningen) och Layer Window. Platserna: lästa ur mallfilerna. Att en faceplate annars
@@ -1134,7 +1184,7 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Integrerad Givare | `MWSE\Symbol\Givare` | Ingång, analog, larm ³ | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.0.0 |
 | Roterande värmeväxlare | `MWSE\Symbol\Värmeväxlare` | Motor och, under `VG.`, Verkningsgrad (`MWSE_VGRAD1`) | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man`, `VG.PV_Ut`, `VG.LAL_Ut` | 1.0.0 |
 | Panelknapp | `MWSE\Symbol\Knapp` | – (gruppen för panelen den öppnar) | – | 1.0.0 |
-| Värmebatteri, Kylbatteri, Kombibatteri, Filter, Radiator, Värmetank, Krets, Krets med bypass, Krets med backventil, Tank, Liten tank, Värmeväxlare X, Värmeväxlare V | `MWSE\Symbol\Statisk` | – | – | 1.0.0 |
+| Värmebatteri, Kylbatteri, Kombibatteri, Filter, Radiator, Värmetank, Krets, Krets med bypass, Krets med backventil, Tank, Liten tank, Värmeväxlare X, Värmeväxlare V, Plattvärmeväxlare | `MWSE\Symbol\Statisk` | – | – | 1.0.0 |
 
 **Faceplates**
 

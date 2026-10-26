@@ -7,7 +7,8 @@ en egen version, som visas i Web8:s mallbibliotek.
 ## 1.0.0 (ej utgiven)
 
 För MWSE FBox-biblioteket V20.6.001; A-symbolerna som mallarna använder finns kvar med samma namn
-i V25.10.003.
+i V25.10.003 och V26.09.015. Undantag: Givarskalningsinställning med en nyare Analog ingång, se
+integratörsguidens avsnitt 2.
 
 Första utgåvan som nedladdningspaket.
 
@@ -47,7 +48,8 @@ Panelknapp är en knapp som öppnar panelen för sin grupp, för paneler utan eg
 
 Bilder utan signaler, med en namnetikett: Värmebatteri, Kylbatteri, Kombibatteri, Filter,
 Radiator, Värmetank, Krets, Krets med bypass, Krets med backventil, Tank, Liten tank,
-Värmeväxlare X och Värmeväxlare V. Kategori `MWSE\Symbol\Statisk`, mallversion 1.0.0.
+Värmeväxlare X, Värmeväxlare V och Plattvärmeväxlare (vatten–vatten, till exempel i en
+fjärrvärmecentral). Kategori `MWSE\Symbol\Statisk`, mallversion 1.0.0.
 
 ### Paneler
 
@@ -101,7 +103,7 @@ Värmeväxlare X och Värmeväxlare V. Kategori `MWSE\Symbol\Statisk`, mallversi
 
 | Mall | Kategori i Web8 | Mallversion | Binds till |
 |---|---|---|---|
-| Larmlista | `MWSE\Sida\Larm` | 1.0.0 | Larmlistan från FBoxen Alarm PCD init (`A.Alarm.<namn>.MyName`). Bygger på Saias Online Alarm List (generation 1), med MWSE:s färger och svenska knappar, utan flerval, rubrikrad och rullningslist |
+| Larmlista | `MWSE\Sida\Larm` | 1.0.0 | Larmlistan från FBoxen Alarm PCD init (`A.Alarm.<namn>.MyName`). Bygger på Saias Online Alarm List (generation 1), förenklad som labbets larmlista: senaste larmet överst, fyra knappar (Kvittera vald, Kvittera alla, Radera vald, Radera alla) och bläddringspilar, utan filter, sortering, kolumnval, flerval, rubrikrad och rullningslist. Ritad som ett inställningsblock med kolumnrubrikerna i bandet, Arial 12 och 38 px rader |
 | Larmsummering | `MWSE\Sida\Larm` | 1.0.0 | Antal larm från samma FBox (`<namn>.antal`); öppnar larmvyn |
 | Topplist | `MWSE\Sida\Navigering` | 1.0.0 | Meny, bakåt, sidtitel (`sidTitel`), inloggad användare, PCD:ns klocka (`S.HVC.Clock`), utloggning. Plats för Larmsummering längst till höger |
 | Navigeringsmeny | `MWSE\Sida\Navigering` | 1.0.0 | Öppnas från Topplist; knappar till vyerna Start, Larm, Inställningar, Info och login, som integratören riktar om i Actions |
