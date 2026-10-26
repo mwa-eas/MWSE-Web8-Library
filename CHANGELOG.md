@@ -95,7 +95,7 @@ Värmeväxlare X och Värmeväxlare V. Kategori `MWSE\Symbol\Statisk`, mallversi
 
 | Mall | Kategori i Web8 | Mallversion | Binds till |
 |---|---|---|---|
-| Larmlista | `MWSE\Sida\Larm` | 1.0.0 | Larmlistan från FBoxen Alarm PCD init (`A.Alarm.<namn>.MyName`). Bygger på Saias Online Alarm List (generation 1), med MWSE:s färger och svenska knappar |
+| Larmlista | `MWSE\Sida\Larm` | 1.0.0 | Larmlistan från FBoxen Alarm PCD init (`A.Alarm.<namn>.MyName`). Bygger på Saias Online Alarm List (generation 1), med MWSE:s färger och svenska knappar, utan flerval och rubrikrad |
 | Larmsummering | `MWSE\Sida\Larm` | 1.0.0 | Antal larm från samma FBox (`<namn>.antal`); öppnar larmvyn |
 | Topplist | `MWSE\Sida\Navigering` | 1.0.0 | Meny, bakåt, sidtitel (`sidTitel`), inloggad användare, PCD:ns klocka (`S.HVC.Clock`), utloggning. Plats för Larmsummering längst till höger |
 | Navigeringsmeny | `MWSE\Sida\Navigering` | 1.0.0 | Öppnas från Topplist; knappar till vyerna Start, Larm, Inställningar, Info och login, som integratören riktar om i Actions |

@@ -761,7 +761,7 @@ binder inte under `A.MWSE.Namn.`:
 
 | Mall | Kategori | Storlek (px) | Kopplas till |
 |---|---|---|---|
-| Larmlista | `MWSE\Sida\Larm` | 960 × 520 | Larmlistan i en Alarm PCD init-FBox, under `Namn.` |
+| Larmlista | `MWSE\Sida\Larm` | 960 × 464 | Larmlistan i en Alarm PCD init-FBox, under `Namn.` |
 | Larmsummering | `MWSE\Sida\Larm` | 104 × 48 | Antalet larm, symbolen `<grupp>.antal`, under `Namn.`; öppnar vyn `Larm` |
 | Topplist | `MWSE\Sida\Navigering` | 1020 × 48 | Web8:s inloggningsvariabler, HEAVAC:s klocka, `sidTitel`, `visaMeny`; utloggningen öppnar vyn `login` |
 | Navigeringsmeny | `MWSE\Sida\Navigering` | 1020 × 1032 | `visaMeny`; raderna öppnar vyerna `Start`, `Larm`, `Inställningar`, `Info` och `login` |
@@ -822,9 +822,8 @@ Kolumnerna heter ID, Larmtext, Kommande, Gående och Kvitt. Knapparna:
   kvitteras försvinner ur listan.
 - **Filter** visar bara aktiva larm; **Aktiva/okvitterade** visar aktiva och okvitterade larm.
 
-Rubrikraden visar den valda radens larmtext. Är ingen rad vald visar den taggen
-`A.Alarm.<namn>.MyName_0` (med Filter på `MyName_`), eftersom projektet saknar text för den.
-Skriv en text för `<symbol>_0` om rubrikraden ska visa något annat.
+En rad i taget kan väljas. Saias rubrikrad med flervalsknappen och den valda radens text är
+borttagen, eftersom texten redan står i raden.
 
 Kvitt-kolumnen visar körningens egna `NAK` och `ACK`, och den valda raden ritas svart med vit
 text. Båda kommer från Web8:s körning, inte från mallens egenskaper.

@@ -476,361 +476,6 @@
         <Property name="FocusLost" source="C" type="Event" />
       </Properties>
     </Element>
-    <Element id="96379e96-0607-4f23-ba40-dc2eaafb09a7" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Chart">
-      <Properties>
-        <Property name="Name" source="C" value="Chart" type="string" />
-        <Property name="AccessBitmask" source="C" value="0" type="AccessBitmask" />
-        <Property name="OffsetY" source="RV" type="double" />
-        <Property name="X" source="C" value="0" type="double" />
-        <Property name="Y" source="C" value="0" type="double" />
-        <Property name="Width" source="C" value="0" type="double" />
-        <Property name="Height" source="C" value="0" type="double" />
-        <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-        <Property name="OffsetX" source="RV" type="double" />
-        <Property name="HeightOffset" source="RV" type="double" />
-        <Property name="WidthOffset" source="RV" type="double" />
-        <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Description" source="C" type="string" />
-        <Property name="DisableEvents" source="C" value="False" type="bool" />
-      </Properties>
-      <Element id="a4837b7f-379e-46ed-8d2e-e70885b0896f" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Head">
-        <Properties>
-          <Property name="Name" source="C" value="Head" type="string" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="0" type="double" />
-          <Property name="Height" source="C" value="0" type="double" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-        </Properties>
-        <Element id="2be72406-44a4-4d1d-b6a8-cd4aa37fb43b" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Left">
-          <Properties>
-            <Property name="Name" source="C" value="Left" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="2" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="0" type="double" />
-            <Property name="Y" source="C" value="0" type="double" />
-            <Property name="Width" source="C" value="128" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="False" type="bool" />
-            <Property name="HasFillColor" source="C" value="False" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          </Properties>
-        </Element>
-        <Element id="02aa89d7-12a0-49d0-88a8-35548de56aa4" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Right">
-          <Properties>
-            <Property name="Name" source="C" value="Right" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="1" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="0" type="double" />
-            <Property name="Y" source="C" value="0" type="double" />
-            <Property name="Width" source="C" value="128" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="False" type="bool" />
-            <Property name="HasFillColor" source="C" value="False" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          </Properties>
-        </Element>
-        <Element id="148099f2-29d6-45a4-9af1-65c29f66500d" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Information">
-          <Properties>
-            <Property name="Name" source="C" value="Information" type="string" />
-            <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="1" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="0" type="double" />
-            <Property name="Y" source="C" value="0" type="double" />
-            <Property name="Width" source="C" value="128" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="False" type="bool" />
-            <Property name="HasFillColor" source="C" value="False" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="CSV" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-            <Property name="Description" source="C" type="string" />
-          </Properties>
-        </Element>
-        <Element id="f1d509cc-a352-4aa7-a5a5-51bf16ec342e" type="fa09500d-cfce-43ae-ba3d-895e4a2aeab7" name="Selected Alam Text">
-          <Conditions>
-            <ConditionLogic id="bfa0efe0-6bc1-4cbd-ac47-73704e21aa43" ref="768a1cb3-05ee-46c8-a256-2a45a26caab5" name="Hide" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONAdvanced" operator="Equal" rightType="Constant" rightValue="1" />
-            </ConditionLogic>
-            <ConditionLogic id="3ff77698-e6cb-4476-acf6-77d62f7f7485" ref="6160e63b-d82e-49d1-90e8-f5261fdfc1ca" name="Hide (1)" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="MACROALRDEFONSelAlrName" operator="Equal" rightType="Constant" />
-            </ConditionLogic>
-            <ConditionLogic id="97077e07-2b11-4c28-9fa1-69c5ddf76a10" ref="eeff5550-a43d-4888-be6f-6a4927155675" name="Hide (2)" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="MACROALRDEFONSelAlrTypeID" operator="Equal" rightType="Constant" rightValue="" />
-            </ConditionLogic>
-            <ConditionLogic id="aceb1aa5-4eca-4ed1-bd1b-4735062ff6b2" ref="161c0a4f-46f9-4971-80d6-e9485188d5fb" name="_Long not available" operator="And">
-              <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Hide_Selected_Alam_Text" operator="Equal" rightType="Constant" rightValue="1" />
-            </ConditionLogic>
-          </Conditions>
-          <Properties>
-            <ConditionPriority>
-              <Condition id="97077e07-2b11-4c28-9fa1-69c5ddf76a10" />
-              <Condition id="aceb1aa5-4eca-4ed1-bd1b-4735062ff6b2" />
-            </ConditionPriority>
-            <Property name="Name" source="C" value="Selected Alam Text" type="string" />
-            <Property name="FillColor" source="C" value="240 243 247" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="1" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="X" source="C" value="136" type="double" />
-            <Property name="Y" source="C" value="0" type="double" />
-            <Property name="Width" source="C" value="824" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="HasOutline" source="C" value="False" type="bool" />
-            <Property name="Text" source="CSV" value="@CO_AlarmsListNr.@_@CO_MACROALRDEFONSelAlrTypeID@_Long" type="string" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="WordWrap" source="C" value="True" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" condition="97077e07-2b11-4c28-9fa1-69c5ddf76a10" value="False" type="bool" />
-            <Property name="Text" source="CSV" condition="97077e07-2b11-4c28-9fa1-69c5ddf76a10" type="string" />
-            <Property name="Text" source="CSV" condition="aceb1aa5-4eca-4ed1-bd1b-4735062ff6b2" value="@CO_AlarmsListNr.@_@CO_MACROALRDEFONSelAlrTypeID@" type="string" />
-            <Property name="FontColor" source="C" value="27 35 47" type="Color" />
-          </Properties>
-        </Element>
-        <Element id="d73a4eed-cfb7-42bb-af84-6aea5184b26f" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Check_Selected_Alam_Text">
-          <Functions>
-            <Function id="377aae11-2c43-4b2f-a04a-a87eb29b50e8" ref="4a2a0865-4322-4050-b31a-e983406cf97f" name="Check Translation is available">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="0" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Hide_Selected_Alam_Text" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="GetStringLength">
-                <Parameter type="CSV" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="@CO_AlarmsListNr.@_@CO_MACROALRDEFONSelAlrTypeID@_Long" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                </Parameter>
-              </Instruction>
-              <Instruction macro="WriteSubtractResultToVariableInt">
-                <Parameter type="Constant" value="5" name="FirstValue" />
-                <Parameter type="Container" name="SecondValue">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                </Parameter>
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                </Parameter>
-              </Instruction>
-              <Expression type="None">
-                <Instruction macro="GetCharAsString">
-                  <Parameter type="CSV" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="@CO_AlarmsListNr.@_@CO_MACROALRDEFONSelAlrTypeID@_Long" />
-                  </Parameter>
-                  <Parameter type="Container" name="Index">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                </Instruction>
-                <Instruction macro="WriteValueToVariable">
-                  <Parameter type="Container" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Check_Selected_Alam_Text" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-              <Expression type="None">
-                <Instruction macro="IncrementVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                  </Parameter>
-                </Instruction>
-                <Instruction macro="GetCharAsString">
-                  <Parameter type="CSV" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="@CO_AlarmsListNr.@_@CO_MACROALRDEFONSelAlrTypeID@_Long" />
-                  </Parameter>
-                  <Parameter type="Container" name="Index">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                </Instruction>
-                <Instruction macro="AppendValueToDestination">
-                  <Parameter type="Container" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Check_Selected_Alam_Text" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-              <Expression type="None">
-                <Instruction macro="IncrementVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                  </Parameter>
-                </Instruction>
-                <Instruction macro="GetCharAsString">
-                  <Parameter type="CSV" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="@CO_AlarmsListNr.@_@CO_MACROALRDEFONSelAlrTypeID@_Long" />
-                  </Parameter>
-                  <Parameter type="Container" name="Index">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                </Instruction>
-                <Instruction macro="AppendValueToDestination">
-                  <Parameter type="Container" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Check_Selected_Alam_Text" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-              <Expression type="None">
-                <Instruction macro="IncrementVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                  </Parameter>
-                </Instruction>
-                <Instruction macro="GetCharAsString">
-                  <Parameter type="CSV" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="@CO_AlarmsListNr.@_@CO_MACROALRDEFONSelAlrTypeID@_Long" />
-                  </Parameter>
-                  <Parameter type="Container" name="Index">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                </Instruction>
-                <Instruction macro="AppendValueToDestination">
-                  <Parameter type="Container" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Check_Selected_Alam_Text" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-              <Expression type="None">
-                <Instruction macro="IncrementVariable">
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                  </Parameter>
-                </Instruction>
-                <Instruction macro="GetCharAsString">
-                  <Parameter type="CSV" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="@CO_AlarmsListNr.@_@CO_MACROALRDEFONSelAlrTypeID@_Long" />
-                  </Parameter>
-                  <Parameter type="Container" name="Index">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_HEAD_LENGTH" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                </Instruction>
-                <Instruction macro="AppendValueToDestination">
-                  <Parameter type="Container" name="Value">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Char" />
-                  </Parameter>
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Check_Selected_Alam_Text" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-              <Expression type="If" leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="?S_Check_Selected_Alam_Text" operator="Equal" rightType="Constant" rightValue="_Long">
-                <Instruction macro="WriteValueToVariable">
-                  <Parameter type="Constant" value="1" name="Value" />
-                  <Parameter type="Container" name="Destination">
-                    <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Hide_Selected_Alam_Text" />
-                  </Parameter>
-                </Instruction>
-              </Expression>
-            </Function>
-          </Functions>
-          <Properties>
-            <Property name="Name" source="C" value="Check_Selected_Alam_Text" type="string" />
-            <Property name="Repaint" source="C" value="377aae11-2c43-4b2f-a04a-a87eb29b50e8" type="Event" />
-          </Properties>
-        </Element>
-      </Element>
-    </Element>
     <Element id="be502c4e-bfdd-459e-aedb-48274044bdb1" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Alarm List">
       <Conditions>
         <ConditionLogic id="348ce109-d0be-4669-8873-1325d9867518" ref="5ab6b4d7-eacc-4ab5-8755-e0c8cd9edd92" name="Hide @MACROALRDEFONAdvancedID" operator="And">
@@ -862,7 +507,7 @@
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="56" type="double" />
+          <Property name="Y" source="C" value="0" type="double" />
           <Property name="Width" source="C" value="896" type="double" />
           <Property name="Height" source="C" value="32" type="double" />
           <Property name="HasOutline" source="C" value="False" type="bool" />
@@ -913,7 +558,7 @@
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="88" type="double" />
+          <Property name="Y" source="C" value="32" type="double" />
           <Property name="Width" source="C" value="896" type="double" />
           <Property name="Height" source="C" value="320" type="double" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -983,7 +628,7 @@
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="904" type="double" />
-          <Property name="Y" source="C" value="56" type="double" />
+          <Property name="Y" source="C" value="0" type="double" />
           <Property name="Width" source="C" value="56" type="double" />
           <Property name="Height" source="C" value="352" type="double" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -1040,7 +685,7 @@
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="908" type="double" />
-          <Property name="Y" source="C" value="60" type="double" />
+          <Property name="Y" source="C" value="4" type="double" />
           <Property name="Width" source="C" value="48" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1112,7 +757,7 @@
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="908" type="double" />
-          <Property name="Y" source="C" value="356" type="double" />
+          <Property name="Y" source="C" value="300" type="double" />
           <Property name="Width" source="C" value="48" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1151,7 +796,7 @@
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="916" type="double" />
-          <Property name="Y" source="C" value="116" type="double" />
+          <Property name="Y" source="C" value="60" type="double" />
           <Property name="Width" source="C" value="32" type="double" />
           <Property name="Height" source="C" value="232" type="double" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
@@ -1287,7 +932,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="56" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
+            <Property name="Y" source="C" value="40" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1342,7 +987,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="214" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
+            <Property name="Y" source="C" value="40" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1397,7 +1042,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="372" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
+            <Property name="Y" source="C" value="40" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1452,7 +1097,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="530" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
+            <Property name="Y" source="C" value="40" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1507,7 +1152,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="688" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
+            <Property name="Y" source="C" value="40" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1555,7 +1200,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="0" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
+            <Property name="Y" source="C" value="40" type="double" />
             <Property name="Width" source="C" value="48" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1616,7 +1261,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="848" type="double" />
-            <Property name="Y" source="C" value="96" type="double" />
+            <Property name="Y" source="C" value="40" type="double" />
             <Property name="Width" source="C" value="48" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1695,7 +1340,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="56" type="double" />
-            <Property name="Y" source="C" value="152" type="double" />
+            <Property name="Y" source="C" value="96" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1739,7 +1384,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="214" type="double" />
-            <Property name="Y" source="C" value="152" type="double" />
+            <Property name="Y" source="C" value="96" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1783,7 +1428,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="372" type="double" />
-            <Property name="Y" source="C" value="152" type="double" />
+            <Property name="Y" source="C" value="96" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1827,7 +1472,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="530" type="double" />
-            <Property name="Y" source="C" value="152" type="double" />
+            <Property name="Y" source="C" value="96" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1871,7 +1516,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="688" type="double" />
-            <Property name="Y" source="C" value="152" type="double" />
+            <Property name="Y" source="C" value="96" type="double" />
             <Property name="Width" source="C" value="150" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -1949,7 +1594,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="848" type="double" />
-            <Property name="Y" source="C" value="208" type="double" />
+            <Property name="Y" source="C" value="152" type="double" />
             <Property name="Width" source="C" value="48" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2045,7 +1690,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="56" type="double" />
-            <Property name="Y" source="C" value="208" type="double" />
+            <Property name="Y" source="C" value="152" type="double" />
             <Property name="Width" source="C" value="782" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2109,7 +1754,7 @@
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="416" type="double" />
+          <Property name="Y" source="C" value="360" type="double" />
           <Property name="Width" source="C" value="128" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2153,7 +1798,7 @@
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="272" type="double" />
-          <Property name="Y" source="C" value="416" type="double" />
+          <Property name="Y" source="C" value="360" type="double" />
           <Property name="Width" source="C" value="128" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2203,7 +1848,7 @@
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="136" type="double" />
-          <Property name="Y" source="C" value="416" type="double" />
+          <Property name="Y" source="C" value="360" type="double" />
           <Property name="Width" source="C" value="128" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2253,7 +1898,7 @@
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="408" type="double" />
-          <Property name="Y" source="C" value="416" type="double" />
+          <Property name="Y" source="C" value="360" type="double" />
           <Property name="Width" source="C" value="128" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2433,7 +2078,7 @@
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="X" source="C" value="832" type="double" />
-          <Property name="Y" source="C" value="472" type="double" />
+          <Property name="Y" source="C" value="416" type="double" />
           <Property name="Width" source="C" value="128" type="double" />
           <Property name="Height" source="C" value="48" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2461,115 +2106,6 @@
           <Property name="FillColor" source="C" condition="1af499cd-e2a0-45d6-92eb-e7e6f6885473" value="255 255 255" type="Color" />
           <Property name="HasFillColor" source="C" condition="1af499cd-e2a0-45d6-92eb-e7e6f6885473" value="True" type="bool" />
           <Property name="OutlineColor" source="C" condition="1af499cd-e2a0-45d6-92eb-e7e6f6885473" value="30 84 164" type="Color" />
-        </Properties>
-      </Element>
-      <Element id="24921863-dbe5-4845-b8f3-aace45712551" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Multiselect">
-        <Conditions>
-          <ConditionLogic id="16f6115f-fbfe-4c2c-b3b9-2c75e952e3fb" ref="2094b98c-b59c-4cad-a174-817980784af8" name="SINGLESELECT" operator="And">
-            <Condition leftType="Constant" leftValue="SINGLESELECT" operator="Equal" rightType="Container" rightContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" rightName="@MACROALRDEFONSelectMode." />
-          </ConditionLogic>
-          <ConditionLogic id="58f29631-379b-4b9d-8cd9-0b8b94b63190" ref="354fda84-8f2b-4342-80d6-a42e87672cae" name="MULTISELECT" operator="And">
-            <Condition leftType="Constant" leftValue="MULTISELECT" operator="Equal" rightType="Container" rightContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" rightName="@MACROALRDEFONSelectMode." />
-          </ConditionLogic>
-          <ConditionLogic id="0678feac-7eb0-4c3e-80c7-a7ff2fc74f00" ref="828e33fd-fd45-4031-bf52-fdd7c89b1e8b" name="STOM" operator="And">
-            <Condition leftType="Constant" leftValue="STOM" operator="Equal" rightType="Container" rightContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" rightName="@MACROALRDEFONSelectMode." />
-          </ConditionLogic>
-          <ConditionLogic id="97a7121a-16c5-43ea-afad-fdfec82b1ff0" ref="f217f947-9377-435c-8592-ec4491f1b957" name="MTOS" operator="And">
-            <Condition leftType="Constant" leftValue="MTOS" operator="Equal" rightType="Container" rightContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" rightName="@MACROALRDEFONSelectMode." />
-          </ConditionLogic>
-          <ConditionLogic id="3c60972a-c25d-4951-b081-f5111765aa61" ref="2a8dc6e8-e617-4a36-af8f-7ced455442a7" name="SINGLESELECT (1)" operator="And">
-            <Condition leftType="Constant" leftValue="SINGLESELECT" operator="Equal" rightType="Container" rightContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" rightName="@MACROALRDEFONSelectMode." />
-          </ConditionLogic>
-          <ConditionLogic id="daee4f9d-7ba5-4f1c-ad80-63d3ca158a9f" ref="82026d07-b79c-4247-8c7c-43162632035f" name="MULTISELECT (1)" operator="And">
-            <Condition leftType="Constant" leftValue="MULTISELECT" operator="Equal" rightType="Container" rightContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" rightName="@MACROALRDEFONSelectMode." />
-          </ConditionLogic>
-        </Conditions>
-        <Functions>
-          <Function id="bb6038b7-6036-4f6e-88fe-532419fab473" ref="e819038e-4a6f-4bc7-8fab-330602fce71e" name="STOM / MTOS">
-            <Expression type="IfCondition" condition="16f6115f-fbfe-4c2c-b3b9-2c75e952e3fb" value="True">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="STOM" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectMode." />
-                </Parameter>
-              </Instruction>
-            </Expression>
-            <Expression type="IfCondition" condition="58f29631-379b-4b9d-8cd9-0b8b94b63190" value="True">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="MTOS" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectMode." />
-                </Parameter>
-              </Instruction>
-            </Expression>
-          </Function>
-          <Function id="5b804c12-2cad-45aa-a99b-49c3a66572f9" ref="ee0292b9-10a9-43b3-8780-98c69f266782" name="MULTISELECT / SINGLESELECT">
-            <Expression type="IfCondition" condition="0678feac-7eb0-4c3e-80c7-a7ff2fc74f00" value="True">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="MULTISELECT" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectMode." />
-                </Parameter>
-              </Instruction>
-            </Expression>
-            <Expression type="IfCondition" condition="97a7121a-16c5-43ea-afad-fdfec82b1ff0" value="True">
-              <Instruction macro="WriteValueToVariable">
-                <Parameter type="Constant" value="SINGLESELECT" name="Value" />
-                <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectMode." />
-                </Parameter>
-              </Instruction>
-            </Expression>
-            <Instruction macro="WriteValueToVariable">
-              <Parameter type="Constant" value="-1" name="Value" />
-              <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectIndexesOnce." />
-              </Parameter>
-            </Instruction>
-          </Function>
-        </Functions>
-        <Properties>
-          <ConditionPriority>
-            <Condition id="3c60972a-c25d-4951-b081-f5111765aa61" />
-            <Condition id="daee4f9d-7ba5-4f1c-ad80-63d3ca158a9f" />
-          </ConditionPriority>
-          <Property name="Name" source="C" value="Multiselect" type="string" />
-          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-          <Property name="OutlineWidth" source="C" value="2" type="double" />
-          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="128" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
-          <Property name="Use3DFrame" source="C" value="False" type="bool" />
-          <Property name="HasOutline" source="C" value="True" type="bool" />
-          <Property name="HasFillColor" source="C" value="True" type="bool" />
-          <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-          <Property name="Content" source="C" value="Flerval" type="string" />
-          <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-          <Property name="MouseDown" source="C" value="bb6038b7-6036-4f6e-88fe-532419fab473" type="Event" />
-          <Property name="MouseUp" source="C" value="5b804c12-2cad-45aa-a99b-49c3a66572f9" type="Event" />
-          <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-          <Property name="ImageRotation" source="C" value="0" type="double" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="Content" source="C" condition="3c60972a-c25d-4951-b081-f5111765aa61" value="Flerval" type="string" />
-          <Property name="HasOutline" source="C" condition="3c60972a-c25d-4951-b081-f5111765aa61" value="False" type="bool" />
-          <Property name="HasFillColor" source="C" condition="3c60972a-c25d-4951-b081-f5111765aa61" value="True" type="bool" />
-          <Property name="Use3DFrame" source="C" condition="3c60972a-c25d-4951-b081-f5111765aa61" value="False" type="bool" />
-          <Property name="Content" source="C" condition="daee4f9d-7ba5-4f1c-ad80-63d3ca158a9f" value="Flerval" type="string" />
-          <Property name="FillColor" source="C" condition="daee4f9d-7ba5-4f1c-ad80-63d3ca158a9f" value="255 255 255" type="Color" />
-          <Property name="OutlineColor" source="C" condition="daee4f9d-7ba5-4f1c-ad80-63d3ca158a9f" value="30 84 164" type="Color" />
         </Properties>
       </Element>
       <Element id="0ce2c6f8-35a9-472b-965d-df64756e1e1c" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Info" activeCondition="54de3520-2705-449a-bcdf-9c1110beddf6">
@@ -2608,7 +2144,7 @@
             <Property name="OutlineWidth" source="C" value="1" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="728" type="double" />
-            <Property name="Y" source="C" value="416" type="double" />
+            <Property name="Y" source="C" value="360" type="double" />
             <Property name="Width" source="C" value="232" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2643,7 +2179,7 @@
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="Text" source="CSV" value="Total Alarms" type="string" />
             <Property name="X" source="C" value="740" type="double" />
-            <Property name="Y" source="C" value="416" type="double" />
+            <Property name="Y" source="C" value="360" type="double" />
             <Property name="Width" source="C" value="140" type="double" />
             <Property name="Height" source="C" value="24" type="double" />
             <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
@@ -2673,7 +2209,7 @@
               <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListSize." />
             </Property>
             <Property name="X" source="C" value="892" type="double" />
-            <Property name="Y" source="C" value="416" type="double" />
+            <Property name="Y" source="C" value="360" type="double" />
             <Property name="Width" source="C" value="56" type="double" />
             <Property name="Height" source="C" value="24" type="double" />
             <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
@@ -2701,7 +2237,7 @@
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="Text" source="CSV" value="Page" type="string" />
             <Property name="X" source="C" value="740" type="double" />
-            <Property name="Y" source="C" value="440" type="double" />
+            <Property name="Y" source="C" value="384" type="double" />
             <Property name="Width" source="C" value="140" type="double" />
             <Property name="Height" source="C" value="24" type="double" />
             <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
@@ -2731,7 +2267,7 @@
               <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONMaxPageNr." />
             </Property>
             <Property name="X" source="C" value="892" type="double" />
-            <Property name="Y" source="C" value="440" type="double" />
+            <Property name="Y" source="C" value="384" type="double" />
             <Property name="Width" source="C" value="56" type="double" />
             <Property name="Height" source="C" value="24" type="double" />
             <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
@@ -2821,7 +2357,7 @@
               <Property name="OutlineWidth" source="C" value="2" type="double" />
               <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
               <Property name="X" source="C" value="0" type="double" />
-              <Property name="Y" source="C" value="472" type="double" />
+              <Property name="Y" source="C" value="416" type="double" />
               <Property name="Width" source="C" value="128" type="double" />
               <Property name="Height" source="C" value="48" type="double" />
               <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2878,7 +2414,7 @@
               <Property name="OutlineWidth" source="C" value="2" type="double" />
               <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
               <Property name="X" source="C" value="136" type="double" />
-              <Property name="Y" source="C" value="472" type="double" />
+              <Property name="Y" source="C" value="416" type="double" />
               <Property name="Width" source="C" value="128" type="double" />
               <Property name="Height" source="C" value="48" type="double" />
               <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -2970,7 +2506,7 @@
               <Property name="OutlineWidth" source="C" value="2" type="double" />
               <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
               <Property name="X" source="C" value="376" type="double" />
-              <Property name="Y" source="C" value="472" type="double" />
+              <Property name="Y" source="C" value="416" type="double" />
               <Property name="Width" source="C" value="96" type="double" />
               <Property name="Height" source="C" value="48" type="double" />
               <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -3025,7 +2561,7 @@
               <Property name="OutlineWidth" source="C" value="2" type="double" />
               <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
               <Property name="X" source="C" value="480" type="double" />
-              <Property name="Y" source="C" value="472" type="double" />
+              <Property name="Y" source="C" value="416" type="double" />
               <Property name="Width" source="C" value="200" type="double" />
               <Property name="Height" source="C" value="48" type="double" />
               <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -3083,7 +2619,7 @@
             <Property name="OutlineWidth" source="C" value="2" type="double" />
             <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
             <Property name="X" source="C" value="272" type="double" />
-            <Property name="Y" source="C" value="472" type="double" />
+            <Property name="Y" source="C" value="416" type="double" />
             <Property name="Width" source="C" value="96" type="double" />
             <Property name="Height" source="C" value="48" type="double" />
             <Property name="Use3DFrame" source="C" value="False" type="bool" />
