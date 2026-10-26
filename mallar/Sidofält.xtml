@@ -24,5 +24,77 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
+    <Element id="4cad2239-82b8-4e79-9fb6-44503b0ebd80" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rubrik">
+      <Properties>
+        <Property name="Name" source="C" value="Rubrik" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Ingen panel öppen" type="string" />
+        <Property name="X" source="C" value="16" type="double" />
+        <Property name="Y" source="C" value="141" type="double" />
+        <Property name="Width" source="C" value="218" type="double" />
+        <Property name="Height" source="C" value="24" type="double" />
+        <Property name="Font" source="C" value="Arial Bold 11" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="66 77 89" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="f0a62eab-c711-40f2-bf58-f401776d7b02" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rad1">
+      <Properties>
+        <Property name="Name" source="C" value="Rad1" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Klicka på en symbol eller" type="string" />
+        <Property name="X" source="C" value="16" type="double" />
+        <Property name="Y" source="C" value="169" type="double" />
+        <Property name="Width" source="C" value="218" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="66 77 89" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="58752ea4-c3e9-48b2-a122-883666505022" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rad2">
+      <Properties>
+        <Property name="Name" source="C" value="Rad2" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="en panelknapp för att" type="string" />
+        <Property name="X" source="C" value="16" type="double" />
+        <Property name="Y" source="C" value="189" type="double" />
+        <Property name="Width" source="C" value="218" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="66 77 89" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="947cd380-6760-456f-b625-e67f6771ea6b" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rad3">
+      <Properties>
+        <Property name="Name" source="C" value="Rad3" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="öppna dess panel." type="string" />
+        <Property name="X" source="C" value="16" type="double" />
+        <Property name="Y" source="C" value="209" type="double" />
+        <Property name="Width" source="C" value="218" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="66 77 89" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
   </Element>
 </Template>

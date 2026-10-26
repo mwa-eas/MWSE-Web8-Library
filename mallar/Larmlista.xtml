@@ -902,56 +902,6 @@
           <Property name="MouseDown" source="C" type="Event" />
         </Properties>
       </Element>
-      <Element id="4c29776a-5584-461e-b88f-d919cb6ed4a4" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="DELALRSDEFITEMS">
-        <Functions>
-          <Function id="59b6a65e-3c89-4edc-8978-5316a0b41022" ref="073fb5a6-ac35-4349-9f95-746cdea244c2" name="DELALRSHISITEMS">
-            <Instruction macro="WriteValueToVariable">
-              <Parameter type="Constant" value="DELALRSDEFITEMS" name="Value" />
-              <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelAlrsTypesAct." />
-              </Parameter>
-            </Instruction>
-            <Instruction macro="WriteValueToVariable">
-              <Parameter type="Constant" value="-1" name="Value" />
-              <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectIndexesOnce." />
-              </Parameter>
-            </Instruction>
-          </Function>
-        </Functions>
-        <Properties>
-          <Property name="Name" source="C" value="DELALRSDEFITEMS" type="string" />
-          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
-          <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-          <Property name="OutlineWidth" source="C" value="2" type="double" />
-          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="660" type="double" />
-          <Property name="Y" source="C" value="444" type="double" />
-          <Property name="Width" source="C" value="160" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
-          <Property name="Use3DFrame" source="C" value="False" type="bool" />
-          <Property name="HasOutline" source="C" value="True" type="bool" />
-          <Property name="HasFillColor" source="C" value="True" type="bool" />
-          <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-          <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-          <Property name="Content" source="C" value="Radera vald" type="string" />
-          <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-          <Property name="MouseUp" source="C" value="59b6a65e-3c89-4edc-8978-5316a0b41022" type="Event" />
-          <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="ImageRotation" source="C" value="0" type="double" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="MouseDown" source="C" type="Event" />
-        </Properties>
-      </Element>
       <Element id="bd15ca9c-0d00-439d-8169-2c545a3dcf46" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="DELALRSDEFLIST">
         <Functions>
           <Function id="51818e06-6a12-415d-9a5d-a75c00ffe92c" ref="39580274-a262-4d12-96e5-7a36442d37cd" name="DELALRSHISLIST">
@@ -984,7 +934,7 @@
           <Property name="HasFillColor" source="C" value="True" type="bool" />
           <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
           <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-          <Property name="Content" source="C" value="Radera alla" type="string" />
+          <Property name="Content" source="C" value="Rensa" type="string" />
           <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
           <Property name="MouseUp" source="C" value="51818e06-6a12-415d-9a5d-a75c00ffe92c" type="Event" />
           <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />

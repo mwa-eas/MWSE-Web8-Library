@@ -40,7 +40,7 @@ exempel med en pump, en ventil och en givare.
 |---|---|
 | `MWSE\Symbol\...` | Processymboler med lägena vila, drift och fel, statiska symboler och Panelknapp |
 | `MWSE\Panel\...` | Faceplates som öppnas när man klickar på en symbol |
-| `MWSE\Inställning\...` | Inställnings- och statusblock för larm, fördröjningar, skalning, regulatorer, kurvor, tidkanaler och handstyrning, och kurvdiagram som ritar börvärdeskurvorna |
+| `MWSE\Inställning\...` | Inställnings- och statusblock för larm, fördröjningar, skalning, regulatorer, tidkanaler och handstyrning, och kurvblock som visar börvärdeskurvans punkter med kurvan ritad bredvid |
 | `MWSE\Sida\...` | Sidmallar: larmlista, larmsummering, topplist, navigeringsmeny, sidofält, inloggning och inloggningsbakgrund |
 
 Alla mallar, deras versioner och vilken MWSE-FBox de hör till står i [ändringsloggen](CHANGELOG.md).
