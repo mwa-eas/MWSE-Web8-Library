@@ -4,7 +4,11 @@
 A-symbolerna i MWSE FBox-biblioteket. Rubriken anger paketets version. Varje mall har dessutom
 en egen version, som visas i Web8:s mallbibliotek.
 
-## 1.0.0 (ej utgiven)
+## 0.9.0-beta.1 (tidig åtkomst, 2026-10-27)
+
+Första förhandsversionen. Mallarna är prövade mot en simulerad PCD och, där guiden säger det, mot
+en riktig PCD; import och koppling i Web8-editorn är ännu inte prövade för alla mallar. Rapportera
+fel och förslag under Issues.
 
 För MWSE FBox-biblioteket V20.6.001; A-symbolerna som mallarna använder finns kvar med samma namn
 i V25.10.003 och V26.09.015. Undantag: Givarskalningsinställning med en nyare Analog ingång, se
