@@ -159,7 +159,7 @@
             <Condition id="026458d7-068f-4d41-b4da-8c9e8ab1bafe" />
           </ConditionPriority>
           <Property name="Name" source="C" value="Back" type="string" />
-          <Property name="FillColor" source="C" value="233 235 241" type="Color" />
+          <Property name="FillColor" source="C" value="255 255 255" type="Color" />
           <Property name="OutlineColor" source="C" value="99 110 124" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
@@ -204,7 +204,7 @@
       <Element id="10645873-d4ab-4a44-a955-7da5b70d0cc9" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="UserEntry">
         <Properties>
           <Property name="Name" source="C" value="UserEntry" type="string" />
-          <Property name="FillColor" source="C" value="233 235 241" type="Color" />
+          <Property name="FillColor" source="C" value="255 255 255" type="Color" />
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="0" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
@@ -240,7 +240,7 @@
             <Condition id="832f8f80-fe37-46c0-9561-4bde0aedeac4" />
           </ConditionPriority>
           <Property name="Name" source="C" value="Back" type="string" />
-          <Property name="FillColor" source="C" value="233 235 241" type="Color" />
+          <Property name="FillColor" source="C" value="255 255 255" type="Color" />
           <Property name="OutlineColor" source="C" value="99 110 124" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
@@ -340,7 +340,7 @@
             <Condition id="5307af4a-9a62-437e-82ad-4ba7207542cf" />
           </ConditionPriority>
           <Property name="Name" source="C" value="PasswordEntry" type="string" />
-          <Property name="FillColor" source="C" value="233 235 241" type="Color" />
+          <Property name="FillColor" source="C" value="255 255 255" type="Color" />
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="0" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
