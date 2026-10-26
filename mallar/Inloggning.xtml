@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="ed58e32b-3cfe-494c-8bcf-143259d60c65" version="1.0.0" name="Inloggning" description="Inloggningsruta för Web Editors användardatabas, byggd på Saia Burgess Controls Login 1.1.5 som labbets GUI använder." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="Saia-Burgess Controls AG" _category="MWSE\Sida\Inloggning" icon="icons.template.png">
+﻿<Template type="ViewElement" id="ed58e32b-3cfe-494c-8bcf-143259d60c65" version="1.0.0" name="Inloggning" description="Inloggningsruta för Web Editors användardatabas, från labbets GUI." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Sida\Inloggning" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />

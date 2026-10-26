@@ -103,5 +103,5 @@ Värmeväxlare X och Värmeväxlare V. Kategori `MWSE\Symbol\Statisk`, mallversi
 | Topplist | `MWSE\Sida\Navigering` | 1.0.0 | Meny, bakåt, sidtitel (`sidTitel`), inloggad användare, PCD:ns klocka (`S.HVC.Clock`), utloggning. Plats för Larmsummering längst till höger |
 | Navigeringsmeny | `MWSE\Sida\Navigering` | 1.0.0 | Öppnas från Topplist; knappar till vyerna Start, Larm, Inställningar, Info och login, som integratören riktar om i Actions |
 | Sidofält | `MWSE\Sida\Sidofält` | 1.0.0 | Inget. Den fasta högerspalten där panelerna öppnas och panelknapparna ligger |
-| Inloggning | `MWSE\Sida\Inloggning` | 1.0.0 | Web8:s egen inloggning mot användarlistan i projektet. Bygger på Saias Login 1.1.5, med MWSE:s färger |
+| Inloggning | `MWSE\Sida\Inloggning` | 1.0.0 | Web8:s egen inloggning mot användarlistan i projektet, med MWSE:s färger |
 | Bakgrund | `MWSE\Sida\Inloggning` | 1.0.0 | Inget. Bakgrundsbild för inloggningsvyn |

@@ -14,10 +14,11 @@ Hämta den senaste versionen under **Releases**. Zip-filen innehåller:
 
 - `MWSE-Web8-Library-<version>-mallar.zip`: alla mallar, för import i ett steg i Web8
 - `mallar/`: samma mallar som lösa `.xtml`-filer
+- `grafik/`: symbolernas bilder som lösa `.svg`-filer, i alla lägen, för användning utan mallarna
 - `Integratorsguide.md`: integratörsguiden
 - `CHANGELOG.md`: ändringsloggen
 
-Mallarna och guiden finns också direkt i det här förrådet.
+Mallarna, bilderna och guiden finns också direkt i det här förrådet.
 
 ## Kom igång
 
@@ -32,18 +33,19 @@ exempel med en pump, en ventil och en givare.
 |---|---|
 | `MWSE\Symbol\...` | Processymboler med lägena vila, drift och fel, statiska symboler och Panelknapp |
 | `MWSE\Panel\...` | Faceplates som öppnas när man klickar på en symbol |
-| `MWSE\Inställning\...` | Inställnings- och statusblock för larm, fördröjningar, skalning, regulatorer, kurvor, tidkanaler och handstyrning |
-| `MWSE\Sida\...` | Sidmallar: larmlista, larmsummering, topplist, navigeringsmeny och inloggning |
+| `MWSE\Inställning\...` | Inställnings- och statusblock för larm, fördröjningar, skalning, regulatorer, kurvor, tidkanaler och handstyrning, och kurvdiagram som ritar börvärdeskurvorna |
+| `MWSE\Sida\...` | Sidmallar: larmlista, larmsummering, topplist, navigeringsmeny, sidofält, inloggning och inloggningsbakgrund |
 
 Alla mallar, deras versioner och vilken MWSE-FBox de hör till står i [ändringsloggen](CHANGELOG.md).
 
-## Frågor och synpunkter
+## Fel och förslag
 
-Biblioteket ges ut av Malthe Winje Automation AB. Kontakta vår tekniska support med frågor, fel
-och synpunkter, gärna med version och en skärmbild: support@mwa.se eller +46 8 594 118 40,
-vardagar kl. 08–16. Mer om supporten finns på
-[mwa.se/supportcenter/teknisk-support](https://mwa.se/supportcenter/teknisk-support).
+Biblioteket ges ut av Malthe Winje Automation AB. Rapportera fel och föreslå förbättringar under
+**Issues**, med formuläret *Fel eller förslag*. Ange bibliotekets version och bifoga gärna en
+skärmbild. Skriv inte anläggningsnamn, IP-adresser, inloggningar eller kunduppgifter i ett issue.
 
 ## Villkor
 
-Villkoren för användning publiceras inför den officiella lanseringen.
+Biblioteket är fritt att använda under MIT-licensen, se [LICENSE](LICENSE). Undantag: Larmlista
+bygger på Saia Burgess Controls Online Alarm List, och för de delar som kommer därifrån gäller
+Saias villkor.

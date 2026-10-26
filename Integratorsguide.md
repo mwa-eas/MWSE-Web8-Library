@@ -84,6 +84,7 @@ access är versionerna markerade som pre-release. Packa upp zip-filen. Den inneh
 |---|---|
 | `MWSE-Web8-Library-<version>-mallar.zip` | Alla mallar, för import i ett steg ([3.1](#31-rekommenderat-importera-zip-filen)) |
 | `mallar/` | Samma mallar som lösa `.xtml`-filer ([3.2](#32-alternativ-lösa-mallfiler)) |
+| `grafik/` | Symbolernas bilder som lösa `.svg`-filer, i alla lägen (`__Idle`, `__Active`, `__Fault`), för den som vill använda bilderna utan mallarna |
 | `Integratorsguide.md` | Den här guiden |
 | `CHANGELOG.md` | Ändringsloggen |
 
@@ -813,8 +814,7 @@ inloggning. De binder inte under `A.MWSE.Namn.`:
 | Inloggning | `MWSE\Sida\Inloggning` | 360 × 296 | Projektets användardatabas |
 | Bakgrund | `MWSE\Sida\Inloggning` | 1020 × 600 | Inget; bakgrundsbild under Inloggning |
 
-Larmlista bygger på Saias Online Alarm List (generation 1) och Inloggning på Saias Login 1.1.5,
-båda med MWSE:s färger och svenska texter.
+Larmlista bygger på Saias Online Alarm List (generation 1), med MWSE:s färger och svenska texter.
 
 Larmlista, Larmsummering, Topplist och Navigeringsmeny är prövade mot PCD 2026-10-25; Inloggning
 bara mot en simulerad PCD. Vad som återstår står i varje avsnitt.
@@ -1248,15 +1248,11 @@ ett testbygge, och 2026-10-25 mot PCD:n, där labbprogrammet har FBoxen
 ([avsnitt 10](#10-mallar-och-fbox-signaler)). De 16 kurvdiagrammen är prövade 2026-10-26 på
 samma sätt ([6.9](#69-kurvdiagram)).
 
-## 12. Support
+## 12. Fel och förslag
 
-MWSE Web8 Library ges ut av Malthe Winje Automation AB. Kontakta vår tekniska support med frågor, fel
-och synpunkter, gärna med bibliotekets version och en skärmbild:
+MWSE Web8 Library ges ut av Malthe Winje Automation AB. Rapportera fel och föreslå förbättringar
+som ett issue i [förrådet på GitHub](https://github.com/mwa-eas/MWSE-Web8-Library/issues), med
+formuläret **Fel eller förslag**. Ange bibliotekets version och bifoga gärna en skärmbild.
 
-- E-post: support@mwa.se
-- Telefon: +46 8 594 118 40, vardagar kl. 08–16
-- Webb: [mwa.se/supportcenter/teknisk-support](https://mwa.se/supportcenter/teknisk-support)
-
-Fel och förslag kan också läggas som ett issue i
-[förrådet på GitHub](https://github.com/mwa-eas/MWSE-Web8-Library/issues). Förrådet är publikt:
-skriv inte anläggningsnamn, IP-adresser eller kunduppgifter i ett issue.
+Förrådet är publikt: skriv inte anläggningsnamn, IP-adresser, inloggningar eller kunduppgifter i
+ett issue, och maskera sådant i skärmbilder.

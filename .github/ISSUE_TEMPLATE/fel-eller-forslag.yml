@@ -7,9 +7,6 @@ body:
         **Förrådet är publikt.** Allt du skriver här kan läsas av alla. Skriv inte anläggningsnamn,
         kundnamn, adresser, IP-adresser, inloggningar eller annat som pekar ut en anläggning.
         Byt ut sådant mot påhittade namn, och beskär eller maskera skärmbilder.
-
-        Behöver du dela uppgifter som inte ska vara offentliga, kontakta vår tekniska support i stället:
-        support@mwa.se eller +46 8 594 118 40, vardagar kl. 08–16.
   - type: dropdown
     id: typ
     attributes:
