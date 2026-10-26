@@ -55,4 +55,4 @@ skärmbild. Skriv inte anläggningsnamn, IP-adresser, inloggningar eller kundupp
 
 Biblioteket är fritt att använda under MIT-licensen, se [LICENSE](LICENSE). Undantag: Larmlista
 bygger på Saia Burgess Controls Online Alarm List, och för de delar som kommer därifrån gäller
-Saias villkor.
+Saias villkor, se [NOTICE](NOTICE).
