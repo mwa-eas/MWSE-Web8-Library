@@ -10,6 +10,10 @@ Första utgåvan som nedladdningspaket.
 
 Larmfärgen är SmartFrames larm hög (alarm high): fyllning #EFAD9C, kant #B10000, larmtext #5F1506.
 
+P-faktorn (`PFac00`) i Regulatorinställning och PID-regulatorinställning visas med två decimaler
+(`DEC.2`), eftersom FBoxen anger den i hundradelar. Referens-GUI:t visar den med en decimal,
+tio gånger för stort.
+
 ### Symboler
 
 | Mall | Kategori i Web8 | Mallversion |

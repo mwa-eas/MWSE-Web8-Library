@@ -7,7 +7,7 @@
     <RemoteVariable name="A.MWSE.Namn.ActVal" format="DEC.1" />
     <RemoteVariable name="A.MWSE.Namn.SetPt" format="DEC.1" />
     <RemoteVariable name="A.MWSE.Namn.YOut" format="DEC.1" />
-    <RemoteVariable name="A.MWSE.Namn.PFac00" format="DEC.1" />
+    <RemoteVariable name="A.MWSE.Namn.PFac00" format="DEC.2" />
     <RemoteVariable name="A.MWSE.Namn.IntTime" format="DEC.1" />
     <RemoteVariable name="A.MWSE.Namn.DerTime" format="DEC.1" />
     <RemoteVariable name="A.MWSE.Namn.FT1Time" format="DEC.1" />

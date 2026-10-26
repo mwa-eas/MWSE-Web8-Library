@@ -198,7 +198,8 @@ styr hur ett värde visas och hur en inmatningsruta skriver det till PCD:n. Sign
 
 | Format | Signaler | Grund |
 |---|---|---|
-| `DEC.1` | `MV_Ut`, ventilens `Min`, `Max` och `ManV`, larmgränserna `HLLarmGrL`, `HLLarmGrH`, `GfLarmGrL`, `GfLarmGrH`, `LarmGrAvv`, kurvans `BPX1`–`BPX5` och `BPY1`–`BPY5`, regulatorns `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `Offset`, pumpstartens `StartGrD`, `StartGr`, `StoppGr` | Labbets GUI; prövat mot PCD |
+| `DEC.1` | `MV_Ut`, ventilens `Min`, `Max` och `ManV`, larmgränserna `HLLarmGrL`, `HLLarmGrH`, `GfLarmGrL`, `GfLarmGrH`, `LarmGrAvv`, kurvans `BPX1`–`BPX5` och `BPY1`–`BPY5`, regulatorns `ActVal`, `SetPt`, `YOut`, `IntTime`, `Offset`, pumpstartens `StartGrD`, `StartGr`, `StoppGr` | Labbets GUI; prövat mot PCD |
+| `DEC.2` | PI- och PID-regulatorns P-faktor `PFac00` | FBox-makrot; prövat mot PCD 2026-10-25 (se nedan) |
 | `DEC` | `DTtid`, `DTLarmGr`, `DTLarmF`, `StartF_tid`, `StoppF_tid` | Labbets GUI; prövat mot PCD |
 | `DD.MM.YY` | `DTdatum` | Labbets GUI; prövat mot PCD |
 | `HH:MM:SS`, `DD.MM.YY` | Topplistens klocka `S.HVC.Clock.HHMMSS` och `S.HVC.Clock.YYYYMMDD` | Labbets GUI; prövat mot PCD 2026-10-25 |
@@ -208,12 +209,15 @@ styr hur ett värde visas och hur en inmatningsruta skriver det till PCD:n. Sign
 | `DEC.1` | Kurvornas punkt 6–10, `YminV`, `YmaxV` och de sänkta värdena `BPY1n`–`BPY10n`; larmgränserna `LGr`, `HGr`, `LarmGrL`, `LarmGrH`; PID-regulatorns `DerTime`, `FT1Time`; `BeräknVärde`, `Dödzon`; Verkningsgradens `PV_Ut`; handvärdena `ManV` (Handpanel analog) och `V_Ut` (Handstatus analog) | Slutsats: tiondelar i FBox-makrot, eller samma slags värde som `MV_Ut` |
 | `HH:MM` | Tidkanalernas tider | Slutsats: registret håller TTMM (07:30 = 730), och Web8:s körning visar och skriver det så |
 
-**P-faktorn visas tio gånger för stor.** FBoxen anger P-faktorn i hundradelar
-(`Yp = Xw·Fp/100`), så `PFac00` = 100 betyder 1,00 % per K. Mallarna visar `PFac00` med
-`DEC.1`, som labbets GUI, alltså som `10.0 %`. Det visade värdet är därmed tio gånger den
-verkliga förstärkningen i % per K. På PCD:n följde `PFac` `PFac00` 1:1, så samma gäller `PFac`
-i P-regulatorinställning. Formatet följer labbets GUI tills vidare. Skalan är läst ur FBox-makrot;
-att `PFac` följer `PFac00` 1:1: prövat mot PCD 2026-10-25.
+**P-faktorn i PI- och PID-regulatorn har två decimaler.** FBoxen anger P-faktorn i
+hundradelar (`Yp = Xw·Fp/100`), så `PFac00` = 100 betyder 1,00 % per K och visas som `1.00`.
+Labbets GUI visar den med en decimal, alltså som `10.0`, tio gånger för stort; mallarna rättar
+det. Har ditt projekt redan deklarerat `PFac00` med ett annat format i **PCD Variables Editor**,
+gäller projektets format före mallens. Ändra det då till `DEC.2`. P-regulatorns `PFac` är
+regulatorns egen inställning i tiondelar och behåller `DEC.1`. Skalan är läst ur FBox-makrot;
+att `PFac` i PI-regulatorn följer `PFac00` 1:1: prövat mot PCD 2026-10-25. Att projektets format
+går före mallens, och att mallens `DEC.2` gäller utan egen deklaration: prövat i ett testbygge
+2026-10-26.
 
 > **Ännu inte verifierat:** formaten med grunden *Slutsats* som inte är prövade mot PCD.
 > Labbprogrammet har ingen av FBoxarna bakom dem (kurvor utöver Börvärdeskurva 5, larm,
