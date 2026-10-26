@@ -38,7 +38,7 @@ Trepunktsventil binds till Trepunktsventil (`MWSE_BAROM`) och har bara lägena v
 eftersom FBoxen inte har någon larmutgång. Roterande värmeväxlare binds till rotorns motor
 (`MWSE_MOTOR`) och till verkningsgradsblocket (`MWSE_VGRAD1`), som ska heta `<motornamn>.VG`.
 Panelknapp är en knapp som öppnar panelen för sin grupp, för paneler utan egen symbol
-(Regulatorpanel och handpanelerna).
+(Regulatorpanel och handpanelerna). Den har ingen pil, eftersom pilen betyder byte av vy.
 
 ### Statiska symboler
 
@@ -95,8 +95,10 @@ Värmeväxlare X och Värmeväxlare V. Kategori `MWSE\Symbol\Statisk`, mallversi
 
 | Mall | Kategori i Web8 | Mallversion | Binds till |
 |---|---|---|---|
-| Larmlista | `MWSE\Sida\Larm` | 1.0.0 | Larmlistan från FBoxen Alarm PCD init (`A.Alarm.<namn>.MyName`). Bygger på Saias Online Alarm List (generation 1), med MWSE:s färger och svenska knappar, utan flerval och rubrikrad |
+| Larmlista | `MWSE\Sida\Larm` | 1.0.0 | Larmlistan från FBoxen Alarm PCD init (`A.Alarm.<namn>.MyName`). Bygger på Saias Online Alarm List (generation 1), med MWSE:s färger och svenska knappar, utan flerval, rubrikrad och rullningslist |
 | Larmsummering | `MWSE\Sida\Larm` | 1.0.0 | Antal larm från samma FBox (`<namn>.antal`); öppnar larmvyn |
 | Topplist | `MWSE\Sida\Navigering` | 1.0.0 | Meny, bakåt, sidtitel (`sidTitel`), inloggad användare, PCD:ns klocka (`S.HVC.Clock`), utloggning. Plats för Larmsummering längst till höger |
 | Navigeringsmeny | `MWSE\Sida\Navigering` | 1.0.0 | Öppnas från Topplist; knappar till vyerna Start, Larm, Inställningar, Info och login, som integratören riktar om i Actions |
+| Sidofält | `MWSE\Sida\Sidofält` | 1.0.0 | Inget. Den fasta högerspalten där panelerna öppnas och panelknapparna ligger |
 | Inloggning | `MWSE\Sida\Inloggning` | 1.0.0 | Web8:s egen inloggning mot användarlistan i projektet. Bygger på Saias Login 1.1.5, med MWSE:s färger |
+| Bakgrund | `MWSE\Sida\Inloggning` | 1.0.0 | Inget. Bakgrundsbild för inloggningsvyn |

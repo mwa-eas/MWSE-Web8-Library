@@ -1,0 +1,32 @@
+﻿<Template type="ViewElement" id="98514269-8e5f-454f-b73a-b952eeba3160" version="1.0.0" name="Bakgrund" description="Bakgrundsbild för inloggningsvyn, läggs under Inloggning." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Sida\Inloggning" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <Resources>
+    <Resource name="Media/MWSE_LoginBackground.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDEwMjQgNjAwIj4KICA8IS0tIEJhc2U6IGxpZ2h0IGdyZXktYmx1ZSAtLT4KICA8cmVjdCB3aWR0aD0iMTAyNCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiNlNGVkZjMiLz4KCiAgPCEtLSBMYXJnZSBiYWNrZ3JvdW5kIGFyY3MgZnJvbSB0b3AgcmlnaHQgLS0+CiAgPGNpcmNsZSBjeD0iMTE1MCIgY3k9Ii04MCIgcj0iNzUwIiBmaWxsPSJub25lIiBzdHJva2U9IiNiOGQwZGUiIHN0cm9rZS13aWR0aD0iNjAiIG9wYWNpdHk9IjAuNSIvPgogIDxjaXJjbGUgY3g9IjExNTAiIGN5PSItODAiIHI9IjU4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzRkOGU2IiBzdHJva2Utd2lkdGg9IjQwIiBvcGFjaXR5PSIwLjQiLz4KICA8Y2lyY2xlIGN4PSIxMTUwIiBjeT0iLTgwIiByPSI0MzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2NjZTBlYyIgc3Ryb2tlLXdpZHRoPSIyNSIgb3BhY2l0eT0iMC40Ii8+CgogIDwhLS0gTGFyZ2UgYXJjcyBmcm9tIGJvdHRvbSBsZWZ0IC0tPgogIDxjaXJjbGUgY3g9Ii0xMjAiIGN5PSI2ODAiIHI9IjcwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjhkMGRlIiBzdHJva2Utd2lkdGg9IjUwIiBvcGFjaXR5PSIwLjQiLz4KICA8Y2lyY2xlIGN4PSItMTIwIiBjeT0iNjgwIiByPSI1MzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2M0ZDhlNiIgc3Ryb2tlLXdpZHRoPSIzMCIgb3BhY2l0eT0iMC4zNSIvPgoKICA8IS0tIEZpbmUgYXJjIGxpbmVzIHRvcCByaWdodCAtLT4KICA8Y2lyY2xlIGN4PSIxMTUwIiBjeT0iLTgwIiByPSI2ODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdhYWZjOCIgc3Ryb2tlLXdpZHRoPSIwLjgiIG9wYWNpdHk9IjAuNCIvPgogIDxjaXJjbGUgY3g9IjExNTAiIGN5PSItODAiIHI9IjU4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2FhZmM4IiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC4zNSIvPgogIDxjaXJjbGUgY3g9IjExNTAiIGN5PSItODAiIHI9IjQ4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2FhZmM4IiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC4zNSIvPgogIDxjaXJjbGUgY3g9IjExNTAiIGN5PSItODAiIHI9IjM4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2FhZmM4IiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC4zIi8+CiAgPGNpcmNsZSBjeD0iMTE1MCIgY3k9Ii04MCIgcj0iMjgwIiBmaWxsPSJub25lIiBzdHJva2U9IiM3YWFmYzgiIHN0cm9rZS13aWR0aD0iMC44IiBvcGFjaXR5PSIwLjI1Ii8+CgogIDwhLS0gRmluZSBhcmMgbGluZXMgYm90dG9tIGxlZnQgLS0+CiAgPGNpcmNsZSBjeD0iLTEyMCIgY3k9IjY4MCIgcj0iNjMwIiBmaWxsPSJub25lIiBzdHJva2U9IiM3YWFmYzgiIHN0cm9rZS13aWR0aD0iMC44IiBvcGFjaXR5PSIwLjM1Ii8+CiAgPGNpcmNsZSBjeD0iLTEyMCIgY3k9IjY4MCIgcj0iNTEwIiBmaWxsPSJub25lIiBzdHJva2U9IiM3YWFmYzgiIHN0cm9rZS13aWR0aD0iMC44IiBvcGFjaXR5PSIwLjMiLz4KICA8Y2lyY2xlIGN4PSItMTIwIiBjeT0iNjgwIiByPSIzOTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdhYWZjOCIgc3Ryb2tlLXdpZHRoPSIwLjgiIG9wYWNpdHk9IjAuMjUiLz4KICA8Y2lyY2xlIGN4PSItMTIwIiBjeT0iNjgwIiByPSIyNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdhYWZjOCIgc3Ryb2tlLXdpZHRoPSIwLjgiIG9wYWNpdHk9IjAuMiIvPgoKICA8IS0tIERpYWdvbmFsIGxpZ2h0IHBhbmVsIG92ZXJsYXlzIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iMzAwLDAgNjAwLDAgNzUwLDYwMCA0NTAsNjAwIiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIwLjA2Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NTAsMCA4MjAsMCAxMDI0LDQwMCAxMDI0LDAiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuMDciLz4KICA8cG9seWdvbiBwb2ludHM9IjAsMjAwIDAsNDAwIDIwMCw2MDAgMCw2MDAiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuMDUiLz4KCiAgPCEtLSBOb2RlIGRvdHMgLS0+CiAgPGcgZmlsbD0iIzUwOTBiMCIgb3BhY2l0eT0iMC41Ij4KICAgIDxjaXJjbGUgY3g9IjgyMCIgY3k9IjQ4IiByPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSI5NzAiIGN5PSIxOTAiIHI9IjIuNSIvPgogICAgPGNpcmNsZSBjeD0iOTgwIiBjeT0iMzcwIiByPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSI3NjAiIGN5PSI1MTAiIHI9IjIuNSIvPgogICAgPGNpcmNsZSBjeD0iMTIwIiBjeT0iNDgwIiByPSIzIi8+CiAgICA8Y2lyY2xlIGN4PSI1NSIgY3k9IjMwMCIgcj0iMi41Ii8+CiAgICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNDAiIHI9IjIuNSIvPgogICAgPGNpcmNsZSBjeD0iNDgwIiBjeT0iMzAiIHI9IjIiLz4KICA8L2c+CgogIDwhLS0gQ29ubmVjdG9yIGxpbmVzIC0tPgogIDxnIHN0cm9rZT0iIzUwOTBiMCIgc3Ryb2tlLXdpZHRoPSIwLjciIG9wYWNpdHk9IjAuMiIgZmlsbD0ibm9uZSI+CiAgICA8bGluZSB4MT0iNDgwIiB5MT0iMzAiIHgyPSI4MjAiIHkyPSI0OCIvPgogICAgPGxpbmUgeDE9IjgyMCIgeTE9IjQ4IiB4Mj0iOTcwIiB5Mj0iMTkwIi8+CiAgICA8bGluZSB4MT0iOTcwIiB5MT0iMTkwIiB4Mj0iOTgwIiB5Mj0iMzcwIi8+CiAgICA8bGluZSB4MT0iOTgwIiB5MT0iMzcwIiB4Mj0iNzYwIiB5Mj0iNTEwIi8+CiAgICA8bGluZSB4MT0iNzYwIiB5MT0iNTEwIiB4Mj0iMTIwIiB5Mj0iNDgwIi8+CiAgICA8bGluZSB4MT0iMTIwIiB5MT0iNDgwIiB4Mj0iNTUiIHkyPSIzMDAiLz4KICAgIDxsaW5lIHgxPSI1NSIgeTE9IjMwMCIgeDI9IjIwMCIgeTI9IjE0MCIvPgogICAgPGxpbmUgeDE9IjIwMCIgeTE9IjE0MCIgeDI9IjQ4MCIgeTI9IjMwIi8+CiAgPC9nPgo8L3N2Zz4K" />
+  </Resources>
+  <Element id="dc9c5332-60a3-4bac-ab9a-c2165be8e89f" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Bakgrund">
+    <Properties>
+      <Property name="Name" source="C" value="Bakgrund" type="string" />
+    </Properties>
+    <Element id="9af56cfc-22c3-4fb2-b910-84c5eed6b353" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Bild">
+      <Properties>
+        <Property name="Name" source="C" value="Bild" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="1020" type="double" />
+        <Property name="Height" source="C" value="600" type="double" />
+        <Property name="ScaleMode" source="C" value="Stretch" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="98514269-8e5f-454f-b73a-b952eeba3160" name="Media/MWSE_LoginBackground.svg" />
+        </Property>
+      </Properties>
+    </Element>
+  </Element>
+</Template>

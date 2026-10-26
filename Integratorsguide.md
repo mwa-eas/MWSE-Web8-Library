@@ -407,10 +407,12 @@ klick. De behöver ingen koppling: placera, skriv namnet i `Namn` och dölj det 
 
 Etiketten ligger ovanför bilden, så mallen är 20 px högre än bilden och minst 80 px bred.
 
-**Panelknapp** (kategori `MWSE\Symbol\Knapp`, 160 × 48 px) öppnar den faceplate som är kopplad
+**Panelknapp** (kategori `MWSE\Symbol\Knapp`, 250 × 48 px) öppnar den faceplate som är kopplad
 till samma grupp, för de faceplates som ingen symbol öppnar: Regulatorpanel, Handpanel digital,
 Handpanel analog och Digitalsignalpanel. Den fungerar som en symbol: klicket skriver gruppen till
 `valdSymbol`, och knappen markeras som vald. Skriv knappens text i `Namn`, till exempel `Reg`.
+Knappen har ingen pil: pilen betyder att man går till en annan vy, som i menyn. Lägg
+panelknapparna i sidofältet under panelerna ([7.6](#76-placering-och-lagerordning)).
 
 Panelknapp har inga PCD-variabler, så knappen **Find and Replace Template Group** är avstängd.
 Koppla den med den handskrivna vägen i [5.2](#52-koppla-symbolen-till-objektet): **Find what**
@@ -756,8 +758,8 @@ Händelsens och fältens namn i editorn: prövat 2026-10-23.*
 
 ## 7. Sidmallar
 
-Sidmallarna bygger själva sidan: larmlista, larmsummering, topplist, meny och inloggning. De
-binder inte under `A.MWSE.Namn.`:
+Sidmallarna bygger själva sidan: larmlista, larmsummering, topplist, meny, sidofält och
+inloggning. De binder inte under `A.MWSE.Namn.`:
 
 | Mall | Kategori | Storlek (px) | Kopplas till |
 |---|---|---|---|
@@ -765,7 +767,9 @@ binder inte under `A.MWSE.Namn.`:
 | Larmsummering | `MWSE\Sida\Larm` | 104 × 48 | Antalet larm, symbolen `<grupp>.antal`, under `Namn.`; öppnar vyn `Larm` |
 | Topplist | `MWSE\Sida\Navigering` | 1020 × 48 | Web8:s inloggningsvariabler, HEAVAC:s klocka, `sidTitel`, `visaMeny`; utloggningen öppnar vyn `login` |
 | Navigeringsmeny | `MWSE\Sida\Navigering` | 1020 × 1032 | `visaMeny`; raderna öppnar vyerna `Start`, `Larm`, `Inställningar`, `Info` och `login` |
+| Sidofält | `MWSE\Sida\Sidofält` | 250 × 552 | Inget; spalten där panelerna och panelknapparna ligger |
 | Inloggning | `MWSE\Sida\Inloggning` | 360 × 296 | Projektets användardatabas |
+| Bakgrund | `MWSE\Sida\Inloggning` | 1020 × 600 | Inget; bakgrundsbild under Inloggning |
 
 Larmlista bygger på Saias Online Alarm List (generation 1) och Inloggning på Saias Login 1.1.5,
 båda med MWSE:s färger och svenska texter.
@@ -810,7 +814,8 @@ view") och Jump Back. Namnen i labbprogrammet: lästa ur dess symbolfil och Fupl
 2. Markera mallen, öppna fliken **Template** i Properties och sätt **Alarm List PPO Name** till
    larmlistans symbol, till exempel `A.Alarm.Larmlista.MyName`. Det går också att byta
    `A.Alarm.Namn.` mot `A.Alarm.Larmlista.` med **Replace All** i Cross-Reference.
-3. Sätt **Alarm List Size** till antalet larmtyper i listan (mallen har 10).
+3. Sätt **Alarm List Size** till antalet larm i larm-FBoxen (mallen har 10). Får larmen inte
+   plats bläddrar pilarna till höger sida för sida; en pil blir grå vid första och sista sidan.
 4. Larmtexterna läses från en CSV-fil (**Alarm Texts From CSV File** är på). Bygg projektet en
    gång, så skapas taggarna `<symbol>_0` till `<symbol>_<N−1>`, till exempel
    `A.Alarm.Larmlista.MyName_0`. Skriv larmtexten för varje tagg i CSV-filen. Utan text visar
@@ -939,13 +944,19 @@ En sida med alla sidmallar, för en vy på 1020 × 600 px:
 1. **Topplist** överst i vyn, på (0, 0).
 2. **Larmsummering** på (916, 0) relativt topplisten, i samma lager och **efter** Topplist, så att
    den ritas ovanpå.
-3. Vyns symboler och inställningsblock under topplisten, och faceplates i lagret `Paneler`
-   ([6.1](#61-lager-för-faceplates)).
-4. **Navigeringsmeny** på (0, 48), direkt under topplisten, och **sist**: efter alla faceplates i
+3. **Sidofält** på (770, 48), i ett lager under `Paneler`. Spalten är fast på varje vy: alla
+   faceplates öppnas överst i den, på (770, 50) i lagret `Paneler`
+   ([6.1](#61-lager-för-faceplates)), och panelknapparna läggs under dem, från (770, 408) och
+   56 px nedåt per knapp. Digitalsignalpanel är 480 px hög och täcker knapparna medan den är
+   öppen.
+4. Vyns symboler och inställningsblock under topplisten och till vänster om sidofältet, x under
+   770.
+5. **Navigeringsmeny** på (0, 48), direkt under topplisten, och **sist**: efter alla faceplates i
    det översta lagret, eller i ett eget lager överst. Annars ritas en öppen faceplate ovanpå menyns
    gardin. Menyn och gardinen räcker till nederkanten av en vy som är upp till 1080 px hög. I en
    lägre vy går de utanför vyn i editorn, men i körningen skärs de av vid vyns kant.
-5. **Larmlista** i larmvyn, och **Inloggning** i inloggningsvyn.
+6. **Larmlista** i larmvyn. I inloggningsvyn: **Bakgrund** på (0, 0) först och **Inloggning**
+   ovanpå den.
 
 *Källa: Web Editor-manualen, del 7, Document Outline Window (det översta elementet i översikten
 är överst i körningen) och Layer Window. Platserna: lästa ur mallfilerna. Att en faceplate annars

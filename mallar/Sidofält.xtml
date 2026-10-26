@@ -1,0 +1,28 @@
+﻿<Template type="ViewElement" id="0ada40e9-18c8-4990-a099-be372fb8b025" version="1.0.0" name="Sidofält" description="Den fasta högerspalten under topplisten: panelerna öppnas överst i den och Panelknapp läggs under dem." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Sida\Sidofält" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <Resources />
+  <Element id="fd29def5-88a5-48a9-b21e-5b9a0e95d888" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Sidofält">
+    <Properties>
+      <Property name="Name" source="C" value="Sidofält" type="string" />
+    </Properties>
+    <Element id="728cb764-350e-47b2-981a-8a3ff02bc978" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
+      <Properties>
+        <Property name="Name" source="C" value="Bakgrund" type="string" />
+        <Property name="FillColor" source="C" value="223 226 234" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="250" type="double" />
+        <Property name="Height" source="C" value="552" type="double" />
+        <Property name="HasOutline" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+      </Properties>
+    </Element>
+  </Element>
+</Template>

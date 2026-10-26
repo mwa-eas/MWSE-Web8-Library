@@ -20,8 +20,8 @@
     <Translation key="ACK" t1="ACK" t2="ACK" t3="ACK" t4="ACK" t5="ACK" t6="Kvitt" />
     <Translation key="Hide" t1="Hide" t2="Cacher" t3="Verbergen" t4="Verstecken" t5="Nascondere" t6="Dölj" />
     <Translation key="Project Default" t1="Project Default" t2="Projet défaut" t3="Project Default" t4="Projekt-Standard" t5="Progetto di default" t6="Standardkolumner" />
-    <Translation key="Total Alarms" t1="Total Alarms" t2="Total des alarmes" t3="Totaal alarmen" t4="Alle Alarme" t5="Totale Allarmi" t6="Larmtyper" />
-    <Translation key="Page" t1="Page" t2="Page" t3="Pagina" t4="Seite" t5="Pagina" t6="Sidor" />
+    <Translation key="Total Alarms" t1="Total Alarms" t2="Total des alarmes" t3="Totaal alarmen" t4="Alle Alarme" t5="Totale Allarmi" />
+    <Translation key="Page" t1="Page" t2="Page" t3="Pagina" t4="Seite" t5="Pagina" />
   </Translations>
   <Resources>
     <Resource name="Media/MWSE_ArrowUp.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4XzkwMCIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF85MDApIj4KPHBhdGggZD0iTTEyIDEwLjhMNy40IDE1LjRMNiAxNEwxMiA4TDE4IDE0TDE2LjYgMTUuNEwxMiAxMC44WiIgZmlsbD0iIzFCMjMyRiIvPgo8L2c+Cjwvc3ZnPgo=" />
@@ -620,30 +620,6 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Description" source="C" type="string" />
       </Properties>
-      <Element id="d6a8b57e-910d-4c1a-a554-e66b27bd4456" type="365164dc-5073-11e0-8201-b603e0d72085" name="Backlay">
-        <Properties>
-          <Property name="Name" source="C" value="Backlay" type="string" />
-          <Property name="FillColor" source="C" value="223 226 234" type="Color" />
-          <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
-          <Property name="OutlineWidth" source="C" value="1" type="double" />
-          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="904" type="double" />
-          <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="56" type="double" />
-          <Property name="Height" source="C" value="352" type="double" />
-          <Property name="HasOutline" source="C" value="True" type="bool" />
-          <Property name="HasFillColor" source="C" value="True" type="bool" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-        </Properties>
-      </Element>
       <Element id="06f853ee-468e-4a87-8c76-71c52bcaec76" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Up">
         <Conditions>
           <ConditionLogic id="cd493542-ecd7-4f48-a0ef-c95bb2448f58" ref="e4ae2654-665a-49eb-a5db-17075581714f" name="@MACROALRHISONPageNr. &gt; 0" operator="And">
@@ -786,42 +762,6 @@
           <Property name="OutlineColor" source="C" condition="4295186a-e208-4657-9a90-91f8a3e53343" value="145 150 159" type="Color" />
           <Property name="Content" source="C" condition="4295186a-e208-4657-9a90-91f8a3e53343" type="string" />
           <Property name="FillColor" source="C" condition="4295186a-e208-4657-9a90-91f8a3e53343" value="220 222 230" type="Color" />
-        </Properties>
-      </Element>
-      <Element id="3d50bc24-2c98-42e8-ba4e-859bdd5ed340" type="e40ad01c-67f9-4628-9713-b529352cc0ce" name="Possision">
-        <Properties>
-          <Property name="Name" source="C" value="Possision" type="string" />
-          <Property name="FillColor" source="C" value="159 170 185" type="Color" />
-          <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
-          <Property name="OutlineWidth" source="C" value="1" type="double" />
-          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="916" type="double" />
-          <Property name="Y" source="C" value="60" type="double" />
-          <Property name="Width" source="C" value="32" type="double" />
-          <Property name="Height" source="C" value="232" type="double" />
-          <Property name="HasOutline" source="C" value="True" type="bool" />
-          <Property name="ScaleSpacement" source="C" value="1" type="double" />
-          <Property name="ShowScale" source="C" value="False" type="bool" />
-          <Property name="MinValue" source="C" value="0" type="double" />
-          <Property name="MaxValue" source="LV" type="InternalVariableAddress">
-            <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONMaxPageNr." />
-          </Property>
-          <Property name="CurrentValue" source="LV" type="InternalVariableAddress">
-            <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONPageNr." />
-          </Property>
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="ShowMinValue" source="C" />
-          <Property name="ShowMaxValue" source="C" />
-          <Property name="GrowDirection" source="C" value="TopToBottom" type="Direction" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="Description" source="C" type="string" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="HasFillColor" source="C" value="True" type="bool" />
         </Properties>
       </Element>
     </Element>
@@ -2107,185 +2047,6 @@
           <Property name="HasFillColor" source="C" condition="1af499cd-e2a0-45d6-92eb-e7e6f6885473" value="True" type="bool" />
           <Property name="OutlineColor" source="C" condition="1af499cd-e2a0-45d6-92eb-e7e6f6885473" value="30 84 164" type="Color" />
         </Properties>
-      </Element>
-      <Element id="0ce2c6f8-35a9-472b-965d-df64756e1e1c" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Info" activeCondition="54de3520-2705-449a-bcdf-9c1110beddf6">
-        <Conditions>
-          <ConditionLogic id="54de3520-2705-449a-bcdf-9c1110beddf6" ref="1582ff12-87e7-4ee4-b8c4-24b1805a776f" name="Hide Filter Activ" operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONFilterMode." operator="GreaterEqual" rightType="Constant" rightValue="1" />
-          </ConditionLogic>
-        </Conditions>
-        <Properties>
-          <ConditionPriority>
-            <Condition id="54de3520-2705-449a-bcdf-9c1110beddf6" />
-          </ConditionPriority>
-          <Property name="Name" source="C" value="Info" type="string" />
-          <Property name="Hidden" source="C" value="False" type="bool" />
-          <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="X" source="C" value="0" type="double" />
-          <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="0" type="double" />
-          <Property name="Height" source="C" value="0" type="double" />
-          <Property name="OffsetX" source="RV" type="double" />
-          <Property name="OffsetY" source="RV" type="double" />
-          <Property name="WidthOffset" source="RV" type="double" />
-          <Property name="HeightOffset" source="RV" type="double" />
-          <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-          <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-          <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="Description" source="C" type="string" />
-          <Property name="Hidden" source="C" condition="54de3520-2705-449a-bcdf-9c1110beddf6" value="True" type="bool" />
-          <Property name="DisableEvents" source="C" condition="54de3520-2705-449a-bcdf-9c1110beddf6" value="True" type="bool" />
-        </Properties>
-        <Element id="c1206ebb-0e89-492c-96e2-bce0b3afc3c9" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Values">
-          <Properties>
-            <Property name="Name" source="C" value="Values" type="string" />
-            <Property name="FillColor" source="C" value="223 226 234" type="Color" />
-            <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
-            <Property name="OutlineWidth" source="C" value="1" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="X" source="C" value="728" type="double" />
-            <Property name="Y" source="C" value="360" type="double" />
-            <Property name="Width" source="C" value="232" type="double" />
-            <Property name="Height" source="C" value="48" type="double" />
-            <Property name="Use3DFrame" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="True" type="bool" />
-            <Property name="HasFillColor" source="C" value="True" type="bool" />
-            <Property name="ScaleMode" source="C" value="Fit" type="ScaleMode" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="Content" source="C" type="string" />
-            <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="ImageRotation" source="C" value="0" type="double" />
-            <Property name="DisableEvents" source="C" value="False" type="bool" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="MouseDown" source="C" type="Event" />
-            <Property name="MouseUp" source="C" type="Event" />
-            <Property name="FunctionKey" source="C" type="FunctionKey" />
-          </Properties>
-        </Element>
-        <Element id="382b0e88-5446-4b23-8345-e35538d54c9b" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Label">
-          <Properties>
-            <Property name="Name" source="C" value="Label" type="string" />
-            <Property name="FillColor" source="C" value="223 226 234" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="1" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="Text" source="CSV" value="Total Alarms" type="string" />
-            <Property name="X" source="C" value="740" type="double" />
-            <Property name="Y" source="C" value="360" type="double" />
-            <Property name="Width" source="C" value="140" type="double" />
-            <Property name="Height" source="C" value="24" type="double" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
-            <Property name="FontColor" source="C" value="66 77 89" type="Color" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="False" type="bool" />
-            <Property name="HasFillColor" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-          </Properties>
-        </Element>
-        <Element id="21350a93-8cf2-4c99-8469-751c7b3aca7a" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Value">
-          <Properties>
-            <Property name="Name" source="C" value="Value" type="string" />
-            <Property name="FillColor" source="C" value="223 226 234" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="1" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="Text" source="LV" type="InternalVariableAddress">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListSize." />
-            </Property>
-            <Property name="X" source="C" value="892" type="double" />
-            <Property name="Y" source="C" value="360" type="double" />
-            <Property name="Width" source="C" value="56" type="double" />
-            <Property name="Height" source="C" value="24" type="double" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
-            <Property name="FontColor" source="C" value="27 35 47" type="Color" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="False" type="bool" />
-            <Property name="HasFillColor" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-          </Properties>
-        </Element>
-        <Element id="f73a2e15-5366-4743-a83f-ae49e53c3f20" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Label">
-          <Properties>
-            <Property name="Name" source="C" value="Label" type="string" />
-            <Property name="FillColor" source="C" value="223 226 234" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="1" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="Text" source="CSV" value="Page" type="string" />
-            <Property name="X" source="C" value="740" type="double" />
-            <Property name="Y" source="C" value="384" type="double" />
-            <Property name="Width" source="C" value="140" type="double" />
-            <Property name="Height" source="C" value="24" type="double" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
-            <Property name="FontColor" source="C" value="66 77 89" type="Color" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="False" type="bool" />
-            <Property name="HasFillColor" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-          </Properties>
-        </Element>
-        <Element id="9f2fef87-3dbe-4e42-9157-211ed6f8abe6" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Value">
-          <Properties>
-            <Property name="Name" source="C" value="Value" type="string" />
-            <Property name="FillColor" source="C" value="223 226 234" type="Color" />
-            <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
-            <Property name="OutlineWidth" source="C" value="1" type="double" />
-            <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-            <Property name="Text" source="LV" type="InternalVariableAddress">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONMaxPageNr." />
-            </Property>
-            <Property name="X" source="C" value="892" type="double" />
-            <Property name="Y" source="C" value="384" type="double" />
-            <Property name="Width" source="C" value="56" type="double" />
-            <Property name="Height" source="C" value="24" type="double" />
-            <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
-            <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
-            <Property name="FontColor" source="C" value="27 35 47" type="Color" />
-            <Property name="LockedInEditor" source="C" value="False" type="bool" />
-            <Property name="AccessBitmask" source="C" type="AccessBitmask" />
-            <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
-            <Property name="Description" source="C" type="string" />
-            <Property name="Hidden" source="C" value="False" type="bool" />
-            <Property name="HasOutline" source="C" value="False" type="bool" />
-            <Property name="HasFillColor" source="C" value="False" type="bool" />
-            <Property name="OffsetX" source="RV" type="double" />
-            <Property name="OffsetY" source="RV" type="double" />
-            <Property name="WidthOffset" source="RV" type="double" />
-            <Property name="HeightOffset" source="RV" type="double" />
-          </Properties>
-        </Element>
       </Element>
       <Element id="814edeb9-6975-42e5-b9bd-51ac97594958" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Filter and Sort">
         <Conditions>
