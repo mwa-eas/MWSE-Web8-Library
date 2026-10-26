@@ -692,7 +692,7 @@ Larm, frysvakt (Part 12), avsnitt "A-symboler". `ResetDT` och `LarmVal`: lästa 
 
 | Mall | FBox | Visar | Skriver | Storlek (px) |
 |---|---|---|---|---|
-| PID-regulatorinställning | Regulator PID (`MWSE_heaPID3`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac00`), I-tid, D-tid, filtertid, offset | 310 × 620 |
+| PID-regulatorinställning | Regulator PID (`MWSE_heaPID3`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac00`), I-tid, D-tid, filtertid, offset | 310 × 506 |
 | P-regulatorinställning | Regulator P (`MWSE_heaPP2`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac`), arbetspunkt (`PtIni`) | 310 × 380 |
 
 Hjälpen listar inte regulatorernas A-symboler; namnen är lästa ur FBox-makrot. Faceplate för
@@ -764,7 +764,7 @@ binder inte under `A.MWSE.Namn.`:
 | Larmlista | `MWSE\Sida\Larm` | 960 × 520 | Larmlistan i en Alarm PCD init-FBox, under `Namn.` |
 | Larmsummering | `MWSE\Sida\Larm` | 104 × 48 | Antalet larm, symbolen `<grupp>.antal`, under `Namn.`; öppnar vyn `Larm` |
 | Topplist | `MWSE\Sida\Navigering` | 1020 × 48 | Web8:s inloggningsvariabler, HEAVAC:s klocka, `sidTitel`, `visaMeny`; utloggningen öppnar vyn `login` |
-| Navigeringsmeny | `MWSE\Sida\Navigering` | 1020 × 552 | `visaMeny`; raderna öppnar vyerna `Start`, `Larm`, `Inställningar`, `Info` och `login` |
+| Navigeringsmeny | `MWSE\Sida\Navigering` | 1020 × 1032 | `visaMeny`; raderna öppnar vyerna `Start`, `Larm`, `Inställningar`, `Info` och `login` |
 | Inloggning | `MWSE\Sida\Inloggning` | 360 × 296 | Projektets användardatabas |
 
 Larmlista bygger på Saias Online Alarm List (generation 1) och Inloggning på Saias Login 1.1.5,
@@ -944,12 +944,14 @@ En sida med alla sidmallar, för en vy på 1020 × 600 px:
    ([6.1](#61-lager-för-faceplates)).
 4. **Navigeringsmeny** på (0, 48), direkt under topplisten, och **sist**: efter alla faceplates i
    det översta lagret, eller i ett eget lager överst. Annars ritas en öppen faceplate ovanpå menyns
-   gardin.
+   gardin. Menyn och gardinen räcker till nederkanten av en vy som är upp till 1080 px hög. I en
+   lägre vy går de utanför vyn i editorn, men i körningen skärs de av vid vyns kant.
 5. **Larmlista** i larmvyn, och **Inloggning** i inloggningsvyn.
 
 *Källa: Web Editor-manualen, del 7, Document Outline Window (det översta elementet i översikten
 är överst i körningen) och Layer Window. Platserna: lästa ur mallfilerna. Att en faceplate annars
-ritas ovanpå gardinen: prövat mot en simulerad PCD 2026-10-23.*
+ritas ovanpå gardinen: prövat mot en simulerad PCD 2026-10-23. Att menyn skärs av vid vyns kant:
+prövat mot en simulerad PCD 2026-10-26.*
 
 ## 8. Bygga och ladda ned
 
