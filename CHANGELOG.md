@@ -6,6 +6,9 @@ en egen version, som visas i Web8:s mallbibliotek.
 
 ## 1.0.0 (ej utgiven)
 
+För MWSE FBox-biblioteket V20.6.001; A-symbolerna som mallarna använder finns kvar med samma namn
+i V25.10.003.
+
 Första utgåvan som nedladdningspaket.
 
 Larmfärgen är SmartFrames larm hög (alarm high): fyllning #EFAD9C, kant #B10000, larmtext #5F1506.

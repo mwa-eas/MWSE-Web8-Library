@@ -20,6 +20,11 @@ Hämta den senaste versionen under **Releases**. Zip-filen innehåller:
 
 Mallarna, bilderna och guiden finns också direkt i det här förrådet.
 
+## MWSE FBox-biblioteket
+
+Mallarna är byggda och prövade mot MWSE FBox-biblioteket **V20.6.001**. Alla A-symboler som
+mallarna använder finns kvar med samma namn i V25.10.003. Nyare versioner är inte prövade.
+
 ## Kom igång
 
 Börja med [integratörsguiden](Integratorsguide.md). Den går igenom förutsättningarna i

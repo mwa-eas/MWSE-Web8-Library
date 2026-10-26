@@ -15,7 +15,7 @@ Påståenden om hur Web8, PG5 och MWSE-FBoxarna fungerar har en källnot: Web Ed
 Web Editor-manualen eller MWSE FBox-hjälpen med kapitel, del eller sida (se
 [avsnitt 11](#11-källor)), eller **Prövat** när påståendet bara vilar på Malthe Winje Automation
 AB:s egna tester. Testmiljön var PG5 2.3.196 med Web Editor 8, en PCD3.M5360 med COSinus 1.28.51
-och MWSE FBox-biblioteket `MWSE_V25_10_003`. De mallar som kom till senast är prövade mot en
+och MWSE FBox-biblioteket V20.6.001 (se [2](#2-förutsättningar-i-pg5-programmet)). De mallar som kom till senast är prövade mot en
 simulerad PCD och, där labbprogrammet har FBoxen, mot PCD:n 2026-10-25. Punkter som ännu inte är prövade är markerade **Ännu inte verifierat**, med vad du gör tills
 vidare. Ett format eller beteende som bara är läst ur FBox-makrot, och inte ur någon manual, är
 markerat som slutsats.
@@ -50,7 +50,15 @@ Alla mallar, kategorier och signaler finns i [avsnitt 10](#10-mallar-och-fbox-si
 
 ## 2. Förutsättningar i PG5-programmet
 
-1. PCD-programmet använder MWSE FBox-biblioteket (prövat med `MWSE_V25_10_003`).
+1. PCD-programmet använder MWSE FBox-biblioteket. Mallarna är byggda och prövade mot version
+   **V20.6.001**. A-symbolerna i V25.10.003 är jämförda med den: alla som mallarna använder finns
+   kvar med samma namn. V25.10.003 har också nya FBoxar och signaler som mallarna inte använder
+   än, till exempel Verkningsgrad V2 och `GfErsätt` i Analog ingång. Versioner efter V25.10.003
+   är inte jämförda.
+
+   *Källa: FBox-makrona i MWSEFamilyAllmant.lib, V20.6.001 och V25.10.003, jämförda
+   2026-10-26.* **Ännu inte verifierat:** mallarna mot en PCD vars program är byggt med
+   V25.10.003.
 2. Varje objekt som ska visas har en MWSE-FBox **med namn** i Fupla. FBoxen skapar A-symbolerna
    `A.MWSE.<namn>.<signal>` först när ett namn anges på den. Ge FBoxen namnet
    `<anläggning>.<objekt>`, till exempel `VS01.P01`, så får signalerna namn som
@@ -1242,11 +1250,11 @@ Malthe Winje Automation AB:s utgåva av hjälpen i 22 delar (MWSE FBox Library D
 slutsats.
 
 **Prövat.** Malthe Winje Automation AB:s egna tester, med PG5 2.3.196 och Web Editor 8, en
-PCD3.M5360 med COSinus 1.28.51 och MWSE FBox-biblioteket `MWSE_V25_10_003`. Prov mot PCD gjordes
-2026-10-23 med de första 21 mallarna. De övriga 60 är prövade samma dag mot en simulerad PCD och i
-ett testbygge, och 2026-10-25 mot PCD:n, där labbprogrammet har FBoxen
-([avsnitt 10](#10-mallar-och-fbox-signaler)). De 16 kurvdiagrammen är prövade 2026-10-26 på
-samma sätt ([6.9](#69-kurvdiagram)).
+PCD3.M5360 med COSinus 1.28.51 och MWSE FBox-biblioteket V20.6.001. Prov mot PCD gjordes
+2026-10-23 med de första 21 mallarna och 2026-10-25 med dem vars FBox labbprogrammet har. De
+övriga prövades 2026-10-26 mot PCD:n med ett testprogram som har en av varje MWSE-FBox som
+biblioteket använder ([avsnitt 10](#10-mallar-och-fbox-signaler)). De 16 kurvdiagrammen är
+prövade 2026-10-26 mot en simulerad PCD och mot labbets kurva på PCD:n ([6.9](#69-kurvdiagram)).
 
 ## 12. Fel och förslag
 
