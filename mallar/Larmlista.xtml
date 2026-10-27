@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" version="1.0.0" name="Larmlista" description="Visar larmen i en larmlista från FBoxen Alarm PCD init, det senaste larmet överst. Bygger på Saia Burgess Controls Online Alarm List (Alarm (Online) 1.0.8, generation 1), med MWSE:s färger och svenska knappar." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="Saia-Burgess Controls AG" _category="MWSE\Sida\Larm" icon="icons.template.png">
+﻿<Template type="ViewElement" id="6e5af162-ebef-4c5c-9207-c9b005cb0a03" version="1.1.0" name="Larmlista" description="Visar larmen i en larmlista från FBoxen Alarm PCD init, det senaste larmet överst. Bygger på Saia Burgess Controls Online Alarm List (Alarm (Online) 1.0.8, generation 1), med MWSE:s färger och svenska knappar." templateNameId="_1_1_0" creator="Malthe Winje Automation AB" copyright="Saia-Burgess Controls AG" _category="MWSE\Sida\Larm" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
@@ -211,7 +211,7 @@
     <Property name="SortMode" source="C" value="1" type="string" />
     <Property name="FilterMode" source="C" value="3" type="string" />
   </Properties>
-  <Element id="48cb31b5-6c8d-4228-902a-37962af4e2ef" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Alarming Online">
+  <Element id="274bd632-ff2e-4866-9329-e1fcc2d72d81" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Alarming Online">
     <Properties>
       <Property name="Name" source="C" value="Alarming Online" type="string" />
       <Property name="Hidden" source="C" value="False" type="bool" />
@@ -229,7 +229,7 @@
       <Property name="LockedInEditor" source="C" value="False" type="bool" />
       <Property name="Description" source="C" type="string" />
     </Properties>
-    <Element id="127c1ccf-885d-425e-99ef-109a79c2a296" type="365164dc-5073-11e0-8201-b603e0d72085" name="Kort">
+    <Element id="e616edff-60ab-4066-b136-a7b48e4602e0" type="365164dc-5073-11e0-8201-b603e0d72085" name="Kort">
       <Properties>
         <Property name="Name" source="C" value="Kort" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -238,14 +238,14 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="0" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
-        <Property name="Width" source="C" value="1004" type="double" />
-        <Property name="Height" source="C" value="508" type="double" />
+        <Property name="Width" source="C" value="1000" type="double" />
+        <Property name="Height" source="C" value="480" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="3c16c4fd-819d-4482-bd69-63b9d08cf23e" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rubrikband">
+    <Element id="dab58f97-e4aa-4bcd-bf7b-d6202a3ac559" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rubrikband">
       <Properties>
         <Property name="Name" source="C" value="Rubrikband" type="string" />
         <Property name="FillColor" source="C" value="219 222 230" type="Color" />
@@ -254,26 +254,26 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="0" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
-        <Property name="Width" source="C" value="1004" type="double" />
-        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Width" source="C" value="1000" type="double" />
+        <Property name="Height" source="C" value="40" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="506560ca-e82d-4631-aae7-a2a5d3cbffb8" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Init">
+    <Element id="7b9ed290-daa4-4c7e-9910-87d43ebf596b" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Init">
       <Functions>
-        <Function id="d6116ae7-011a-49b6-a50d-b7cc1756ec94" ref="2e4879b5-4619-4b86-8a09-0c761825dc5e" name="On view open">
+        <Function id="ead666ce-b21c-45f6-97c7-4e4a06d7b795" ref="2e4879b5-4619-4b86-8a09-0c761825dc5e" name="On view open">
           <Instruction macro="WriteValueToVariable">
             <Parameter type="Constant" value="0" name="Value" />
             <Parameter type="Container" name="Destination">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAdvanced" />
+              <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAdvanced" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteValueToVariable">
             <Parameter type="Constant" value="0" name="Value" />
             <Parameter type="Container" name="Destination">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAdvancedID" />
+              <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAdvancedID" />
             </Parameter>
           </Instruction>
         </Function>
@@ -286,209 +286,209 @@
         <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
         <Property name="DisableEvents" source="C" value="False" type="bool" />
         <Property name="Repaint" source="C" type="Event" />
-        <Property name="FocusGained" source="C" value="d6116ae7-011a-49b6-a50d-b7cc1756ec94" type="Event" />
+        <Property name="FocusGained" source="C" value="ead666ce-b21c-45f6-97c7-4e4a06d7b795" type="Event" />
         <Property name="FocusLost" source="C" type="Event" />
       </Properties>
     </Element>
-    <Element id="d66105c4-6f62-4128-a116-d88f084db64e" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Header">
+    <Element id="55865f18-427e-44eb-b14e-4859d62fcda6" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Header">
       <Functions>
-        <Function id="53dcd470-a7ef-44cc-92f8-dc24c40b127f" ref="c217b252-dfc7-47ae-ada7-79007c8977d5" name="Init Alarming Viewer">
+        <Function id="d1b95b70-027f-44ba-b6e9-858b9ac4a90d" ref="c217b252-dfc7-47ae-ada7-79007c8977d5" name="Init Alarming Viewer">
           <Instruction macro="WriteValueToVariable">
             <Parameter type="Container" name="Value">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListNr." />
+              <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListNr." />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="AlarmsListNr." />
-            </Parameter>
-          </Instruction>
-          <Instruction macro="WriteValueToVariable">
-            <Parameter type="Constant" name="Value" />
-            <Parameter type="Container" name="Destination">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+              <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="AlarmsListNr." />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteValueToVariable">
             <Parameter type="Constant" name="Value" />
             <Parameter type="Container" name="Destination">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+              <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Constant" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteValueToVariable">
             <Parameter type="Constant" value="#sp;" name="Value" />
             <Parameter type="Container" name="Destination">
-              <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+              <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
             </Parameter>
           </Instruction>
           <Expression type="None">
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Container" name="Value">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_0" />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="?S_Col_Width_0" />
               </Parameter>
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Constant" value="," name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Container" name="Value">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_1" />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="?S_Col_Width_1" />
               </Parameter>
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Constant" value="," name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Container" name="Value">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_3" />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="?S_Col_Width_3" />
               </Parameter>
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Constant" value="," name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Container" name="Value">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_4" />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="?S_Col_Width_4" />
               </Parameter>
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Constant" value="," name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Container" name="Value">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_5" />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="?S_Col_Width_5" />
               </Parameter>
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Constant" value="," name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Container" name="Value">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="?S_Col_Width_6" />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="?S_Col_Width_6" />
               </Parameter>
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Instruction macro="AppendValueToDestination">
               <Parameter type="Constant" value="&#xA;" name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
               </Parameter>
             </Instruction>
             <Expression type="None">
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="Container" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeaderSP." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeaderSP." />
                 </Parameter>
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="CSV" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="StateColor" />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" key="StateColor" />
                 </Parameter>
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="Constant" value="	" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="CSV" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="IID" />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" key="IID" />
                 </Parameter>
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="Constant" value="	" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="CSV" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="Alarmtext" />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" key="Alarmtext" />
                 </Parameter>
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="Constant" value="	" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="CSV" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="Time On" />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" key="Time On" />
                 </Parameter>
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="Constant" value="	" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="CSV" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="Time Off" />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" key="Time Off" />
                 </Parameter>
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="Constant" value="	" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
               <Instruction macro="AppendValueToDestination">
                 <Parameter type="CSV" name="Value">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" key="ACK" />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" key="ACK" />
                 </Parameter>
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
                 </Parameter>
               </Instruction>
             </Expression>
@@ -497,20 +497,20 @@
       </Functions>
       <Properties>
         <Property name="Name" source="C" value="Header" type="string" />
-        <Property name="FocusGained" source="C" value="53dcd470-a7ef-44cc-92f8-dc24c40b127f" type="Event" />
+        <Property name="FocusGained" source="C" value="d1b95b70-027f-44ba-b6e9-858b9ac4a90d" type="Event" />
         <Property name="AccessBitmask" source="C" type="AccessBitmask" />
         <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Description" source="C" type="string" />
         <Property name="DisableEvents" source="C" value="False" type="bool" />
-        <Property name="Repaint" source="C" value="53dcd470-a7ef-44cc-92f8-dc24c40b127f" type="Event" />
+        <Property name="Repaint" source="C" value="d1b95b70-027f-44ba-b6e9-858b9ac4a90d" type="Event" />
         <Property name="FocusLost" source="C" type="Event" />
       </Properties>
     </Element>
-    <Element id="be502c4e-bfdd-459e-aedb-48274044bdb1" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Alarm List">
+    <Element id="5ee3160e-d3a7-4481-afd2-cb3569f195b1" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Alarm List">
       <Conditions>
-        <ConditionLogic id="348ce109-d0be-4669-8873-1325d9867518" ref="5ab6b4d7-eacc-4ab5-8755-e0c8cd9edd92" name="Hide @MACROALRDEFONAdvancedID" operator="And">
-          <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONAdvanced" operator="NotEqual" rightType="Constant" rightValue="0" />
+        <ConditionLogic id="b1860991-c99b-4fc1-bb26-329d96d718a2" ref="5ab6b4d7-eacc-4ab5-8755-e0c8cd9edd92" name="Hide @MACROALRDEFONAdvancedID" operator="And">
+          <Condition leftType="Container" leftContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" leftName="@MACROALRDEFONAdvanced" operator="NotEqual" rightType="Constant" rightValue="0" />
         </ConditionLogic>
       </Conditions>
       <Properties>
@@ -530,16 +530,16 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Description" source="C" type="string" />
       </Properties>
-      <Element id="862215be-b4e6-4ca9-a895-f2aba658eea2" type="266fe87d-6aac-48a1-9aab-83b882a60ce8" name="Header">
+      <Element id="2fc18607-b676-48f0-979d-4e8588a4f2ed" type="266fe87d-6aac-48a1-9aab-83b882a60ce8" name="Header">
         <Properties>
           <Property name="Name" source="C" value="Header" type="string" />
           <Property name="FillColor" source="C" value="219 222 230" type="Color" />
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="16" type="double" />
-          <Property name="Y" source="C" value="14" type="double" />
-          <Property name="Width" source="C" value="916" type="double" />
+          <Property name="X" source="C" value="10" type="double" />
+          <Property name="Y" source="C" value="10" type="double" />
+          <Property name="Width" source="C" value="930" type="double" />
           <Property name="Height" source="C" value="24" type="double" />
           <Property name="HasOutline" source="C" value="False" type="bool" />
           <Property name="ItemTargets" source="C" type="ItemTargets" />
@@ -547,7 +547,7 @@
           <Property name="Font" source="C" value="Arial Bold 12" type="FontInfo" />
           <Property name="HasFillColor" source="C" value="False" type="bool" />
           <Property name="Content" source="LV" type="InternalVariableAddress">
-            <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsListHeader." />
+            <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsListHeader." />
           </Property>
           <Property name="ShowRow" source="C" value="False" type="bool" />
           <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />
@@ -572,25 +572,25 @@
           <Property name="MouseUp" source="C" type="Event" />
         </Properties>
       </Element>
-      <Element id="38760c13-3809-4c7b-bbb8-1d8578c64a2e" type="56541298-f82f-46a2-8c50-2411b2394185" name="Item List">
+      <Element id="9eac1ceb-c1a2-4ef7-9e74-0e7b4e55c38f" type="56541298-f82f-46a2-8c50-2411b2394185" name="Item List">
         <Conditions>
-          <ConditionLogic id="30835e31-5bd3-4680-8b7f-1d88094f5c3e" ref="5dea9e15-9a2e-4f7f-8b8a-e41311879cef" name="@MACROALRDEFONSelectMode." operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONSelectMode." operator="Equal" rightType="Constant" rightValue="MULTISELECT" />
+          <ConditionLogic id="7b9400a0-2298-4942-89eb-560cb0106d69" ref="5dea9e15-9a2e-4f7f-8b8a-e41311879cef" name="@MACROALRDEFONSelectMode." operator="And">
+            <Condition leftType="Container" leftContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" leftName="@MACROALRDEFONSelectMode." operator="Equal" rightType="Constant" rightValue="MULTISELECT" />
           </ConditionLogic>
         </Conditions>
         <Properties>
           <ConditionPriority>
-            <Condition id="30835e31-5bd3-4680-8b7f-1d88094f5c3e" />
-            <Condition id="348ce109-d0be-4669-8873-1325d9867518" />
+            <Condition id="7b9400a0-2298-4942-89eb-560cb0106d69" />
+            <Condition id="b1860991-c99b-4fc1-bb26-329d96d718a2" />
           </ConditionPriority>
           <Property name="Name" source="C" value="Item List" type="string" />
           <Property name="FillColor" source="C" value="240 243 247" type="Color" />
           <Property name="OutlineColor" source="C" value="66 77 89" type="Color" />
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="16" type="double" />
-          <Property name="Y" source="C" value="48" type="double" />
-          <Property name="Width" source="C" value="916" type="double" />
+          <Property name="X" source="C" value="10" type="double" />
+          <Property name="Y" source="C" value="40" type="double" />
+          <Property name="Width" source="C" value="930" type="double" />
           <Property name="Height" source="C" value="380" type="double" />
           <Property name="HasOutline" source="C" value="False" type="bool" />
           <Property name="ItemTargets" source="C" type="ItemTargets">
@@ -602,12 +602,12 @@
           <Property name="Font" source="C" value="Arial 12" type="FontInfo" />
           <Property name="HasFillColor" source="C" value="True" type="bool" />
           <Property name="Content" source="LV" type="InternalVariableAddress">
-            <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONAlarmsList." />
+            <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONAlarmsList." />
           </Property>
           <Property name="ShowLine" source="C" value="True" type="bool" />
           <Property name="ShowRow" source="C" value="False" type="bool" />
           <Property name="SelectIndexOnce" source="LV" type="InternalVariableAddress">
-            <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectIndexesOnce." />
+            <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONSelectIndexesOnce." />
           </Property>
           <Property name="Hidden" source="C" value="False" type="bool" />
           <Property name="OffsetX" source="RV" type="double" />
@@ -627,13 +627,13 @@
           <Property name="MouseDown" source="C" type="Event" />
           <Property name="MouseUp" source="C" type="Event" />
           <Property name="FunctionKey" source="C" type="FunctionKey" />
-          <Property name="MultiSelect" source="C" condition="30835e31-5bd3-4680-8b7f-1d88094f5c3e" value="True" type="bool" />
-          <Property name="ItemTargets" source="C" condition="348ce109-d0be-4669-8873-1325d9867518" type="ItemTargets" />
-          <Property name="Hidden" source="C" condition="348ce109-d0be-4669-8873-1325d9867518" value="True" type="bool" />
+          <Property name="MultiSelect" source="C" condition="7b9400a0-2298-4942-89eb-560cb0106d69" value="True" type="bool" />
+          <Property name="ItemTargets" source="C" condition="b1860991-c99b-4fc1-bb26-329d96d718a2" type="ItemTargets" />
+          <Property name="Hidden" source="C" condition="b1860991-c99b-4fc1-bb26-329d96d718a2" value="True" type="bool" />
         </Properties>
       </Element>
     </Element>
-    <Element id="54433d18-8846-4e32-8385-1f3fb37e61ee" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Scoll Alarmlist">
+    <Element id="1b2a0ed5-9b55-4e4d-ab8b-c2ddfed59c20" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Scoll Alarmlist">
       <Properties>
         <Property name="Name" source="C" value="Scoll Alarmlist" type="string" />
         <Property name="Hidden" source="C" value="False" type="bool" />
@@ -651,32 +651,32 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Description" source="C" type="string" />
       </Properties>
-      <Element id="06f853ee-468e-4a87-8c76-71c52bcaec76" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Up">
+      <Element id="a44a4b07-44ce-4ff2-b67f-9c4d697d35ac" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Up">
         <Conditions>
-          <ConditionLogic id="cd493542-ecd7-4f48-a0ef-c95bb2448f58" ref="e4ae2654-665a-49eb-a5db-17075581714f" name="@MACROALRHISONPageNr. &gt; 0" operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONPageNr." operator="Greater" rightType="Constant" rightValue="0" />
+          <ConditionLogic id="16a4e720-7aec-4ded-861c-7058caaf575e" ref="e4ae2654-665a-49eb-a5db-17075581714f" name="@MACROALRHISONPageNr. &gt; 0" operator="And">
+            <Condition leftType="Container" leftContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" leftName="@MACROALRDEFONPageNr." operator="Greater" rightType="Constant" rightValue="0" />
           </ConditionLogic>
-          <ConditionLogic id="2ed64902-72c1-44e0-9d9c-ea0c5615e193" ref="3834994a-2c09-49e6-9398-ae6a97d6cb3c" name="@MACROALRHISONPageNr. &gt;= 0" operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONPageNr." operator="GreaterEqual" rightType="Constant" rightValue="0" />
+          <ConditionLogic id="5c781b14-5b27-4801-946e-42eda020dbdf" ref="3834994a-2c09-49e6-9398-ae6a97d6cb3c" name="@MACROALRHISONPageNr. &gt;= 0" operator="And">
+            <Condition leftType="Container" leftContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" leftName="@MACROALRDEFONPageNr." operator="GreaterEqual" rightType="Constant" rightValue="0" />
           </ConditionLogic>
-          <ConditionLogic id="7a3bc6d2-7c03-4c0e-9241-ec22a7565b72" ref="3d6d5aa6-3fa9-448c-9160-fdc93345143c" name="@MACROALRHISONPageNr. &lt;= 0" operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONPageNr." operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <ConditionLogic id="db63dd49-45a6-4802-8088-41323343fa2f" ref="3d6d5aa6-3fa9-448c-9160-fdc93345143c" name="@MACROALRHISONPageNr. &lt;= 0" operator="And">
+            <Condition leftType="Container" leftContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" leftName="@MACROALRDEFONPageNr." operator="LesserEqual" rightType="Constant" rightValue="0" />
           </ConditionLogic>
         </Conditions>
         <Functions>
-          <Function id="7faf7190-23da-4815-9225-37c177272673" ref="e3572306-06d7-42dc-8e96-67d77612abac" name="Go Up">
-            <Expression type="IfCondition" condition="cd493542-ecd7-4f48-a0ef-c95bb2448f58" value="True">
+          <Function id="40cc4784-386e-45c0-aafd-197618a30e57" ref="e3572306-06d7-42dc-8e96-67d77612abac" name="Go Up">
+            <Expression type="IfCondition" condition="16a4e720-7aec-4ded-861c-7058caaf575e" value="True">
               <Instruction macro="DecrementVariable">
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONPageNr." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONPageNr." />
                 </Parameter>
               </Instruction>
             </Expression>
-            <Expression type="IfCondition" condition="2ed64902-72c1-44e0-9d9c-ea0c5615e193" value="True">
+            <Expression type="IfCondition" condition="5c781b14-5b27-4801-946e-42eda020dbdf" value="True">
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="-1" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectIndexesOnce." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONSelectIndexesOnce." />
                 </Parameter>
               </Instruction>
             </Expression>
@@ -684,27 +684,27 @@
         </Functions>
         <Properties>
           <ConditionPriority>
-            <Condition id="7a3bc6d2-7c03-4c0e-9241-ec22a7565b72" />
+            <Condition id="db63dd49-45a6-4802-8088-41323343fa2f" />
           </ConditionPriority>
           <Property name="Name" source="C" value="Up" type="string" />
           <Property name="FillColor" source="C" value="215 217 225" type="Color" />
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="940" type="double" />
-          <Property name="Y" source="C" value="48" type="double" />
-          <Property name="Width" source="C" value="48" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="X" source="C" value="950" type="double" />
+          <Property name="Y" source="C" value="40" type="double" />
+          <Property name="Width" source="C" value="40" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
           <Property name="HasFillColor" source="C" value="True" type="bool" />
           <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
           <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
           <Property name="Content" source="File" type="ResourceAddress">
-            <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="Media/MWSE_ArrowUp.svg" />
+            <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="Media/MWSE_ArrowUp.svg" />
           </Property>
           <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-          <Property name="MouseUp" source="C" value="7faf7190-23da-4815-9225-37c177272673" type="Event" />
+          <Property name="MouseUp" source="C" value="40cc4784-386e-45c0-aafd-197618a30e57" type="Event" />
           <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />
           <Property name="AccessBitmask" source="C" type="AccessBitmask" />
           <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
@@ -718,37 +718,37 @@
           <Property name="ImageRotation" source="C" value="0" type="double" />
           <Property name="DisableEvents" source="C" value="False" type="bool" />
           <Property name="MouseDown" source="C" type="Event" />
-          <Property name="OutlineColor" source="C" condition="7a3bc6d2-7c03-4c0e-9241-ec22a7565b72" value="145 150 159" type="Color" />
-          <Property name="Content" source="C" condition="7a3bc6d2-7c03-4c0e-9241-ec22a7565b72" type="string" />
-          <Property name="FillColor" source="C" condition="7a3bc6d2-7c03-4c0e-9241-ec22a7565b72" value="220 222 230" type="Color" />
+          <Property name="OutlineColor" source="C" condition="db63dd49-45a6-4802-8088-41323343fa2f" value="145 150 159" type="Color" />
+          <Property name="Content" source="C" condition="db63dd49-45a6-4802-8088-41323343fa2f" type="string" />
+          <Property name="FillColor" source="C" condition="db63dd49-45a6-4802-8088-41323343fa2f" value="220 222 230" type="Color" />
         </Properties>
       </Element>
-      <Element id="a9b55a19-7001-4d6d-aa6b-d37ee2aa884f" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Down">
+      <Element id="62af353c-6020-4e87-bd2d-55471c9ad8d2" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Down">
         <Conditions>
-          <ConditionLogic id="6d1dace1-fa33-48c9-913c-ef7960c150e7" ref="49b835a0-c942-44d5-8f30-2fd9fae8fe0a" name="@MACROALRHISONPageNr. &lt; @MACROALRHISONMaxPageNr." operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONPageNr." operator="Lesser" rightType="Container" rightContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" rightName="@MACROALRDEFONMaxPageNr." />
+          <ConditionLogic id="06dc91a3-a404-481c-960b-a41a5101f1a8" ref="49b835a0-c942-44d5-8f30-2fd9fae8fe0a" name="@MACROALRHISONPageNr. &lt; @MACROALRHISONMaxPageNr." operator="And">
+            <Condition leftType="Container" leftContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" leftName="@MACROALRDEFONPageNr." operator="Lesser" rightType="Container" rightContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" rightName="@MACROALRDEFONMaxPageNr." />
           </ConditionLogic>
-          <ConditionLogic id="18642d12-37f9-4c2e-a63b-ca8ef08b200a" ref="f14997e7-4657-45d6-ae2d-768223a93241" name="@MACROALRHISONPageNr. &lt;= @MACROALRHISONMaxPageNr." operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONPageNr." operator="LesserEqual" rightType="Container" rightContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" rightName="@MACROALRDEFONMaxPageNr." />
+          <ConditionLogic id="15553870-dec2-4d9f-bc71-dc986979ff80" ref="f14997e7-4657-45d6-ae2d-768223a93241" name="@MACROALRHISONPageNr. &lt;= @MACROALRHISONMaxPageNr." operator="And">
+            <Condition leftType="Container" leftContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" leftName="@MACROALRDEFONPageNr." operator="LesserEqual" rightType="Container" rightContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" rightName="@MACROALRDEFONMaxPageNr." />
           </ConditionLogic>
-          <ConditionLogic id="4295186a-e208-4657-9a90-91f8a3e53343" ref="6cf35e9b-1fc9-470f-beb3-44607b7befd6" name="@MACROALRHISONPageNr. &gt;= @MACROALRHISONMaxPageNr." operator="And">
-            <Condition leftType="Container" leftContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" leftName="@MACROALRDEFONPageNr." operator="GreaterEqual" rightType="Container" rightContainer="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" rightName="@MACROALRDEFONMaxPageNr." />
+          <ConditionLogic id="7217ad13-2bcd-45b1-8b25-49b827313b8e" ref="6cf35e9b-1fc9-470f-beb3-44607b7befd6" name="@MACROALRHISONPageNr. &gt;= @MACROALRHISONMaxPageNr." operator="And">
+            <Condition leftType="Container" leftContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" leftName="@MACROALRDEFONPageNr." operator="GreaterEqual" rightType="Container" rightContainer="6e5af162-ebef-4c5c-9207-c9b005cb0a03" rightName="@MACROALRDEFONMaxPageNr." />
           </ConditionLogic>
         </Conditions>
         <Functions>
-          <Function id="319d5266-1933-4239-9f0d-a13c4abe9d54" ref="c5a2f1e6-3c96-4de6-a3ce-b7b163887bce" name="Go Down">
-            <Expression type="IfCondition" condition="6d1dace1-fa33-48c9-913c-ef7960c150e7" value="True">
+          <Function id="05e11eee-7cd7-42c5-96b2-a7929e428786" ref="c5a2f1e6-3c96-4de6-a3ce-b7b163887bce" name="Go Down">
+            <Expression type="IfCondition" condition="06dc91a3-a404-481c-960b-a41a5101f1a8" value="True">
               <Instruction macro="IncrementVariable">
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONPageNr." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONPageNr." />
                 </Parameter>
               </Instruction>
             </Expression>
-            <Expression type="IfCondition" condition="18642d12-37f9-4c2e-a63b-ca8ef08b200a" value="True">
+            <Expression type="IfCondition" condition="15553870-dec2-4d9f-bc71-dc986979ff80" value="True">
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="-1" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectIndexesOnce." />
+                  <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONSelectIndexesOnce." />
                 </Parameter>
               </Instruction>
             </Expression>
@@ -756,27 +756,27 @@
         </Functions>
         <Properties>
           <ConditionPriority>
-            <Condition id="4295186a-e208-4657-9a90-91f8a3e53343" />
+            <Condition id="7217ad13-2bcd-45b1-8b25-49b827313b8e" />
           </ConditionPriority>
           <Property name="Name" source="C" value="Down" type="string" />
           <Property name="FillColor" source="C" value="215 217 225" type="Color" />
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="940" type="double" />
+          <Property name="X" source="C" value="950" type="double" />
           <Property name="Y" source="C" value="380" type="double" />
-          <Property name="Width" source="C" value="48" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Width" source="C" value="40" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
           <Property name="HasFillColor" source="C" value="True" type="bool" />
           <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
           <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
           <Property name="Content" source="File" type="ResourceAddress">
-            <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="Media/MWSE_ArrowDown.svg" />
+            <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="Media/MWSE_ArrowDown.svg" />
           </Property>
           <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-          <Property name="MouseUp" source="C" value="319d5266-1933-4239-9f0d-a13c4abe9d54" type="Event" />
+          <Property name="MouseUp" source="C" value="05e11eee-7cd7-42c5-96b2-a7929e428786" type="Event" />
           <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />
           <Property name="AccessBitmask" source="C" type="AccessBitmask" />
           <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
@@ -790,13 +790,13 @@
           <Property name="MouseDown" source="C" type="Event" />
           <Property name="ImageRotation" source="C" value="0" type="double" />
           <Property name="DisableEvents" source="C" value="False" type="bool" />
-          <Property name="OutlineColor" source="C" condition="4295186a-e208-4657-9a90-91f8a3e53343" value="145 150 159" type="Color" />
-          <Property name="Content" source="C" condition="4295186a-e208-4657-9a90-91f8a3e53343" type="string" />
-          <Property name="FillColor" source="C" condition="4295186a-e208-4657-9a90-91f8a3e53343" value="220 222 230" type="Color" />
+          <Property name="OutlineColor" source="C" condition="7217ad13-2bcd-45b1-8b25-49b827313b8e" value="145 150 159" type="Color" />
+          <Property name="Content" source="C" condition="7217ad13-2bcd-45b1-8b25-49b827313b8e" type="string" />
+          <Property name="FillColor" source="C" condition="7217ad13-2bcd-45b1-8b25-49b827313b8e" value="220 222 230" type="Color" />
         </Properties>
       </Element>
     </Element>
-    <Element id="6190d914-f04c-40ce-951a-26055f88f0e7" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Menue">
+    <Element id="89ebee15-e330-4016-8e2d-9295383a9194" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Menue">
       <Properties>
         <Property name="Name" source="C" value="Menue" type="string" />
         <Property name="Hidden" source="C" value="False" type="bool" />
@@ -814,13 +814,13 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Description" source="C" type="string" />
       </Properties>
-      <Element id="13036ba7-2195-4369-a770-b42df26d92fd" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="ACKALRSDEFITEMS">
+      <Element id="30e03791-ce4e-478d-95d4-6396ce0133be" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="ACKALRSDEFITEMS">
         <Functions>
-          <Function id="dccbab07-ac71-4988-b0e0-e50f4d66d9de" ref="fa18901f-6ac3-4e11-8c93-1f0a5317fd8f" name="ACKALRSHISITEMS">
+          <Function id="0ff99d63-3909-4e97-b0c7-29451291bfb2" ref="fa18901f-6ac3-4e11-8c93-1f0a5317fd8f" name="ACKALRSHISITEMS">
             <Instruction macro="WriteValueToVariable">
               <Parameter type="Constant" value="ACKALRSDEFITEMS" name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelAlrsTypesAct." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONSelAlrsTypesAct." />
               </Parameter>
             </Instruction>
           </Function>
@@ -831,10 +831,10 @@
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="16" type="double" />
-          <Property name="Y" source="C" value="444" type="double" />
+          <Property name="X" source="C" value="10" type="double" />
+          <Property name="Y" source="C" value="430" type="double" />
           <Property name="Width" source="C" value="160" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
           <Property name="HasFillColor" source="C" value="True" type="bool" />
@@ -842,7 +842,7 @@
           <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
           <Property name="Content" source="C" value="Kvittera vald" type="string" />
           <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-          <Property name="MouseUp" source="C" value="dccbab07-ac71-4988-b0e0-e50f4d66d9de" type="Event" />
+          <Property name="MouseUp" source="C" value="0ff99d63-3909-4e97-b0c7-29451291bfb2" type="Event" />
           <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />
           <Property name="AccessBitmask" source="C" type="AccessBitmask" />
           <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
@@ -858,13 +858,13 @@
           <Property name="DisableEvents" source="C" value="False" type="bool" />
         </Properties>
       </Element>
-      <Element id="5e1cdc1d-16f7-4571-ad61-0b9aa187feab" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="ACKALRSDEFLIST">
+      <Element id="185cdaa2-4127-477a-8635-75c54c5692fa" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="ACKALRSDEFLIST">
         <Functions>
-          <Function id="959d3c8f-99ca-4f98-b5f9-cb9b111a5c7f" ref="d79e54ef-1e92-43e7-8305-482d2dfe7976" name="ACKALRSHISLIST">
+          <Function id="4126295b-22fa-4996-8a5a-3e81948747e9" ref="d79e54ef-1e92-43e7-8305-482d2dfe7976" name="ACKALRSHISLIST">
             <Instruction macro="WriteValueToVariable">
               <Parameter type="Constant" value="ACKALRSDEFLIST" name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelAlrsTypesAct." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONSelAlrsTypesAct." />
               </Parameter>
             </Instruction>
           </Function>
@@ -875,10 +875,10 @@
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="184" type="double" />
-          <Property name="Y" source="C" value="444" type="double" />
+          <Property name="X" source="C" value="180" type="double" />
+          <Property name="Y" source="C" value="430" type="double" />
           <Property name="Width" source="C" value="160" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
           <Property name="HasFillColor" source="C" value="True" type="bool" />
@@ -886,7 +886,7 @@
           <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
           <Property name="Content" source="C" value="Kvittera alla" type="string" />
           <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-          <Property name="MouseUp" source="C" value="959d3c8f-99ca-4f98-b5f9-cb9b111a5c7f" type="Event" />
+          <Property name="MouseUp" source="C" value="4126295b-22fa-4996-8a5a-3e81948747e9" type="Event" />
           <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />
           <Property name="AccessBitmask" source="C" type="AccessBitmask" />
           <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />
@@ -902,19 +902,19 @@
           <Property name="MouseDown" source="C" type="Event" />
         </Properties>
       </Element>
-      <Element id="bd15ca9c-0d00-439d-8169-2c545a3dcf46" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="DELALRSDEFLIST">
+      <Element id="b55a1aa6-2992-4e6f-848c-9bc5c9b20ca8" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="DELALRSDEFLIST">
         <Functions>
-          <Function id="51818e06-6a12-415d-9a5d-a75c00ffe92c" ref="39580274-a262-4d12-96e5-7a36442d37cd" name="DELALRSHISLIST">
+          <Function id="8475c44e-1da6-47d9-92e8-b6d5eaa7681b" ref="39580274-a262-4d12-96e5-7a36442d37cd" name="DELALRSHISLIST">
             <Instruction macro="WriteValueToVariable">
               <Parameter type="Constant" value="DELALRSDEFLIST" name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelAlrsTypesAct." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONSelAlrsTypesAct." />
               </Parameter>
             </Instruction>
             <Instruction macro="WriteValueToVariable">
               <Parameter type="Constant" value="-1" name="Value" />
               <Parameter type="Container" name="Destination">
-                <Address container="a39cd5cf-e725-41a4-9904-aa0c97fc3f26" name="@MACROALRDEFONSelectIndexesOnce." />
+                <Address container="6e5af162-ebef-4c5c-9207-c9b005cb0a03" name="@MACROALRDEFONSelectIndexesOnce." />
               </Parameter>
             </Instruction>
           </Function>
@@ -925,10 +925,10 @@
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="2" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="828" type="double" />
-          <Property name="Y" source="C" value="444" type="double" />
+          <Property name="X" source="C" value="830" type="double" />
+          <Property name="Y" source="C" value="430" type="double" />
           <Property name="Width" source="C" value="160" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="True" type="bool" />
           <Property name="HasFillColor" source="C" value="True" type="bool" />
@@ -936,7 +936,7 @@
           <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
           <Property name="Content" source="C" value="Rensa" type="string" />
           <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-          <Property name="MouseUp" source="C" value="51818e06-6a12-415d-9a5d-a75c00ffe92c" type="Event" />
+          <Property name="MouseUp" source="C" value="8475c44e-1da6-47d9-92e8-b6d5eaa7681b" type="Event" />
           <Property name="FunctionKey" source="C" value="F1;F2;F3" type="FunctionKey" />
           <Property name="AccessBitmask" source="C" type="AccessBitmask" />
           <Property name="HideIfNotAccessible" source="C" value="False" type="bool" />

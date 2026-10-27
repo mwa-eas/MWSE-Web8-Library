@@ -371,7 +371,7 @@ däremot inte ha någon enhet ([6.9](#69-kurvblock)).
 ### 5.7 Roterande värmeväxlare: två grupper
 
 `Roterande värmeväxlare` (kategori `MWSE\Symbol\Värmeväxlare`; bilden 70 × 210 px, med etikett
-och värde 80 × 240 px) binder två FBoxar:
+och värde 80 × 250 px; kanalerna möter bilden 40 och 210 px ner i mallen) binder två FBoxar:
 
 | Grupp i mallen | FBox | Signaler |
 |---|---|---|
@@ -418,12 +418,19 @@ klick. De behöver ingen koppling: placera, skriv namnet i `Namn` och dölj det 
 | Värmebatteri, Kylbatteri, Kombibatteri, Filter | 40 × 40 |
 | Radiator | 90 × 60 |
 | Värmetank | 100 × 150 |
-| Krets, Krets med bypass, Krets med backventil | 60 × 130 |
+| Krets, Krets med bypass, Krets med backventil | 60 × 140 |
 | Tank | 100 × 110 |
-| Liten tank | 40 × 60 |
+| Liten tank | 60 × 60 |
 | Värmeväxlare X, Värmeväxlare V, Plattvärmeväxlare | 250 × 210 |
 
 Etiketten ligger ovanför bilden, så mallen är 20 px högre än bilden och minst 80 px bred.
+
+Alla mallar ligger på Web8:s rutnät om 10 px, och där en kanal eller ledning möter en symbol ligger
+också på rutnätet, när mallen är placerad på det. En symbols bild har sin mitt 50 px ner i mallen,
+där kanalen går. En givares stam slutar 69 px ner, mot ovankanten av en kanal på 70 px. Ett
+batteris låda slutar 10 px under kanalen, och kretsens övre del ligger där. Kretsens ben slutar
+120 px längre ner. En radiators ledningar går in i dess underkant 20 och 70 px från mallens
+vänsterkant. Tankarnas väggar ligger på rutnätet.
 
 **Plattvärmeväxlare** är växlaren vatten–vatten, till exempel i en fjärrvärmecentral: primärsidan
 ansluter till vänster och sekundärsidan till höger. Anslutningarna ligger på samma höjd som på
@@ -437,7 +444,7 @@ får ingen krets: dra tillopp och retur direkt till radiatorns ändar. Lägg reg
 den vågräta tilloppsledningen som går in i kretsens framledningsben, inte bredvid kretsen:
 ventilernas bilder är ritade för vågrät ledning, och kretsens ben är lodräta.
 
-**Panelknapp** (kategori `MWSE\Symbol\Knapp`, 250 × 48 px) öppnar den faceplate som är kopplad
+**Panelknapp** (kategori `MWSE\Symbol\Knapp`, 230 × 40 px) öppnar den faceplate som är kopplad
 till samma grupp, för de faceplates som ingen symbol öppnar: de tre regulatorpanelerna, Handpanel digital,
 Handpanel analog och Digitalsignalpanel. Den fungerar som en symbol: klicket skriver gruppen till
 `valdSymbol`, och knappen markeras som vald. Skriv knappens text i `Namn`, till exempel `Reg`.
@@ -631,11 +638,11 @@ blockets rubrik i textelementet `Namn`, till exempel `GT11 - Tilloppsgivare`.
 
 | Mall | Kategori | Grupp, till exempel | Visar | Skriver | Storlek (px) |
 |---|---|---|---|---|---|
-| Givarinställning | `MWSE\Inställning\Givare` | givarens, `A.MWSE.VS01.GT11.` | – | Larmgräns låg och hög (`HLLarmGrL`, `HLLarmGrH`), fördröjning och enhet (`HLLarmF`, `HLLarmFenhet`), givarfel låg och hög (`GfLarmGrL`, `GfLarmGrH`) och dess fördröjning (`GfLarmF`) | 310 × 380 |
-| Motorinställning | `MWSE\Inställning\Motor` | motorns, `A.MWSE.VS01.P01.` | Drifttimmar (`DTtid`), antal starter (`DTstarter`), senast återställd (`DTdatum`) | Larmgräns och fördröjning för drifttid (`DTLarmGr`, `DTLarmF`); knappen Återställ skriver 1 till `DTreset` | 310 × 380 |
-| Regleravvikelseinställning | `MWSE\Inställning\Regleravvikelse` | `A.MWSE.VS01.RegAvv.` | – | Larmgräns (`LarmGrAvv`), fördröjning och enhet (`Fördr`, `TidsEnh`) | 310 × 220 |
-| Regulatorinställning | `MWSE\Inställning\Regulator` | `A.MWSE.VS01.Reg.` | Mätvärde (`ActVal`), börvärde (`SetPt`), utsignal (`YOut`) | P-faktor (`PFac00`), I-tid (`IntTime`), offset (`Offset`) | 310 × 460 |
-| Pumpstartinställning | `MWSE\Inställning\Pumpstart` | `A.MWSE.VS01.Pumpstart.` | – | Startgräns direkt (`StartGrD`), startgräns och stoppgräns fördröjd (`StartGr`, `StoppGr`), fördröjningarna och deras enheter (`StartF_tid`, `StartF_enhet`, `StoppF_tid`, `StoppF_enhet`) | 310 × 460 |
+| Givarinställning | `MWSE\Inställning\Givare` | givarens, `A.MWSE.VS01.GT11.` | – | Larmgräns låg och hög (`HLLarmGrL`, `HLLarmGrH`), fördröjning och enhet (`HLLarmF`, `HLLarmFenhet`), givarfel låg och hög (`GfLarmGrL`, `GfLarmGrH`) och dess fördröjning (`GfLarmF`) | 310 × 340 |
+| Motorinställning | `MWSE\Inställning\Motor` | motorns, `A.MWSE.VS01.P01.` | Drifttimmar (`DTtid`), antal starter (`DTstarter`), senast återställd (`DTdatum`) | Larmgräns och fördröjning för drifttid (`DTLarmGr`, `DTLarmF`); knappen Återställ skriver 1 till `DTreset` | 310 × 350 |
+| Regleravvikelseinställning | `MWSE\Inställning\Regleravvikelse` | `A.MWSE.VS01.RegAvv.` | – | Larmgräns (`LarmGrAvv`), fördröjning och enhet (`Fördr`, `TidsEnh`) | 310 × 200 |
+| Regulatorinställning | `MWSE\Inställning\Regulator` | `A.MWSE.VS01.Reg.` | Mätvärde (`ActVal`), börvärde (`SetPt`), utsignal (`YOut`) | P-faktor (`PFac00`), I-tid (`IntTime`), offset (`Offset`) | 310 × 430 |
+| Pumpstartinställning | `MWSE\Inställning\Pumpstart` | `A.MWSE.VS01.Pumpstart.` | – | Startgräns direkt (`StartGrD`), startgräns och stoppgräns fördröjd (`StartGr`, `StoppGr`), fördröjningarna och deras enheter (`StartF_tid`, `StartF_enhet`, `StoppF_tid`, `StoppF_enhet`) | 310 × 410 |
 
 Utom knappen Återställ är allt i kolumnen Skriver inmatningsrutor eller listor som skriver
 direkt till PCD:n. Listorna
@@ -662,12 +669,12 @@ eller trycka på skriver direkt till PCD:n. Signalerna står i
 
 | Mall | Kategori | FBox | Innehåll | Storlek (px) |
 |---|---|---|---|---|
-| Motorfördröjningsinställning | `MWSE\Inställning\Motor` | Motor | Startfördröjning och stoppfördröjning (s) | 310 × 220 |
-| Givarskalningsinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | Filtertid (s), kalibrering, skalning invärde och utvärde, min och max | 310 × 540 |
-| Givarhandinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | Läge Auto/Hand och handvärde | 310 × 220 |
-| Ventilskalningsinställning | `MWSE\Inställning\Ventil` | Utgång, analog | Skalning invärde och utvärde, min och max | 310 × 380 |
-| Trepunktsventilinställning | `MWSE\Inställning\Ventil` | Beräknat ärvärde, öka/minska | Gångtid min till max och max till min (s), dödzon (%) | 310 × 300 |
-| Spjällinställning | `MWSE\Inställning\Spjäll` | Spjällstyrning | Larmfördröjning öppna och stäng (s) | 310 × 220 |
+| Motorfördröjningsinställning | `MWSE\Inställning\Motor` | Motor | Startfördröjning och stoppfördröjning (s) | 310 × 200 |
+| Givarskalningsinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | Filtertid (s), kalibrering, skalning invärde och utvärde, min och max | 310 × 480 |
+| Givarhandinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | Läge Auto/Hand och handvärde | 310 × 200 |
+| Ventilskalningsinställning | `MWSE\Inställning\Ventil` | Utgång, analog | Skalning invärde och utvärde, min och max | 310 × 340 |
+| Trepunktsventilinställning | `MWSE\Inställning\Ventil` | Beräknat ärvärde, öka/minska | Gångtid min till max och max till min (s), dödzon (%) | 310 × 270 |
+| Spjällinställning | `MWSE\Inställning\Spjäll` | Spjällstyrning | Larmfördröjning öppna och stäng (s) | 310 × 200 |
 
 - **Etiketterna i skalningen följer registren, inte A-symbolernas namn.** FBoxarna lägger
   `BPX1`, `BPX2`, `BPY1` och `BPY2` på fyra register i ordningen X1, Y1, X2, Y2. `BPX2` håller
@@ -686,9 +693,9 @@ analog (Part 21), Beräknat ärvärde, öka/minska (Part 02) och Spjällstyrning
 
 | Mall | FBox | Innehåll | Storlek (px) |
 |---|---|---|---|
-| Veckoschemainställning | Tidkanal m. referens (`MWSE_TKref`) eller m. ingångar (`MWSE_TKing`) | Till och Från för måndag–söndag, dag före helg och helgdag | 640 × 380 |
-| Veckodagsinställning | Tidkanal, veckodag (`MWSE_TKM`) | Dag, Tid till, Tid från | 310 × 220 |
-| Veckopulsinställning | Veckopuls (`MWSE_Vpuls`) | Dag, Tid till, Pulslängd, Enhet | 310 × 220 |
+| Veckoschemainställning | Tidkanal m. referens (`MWSE_TKref`) eller m. ingångar (`MWSE_TKing`) | Till och Från för måndag–söndag, dag före helg och helgdag | 640 × 330 |
+| Veckodagsinställning | Tidkanal, veckodag (`MWSE_TKM`) | Dag, Tid till, Tid från | 310 × 200 |
+| Veckopulsinställning | Veckopuls (`MWSE_Vpuls`) | Dag, Tid till, Pulslängd, Enhet | 310 × 200 |
 
 - Tiderna skrivs som TT:MM, till exempel 07:30. Formatet `HH:MM` är en slutsats
   ([4.4](#44-format-på-pcd-variabler)).
@@ -705,10 +712,10 @@ Veckopuls (Part 21).*
 
 | Mall | FBox | Innehåll | Storlek (px) |
 |---|---|---|---|
-| Frysvaktsinställning | Larm, frysvakt (`MWSE_LFrV`) | Larmgräns, återställningsgräns, fördröjning med enhet | 310 × 300 |
-| Hög-låglarminställning | Larm HögLåg (`MWSE_RHL`) | Låglarmgräns, höglarmgräns, fördröjning med enhet | 310 × 300 |
-| Driftfelsinställning | Larm, driftfel (`MWSE_DRIFTFEL2`) | Fördröjning (s) | 310 × 140 |
-| Drifttidsinställning | Larm, drifttid (`MWSE_heaCtW2`) | Larmgräns för drifttid; visar drifttimmar och antal starter; knappen Återställ | 310 × 270 |
+| Frysvaktsinställning | Larm, frysvakt (`MWSE_LFrV`) | Larmgräns, återställningsgräns, fördröjning med enhet | 310 × 270 |
+| Hög-låglarminställning | Larm HögLåg (`MWSE_RHL`) | Låglarmgräns, höglarmgräns, fördröjning med enhet | 310 × 270 |
+| Driftfelsinställning | Larm, driftfel (`MWSE_DRIFTFEL2`) | Fördröjning (s) | 310 × 130 |
+| Drifttidsinställning | Larm, drifttid (`MWSE_heaCtW2`) | Larmgräns för drifttid; visar drifttimmar och antal starter; knappen Återställ | 310 × 250 |
 
 - Driftfelets larmvärde (`LarmVal`) är en inställning på FBoxen när programmet byggs, inte ett
   värde i PCD:n, och finns inte i blocket (slutsats ur FBox-makrot).
@@ -724,8 +731,8 @@ Larm, frysvakt (Part 12), avsnitt "A-symboler". `ResetDT` och `LarmVal`: lästa 
 
 | Mall | FBox | Visar | Skriver | Storlek (px) |
 |---|---|---|---|---|
-| PID-regulatorinställning | Regulator PID (`MWSE_heaPID3`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac00`), I-tid, D-tid, filtertid, offset | 310 × 490 |
-| P-regulatorinställning | Regulator P (`MWSE_heaPP2`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac`), arbetspunkt (`PtIni`) | 310 × 380 |
+| PID-regulatorinställning | Regulator PID (`MWSE_heaPID3`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac00`), I-tid, D-tid, filtertid, offset | 310 × 450 |
+| P-regulatorinställning | Regulator P (`MWSE_heaPP2`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac`), arbetspunkt (`PtIni`) | 310 × 360 |
 
 Hjälpen listar inte regulatorernas A-symboler; namnen är lästa ur FBox-makrot. Faceplates med
 Auto/Hand och inställningarna: Regulatorpanel, PID-regulatorpanel och P-regulatorpanel
@@ -745,9 +752,9 @@ Auto/Hand och inställningarna: Regulatorpanel, PID-regulatorpanel och P-regulat
 
 | Mall | FBox | Innehåll | Storlek (px) |
 |---|---|---|---|
-| Handsummering | Auto/Hand MNG (`MWSE_AH_MNG`) | Antal objekt i Hand (`AntalHand`); knappen Alla till Auto (`TillAuto`) | 310 × 170 |
-| Handstatus analog | Auto/Hand, analog via R (`MWSE_MwStatI_`) | Läge och utsignal; S-värdena för Auto och Hand | 310 × 310 |
-| Handstatus digital | Auto/Hand, digital via R (`MWSE_StatB`) | Läge och utsignal; S-värdena för Auto, Hand till och Hand från | 310 × 390 |
+| Handsummering | Auto/Hand MNG (`MWSE_AH_MNG`) | Antal objekt i Hand (`AntalHand`); knappen Alla till Auto (`TillAuto`) | 310 × 160 |
+| Handstatus analog | Auto/Hand, analog via R (`MWSE_MwStatI_`) | Läge och utsignal; S-värdena för Auto och Hand | 310 × 290 |
+| Handstatus digital | Auto/Hand, digital via R (`MWSE_StatB`) | Läge och utsignal; S-värdena för Auto, Hand till och Hand från | 310 × 360 |
 
 - **Alla till Auto** sätter alla anslutna Auto/Hand-FBoxar av version 2 i Auto. FBoxen nollställer
   `TillAuto` själv. Raden *Objekt i hand* visas i handfärgen när antalet är större än 0.
@@ -794,13 +801,13 @@ i ett kort. Det finns ett block per kurv-FBox:
 
 | Mall | FBox | Tabellen | Storlek (px) |
 |---|---|---|---|
-| Kurvinställning | Börvärdeskurva 5 (`MWSE_BvK5`) | Ute och Fram för punkt 1–5 | 788 × 382 |
-| Kurvinställning 2, 3, 4, 6, 7, 8, 9, 10 | Börvärdeskurva 2–10 (`MWSE_BvK<n>`) | Ute och Fram per punkt | 788 × 382 (2–4), 788 × 432 (6), 788 × 482 (7), 932 × 382 (8–10) |
-| Kurvinställning med sänkning 2, 5, 6, 7, 8, 9, 10 | Börvärdesk. m. sänkning (`MWSE_BvK<n>s`) | Ute, Fram och Sänkt per punkt | 788 × 382 (2, 5), 788 × 432 (6), 788 × 482 (7), 1004 × 382 (8–10) |
+| Kurvinställning | Börvärdeskurva 5 (`MWSE_BvK5`) | Ute och Fram för punkt 1–5 | 740 × 380 |
+| Kurvinställning 2, 3, 4, 6, 7, 8, 9, 10 | Börvärdeskurva 2–10 (`MWSE_BvK<n>`) | Ute och Fram per punkt | 740 × 380 (2–6), 740 × 420 (7), 910 × 380 (8–10) |
+| Kurvinställning med sänkning 2, 5, 6, 7, 8, 9, 10 | Börvärdesk. m. sänkning (`MWSE_BvK<n>s`) | Ute, Fram och Sänkt per punkt | 740 × 380 (2, 5, 6), 740 × 420 (7), 980 × 380 (8–10) |
 
 Kategorin är `MWSE\Inställning\Börvärdeskurva`. Placera och koppla blocket som de andra
 inställningsblocken ([6.6](#66-inställningsblock)). Alla kurvblock får plats i en vy på 1020 × 600,
-till exempel på (8, 104) under Topplist och en flikrad. MWSE har ingen kurva med sänkning för 3
+till exempel på (20, 110) under Topplist och en flikrad. MWSE har ingen kurva med sänkning för 3
 eller 4 punkter.
 
 **Tabellen**
@@ -820,7 +827,7 @@ eller 4 punkter.
 
 **Grafen**
 
-- Grafen är lika stor i alla kurvblock, 284 × 246 px, och står till höger om tabellen.
+- Grafen är lika stor i alla kurvblock, 250 × 240 px, och står till höger om tabellen.
 - Utetemperaturen går längs botten, fast från −30 till +20 °C. Framledningen går uppåt från Fram
   min till Fram max. Etiketterna vid ändarna visar Fram min och Fram max, och etiketten i mitten
   deras medelvärde, med en decimal.
@@ -856,12 +863,12 @@ inloggning. De binder inte under `A.MWSE.Namn.`:
 
 | Mall | Kategori | Storlek (px) | Kopplas till |
 |---|---|---|---|
-| Larmlista | `MWSE\Sida\Larm` | 1004 × 508 | Larmlistan i en Alarm PCD init-FBox, under `Namn.` |
-| Larmsummering | `MWSE\Sida\Larm` | 104 × 48 | Antalet larm, symbolen `<grupp>.antal`, under `Namn.`; öppnar vyn `Larm` |
-| Topplist | `MWSE\Sida\Navigering` | 1020 × 48 | Web8:s inloggningsvariabler, HEAVAC:s klocka, `sidTitel`, `visaMeny`; utloggningen öppnar vyn `login` |
-| Navigeringsmeny | `MWSE\Sida\Navigering` | 1020 × 1032 | `visaMeny`; raderna öppnar vyerna `Start`, `Larm`, `Inställningar`, `Info` och `login` |
-| Sidofält | `MWSE\Sida\Sidofält` | 250 × 552 | Inget; spalten där panelerna och panelknapparna ligger, med texten ”Ingen panel öppen” där panelerna öppnas tills en panel täcker den |
-| Inloggning | `MWSE\Sida\Inloggning` | 360 × 296 | Projektets användardatabas |
+| Larmlista | `MWSE\Sida\Larm` | 1000 × 480 | Larmlistan i en Alarm PCD init-FBox, under `Namn.` |
+| Larmsummering | `MWSE\Sida\Larm` | 100 × 50 | Antalet larm, symbolen `<grupp>.antal`, under `Namn.`; öppnar vyn `Larm` |
+| Topplist | `MWSE\Sida\Navigering` | 1020 × 50 | Web8:s inloggningsvariabler, HEAVAC:s klocka, `sidTitel`, `visaMeny`; utloggningen öppnar vyn `login` |
+| Navigeringsmeny | `MWSE\Sida\Navigering` | 1020 × 1030 | `visaMeny`; raderna öppnar vyerna `Start`, `Larm`, `Inställningar`, `Info` och `login` |
+| Sidofält | `MWSE\Sida\Sidofält` | 250 × 550 | Inget; spalten där panelerna och panelknapparna ligger, med texten ”Ingen panel öppen” där panelerna öppnas tills en panel täcker den |
+| Inloggning | `MWSE\Sida\Inloggning` | 360 × 260 | Projektets användardatabas |
 | Bakgrund | `MWSE\Sida\Inloggning` | 1020 × 600 | Inget; bakgrundsbild under Inloggning |
 
 Larmlista bygger på Saias Online Alarm List (generation 1), med MWSE:s färger och svenska texter.
@@ -903,7 +910,7 @@ view") och Jump Back. Namnen i labbprogrammet: lästa ur dess symbolfil och Fupl
 Larm-FBoxen skapar symbolen `A.Alarm.<FBox-namn>.MyName`; mallen har `A.Alarm.Namn.MyName`.
 Mallen är ritad som ett inställningsblock: ett kort med ett band överst som bär kolumnrubrikerna,
 listan under bandet, bläddringspilarna till höger och en rad med tre knappar längst ner. Den får
-plats under Topplist i en vy på 1020 × 600; placera den på (8, 56).
+plats under Topplist i en vy på 1020 × 600; placera den på (10, 60).
 
 1. Placera `Larmlista` i larmvyn, den vy som Larmsummering och menyn öppnar.
 2. Markera mallen, öppna fliken **Template** i Properties och sätt **Alarm List PPO Name** till
@@ -997,8 +1004,8 @@ prövat mot PCD 2026-10-25.*
 
 ### 7.3 Topplist och sidtitel
 
-**Topplist** är sidans övre list, 1020 × 48 px: menyknapp, Tillbaka, sidtitel, inloggad användare,
-klocka och Logga ut. Längst till höger, från x = 916, finns plats för Larmsummering.
+**Topplist** är sidans övre list, 1020 × 50 px: menyknapp, Tillbaka, sidtitel, inloggad användare,
+klocka och Logga ut. Längst till höger, från x = 920, finns plats för Larmsummering.
 
 - **Meny** växlar `visaMeny` mellan 1 och 0 och öppnar och stänger Navigeringsmeny.
 - **Tillbaka** går till förra vyn (Jump Back).
@@ -1036,7 +1043,7 @@ Att bygget tar bort skrivningen utan deklaration och behåller bara första inst
 ### 7.4 Navigeringsmeny
 
 **Navigeringsmeny** öppnas med Topplists menyknapp. Den är dold tills `visaMeny` = 1 och tar då
-emot klick. Menypanelen är 248 px bred till vänster; resten av ytan är en gardin (scrim) som
+emot klick. Menypanelen är 240 px bred till vänster; resten av ytan är en gardin (scrim) som
 tonar ned sidan. Ett klick på gardinen eller på krysset stänger menyn.
 
 Raderna är Översikt, Larm, Inställningar, Info och Inloggning. Varje rad öppnar sin vy och
@@ -1077,17 +1084,17 @@ läst ur labbets login.wev; prövat mot en simulerad PCD 2026-10-23.*
 En sida med alla sidmallar, för en vy på 1020 × 600 px:
 
 1. **Topplist** överst i vyn, på (0, 0).
-2. **Larmsummering** på (916, 0) relativt topplisten, i samma lager och **efter** Topplist, så att
+2. **Larmsummering** på (920, 0) relativt topplisten, i samma lager och **efter** Topplist, så att
    den ritas ovanpå.
-3. **Sidofält** på (770, 48), i ett lager under `Paneler`, på varje vy som har faceplates eller
+3. **Sidofält** på (770, 50), i ett lager under `Paneler`, på varje vy som har faceplates eller
    panelknappar. Vyer utan dem, som larmvyn, använder hela bredden. I sidofältet öppnas alla
    faceplates överst, på (770, 50) i lagret `Paneler`
-   ([6.1](#61-lager-för-faceplates)), och panelknapparna läggs under dem, från (770, 408) och
-   56 px nedåt per knapp. Vyns länk till sina inställningar (en knapp med pil) ligger längst ner
+   ([6.1](#61-lager-för-faceplates)), och panelknapparna läggs under dem, från (780, 410) och
+   50 px nedåt per knapp, så att de har 10 px luft mot sidofältets kanter, panelen och varandra. Vyns länk till sina inställningar (en knapp med pil) ligger längst ner
    i sidofältet.
 4. Vyns symboler och inställningsblock under topplisten och till vänster om sidofältet, x under
    770.
-5. **Navigeringsmeny** på (0, 48), direkt under topplisten, och **sist**: efter alla faceplates i
+5. **Navigeringsmeny** på (0, 50), direkt under topplisten, och **sist**: efter alla faceplates i
    det översta lagret, eller i ett eget lager överst. Annars ritas en öppen faceplate ovanpå menyns
    gardin. Menyn och gardinen räcker till nederkanten av en vy som är upp till 1080 px hög. I en
    lägre vy går de utanför vyn i editorn, men i körningen skärs de av vid vyns kant.
@@ -1211,79 +1218,79 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 
 | Mall | Kategori i Web8 | MWSE-FBox | Signaler | Version |
 |---|---|---|---|---|
-| Pump | `MWSE\Symbol\Motor` | Motor (`MWSE_Motor`) | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man` | 2.0.0 |
-| Fläkt | `MWSE\Symbol\Motor` | Motor | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man` | 2.0.0 |
-| Motor | `MWSE\Symbol\Motor` | Motor | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man` | 2.0.0 |
-| Kompressor | `MWSE\Symbol\Motor` | Motor ¹ | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man` | 2.0.0 |
-| Spjäll | `MWSE\Symbol\Ställdon` | Spjällstyrning (`MWSE_Lflaps2`) | `R_Ut`, `LA_Ut`, `Man` | 2.0.0 |
-| Brandspjäll | `MWSE\Symbol\Ställdon` | Spjällstyrning ¹ | `R_Ut`, `LA_Ut`, `Man` | 2.0.0 |
-| Tvåvägsventil | `MWSE\Symbol\Ställdon` | Utgång, analog (`MWSE_UtAna`) | `MV_Ut`, `Man` | 2.0.0 |
-| Trevägsventil | `MWSE\Symbol\Ställdon` | Utgång, analog ² | `MV_Ut`, `Man` | 2.0.0 |
-| Trepunktsventil | `MWSE\Symbol\Ställdon` | Beräknat ärvärde, öka/minska (`MWSE_BAROM`) | `BeräknVärde`, `IncUt`, `DecUt` | 1.0.0 |
-| Givare | `MWSE\Symbol\Givare` | Ingång, analog, larm (`MWSE_InAnaL`) | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.0.0 |
-| Utegivare | `MWSE\Symbol\Givare` | Ingång, analog, larm | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.0.0 |
-| Differensgivare | `MWSE\Symbol\Givare` | Ingång, analog, larm ³ | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.0.0 |
-| Integrerad Givare | `MWSE\Symbol\Givare` | Ingång, analog, larm ³ | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.0.0 |
-| Roterande värmeväxlare | `MWSE\Symbol\Värmeväxlare` | Motor och, under `VG.`, Verkningsgrad (`MWSE_VGRAD1`) | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man`, `VG.PV_Ut`, `VG.LAL_Ut` | 1.0.0 |
-| Panelknapp | `MWSE\Symbol\Knapp` | – (gruppen för panelen den öppnar) | – | 1.0.0 |
-| Värmebatteri, Kylbatteri, Kombibatteri, Filter, Radiator, Värmetank, Krets, Krets med bypass, Krets med backventil, Tank, Liten tank, Värmeväxlare X, Värmeväxlare V, Plattvärmeväxlare | `MWSE\Symbol\Statisk` | – | – | 1.0.0 |
+| Pump | `MWSE\Symbol\Motor` | Motor (`MWSE_Motor`) | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man` | 2.1.0 |
+| Fläkt | `MWSE\Symbol\Motor` | Motor | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man` | 2.1.0 |
+| Motor | `MWSE\Symbol\Motor` | Motor | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man` | 2.1.0 |
+| Kompressor | `MWSE\Symbol\Motor` | Motor ¹ | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man` | 2.1.0 |
+| Spjäll | `MWSE\Symbol\Ställdon` | Spjällstyrning (`MWSE_Lflaps2`) | `R_Ut`, `LA_Ut`, `Man` | 2.1.0 |
+| Brandspjäll | `MWSE\Symbol\Ställdon` | Spjällstyrning ¹ | `R_Ut`, `LA_Ut`, `Man` | 2.1.0 |
+| Tvåvägsventil | `MWSE\Symbol\Ställdon` | Utgång, analog (`MWSE_UtAna`) | `MV_Ut`, `Man` | 2.1.0 |
+| Trevägsventil | `MWSE\Symbol\Ställdon` | Utgång, analog ² | `MV_Ut`, `Man` | 2.1.0 |
+| Trepunktsventil | `MWSE\Symbol\Ställdon` | Beräknat ärvärde, öka/minska (`MWSE_BAROM`) | `BeräknVärde`, `IncUt`, `DecUt` | 1.1.0 |
+| Givare | `MWSE\Symbol\Givare` | Ingång, analog, larm (`MWSE_InAnaL`) | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.1.0 |
+| Utegivare | `MWSE\Symbol\Givare` | Ingång, analog, larm | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.1.0 |
+| Differensgivare | `MWSE\Symbol\Givare` | Ingång, analog, larm ³ | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.1.0 |
+| Integrerad Givare | `MWSE\Symbol\Givare` | Ingång, analog, larm ³ | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.1.0 |
+| Roterande värmeväxlare | `MWSE\Symbol\Värmeväxlare` | Motor och, under `VG.`, Verkningsgrad (`MWSE_VGRAD1`) | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man`, `VG.PV_Ut`, `VG.LAL_Ut` | 1.1.0 |
+| Panelknapp | `MWSE\Symbol\Knapp` | – (gruppen för panelen den öppnar) | – | 1.1.0 |
+| Värmebatteri, Kylbatteri, Kombibatteri, Filter, Radiator, Värmetank, Krets, Krets med bypass, Krets med backventil, Tank, Liten tank, Värmeväxlare X, Värmeväxlare V, Plattvärmeväxlare | `MWSE\Symbol\Statisk` | – | – | 1.1.0 (kretsarna), 1.0.1 (batterierna, Radiator, tankarna), 1.0.0 (Filter, växlarna) |
 
 **Faceplates**
 
 | Mall | Kategori i Web8 | MWSE-FBox | Signaler | Version |
 |---|---|---|---|---|
-| Motorpanel | `MWSE\Panel\Motor` | Motor | `LD_Ut`, `LDT_Ut`, `Man`, `ManV`, `DTtid`, `DTstarter` | 1.0.0 |
-| Givarpanel | `MWSE\Panel\Givare` | Ingång, analog, larm | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `HLLarmGrL`, `HLLarmGrH` | 1.0.0 |
-| Ventilpanel | `MWSE\Panel\Ventil` | Utgång, analog | `MV_Ut`, `Min`, `Max`, `Man`, `ManV` | 1.0.0 |
-| Spjällpanel | `MWSE\Panel\Spjäll` | Spjällstyrning | `LA_Ut`, `Man`, `ManV` | 1.0.0 |
-| Trepunktsventilpanel | `MWSE\Panel\Ventil` | Beräknat ärvärde, öka/minska | `BeräknVärde`, `IncUt`, `DecUt`, `KalUt` | 1.0.0 |
-| Regulatorpanel | `MWSE\Panel\Regulator` | Regulator PI (`MWSE_heaPI3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime` | 1.0.0 |
-| PID-regulatorpanel | `MWSE\Panel\Regulator` | Regulator PID (`MWSE_heaPID3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `DerTime` | 1.0.0 |
-| P-regulatorpanel | `MWSE\Panel\Regulator` | Regulator P (`MWSE_heaPP2`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac`, `PtIni` | 1.0.0 |
-| Handpanel digital | `MWSE\Panel\Hand` | Auto/Hand, digital (`MWSE_AHdi`, `MWSE_AHdigS`, `MWSE_AHdigS2`) | `Man`, `ManV` | 1.0.0 |
-| Handpanel analog | `MWSE\Panel\Hand` | Auto/Hand, analog (`MWSE_AHan`, `MWSE_AHanaS`, `MWSE_AHanaS2`) | `Man`, `ManV` | 1.0.0 |
-| Digitalsignalpanel | `MWSE\Panel\Hand` | Digital signal (`MWSE_DigSignal`) | `Man`, `ManV`, `Invertering`, `StartF_tid`, `StartF_enhet`, `StoppF_tid`, `StoppF_enhet` | 1.0.0 |
+| Motorpanel | `MWSE\Panel\Motor` | Motor | `LD_Ut`, `LDT_Ut`, `Man`, `ManV`, `DTtid`, `DTstarter` | 1.0.2 |
+| Givarpanel | `MWSE\Panel\Givare` | Ingång, analog, larm | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `HLLarmGrL`, `HLLarmGrH` | 1.0.1 |
+| Ventilpanel | `MWSE\Panel\Ventil` | Utgång, analog | `MV_Ut`, `Min`, `Max`, `Man`, `ManV` | 1.0.2 |
+| Spjällpanel | `MWSE\Panel\Spjäll` | Spjällstyrning | `LA_Ut`, `Man`, `ManV` | 1.0.2 |
+| Trepunktsventilpanel | `MWSE\Panel\Ventil` | Beräknat ärvärde, öka/minska | `BeräknVärde`, `IncUt`, `DecUt`, `KalUt` | 1.0.1 |
+| Regulatorpanel | `MWSE\Panel\Regulator` | Regulator PI (`MWSE_heaPI3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime` | 1.0.2 |
+| PID-regulatorpanel | `MWSE\Panel\Regulator` | Regulator PID (`MWSE_heaPID3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `DerTime` | 1.0.2 |
+| P-regulatorpanel | `MWSE\Panel\Regulator` | Regulator P (`MWSE_heaPP2`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac`, `PtIni` | 1.0.2 |
+| Handpanel digital | `MWSE\Panel\Hand` | Auto/Hand, digital (`MWSE_AHdi`, `MWSE_AHdigS`, `MWSE_AHdigS2`) | `Man`, `ManV` | 1.0.2 |
+| Handpanel analog | `MWSE\Panel\Hand` | Auto/Hand, analog (`MWSE_AHan`, `MWSE_AHanaS`, `MWSE_AHanaS2`) | `Man`, `ManV` | 1.0.2 |
+| Digitalsignalpanel | `MWSE\Panel\Hand` | Digital signal (`MWSE_DigSignal`) | `Man`, `ManV`, `Invertering`, `StartF_tid`, `StartF_enhet`, `StoppF_tid`, `StoppF_enhet` | 1.0.2 |
 
 **Inställningar och status**
 
 | Mall | Kategori i Web8 | MWSE-FBox | Signaler | Version |
 |---|---|---|---|---|
-| Givarinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | `HLLarmGrL`, `HLLarmGrH`, `HLLarmF`, `HLLarmFenhet`, `GfLarmGrL`, `GfLarmGrH`, `GfLarmF` | 1.0.0 |
-| Givarskalningsinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | `Filtertid`, `Kalibrering`, `BPX1`, `BPX2`, `BPY1`, `BPY2` | 1.0.0 |
-| Givarhandinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | `Man`, `ManV` | 1.0.0 |
-| Motorinställning | `MWSE\Inställning\Motor` | Motor | `DTLarmGr`, `DTLarmF`, `DTtid`, `DTstarter`, `DTdatum`, `DTreset` | 1.0.0 |
-| Motorfördröjningsinställning | `MWSE\Inställning\Motor` | Motor | `StartF`, `StoppF` | 1.0.0 |
-| Ventilskalningsinställning | `MWSE\Inställning\Ventil` | Utgång, analog | `BPX1`, `BPX2`, `BPY1`, `BPY2` | 1.0.0 |
-| Trepunktsventilinställning | `MWSE\Inställning\Ventil` | Beräknat ärvärde, öka/minska | `GångtidÖ`, `GångtidM`, `Dödzon` | 1.0.0 |
-| Spjällinställning | `MWSE\Inställning\Spjäll` | Spjällstyrning | `LarmF_O`, `LarmF_S` | 1.0.0 |
-| Regleravvikelseinställning | `MWSE\Inställning\Regleravvikelse` | Larm, regleravvikelse (`MWSE_RAVB`) | `LarmGrAvv`, `Fördr`, `TidsEnh` | 1.0.0 |
-| Regulatorinställning | `MWSE\Inställning\Regulator` | Regulator PI (`MWSE_heaPI3`) | `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `Offset` | 1.0.0 |
-| PID-regulatorinställning | `MWSE\Inställning\Regulator` | Regulator PID (`MWSE_heaPID3`) | `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `DerTime`, `FT1Time`, `Offset` | 1.0.0 |
-| P-regulatorinställning | `MWSE\Inställning\Regulator` | Regulator P (`MWSE_heaPP2`) | `ActVal`, `SetPt`, `YOut`, `PFac`, `PtIni` | 1.0.0 |
-| Kurvinställning | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva 5 (`MWSE_BvK5`) | `BPX1`–`BPX5`, `BPY1`–`BPY5`, `YminV`, `YmaxV` | 2.0.0 |
-| Kurvinställning 2, 3, 4, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva *n* (`MWSE_BvK<n>`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `YminV`, `YmaxV` | 2.0.0 |
-| Kurvinställning med sänkning 2, 5, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdesk. m. sänkning *n* (`MWSE_BvK<n>s`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `BPY1n`–`BPY<n>n`, `YminV`, `YmaxV` | 2.0.0 |
-| Pumpstartinställning | `MWSE\Inställning\Pumpstart` | Pumpstart (`MWSE_Pumpst`) | `StartGrD`, `StartGr`, `StartF_tid`, `StartF_enhet`, `StoppGr`, `StoppF_tid`, `StoppF_enhet` | 1.0.0 |
-| Veckoschemainställning | `MWSE\Inställning\Tidkanal` | Tidkanal m. referens eller m. ingångar (`MWSE_TKref`, `MWSE_TKing`) | `månTill`, `månFrån`, `tisTill`, `tisFrån`, `onsTill`, `onsFrån`, `torsTill`, `torsFrån`, `freTill`, `freFrån`, `lörTill`, `lörFrån`, `sönTill`, `sönFrån`, `dfhTill`, `dfhFrån`, `hdTill`, `hdFrån` | 1.0.0 |
-| Veckodagsinställning | `MWSE\Inställning\Tidkanal` | Tidkanal, veckodag (`MWSE_TKM`) | `Dag`, `TidT`, `TidF` | 1.0.0 |
-| Veckopulsinställning | `MWSE\Inställning\Tidkanal` | Veckopuls (`MWSE_Vpuls`) | `Dag`, `TidTill`, `Pulslängd`, `Tidsenhet` | 1.0.0 |
-| Frysvaktsinställning | `MWSE\Inställning\Larm` | Larm, frysvakt (`MWSE_LFrV`) | `LGr`, `HGr`, `LarmF`, `Enhet` | 1.0.0 |
-| Hög-låglarminställning | `MWSE\Inställning\Larm` | Larm HögLåg (`MWSE_RHL`) | `LarmGrL`, `LarmGrH`, `TidsF`, `Enhet` | 1.0.0 |
-| Driftfelsinställning | `MWSE\Inställning\Larm` | Larm, driftfel (`MWSE_DRIFTFEL2`) | `LarmF` | 1.0.0 |
-| Drifttidsinställning | `MWSE\Inställning\Larm` | Larm, drifttid (`MWSE_heaCtW2`) | `LarmGr`, `AntalTimmar`, `AntalStarter`, `ResetDT` | 1.0.0 |
-| Handsummering | `MWSE\Inställning\Status` | Auto/Hand MNG (`MWSE_AH_MNG`) | `AntalHand`, `TillAuto` | 1.0.0 |
-| Handstatus analog | `MWSE\Inställning\Status` | Auto/Hand, analog via R (`MWSE_MwStatI_`) | `Man_Ut`, `V_Ut`, `RegisterV1`, `RegisterV2` | 1.0.0 |
-| Handstatus digital | `MWSE\Inställning\Status` | Auto/Hand, digital via R (`MWSE_StatB`) | `ManUt`, `V_Ut`, `RegisterV1`, `RegisterV2`, `RegisterV3` | 1.0.0 |
+| Givarinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | `HLLarmGrL`, `HLLarmGrH`, `HLLarmF`, `HLLarmFenhet`, `GfLarmGrL`, `GfLarmGrH`, `GfLarmF` | 1.1.0 |
+| Givarskalningsinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | `Filtertid`, `Kalibrering`, `BPX1`, `BPX2`, `BPY1`, `BPY2` | 1.1.0 |
+| Givarhandinställning | `MWSE\Inställning\Givare` | Ingång, analog, larm | `Man`, `ManV` | 1.1.0 |
+| Motorinställning | `MWSE\Inställning\Motor` | Motor | `DTLarmGr`, `DTLarmF`, `DTtid`, `DTstarter`, `DTdatum`, `DTreset` | 1.1.0 |
+| Motorfördröjningsinställning | `MWSE\Inställning\Motor` | Motor | `StartF`, `StoppF` | 1.1.0 |
+| Ventilskalningsinställning | `MWSE\Inställning\Ventil` | Utgång, analog | `BPX1`, `BPX2`, `BPY1`, `BPY2` | 1.1.0 |
+| Trepunktsventilinställning | `MWSE\Inställning\Ventil` | Beräknat ärvärde, öka/minska | `GångtidÖ`, `GångtidM`, `Dödzon` | 1.1.0 |
+| Spjällinställning | `MWSE\Inställning\Spjäll` | Spjällstyrning | `LarmF_O`, `LarmF_S` | 1.1.0 |
+| Regleravvikelseinställning | `MWSE\Inställning\Regleravvikelse` | Larm, regleravvikelse (`MWSE_RAVB`) | `LarmGrAvv`, `Fördr`, `TidsEnh` | 1.1.0 |
+| Regulatorinställning | `MWSE\Inställning\Regulator` | Regulator PI (`MWSE_heaPI3`) | `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `Offset` | 1.1.0 |
+| PID-regulatorinställning | `MWSE\Inställning\Regulator` | Regulator PID (`MWSE_heaPID3`) | `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `DerTime`, `FT1Time`, `Offset` | 1.1.0 |
+| P-regulatorinställning | `MWSE\Inställning\Regulator` | Regulator P (`MWSE_heaPP2`) | `ActVal`, `SetPt`, `YOut`, `PFac`, `PtIni` | 1.1.0 |
+| Kurvinställning | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva 5 (`MWSE_BvK5`) | `BPX1`–`BPX5`, `BPY1`–`BPY5`, `YminV`, `YmaxV` | 2.1.0 |
+| Kurvinställning 2, 3, 4, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva *n* (`MWSE_BvK<n>`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `YminV`, `YmaxV` | 2.1.0 |
+| Kurvinställning med sänkning 2, 5, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdesk. m. sänkning *n* (`MWSE_BvK<n>s`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `BPY1n`–`BPY<n>n`, `YminV`, `YmaxV` | 2.1.0 |
+| Pumpstartinställning | `MWSE\Inställning\Pumpstart` | Pumpstart (`MWSE_Pumpst`) | `StartGrD`, `StartGr`, `StartF_tid`, `StartF_enhet`, `StoppGr`, `StoppF_tid`, `StoppF_enhet` | 1.1.0 |
+| Veckoschemainställning | `MWSE\Inställning\Tidkanal` | Tidkanal m. referens eller m. ingångar (`MWSE_TKref`, `MWSE_TKing`) | `månTill`, `månFrån`, `tisTill`, `tisFrån`, `onsTill`, `onsFrån`, `torsTill`, `torsFrån`, `freTill`, `freFrån`, `lörTill`, `lörFrån`, `sönTill`, `sönFrån`, `dfhTill`, `dfhFrån`, `hdTill`, `hdFrån` | 1.1.0 |
+| Veckodagsinställning | `MWSE\Inställning\Tidkanal` | Tidkanal, veckodag (`MWSE_TKM`) | `Dag`, `TidT`, `TidF` | 1.1.0 |
+| Veckopulsinställning | `MWSE\Inställning\Tidkanal` | Veckopuls (`MWSE_Vpuls`) | `Dag`, `TidTill`, `Pulslängd`, `Tidsenhet` | 1.1.0 |
+| Frysvaktsinställning | `MWSE\Inställning\Larm` | Larm, frysvakt (`MWSE_LFrV`) | `LGr`, `HGr`, `LarmF`, `Enhet` | 1.1.0 |
+| Hög-låglarminställning | `MWSE\Inställning\Larm` | Larm HögLåg (`MWSE_RHL`) | `LarmGrL`, `LarmGrH`, `TidsF`, `Enhet` | 1.1.0 |
+| Driftfelsinställning | `MWSE\Inställning\Larm` | Larm, driftfel (`MWSE_DRIFTFEL2`) | `LarmF` | 1.1.0 |
+| Drifttidsinställning | `MWSE\Inställning\Larm` | Larm, drifttid (`MWSE_heaCtW2`) | `LarmGr`, `AntalTimmar`, `AntalStarter`, `ResetDT` | 1.1.0 |
+| Handsummering | `MWSE\Inställning\Status` | Auto/Hand MNG (`MWSE_AH_MNG`) | `AntalHand`, `TillAuto` | 1.1.0 |
+| Handstatus analog | `MWSE\Inställning\Status` | Auto/Hand, analog via R (`MWSE_MwStatI_`) | `Man_Ut`, `V_Ut`, `RegisterV1`, `RegisterV2` | 1.1.0 |
+| Handstatus digital | `MWSE\Inställning\Status` | Auto/Hand, digital via R (`MWSE_StatB`) | `ManUt`, `V_Ut`, `RegisterV1`, `RegisterV2`, `RegisterV3` | 1.1.0 |
 
 **Sidmallar**
 
 | Mall | Kategori i Web8 | Binds till | Version |
 |---|---|---|---|
-| Larmlista | `MWSE\Sida\Larm` | `A.Alarm.Namn.MyName` (egenskapen Alarm List PPO Name) | 1.0.0 |
-| Larmsummering | `MWSE\Sida\Larm` | `Namn.antal` | 1.0.0 |
-| Topplist | `MWSE\Sida\Navigering` | `S.HVC.Clock.HHMMSS`, `S.HVC.Clock.YYYYMMDD`; interna `visaMeny`, `sidTitel`; Web8:s inloggningsvariabler | 1.0.0 |
-| Navigeringsmeny | `MWSE\Sida\Navigering` | intern `visaMeny` | 1.0.0 |
-| Inloggning | `MWSE\Sida\Inloggning` | projektets användardatabas och Web8:s inloggningsvariabler | 1.0.0 |
+| Larmlista | `MWSE\Sida\Larm` | `A.Alarm.Namn.MyName` (egenskapen Alarm List PPO Name) | 1.1.0 |
+| Larmsummering | `MWSE\Sida\Larm` | `Namn.antal` | 1.1.0 |
+| Topplist | `MWSE\Sida\Navigering` | `S.HVC.Clock.HHMMSS`, `S.HVC.Clock.YYYYMMDD`; interna `visaMeny`, `sidTitel`; Web8:s inloggningsvariabler | 1.1.0 |
+| Navigeringsmeny | `MWSE\Sida\Navigering` | intern `visaMeny` | 1.1.0 |
+| Inloggning | `MWSE\Sida\Inloggning` | projektets användardatabas och Web8:s inloggningsvariabler | 1.1.0 |
 
 Alla symboler, Panelknapp och faceplates använder dessutom den interna variabeln `valdSymbol`;
 symbolerna och de statiska symbolerna även `doljNamn`.

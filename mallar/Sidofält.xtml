@@ -1,14 +1,14 @@
-﻿<Template type="ViewElement" id="0ada40e9-18c8-4990-a099-be372fb8b025" version="1.0.0" name="Sidofält" description="Den fasta högerspalten under topplisten: panelerna öppnas överst i den och Panelknapp läggs under dem." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Sida\Sidofält" icon="icons.template.png">
+﻿<Template type="ViewElement" id="c9ee90df-04ac-4df8-9fea-5f00f85b8f90" version="1.1.0" name="Sidofält" description="Den fasta högerspalten under topplisten: panelerna öppnas överst i den och Panelknapp läggs under dem." templateNameId="_1_1_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Sida\Sidofält" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
   </InitialLayout>
   <Resources />
-  <Element id="fd29def5-88a5-48a9-b21e-5b9a0e95d888" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Sidofält">
+  <Element id="061cfc43-2975-47f2-8041-854db5565d76" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Sidofält">
     <Properties>
       <Property name="Name" source="C" value="Sidofält" type="string" />
     </Properties>
-    <Element id="728cb764-350e-47b2-981a-8a3ff02bc978" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
+    <Element id="a63c1119-d242-407b-9c0d-e14760ea81da" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
       <Properties>
         <Property name="Name" source="C" value="Bakgrund" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -18,13 +18,13 @@
         <Property name="X" source="C" value="0" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
         <Property name="Width" source="C" value="250" type="double" />
-        <Property name="Height" source="C" value="552" type="double" />
+        <Property name="Height" source="C" value="550" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="4cad2239-82b8-4e79-9fb6-44503b0ebd80" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rubrik">
+    <Element id="74533cb3-99de-4855-816d-7eb5012b2b3a" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rubrik">
       <Properties>
         <Property name="Name" source="C" value="Rubrik" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -33,7 +33,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="C" value="Ingen panel öppen" type="string" />
         <Property name="X" source="C" value="16" type="double" />
-        <Property name="Y" source="C" value="141" type="double" />
+        <Property name="Y" source="C" value="139" type="double" />
         <Property name="Width" source="C" value="218" type="double" />
         <Property name="Height" source="C" value="24" type="double" />
         <Property name="Font" source="C" value="Arial Bold 11" type="FontInfo" />
@@ -42,7 +42,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="f0a62eab-c711-40f2-bf58-f401776d7b02" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rad1">
+    <Element id="118e08e9-290d-40be-807a-295afe2e2052" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rad1">
       <Properties>
         <Property name="Name" source="C" value="Rad1" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -51,7 +51,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="C" value="Klicka på en symbol eller" type="string" />
         <Property name="X" source="C" value="16" type="double" />
-        <Property name="Y" source="C" value="169" type="double" />
+        <Property name="Y" source="C" value="167" type="double" />
         <Property name="Width" source="C" value="218" type="double" />
         <Property name="Height" source="C" value="20" type="double" />
         <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
@@ -60,7 +60,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="58752ea4-c3e9-48b2-a122-883666505022" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rad2">
+    <Element id="ca17993e-ce50-4127-9326-128a77d57a86" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rad2">
       <Properties>
         <Property name="Name" source="C" value="Rad2" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -69,7 +69,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="C" value="en panelknapp för att" type="string" />
         <Property name="X" source="C" value="16" type="double" />
-        <Property name="Y" source="C" value="189" type="double" />
+        <Property name="Y" source="C" value="187" type="double" />
         <Property name="Width" source="C" value="218" type="double" />
         <Property name="Height" source="C" value="20" type="double" />
         <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
@@ -78,7 +78,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="947cd380-6760-456f-b625-e67f6771ea6b" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rad3">
+    <Element id="9d3d5240-9cc9-4a07-9078-3845e7703e39" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Rad3">
       <Properties>
         <Property name="Name" source="C" value="Rad3" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -87,7 +87,7 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="C" value="öppna dess panel." type="string" />
         <Property name="X" source="C" value="16" type="double" />
-        <Property name="Y" source="C" value="209" type="double" />
+        <Property name="Y" source="C" value="207" type="double" />
         <Property name="Width" source="C" value="218" type="double" />
         <Property name="Height" source="C" value="20" type="double" />
         <Property name="Font" source="C" value="Arial 11" type="FontInfo" />

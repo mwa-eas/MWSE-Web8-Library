@@ -4,6 +4,41 @@
 A-symbolerna i MWSE FBox-biblioteket. Rubriken anger paketets version. Varje mall har dessutom
 en egen version, som visas i Web8:s mallbibliotek.
 
+## 0.9.0-beta.2 (tidig åtkomst, 2026-10-27)
+
+Andra förhandsversionen. Paketet har nu också `NOTICE` med villkoren för Larmlistas delar från
+Saia; `LICENSE` är den rena MIT-licensen.
+
+Hela biblioteket ligger på Web8:s rutnät om 10 px: mallarnas storlekar och platser, varje ram,
+fält, knapp, band och rad, och där en kanal eller ledning möter en symbol. Alla knappar och fält
+är 40 px höga; bredden följer platsen eller innehållet.
+
+- Topplist 1.1.0 är 1020 × 50 px. Larmsummering 1.1.0 är 100 × 50 px och läggs på (920, 0).
+  Sidofält 1.1.0 läggs på (770, 50) och är 250 × 550 px. Navigeringsmeny 1.1.0 läggs på (0, 50).
+- Panelknapp 1.1.0 är 230 × 40 px och läggs på (780, 410), 50 px nedåt per knapp, med 10 px luft
+  mot sidofältets kanter, panelen ovanför och varandra.
+- Larmlista 1.1.0 är 1000 × 480 px och läggs 10 px från vyns kant.
+- Inloggning 1.1.0 är 360 × 260 px.
+- Symbolerna (2.1.0, Trepunktsventil 1.1.0) är 80 × 100 px: bilden ligger 5 px lägre, så att
+  kanalen möter dess mitt 50 px ner. Utegivare är 140 × 60 px. Roterande värmeväxlare 1.1.0 möter
+  kanalerna 40 och 210 px ner.
+- Batteriernas låda är 20 px (Värmebatteri, Kylbatteri och Kombibatteri 1.0.1), så att kretsen
+  hänger 10 px under kanalen. Kretsarna 1.1.0 är 60 × 140 px med 120 px långa ben. Radiator 1.0.1
+  tar ledningarna 20 och 70 px in. Tankarnas väggar ligger på rutnätet (Tank och Värmetank 1.0.1);
+  Liten tank 1.0.1 är 60 × 60 px.
+- Faceplates är fortfarande 250 × 350 px, med raderna på rutnätet och krysset i en ruta på
+  50 × 50 px.
+- Inställningsblocken 1.1.0 behåller bredden och blir 10–60 px lägre.
+- Kurvblocken 2.1.0 är 740, 910 eller 980 px breda och 380 eller 420 px höga. Grafen är lika stor
+  i alla, 250 × 240 px.
+
+Flytta redan placerade mallar till de nya platserna, och dra om kanaler och ledningar till
+symbolerna på rutnätet.
+
+Alla knappar har raka hörn och ritas som Panelknapp: en Web8-rektangel med bara ikonen som bild.
+Larmsummering blir röd genom rektangelns färg i stället för genom att byta hela bilden.
+Knappbilderna med ram finns inte längre i `grafik/`.
+
 ## 0.9.0-beta.1 (tidig åtkomst, 2026-10-27)
 
 Första förhandsversionen. Mallarna är prövade mot en simulerad PCD och, där guiden säger det, mot

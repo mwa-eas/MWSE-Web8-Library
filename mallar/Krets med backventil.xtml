@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="19258f02-61af-4b0a-ac6c-5e3491ed87e5" version="1.0.0" name="Krets med backventil" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+﻿<Template type="ViewElement" id="79622660-77be-4b3a-8a4e-4f90bc9e60bc" version="1.1.0" name="Krets med backventil" description="" templateNameId="_1_1_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
@@ -7,13 +7,13 @@
     <LocalVariable name="doljNamn" value="0" />
   </LocalVariables>
   <Resources>
-    <Resource name="Media/MWSE_CircuitNonReturnValve.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMTMwIiB2aWV3Qm94PSIwIDAgNjAgMTMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNTAgMTIwVjEzQzUwIDguNTgxNzIgNDYuNDE4MyA1IDQyIDVIMThDMTMuNTgxNyA1IDEwIDguNTgxNzIgMTAgMTNWMTIwIiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iMTAiIHkxPSI3MCIgeDI9IjUwIiB5Mj0iNzAiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjMwIiBjeT0iNzAiIHI9IjQiIGZpbGw9IiNGMEYzRjciLz4KPHBhdGggZD0iTTIxIDc1LjE5NjNMMjEgNjQuODAzN0wzMCA3MEwyMSA3NS4xOTYzWiIgZmlsbD0iI0YwRjNGNyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTM5IDY0LjgwMzdMMzkgNzUuMTk2M0wzMCA3MEwzOSA2NC44MDM3WiIgZmlsbD0iI0YwRjNGNyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjM2IiB5MT0iNjYiIHgyPSIzNiIgeTI9Ijc0IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
+    <Resource name="Media/MWSE_CircuitNonReturnValve.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMTQwIiB2aWV3Qm94PSIwIDAgNjAgMTQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNTAgMTMwVjE4QzUwIDEzLjU4MTcgNDYuNDE4MyAxMCA0MiAxMEgxOEMxMy41ODE3IDEwIDEwIDEzLjU4MTcgMTAgMThWMTMwIiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iMTAiIHkxPSI3MCIgeDI9IjUwIiB5Mj0iNzAiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjMwIiBjeT0iNzAiIHI9IjQiIGZpbGw9IiNGMEYzRjciLz4KPHBhdGggZD0iTTIxIDc1LjE5NjNMMjEgNjQuODAzN0wzMCA3MEwyMSA3NS4xOTYzWiIgZmlsbD0iI0YwRjNGNyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTM5IDY0LjgwMzdMMzkgNzUuMTk2M0wzMCA3MEwzOSA2NC44MDM3WiIgZmlsbD0iI0YwRjNGNyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjM2IiB5MT0iNjYiIHgyPSIzNiIgeTI9Ijc0IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
   </Resources>
-  <Element id="eb023ecc-17d4-479e-a6bc-993a01ab1b76" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Krets med backventil">
+  <Element id="9c040903-5246-4e76-9524-319550e0d183" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Krets med backventil">
     <Properties>
       <Property name="Name" source="C" value="Krets med backventil" type="string" />
     </Properties>
-    <Element id="fdb76785-3025-42e5-a937-2ba85ba7b84c" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+    <Element id="5e1d0c73-041f-4c78-aaa9-820208ffa19e" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
       <Properties>
         <Property name="Name" source="C" value="Symbol" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -23,23 +23,23 @@
         <Property name="X" source="C" value="10" type="double" />
         <Property name="Y" source="C" value="20" type="double" />
         <Property name="Width" source="C" value="60" type="double" />
-        <Property name="Height" source="C" value="130" type="double" />
+        <Property name="Height" source="C" value="140" type="double" />
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="19258f02-61af-4b0a-ac6c-5e3491ed87e5" name="Media/MWSE_CircuitNonReturnValve.svg" />
+          <Address container="79622660-77be-4b3a-8a4e-4f90bc9e60bc" name="Media/MWSE_CircuitNonReturnValve.svg" />
         </Property>
       </Properties>
     </Element>
-    <Element id="5dcd9f57-6199-4fef-bc8c-b4be2cac4219" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+    <Element id="6dfcd4a3-89da-44a3-9c8a-21238d994ae8" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
       <Conditions>
-        <ConditionLogic id="e3696cec-c0a3-4620-bc57-cf77ab8d2224" name="Dold" operator="And">
-          <Condition leftType="Container" leftContainer="19258f02-61af-4b0a-ac6c-5e3491ed87e5" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="e104950a-dacc-4c8b-af75-6249a994eb27" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="79622660-77be-4b3a-8a4e-4f90bc9e60bc" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="e3696cec-c0a3-4620-bc57-cf77ab8d2224" />
+          <Condition id="e104950a-dacc-4c8b-af75-6249a994eb27" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Namn" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -55,7 +55,7 @@
         <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="25 27 30" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="e3696cec-c0a3-4620-bc57-cf77ab8d2224" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="e104950a-dacc-4c8b-af75-6249a994eb27" value="True" type="bool" />
       </Properties>
     </Element>
   </Element>

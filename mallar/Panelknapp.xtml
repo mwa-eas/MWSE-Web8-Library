@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="1e897c9b-7d24-46dc-b165-74f8edd89d36" version="1.0.0" name="Panelknapp" description="Öppnar panelen som är bunden till samma grupp, t.ex. Regulatorpanel eller en handpanel. Texten ändras som en symbols namn." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Knapp" icon="icons.template.png">
+﻿<Template type="ViewElement" id="1f2cea32-bbec-4b61-aae8-3e01e4693d99" version="1.1.0" name="Panelknapp" description="Öppnar panelen som är bunden till samma grupp, t.ex. Regulatorpanel eller en handpanel. Texten ändras som en symbols namn." templateNameId="_1_1_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Knapp" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
@@ -7,19 +7,19 @@
     <StaticVariable name="valdSymbol" />
   </StaticVariables>
   <Resources />
-  <Element id="e361e24a-bc27-441e-9ba9-218cc0f4300f" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Panelknapp">
+  <Element id="19e29d44-626e-4dce-8469-3e941bb73975" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Panelknapp">
     <Conditions>
-      <ConditionLogic id="6d05412e-f24d-4ebe-a120-08dddbab5b9c" name="Vald" operator="And">
-        <Condition leftType="Container" leftContainer="1e897c9b-7d24-46dc-b165-74f8edd89d36" leftName="valdSymbol" operator="Equal" rightType="Constant" rightValue="A.MWSE.Namn." />
+      <ConditionLogic id="21bb53be-8620-4f1e-9ca0-f4e9d4b3b031" name="Vald" operator="And">
+        <Condition leftType="Container" leftContainer="1f2cea32-bbec-4b61-aae8-3e01e4693d99" leftName="valdSymbol" operator="Equal" rightType="Constant" rightValue="A.MWSE.Namn." />
       </ConditionLogic>
     </Conditions>
     <Properties>
       <Property name="Name" source="C" value="Panelknapp" type="string" />
     </Properties>
-    <Element id="219f3f60-d5be-4109-8cb3-b41cce087986" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
+    <Element id="fc3cb074-5d7f-4755-b410-9118428cf359" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
       <Properties>
         <ConditionPriority>
-          <Condition id="6d05412e-f24d-4ebe-a120-08dddbab5b9c" />
+          <Condition id="21bb53be-8620-4f1e-9ca0-f4e9d4b3b031" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Bakgrund" type="string" />
         <Property name="FillColor" source="C" value="215 217 225" type="Color" />
@@ -28,19 +28,19 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="0" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
-        <Property name="Width" source="C" value="250" type="double" />
-        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Width" source="C" value="230" type="double" />
+        <Property name="Height" source="C" value="40" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
-        <Property name="FillColor" source="C" condition="6d05412e-f24d-4ebe-a120-08dddbab5b9c" value="255 255 255" type="Color" />
-        <Property name="OutlineColor" source="C" condition="6d05412e-f24d-4ebe-a120-08dddbab5b9c" value="30 84 164" type="Color" />
+        <Property name="FillColor" source="C" condition="21bb53be-8620-4f1e-9ca0-f4e9d4b3b031" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" condition="21bb53be-8620-4f1e-9ca0-f4e9d4b3b031" value="30 84 164" type="Color" />
       </Properties>
     </Element>
-    <Element id="6ce2e918-418a-4a31-bc4c-9d15949dd3df" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+    <Element id="316c60e7-9fcc-41d9-a5de-df89a3dcd477" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
       <Properties>
         <ConditionPriority>
-          <Condition id="6d05412e-f24d-4ebe-a120-08dddbab5b9c" />
+          <Condition id="21bb53be-8620-4f1e-9ca0-f4e9d4b3b031" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Namn" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -50,22 +50,22 @@
         <Property name="Text" source="C" value="Namn" type="string" />
         <Property name="X" source="C" value="16" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
-        <Property name="Width" source="C" value="218" type="double" />
-        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Width" source="C" value="198" type="double" />
+        <Property name="Height" source="C" value="40" type="double" />
         <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
         <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="27 35 47" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="FontColor" source="C" condition="6d05412e-f24d-4ebe-a120-08dddbab5b9c" value="30 84 164" type="Color" />
+        <Property name="FontColor" source="C" condition="21bb53be-8620-4f1e-9ca0-f4e9d4b3b031" value="30 84 164" type="Color" />
       </Properties>
     </Element>
-    <Element id="ff33aaa8-5dd3-42db-8600-a80d95750580" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+    <Element id="e535140d-ab54-403d-8d31-b77a9f410090" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
       <Properties>
         <Property name="Name" source="C" value="Knapp" type="string" />
         <Property name="X" source="C" value="0" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
-        <Property name="Width" source="C" value="250" type="double" />
-        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Width" source="C" value="230" type="double" />
+        <Property name="Height" source="C" value="40" type="double" />
         <Property name="Use3DFrame" source="C" value="False" type="bool" />
         <Property name="HasOutline" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="False" type="bool" />

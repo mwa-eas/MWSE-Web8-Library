@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="66236d81-0287-40cc-9a9d-9e033bda068c" version="1.0.0" name="Krets" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+﻿<Template type="ViewElement" id="157e0c27-1178-42de-a04a-5c0a28282525" version="1.1.0" name="Krets" description="" templateNameId="_1_1_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
@@ -7,13 +7,13 @@
     <LocalVariable name="doljNamn" value="0" />
   </LocalVariables>
   <Resources>
-    <Resource name="Media/MWSE_Circuit.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMTMwIiB2aWV3Qm94PSIwIDAgNjAgMTMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNTAgMTIwVjEzQzUwIDguNTgxNzIgNDYuNDE4MyA1IDQyIDVIMThDMTMuNTgxNyA1IDEwIDguNTgxNzIgMTAgMTNWMTIwIiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
+    <Resource name="Media/MWSE_Circuit.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMTQwIiB2aWV3Qm94PSIwIDAgNjAgMTQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNTAgMTMwVjE4QzUwIDEzLjU4MTcgNDYuNDE4MyAxMCA0MiAxMEgxOEMxMy41ODE3IDEwIDEwIDEzLjU4MTcgMTAgMThWMTMwIiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
   </Resources>
-  <Element id="2a1a5198-624a-4ab9-9c4d-3589411de979" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Krets">
+  <Element id="f0f90cc4-ceb0-4155-bda3-699b903c669d" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Krets">
     <Properties>
       <Property name="Name" source="C" value="Krets" type="string" />
     </Properties>
-    <Element id="ce27ce76-36ef-4a7a-9973-1fcf9ba95870" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+    <Element id="1711bd88-9177-4e10-b35f-1ef9541c8825" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
       <Properties>
         <Property name="Name" source="C" value="Symbol" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -23,23 +23,23 @@
         <Property name="X" source="C" value="10" type="double" />
         <Property name="Y" source="C" value="20" type="double" />
         <Property name="Width" source="C" value="60" type="double" />
-        <Property name="Height" source="C" value="130" type="double" />
+        <Property name="Height" source="C" value="140" type="double" />
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="66236d81-0287-40cc-9a9d-9e033bda068c" name="Media/MWSE_Circuit.svg" />
+          <Address container="157e0c27-1178-42de-a04a-5c0a28282525" name="Media/MWSE_Circuit.svg" />
         </Property>
       </Properties>
     </Element>
-    <Element id="e1323771-2236-48ff-b862-8624d15c750b" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+    <Element id="d5ddb150-6fa4-4ecb-b71f-efce28974f2f" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
       <Conditions>
-        <ConditionLogic id="d686a1e4-bbb9-4fb3-9c98-71296e724051" name="Dold" operator="And">
-          <Condition leftType="Container" leftContainer="66236d81-0287-40cc-9a9d-9e033bda068c" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="7bfc0de4-7b71-4b1e-9dce-6b4833664c3e" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="157e0c27-1178-42de-a04a-5c0a28282525" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="d686a1e4-bbb9-4fb3-9c98-71296e724051" />
+          <Condition id="7bfc0de4-7b71-4b1e-9dce-6b4833664c3e" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Namn" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -55,7 +55,7 @@
         <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="25 27 30" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="d686a1e4-bbb9-4fb3-9c98-71296e724051" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="7bfc0de4-7b71-4b1e-9dce-6b4833664c3e" value="True" type="bool" />
       </Properties>
     </Element>
   </Element>

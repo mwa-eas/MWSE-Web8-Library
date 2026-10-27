@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="d55a0d9c-c554-4d8c-930d-b2184d7799d8" version="1.0.0" name="Radiator" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+﻿<Template type="ViewElement" id="12f94da5-9369-4c41-a1ea-02081da99ed4" version="1.0.1" name="Radiator" description="" templateNameId="_1_0_1" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
@@ -7,13 +7,13 @@
     <LocalVariable name="doljNamn" value="0" />
   </LocalVariables>
   <Resources>
-    <Resource name="Media/MWSE_Radiator.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA5MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iNiIgeT0iNyIgd2lkdGg9Ijc4IiBoZWlnaHQ9IjQ2IiByeD0iMyIgZmlsbD0iI0YwRjNGNyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjYiIHkxPSIxMiIgeDI9Ijg0IiB5Mj0iMTIiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxsaW5lIHgxPSI2IiB5MT0iNDgiIHgyPSI4NCIgeTI9IjQ4IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iMTUiIHkxPSIxOSIgeDI9IjE1IiB5Mj0iNDEiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjI3IiB5MT0iMTkiIHgyPSIyNyIgeTI9IjQxIiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSIzOSIgeTE9IjE5IiB4Mj0iMzkiIHkyPSI0MSIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8bGluZSB4MT0iNTEiIHkxPSIxOSIgeDI9IjUxIiB5Mj0iNDEiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjYzIiB5MT0iMTkiIHgyPSI2MyIgeTI9IjQxIiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSI3NSIgeTE9IjE5IiB4Mj0iNzUiIHkyPSI0MSIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" />
+    <Resource name="Media/MWSE_Radiator.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA5MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iNiIgeT0iMTAiIHdpZHRoPSI3OCIgaGVpZ2h0PSI0MCIgcng9IjMiIGZpbGw9IiNGMEYzRjciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxsaW5lIHgxPSI2IiB5MT0iMTUiIHgyPSI4NCIgeTI9IjE1IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8bGluZSB4MT0iNiIgeTE9IjQ1IiB4Mj0iODQiIHkyPSI0NSIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjE1IiB5MT0iMjEiIHgyPSIxNSIgeTI9IjM5IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSIyNyIgeTE9IjIxIiB4Mj0iMjciIHkyPSIzOSIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8bGluZSB4MT0iMzkiIHkxPSIyMSIgeDI9IjM5IiB5Mj0iMzkiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGxpbmUgeDE9IjUxIiB5MT0iMjEiIHgyPSI1MSIgeTI9IjM5IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxsaW5lIHgxPSI2MyIgeTE9IjIxIiB4Mj0iNjMiIHkyPSIzOSIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8bGluZSB4MT0iNzUiIHkxPSIyMSIgeDI9Ijc1IiB5Mj0iMzkiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==" />
   </Resources>
-  <Element id="07a7da7d-b7b5-48c9-88dd-cfc7767f54d1" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Radiator">
+  <Element id="5721bac6-3879-4fa2-9c46-7f5734b26325" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Radiator">
     <Properties>
       <Property name="Name" source="C" value="Radiator" type="string" />
     </Properties>
-    <Element id="c23ae5c0-8bbc-45cd-84dd-69b7f905e573" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+    <Element id="4c4c03a7-57f5-4a03-8e26-a93e1487e4a4" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
       <Properties>
         <Property name="Name" source="C" value="Symbol" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -27,19 +27,19 @@
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="d55a0d9c-c554-4d8c-930d-b2184d7799d8" name="Media/MWSE_Radiator.svg" />
+          <Address container="12f94da5-9369-4c41-a1ea-02081da99ed4" name="Media/MWSE_Radiator.svg" />
         </Property>
       </Properties>
     </Element>
-    <Element id="a620c7c8-d6d0-4ef6-ae7d-206e6fb277d5" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+    <Element id="f8ffe134-dd6d-4c37-9fe4-80f68f94f1c4" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
       <Conditions>
-        <ConditionLogic id="399f74bf-263f-482e-bfe5-7bed8c49b7c2" name="Dold" operator="And">
-          <Condition leftType="Container" leftContainer="d55a0d9c-c554-4d8c-930d-b2184d7799d8" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="e275a97a-bdca-460a-a531-6fa9c7197379" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="12f94da5-9369-4c41-a1ea-02081da99ed4" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="399f74bf-263f-482e-bfe5-7bed8c49b7c2" />
+          <Condition id="e275a97a-bdca-460a-a531-6fa9c7197379" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Namn" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -55,7 +55,7 @@
         <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="25 27 30" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="399f74bf-263f-482e-bfe5-7bed8c49b7c2" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="e275a97a-bdca-460a-a531-6fa9c7197379" value="True" type="bool" />
       </Properties>
     </Element>
   </Element>

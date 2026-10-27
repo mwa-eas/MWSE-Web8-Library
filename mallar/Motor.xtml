@@ -1,7 +1,7 @@
-﻿<Template type="ViewElement" id="322d3e24-da53-4dc9-b331-ef24a0652f29" version="2.0.0" name="Motor" description="" templateNameId="_2_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Motor" icon="icons.template.png">
+﻿<Template type="ViewElement" id="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" version="2.1.0" name="Motor" description="" templateNameId="_2_1_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Motor" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="380" type="absolute" />
-    <OffsetY value="215" type="absolute" />
+    <OffsetY value="210" type="absolute" />
   </InitialLayout>
   <StaticVariables>
     <StaticVariable name="valdSymbol" />
@@ -23,11 +23,11 @@
     <Resource name="Media/MWSE_Manual_Indicator.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNSIgY3k9IjUiIHI9IjUiIGZpbGw9IiM1MTIxOEQiLz4KPHBhdGggZD0iTTQgMlYyLjVMNSAzLjVMNiAyLjVWMkg4VjhINlY0LjVMNSA1LjVMNCA0LjVWOEgyVjJINFoiIGZpbGw9IiNGNUVGRkYiLz4KPC9zdmc+Cg==" />
     <Resource name="Media/MWSE_Selected.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgb3BhY2l0eT0iMC41IiB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjQ5IiBoZWlnaHQ9IjQ5IiByeD0iMy41IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMUU1NEE0Ii8+Cjwvc3ZnPgo=" />
   </Resources>
-  <Element id="fdc3fe8a-35a1-48cc-9179-f25a7cf16c79" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Motor">
+  <Element id="55282706-4c28-4e5b-b0ea-4f8eb0c5f373" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Motor">
     <Properties>
       <Property name="Name" source="C" value="Motor" type="string" />
     </Properties>
-    <Element id="07629b39-618b-43ad-9024-27343a1dd4e9" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+    <Element id="9f417be6-1db4-4311-9f7e-001a1896dd37" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
       <Properties>
         <Property name="Name" source="C" value="Knapp" type="string" />
         <Property name="FillColor" source="C" value="204 204 204" type="Color" />
@@ -35,7 +35,7 @@
         <Property name="OutlineWidth" source="C" value="2" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="10" type="double" />
-        <Property name="Y" source="C" value="15" type="double" />
+        <Property name="Y" source="C" value="20" type="double" />
         <Property name="Width" source="C" value="60" type="double" />
         <Property name="Height" source="C" value="60" type="double" />
         <Property name="Use3DFrame" source="C" value="False" type="bool" />
@@ -57,15 +57,15 @@
         </Property>
       </Properties>
     </Element>
-    <Element id="9cc9ab08-07f7-49cc-93a5-760c057ae08b" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Vald">
+    <Element id="822d09f1-b1fb-4afb-b90e-06b854ca5323" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Vald">
       <Conditions>
-        <ConditionLogic id="9174ace7-f10d-4d78-af1e-26ea09160340" name="Selected" operator="And">
-          <Condition leftType="Container" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="valdSymbol" operator="Equal" rightType="Constant" rightValue="A.MWSE.Namn." />
+        <ConditionLogic id="a5da7a6f-4196-47e5-bf2d-a349ea2f31ce" name="Selected" operator="And">
+          <Condition leftType="Container" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="valdSymbol" operator="Equal" rightType="Constant" rightValue="A.MWSE.Namn." />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="9174ace7-f10d-4d78-af1e-26ea09160340" />
+          <Condition id="a5da7a6f-4196-47e5-bf2d-a349ea2f31ce" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Vald" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -73,32 +73,32 @@
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="15" type="double" />
-        <Property name="Y" source="C" value="20" type="double" />
+        <Property name="Y" source="C" value="25" type="double" />
         <Property name="Width" source="C" value="50" type="double" />
         <Property name="Height" source="C" value="50" type="double" />
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="322d3e24-da53-4dc9-b331-ef24a0652f29" name="Media/MWSE_Selected.svg" />
+          <Address container="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" name="Media/MWSE_Selected.svg" />
         </Property>
         <Property name="Hidden" source="C" value="True" type="bool" />
-        <Property name="Hidden" source="C" condition="9174ace7-f10d-4d78-af1e-26ea09160340" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="a5da7a6f-4196-47e5-bf2d-a349ea2f31ce" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="5162a09c-581a-49d7-bda1-191cc151f519" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+    <Element id="2acd2b31-0e59-48ec-9863-78ed66122d06" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
       <Conditions>
-        <ConditionLogic id="04e3e961-ab8c-4044-80a4-7a8ddc6fa472" name="Drift" operator="And">
-          <Condition leftType="PDP" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="A.MWSE.Namn.R_Ut" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="722f3c19-31d2-42f9-818d-c2bc1c8b0978" name="Drift" operator="And">
+          <Condition leftType="PDP" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="A.MWSE.Namn.R_Ut" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
-        <ConditionLogic id="a7571292-dbe7-49c2-8ea4-e0031b9c89da" name="Larm" operator="Or">
-          <Condition leftType="PDP" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="A.MWSE.Namn.LD_Ut" operator="Equal" rightType="Constant" rightValue="1" />
-          <Condition leftType="PDP" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="A.MWSE.Namn.LDT_Ut" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="f108ec99-f267-4bda-aa25-4d220360587e" name="Larm" operator="Or">
+          <Condition leftType="PDP" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="A.MWSE.Namn.LD_Ut" operator="Equal" rightType="Constant" rightValue="1" />
+          <Condition leftType="PDP" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="A.MWSE.Namn.LDT_Ut" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="04e3e961-ab8c-4044-80a4-7a8ddc6fa472" />
-          <Condition id="a7571292-dbe7-49c2-8ea4-e0031b9c89da" />
+          <Condition id="722f3c19-31d2-42f9-818d-c2bc1c8b0978" />
+          <Condition id="f108ec99-f267-4bda-aa25-4d220360587e" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Symbol" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -106,31 +106,31 @@
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="10" type="double" />
-        <Property name="Y" source="C" value="15" type="double" />
+        <Property name="Y" source="C" value="20" type="double" />
         <Property name="Width" source="C" value="60" type="double" />
         <Property name="Height" source="C" value="60" type="double" />
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="322d3e24-da53-4dc9-b331-ef24a0652f29" name="Media/MWSE_Motor_Idle.svg" />
+          <Address container="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" name="Media/MWSE_Motor_Idle.svg" />
         </Property>
-        <Property name="Content" source="File" condition="04e3e961-ab8c-4044-80a4-7a8ddc6fa472" type="ResourceAddress">
-          <Address container="322d3e24-da53-4dc9-b331-ef24a0652f29" name="Media/MWSE_Motor_Active.svg" />
+        <Property name="Content" source="File" condition="722f3c19-31d2-42f9-818d-c2bc1c8b0978" type="ResourceAddress">
+          <Address container="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" name="Media/MWSE_Motor_Active.svg" />
         </Property>
-        <Property name="Content" source="File" condition="a7571292-dbe7-49c2-8ea4-e0031b9c89da" type="ResourceAddress">
-          <Address container="322d3e24-da53-4dc9-b331-ef24a0652f29" name="Media/MWSE_Motor_Fault.svg" />
+        <Property name="Content" source="File" condition="f108ec99-f267-4bda-aa25-4d220360587e" type="ResourceAddress">
+          <Address container="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" name="Media/MWSE_Motor_Fault.svg" />
         </Property>
       </Properties>
     </Element>
-    <Element id="88b43168-6a6d-48a9-aa2c-d1040a5a7d36" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+    <Element id="cb98133e-d5b2-40fd-a7e6-47f767c8edea" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
       <Conditions>
-        <ConditionLogic id="ac924353-547d-466b-a255-104b2aba2a48" name="Dold" operator="And">
-          <Condition leftType="Container" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="3e4c965b-99cd-4c93-9d50-159b91af65b0" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="ac924353-547d-466b-a255-104b2aba2a48" />
+          <Condition id="3e4c965b-99cd-4c93-9d50-159b91af65b0" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Namn" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -146,22 +146,22 @@
         <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="25 27 30" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="ac924353-547d-466b-a255-104b2aba2a48" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="3e4c965b-99cd-4c93-9d50-159b91af65b0" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="d2718088-d330-469e-8f76-6277723dc98a" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Driftstatus">
+    <Element id="dd902994-3022-4cda-98e9-f93dad43e0f6" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Driftstatus">
       <Conditions>
-        <ConditionLogic id="cfb52b19-5f8b-4702-a7d8-83b7548f622c" name="Drift" operator="And">
-          <Condition leftType="PDP" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="A.MWSE.Namn.R_Ut" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="6be555a5-691c-4125-ade4-e90dcfad6799" name="Drift" operator="And">
+          <Condition leftType="PDP" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="A.MWSE.Namn.R_Ut" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
-        <ConditionLogic id="beec79fe-a652-4441-8d4a-89e745c7881d" name="Stopp" operator="And">
-          <Condition leftType="PDP" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="A.MWSE.Namn.R_Ut" operator="Equal" rightType="Constant" rightValue="0" />
+        <ConditionLogic id="7582eb03-4694-4741-af18-ae5233755b9f" name="Stopp" operator="And">
+          <Condition leftType="PDP" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="A.MWSE.Namn.R_Ut" operator="Equal" rightType="Constant" rightValue="0" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="cfb52b19-5f8b-4702-a7d8-83b7548f622c" />
-          <Condition id="beec79fe-a652-4441-8d4a-89e745c7881d" />
+          <Condition id="6be555a5-691c-4125-ade4-e90dcfad6799" />
+          <Condition id="7582eb03-4694-4741-af18-ae5233755b9f" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Driftstatus" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -170,28 +170,28 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="C" value="Okänd" type="string" />
         <Property name="X" source="C" value="0" type="double" />
-        <Property name="Y" source="C" value="70" type="double" />
+        <Property name="Y" source="C" value="80" type="double" />
         <Property name="Width" source="C" value="80" type="double" />
         <Property name="Height" source="C" value="20" type="double" />
         <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
         <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="25 27 30" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Text" source="C" condition="cfb52b19-5f8b-4702-a7d8-83b7548f622c" value="Drift" type="string" />
-        <Property name="FontColor" source="C" condition="cfb52b19-5f8b-4702-a7d8-83b7548f622c" value="25 27 30" type="Color" />
-        <Property name="Text" source="C" condition="beec79fe-a652-4441-8d4a-89e745c7881d" value="Stopp" type="string" />
+        <Property name="Text" source="C" condition="6be555a5-691c-4125-ade4-e90dcfad6799" value="Drift" type="string" />
+        <Property name="FontColor" source="C" condition="6be555a5-691c-4125-ade4-e90dcfad6799" value="25 27 30" type="Color" />
+        <Property name="Text" source="C" condition="7582eb03-4694-4741-af18-ae5233755b9f" value="Stopp" type="string" />
       </Properties>
     </Element>
-    <Element id="c3f6903b-3746-46a4-8548-d84f5452a7c3" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Larm">
+    <Element id="88c34d62-021e-4772-be7b-a1d5a2d73064" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Larm">
       <Conditions>
-        <ConditionLogic id="7e0f5143-02d9-4c37-ab09-0936a92539ac" name="Larm" operator="Or">
-          <Condition leftType="PDP" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="A.MWSE.Namn.LD_Ut" operator="Equal" rightType="Constant" rightValue="1" />
-          <Condition leftType="PDP" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="A.MWSE.Namn.LDT_Ut" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="b0b84709-1320-49ec-9320-1e9f95224f3a" name="Larm" operator="Or">
+          <Condition leftType="PDP" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="A.MWSE.Namn.LD_Ut" operator="Equal" rightType="Constant" rightValue="1" />
+          <Condition leftType="PDP" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="A.MWSE.Namn.LDT_Ut" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="7e0f5143-02d9-4c37-ab09-0936a92539ac" />
+          <Condition id="b0b84709-1320-49ec-9320-1e9f95224f3a" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Larm" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -199,27 +199,27 @@
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="20" type="double" />
-        <Property name="Y" source="C" value="25" type="double" />
+        <Property name="Y" source="C" value="30" type="double" />
         <Property name="Width" source="C" value="10" type="double" />
         <Property name="Height" source="C" value="10" type="double" />
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="322d3e24-da53-4dc9-b331-ef24a0652f29" name="Media/MWSE_Alarm_Indicator.svg" />
+          <Address container="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" name="Media/MWSE_Alarm_Indicator.svg" />
         </Property>
         <Property name="Hidden" source="C" value="True" type="bool" />
-        <Property name="Hidden" source="C" condition="7e0f5143-02d9-4c37-ab09-0936a92539ac" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="b0b84709-1320-49ec-9320-1e9f95224f3a" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="1d2b4429-0a6d-4b62-ab20-b5e79263b1c6" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Hand">
+    <Element id="583b6d13-bbea-4c28-8e83-7b6f7d1c7871" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Hand">
       <Conditions>
-        <ConditionLogic id="499b7967-6f89-4f87-8d2e-21cd6cf77f8f" name="Hand" operator="And">
-          <Condition leftType="PDP" leftContainer="322d3e24-da53-4dc9-b331-ef24a0652f29" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="e700a9ee-2c0f-4d2e-8ac1-49949e34294e" name="Hand" operator="And">
+          <Condition leftType="PDP" leftContainer="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" leftName="A.MWSE.Namn.Man" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="499b7967-6f89-4f87-8d2e-21cd6cf77f8f" />
+          <Condition id="e700a9ee-2c0f-4d2e-8ac1-49949e34294e" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Hand" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -227,16 +227,16 @@
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="50" type="double" />
-        <Property name="Y" source="C" value="25" type="double" />
+        <Property name="Y" source="C" value="30" type="double" />
         <Property name="Width" source="C" value="10" type="double" />
         <Property name="Height" source="C" value="10" type="double" />
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="322d3e24-da53-4dc9-b331-ef24a0652f29" name="Media/MWSE_Manual_Indicator.svg" />
+          <Address container="cdaa66dc-0b68-49b9-b8da-c0897c3cb480" name="Media/MWSE_Manual_Indicator.svg" />
         </Property>
         <Property name="Hidden" source="C" value="True" type="bool" />
-        <Property name="Hidden" source="C" condition="499b7967-6f89-4f87-8d2e-21cd6cf77f8f" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="e700a9ee-2c0f-4d2e-8ac1-49949e34294e" value="False" type="bool" />
       </Properties>
     </Element>
   </Element>

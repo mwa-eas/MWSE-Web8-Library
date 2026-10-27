@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="d3e3e7ef-f1ae-4dc2-b877-4cb692dcfdd0" version="1.0.0" name="Liten tank" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+﻿<Template type="ViewElement" id="e81cae5c-dc45-442c-8593-c2ad011d95c4" version="1.0.1" name="Liten tank" description="" templateNameId="_1_0_1" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
@@ -7,39 +7,39 @@
     <LocalVariable name="doljNamn" value="0" />
   </LocalVariables>
   <Resources>
-    <Resource name="Media/MWSE_TankSmall.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA0MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwIDNDMjQuMjk2NSAzIDI4LjEzNjkgMy44NzI3NCAzMC44NjYyIDUuMjM3M0MzMy42NTUzIDYuNjMxODcgMzUgOC4zNzM2OSAzNSAxMEMzNSAxMS42MjYzIDMzLjY1NTMgMTMuMzY4MSAzMC44NjYyIDE0Ljc2MjdDMjguMTM2OSAxNi4xMjczIDI0LjI5NjUgMTcgMjAgMTdDMTUuNzAzNSAxNyAxMS44NjMxIDE2LjEyNzMgOS4xMzM3OSAxNC43NjI3QzYuMzQ0NjYgMTMuMzY4MSA1IDExLjYyNjMgNSAxMEM1IDguMzczNjkgNi4zNDQ2NiA2LjYzMTg3IDkuMTMzNzkgNS4yMzczQzExLjg2MzEgMy44NzI3NCAxNS43MDM1IDMgMjAgM1oiIGZpbGw9IiNGMEYzRjciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yMCA0M0MyNC4yOTY1IDQzIDI4LjEzNjkgNDMuODcyNyAzMC44NjYyIDQ1LjIzNzNDMzMuNjU1MyA0Ni42MzE5IDM1IDQ4LjM3MzcgMzUgNTBDMzUgNTEuNjI2MyAzMy42NTUzIDUzLjM2ODEgMzAuODY2MiA1NC43NjI3QzI4LjEzNjkgNTYuMTI3MyAyNC4yOTY1IDU3IDIwIDU3QzE1LjcwMzUgNTcgMTEuODYzMSA1Ni4xMjczIDkuMTMzNzkgNTQuNzYyN0M2LjM0NDY2IDUzLjM2ODEgNSA1MS42MjYzIDUgNTBDNSA0OC4zNzM3IDYuMzQ0NjYgNDYuNjMxOSA5LjEzMzc5IDQ1LjIzNzNDMTEuODYzMSA0My44NzI3IDE1LjcwMzUgNDMgMjAgNDNaIiBmaWxsPSIjRjBGM0Y3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8cmVjdCB4PSI1IiB5PSIxMSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjRjBGM0Y3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
+    <Resource name="Media/MWSE_TankSmall.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMwIDNDMzUuNzA5MiAzIDQwLjgzMzEgMy44ODMwNiA0NC40OTMyIDUuMjc3MzRDNDYuMzI2NyA1Ljk3NTgzIDQ3Ljc0MTggNi43ODMyOSA0OC42ODA3IDcuNjI4OTFDNDkuNjE5OCA4LjQ3NDczIDUwIDkuMjc3ODcgNTAgMTBDNTAgMTAuNzIyMSA0OS42MTk4IDExLjUyNTMgNDguNjgwNyAxMi4zNzExQzQ3Ljc0MTggMTMuMjE2NyA0Ni4zMjY3IDE0LjAyNDIgNDQuNDkzMiAxNC43MjI3QzQwLjgzMzEgMTYuMTE2OSAzNS43MDkyIDE3IDMwIDE3QzI0LjI5MDggMTcgMTkuMTY2OSAxNi4xMTY5IDE1LjUwNjggMTQuNzIyN0MxMy42NzMzIDE0LjAyNDIgMTIuMjU4MiAxMy4yMTY3IDExLjMxOTMgMTIuMzcxMUMxMC4zODAyIDExLjUyNTMgMTAgMTAuNzIyMSAxMCAxMEMxMCA5LjI3Nzg3IDEwLjM4MDIgOC40NzQ3MyAxMS4zMTkzIDcuNjI4OTFDMTIuMjU4MiA2Ljc4MzI5IDEzLjY3MzMgNS45NzU4MyAxNS41MDY4IDUuMjc3MzRDMTkuMTY2OSAzLjg4MzA2IDI0LjI5MDggMyAzMCAzWiIgZmlsbD0iI0YwRjNGNyIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTMwIDQzQzM1LjcwOTIgNDMgNDAuODMzMSA0My44ODMxIDQ0LjQ5MzIgNDUuMjc3M0M0Ni4zMjY3IDQ1Ljk3NTggNDcuNzQxOCA0Ni43ODMzIDQ4LjY4MDcgNDcuNjI4OUM0OS42MTk4IDQ4LjQ3NDcgNTAgNDkuMjc3OSA1MCA1MEM1MCA1MC43MjIxIDQ5LjYxOTggNTEuNTI1MyA0OC42ODA3IDUyLjM3MTFDNDcuNzQxOCA1My4yMTY3IDQ2LjMyNjcgNTQuMDI0MiA0NC40OTMyIDU0LjcyMjdDNDAuODMzMSA1Ni4xMTY5IDM1LjcwOTIgNTcgMzAgNTdDMjQuMjkwOCA1NyAxOS4xNjY5IDU2LjExNjkgMTUuNTA2OCA1NC43MjI3QzEzLjY3MzMgNTQuMDI0MiAxMi4yNTgyIDUzLjIxNjcgMTEuMzE5MyA1Mi4zNzExQzEwLjM4MDIgNTEuNTI1MyAxMCA1MC43MjIxIDEwIDUwQzEwIDQ5LjI3NzkgMTAuMzgwMiA0OC40NzQ3IDExLjMxOTMgNDcuNjI4OUMxMi4yNTgyIDQ2Ljc4MzMgMTMuNjczMyA0NS45NzU4IDE1LjUwNjggNDUuMjc3M0MxOS4xNjY5IDQzLjg4MzEgMjQuMjkwOCA0MyAzMCA0M1oiIGZpbGw9IiNGMEYzRjciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjEwIiB5PSIxMSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjRjBGM0Y3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
   </Resources>
-  <Element id="9f9fcf23-a24e-4b50-ad44-3a095a459b33" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Liten tank">
+  <Element id="748e9fe1-8088-4c0f-829c-0098a3941560" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Liten tank">
     <Properties>
       <Property name="Name" source="C" value="Liten tank" type="string" />
     </Properties>
-    <Element id="d95460cc-c2cc-4f2c-b023-89d61c9ab22f" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+    <Element id="79105646-8547-4b0c-9af5-ae4a0b2dc5b4" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
       <Properties>
         <Property name="Name" source="C" value="Symbol" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
         <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="X" source="C" value="20" type="double" />
+        <Property name="X" source="C" value="10" type="double" />
         <Property name="Y" source="C" value="20" type="double" />
-        <Property name="Width" source="C" value="40" type="double" />
+        <Property name="Width" source="C" value="60" type="double" />
         <Property name="Height" source="C" value="60" type="double" />
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="d3e3e7ef-f1ae-4dc2-b877-4cb692dcfdd0" name="Media/MWSE_TankSmall.svg" />
+          <Address container="e81cae5c-dc45-442c-8593-c2ad011d95c4" name="Media/MWSE_TankSmall.svg" />
         </Property>
       </Properties>
     </Element>
-    <Element id="dad5502f-01ea-4bac-bf0b-0748bc16a08e" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+    <Element id="48e31812-5a11-4d18-8518-cd794498566e" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
       <Conditions>
-        <ConditionLogic id="1b2a8920-5d77-4cfb-a9f5-972580d4a170" name="Dold" operator="And">
-          <Condition leftType="Container" leftContainer="d3e3e7ef-f1ae-4dc2-b877-4cb692dcfdd0" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="37103f87-2e4e-4318-be20-39a7255922b6" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="e81cae5c-dc45-442c-8593-c2ad011d95c4" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="1b2a8920-5d77-4cfb-a9f5-972580d4a170" />
+          <Condition id="37103f87-2e4e-4318-be20-39a7255922b6" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Namn" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -55,7 +55,7 @@
         <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="25 27 30" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="1b2a8920-5d77-4cfb-a9f5-972580d4a170" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="37103f87-2e4e-4318-be20-39a7255922b6" value="True" type="bool" />
       </Properties>
     </Element>
   </Element>

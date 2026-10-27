@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="45d032f8-280b-44f5-92ab-06170a4da7a2" version="1.0.0" name="Kylbatteri" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
+﻿<Template type="ViewElement" id="99a6e43c-778d-492d-91c0-debbf73d67b2" version="1.0.1" name="Kylbatteri" description="" templateNameId="_1_0_1" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Statisk" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
@@ -7,13 +7,13 @@
     <LocalVariable name="doljNamn" value="0" />
   </LocalVariables>
   <Resources>
-    <Resource name="Media/MWSE_Cooler.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iOSIgeT0iOSIgd2lkdGg9IjIyIiBoZWlnaHQ9IjIyIiBmaWxsPSIjRjBGM0Y3IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSI4IiBzdHJva2U9IiM5RkFBQjkiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMTUgMjBIMjUiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_Cooler.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiNGMEYzRjciIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjgiIHN0cm9rZT0iIzlGQUFCOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0xNSAyMEgyNSIgc3Ryb2tlPSIjOUZBQUI5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" />
   </Resources>
-  <Element id="98be9caa-2aeb-41c3-8f5f-7f1b13062ef0" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Kylbatteri">
+  <Element id="364ac1c6-2115-417b-b965-7737227e1e90" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Kylbatteri">
     <Properties>
       <Property name="Name" source="C" value="Kylbatteri" type="string" />
     </Properties>
-    <Element id="98bd9236-f05a-4a81-b53b-e0d1dee66432" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+    <Element id="0f992659-1dc6-41fb-b5b0-ba5600bda663" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
       <Properties>
         <Property name="Name" source="C" value="Symbol" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -27,19 +27,19 @@
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="45d032f8-280b-44f5-92ab-06170a4da7a2" name="Media/MWSE_Cooler.svg" />
+          <Address container="99a6e43c-778d-492d-91c0-debbf73d67b2" name="Media/MWSE_Cooler.svg" />
         </Property>
       </Properties>
     </Element>
-    <Element id="985e63c8-cfeb-4f06-8758-93263887cce2" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+    <Element id="a55f4b38-1f48-48cd-9a71-a2bf982601b7" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
       <Conditions>
-        <ConditionLogic id="1c583b6a-fcb7-4dea-9788-9a434b6da19d" name="Dold" operator="And">
-          <Condition leftType="Container" leftContainer="45d032f8-280b-44f5-92ab-06170a4da7a2" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="6747b7de-07b0-456f-aa4a-4c763f7c4a2c" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="99a6e43c-778d-492d-91c0-debbf73d67b2" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="1c583b6a-fcb7-4dea-9788-9a434b6da19d" />
+          <Condition id="6747b7de-07b0-456f-aa4a-4c763f7c4a2c" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Namn" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -55,7 +55,7 @@
         <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="25 27 30" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="1c583b6a-fcb7-4dea-9788-9a434b6da19d" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="6747b7de-07b0-456f-aa4a-4c763f7c4a2c" value="True" type="bool" />
       </Properties>
     </Element>
   </Element>

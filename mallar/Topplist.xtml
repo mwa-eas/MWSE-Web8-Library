@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="d17c5ad6-2007-40b5-94d0-fae8e05466dc" version="1.0.0" name="Topplist" description="Sidans topplist: meny, bakåt, sidtitel, inloggad användare, klocka och utloggning. Larmsummering placeras längst till höger." templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Sida\Navigering" icon="icons.template.png">
+﻿<Template type="ViewElement" id="fecbcf6e-d788-40fe-b3d9-f3c115abff49" version="1.1.0" name="Topplist" description="Sidans topplist: meny, bakåt, sidtitel, inloggad användare, klocka och utloggning. Larmsummering placeras längst till höger." templateNameId="_1_1_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Sida\Navigering" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="0" type="absolute" />
     <OffsetY value="0" type="absolute" />
@@ -38,15 +38,15 @@
     <RemoteVariable name="S.HVC.Clock.YYYYMMDD" format="DD.MM.YY" />
   </RemoteVariables>
   <Resources>
-    <Resource name="Media/MWSE_HamburgerButton.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMyIgZmlsbD0iIzc1Nzc3QSIgZmlsbC1vcGFjaXR5PSIwLjA4Ii8+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcng9IjMiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxtYXNrIGlkPSJtYXNrMF81NzBfNDIzIiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgo8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNEOUQ5RDkiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzU3MF80MjMpIj4KPHBhdGggZD0iTTExIDI2VjI0SDI5VjI2SDExWk0xMSAyMVYxOUgyOVYyMUgxMVpNMTEgMTZWMTRIMjlWMTZIMTFaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
-    <Resource name="Media/MWSE_LeftButton.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMyIgZmlsbD0iIzc1Nzc3QSIgZmlsbC1vcGFjaXR5PSIwLjA4Ii8+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcng9IjMiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxtYXNrIGlkPSJtYXNrMF8xMThfNTY1IiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgo8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNEOUQ5RDkiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzExOF81NjUpIj4KPHBhdGggZD0iTTE1LjgyNSAyMUwyMS40MjUgMjYuNkwyMCAyOEwxMiAyMEwyMCAxMkwyMS40MjUgMTMuNEwxNS44MjUgMTlIMjhWMjFIMTUuODI1WiIgZmlsbD0iIzFCMjMyRiIvPgo8L2c+Cjwvc3ZnPgo=" />
-    <Resource name="Media/MWSE_LogoutButton.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMyIgZmlsbD0iIzc1Nzc3QSIgZmlsbC1vcGFjaXR5PSIwLjA4Ii8+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcng9IjMiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxtYXNrIGlkPSJtYXNrMF82NjFfNTE2IiBzdHlsZT0ibWFzay10eXBlOmFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPgo8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNEOUQ5RDkiLz4KPC9tYXNrPgo8ZyBtYXNrPSJ1cmwoI21hc2swXzY2MV81MTYpIj4KPHBhdGggZD0iTTEzIDI5QzEyLjQ1IDI5IDExLjk3OTIgMjguODA0MiAxMS41ODc1IDI4LjQxMjVDMTEuMTk1OCAyOC4wMjA4IDExIDI3LjU1IDExIDI3VjEzQzExIDEyLjQ1IDExLjE5NTggMTEuOTc5MiAxMS41ODc1IDExLjU4NzVDMTEuOTc5MiAxMS4xOTU4IDEyLjQ1IDExIDEzIDExSDIwVjEzSDEzVjI3SDIwVjI5SDEzWk0yNCAyNUwyMi42MjUgMjMuNTVMMjUuMTc1IDIxSDE3VjE5SDI1LjE3NUwyMi42MjUgMTYuNDVMMjQgMTVMMjkgMjBMMjQgMjVaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_Menu.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzU3MF80MjIiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iI0Q5RDlEOSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfNTcwXzQyMikiPgo8cGF0aCBkPSJNMyAxOFYxNkgyMVYxOEgzWk0zIDEzVjExSDIxVjEzSDNaTTMgOFY2SDIxVjhIM1oiIGZpbGw9IiMxQjIzMkYiLz4KPC9nPgo8L3N2Zz4K" />
+    <Resource name="Media/MWSE_ArrowBack.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzExOF81MzAiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iI0Q5RDlEOSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfMTE4XzUzMCkiPgo8cGF0aCBkPSJNNy44MjUgMTNMMTMuNDI1IDE4LjZMMTIgMjBMNCAxMkwxMiA0TDEzLjQyNSA1LjRMNy44MjUgMTFIMjBWMTNINy44MjVaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
+    <Resource name="Media/MWSE_Logout.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzY2MV81MTUiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iI0Q5RDlEOSIvPgo8L21hc2s+CjxnIG1hc2s9InVybCgjbWFzazBfNjYxXzUxNSkiPgo8cGF0aCBkPSJNNSAyMUM0LjQ1IDIxIDMuOTc5MTcgMjAuODA0MiAzLjU4NzUgMjAuNDEyNUMzLjE5NTgzIDIwLjAyMDggMyAxOS41NSAzIDE5VjVDMyA0LjQ1IDMuMTk1ODMgMy45NzkxNyAzLjU4NzUgMy41ODc1QzMuOTc5MTcgMy4xOTU4MyA0LjQ1IDMgNSAzSDEyVjVINVYxOUgxMlYyMUg1Wk0xNiAxN0wxNC42MjUgMTUuNTVMMTcuMTc1IDEzSDlWMTFIMTcuMTc1TDE0LjYyNSA4LjQ1TDE2IDdMMjEgMTJMMTYgMTdaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
   </Resources>
-  <Element id="540914e5-44dd-4b27-85ea-4970b232fa31" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Topplist">
+  <Element id="3e6db0f1-a0b8-401c-9a34-d1c10dcc393b" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Topplist">
     <Properties>
       <Property name="Name" source="C" value="Topplist" type="string" />
     </Properties>
-    <Element id="72b29b81-a12b-44a2-b053-3e64c5ba4b42" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
+    <Element id="15173513-a86f-40e5-92da-28c3d655b9c7" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
       <Properties>
         <Property name="Name" source="C" value="Bakgrund" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -56,41 +56,57 @@
         <Property name="X" source="C" value="0" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
         <Property name="Width" source="C" value="1020" type="double" />
-        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="13940b96-f876-4ba0-854a-2cd40b6f23d4" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Meny">
+    <Element id="ba41f4f5-d483-43e6-b45b-1812b9ea75ec" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Meny">
       <Properties>
         <Property name="Name" source="C" value="Meny" type="string" />
       </Properties>
-      <Element id="78abb307-3ad0-4c45-95ee-9c4fa8024a18" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+      <Element id="1b9505f8-c037-49cc-9cf8-32060f65bc10" type="365164dc-5073-11e0-8201-b603e0d72085" name="Ram">
+        <Properties>
+          <Property name="Name" source="C" value="Ram" type="string" />
+          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
+          <Property name="OutlineColor" source="C" value="99 110 124" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="5" type="double" />
+          <Property name="Y" source="C" value="5" type="double" />
+          <Property name="Width" source="C" value="40" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="True" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="76726373-a285-48df-80a2-a5657a823856" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
         <Properties>
           <Property name="Name" source="C" value="Ikon" type="string" />
           <Property name="FillColor" source="C" value="223 226 234" type="Color" />
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="4" type="double" />
-          <Property name="Y" source="C" value="4" type="double" />
-          <Property name="Width" source="C" value="40" type="double" />
-          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="X" source="C" value="13" type="double" />
+          <Property name="Y" source="C" value="13" type="double" />
+          <Property name="Width" source="C" value="24" type="double" />
+          <Property name="Height" source="C" value="24" type="double" />
           <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
           <Property name="LockedInEditor" source="C" value="False" type="bool" />
           <Property name="Content" source="File" type="ResourceAddress">
-            <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="Media/MWSE_HamburgerButton.svg" />
+            <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="Media/MWSE_Menu.svg" />
           </Property>
         </Properties>
       </Element>
-      <Element id="91629a13-8209-4c94-b0ff-de8ba5c4d279" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+      <Element id="ad714371-8141-4851-a4e7-ede7ec0c3c43" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
         <Properties>
           <Property name="Name" source="C" value="Knapp" type="string" />
           <Property name="X" source="C" value="0" type="double" />
           <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="48" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Width" source="C" value="50" type="double" />
+          <Property name="Height" source="C" value="50" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="False" type="bool" />
           <Property name="HasFillColor" source="C" value="False" type="bool" />
@@ -105,35 +121,51 @@
         </Properties>
       </Element>
     </Element>
-    <Element id="0e385d2b-9084-40a3-83e8-43ee3a770885" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Tillbaka">
+    <Element id="b8042e78-7c60-4d5f-b6a5-cf76455ae43c" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Tillbaka">
       <Properties>
         <Property name="Name" source="C" value="Tillbaka" type="string" />
       </Properties>
-      <Element id="67c62665-6a1a-4b30-87ea-9f1b1842a6ca" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+      <Element id="3fbe6b96-6cbb-4a77-a06d-08cb2f67456e" type="365164dc-5073-11e0-8201-b603e0d72085" name="Ram">
+        <Properties>
+          <Property name="Name" source="C" value="Ram" type="string" />
+          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
+          <Property name="OutlineColor" source="C" value="99 110 124" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="55" type="double" />
+          <Property name="Y" source="C" value="5" type="double" />
+          <Property name="Width" source="C" value="40" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="True" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="acd06ba5-7164-46eb-ab0b-3644e64f90fe" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
         <Properties>
           <Property name="Name" source="C" value="Ikon" type="string" />
           <Property name="FillColor" source="C" value="223 226 234" type="Color" />
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="52" type="double" />
-          <Property name="Y" source="C" value="4" type="double" />
-          <Property name="Width" source="C" value="40" type="double" />
-          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="X" source="C" value="63" type="double" />
+          <Property name="Y" source="C" value="13" type="double" />
+          <Property name="Width" source="C" value="24" type="double" />
+          <Property name="Height" source="C" value="24" type="double" />
           <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
           <Property name="LockedInEditor" source="C" value="False" type="bool" />
           <Property name="Content" source="File" type="ResourceAddress">
-            <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="Media/MWSE_LeftButton.svg" />
+            <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="Media/MWSE_ArrowBack.svg" />
           </Property>
         </Properties>
       </Element>
-      <Element id="3e4c444d-0283-429c-ab59-0de235ea9b15" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+      <Element id="ebd29caf-ff00-48ce-8523-d9daa54d7963" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
         <Properties>
           <Property name="Name" source="C" value="Knapp" type="string" />
-          <Property name="X" source="C" value="48" type="double" />
+          <Property name="X" source="C" value="50" type="double" />
           <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="48" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Width" source="C" value="50" type="double" />
+          <Property name="Height" source="C" value="50" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="False" type="bool" />
           <Property name="HasFillColor" source="C" value="False" type="bool" />
@@ -145,15 +177,15 @@
         </Properties>
       </Element>
     </Element>
-    <Element id="d2eb1fce-7387-4088-a841-84d1873e29dd" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Sidtitel">
+    <Element id="e28422bd-ec9c-4841-8742-c5c480c4c3cd" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Sidtitel">
       <Conditions>
-        <ConditionLogic id="4e027198-42c1-4f8a-9ea8-67016069a46b" name="Egen titel" operator="And">
-          <Condition leftType="Container" leftContainer="d17c5ad6-2007-40b5-94d0-fae8e05466dc" leftName="sidTitel" operator="NotEqual" rightType="Constant" />
+        <ConditionLogic id="58d20e33-887e-4230-ad84-aaf961ceac79" name="Egen titel" operator="And">
+          <Condition leftType="Container" leftContainer="fecbcf6e-d788-40fe-b3d9-f3c115abff49" leftName="sidTitel" operator="NotEqual" rightType="Constant" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="4e027198-42c1-4f8a-9ea8-67016069a46b" />
+          <Condition id="58d20e33-887e-4230-ad84-aaf961ceac79" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Sidtitel" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -161,28 +193,28 @@
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="LV" value="@CURRENT_PAGE" type="InternalVariableAddress" />
-        <Property name="X" source="C" value="104" type="double" />
+        <Property name="X" source="C" value="110" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
         <Property name="Width" source="C" value="400" type="double" />
-        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
         <Property name="Font" source="C" value="Arial Bold 12" type="FontInfo" />
         <Property name="TextAlignment" source="C" value="Left Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="27 35 47" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Text" source="LV" condition="4e027198-42c1-4f8a-9ea8-67016069a46b" value="sidTitel" type="InternalVariableAddress" />
+        <Property name="Text" source="LV" condition="58d20e33-887e-4230-ad84-aaf961ceac79" value="sidTitel" type="InternalVariableAddress" />
       </Properties>
     </Element>
-    <Element id="1cc350c4-5f1c-4e7e-96bb-80d1afb6dd79" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Användare">
+    <Element id="5ecd0dc8-4c28-4234-87b4-488f2dff6881" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Användare">
       <Conditions>
-        <ConditionLogic id="0ead44c6-0d80-4a0d-9e69-e2f46c612933" name="Ej inloggad" operator="Or">
-          <Condition leftType="Container" leftContainer="d17c5ad6-2007-40b5-94d0-fae8e05466dc" leftName="?S_G_User" operator="Equal" rightType="Constant" />
-          <Condition leftType="Container" leftContainer="d17c5ad6-2007-40b5-94d0-fae8e05466dc" leftName="?S_G_User" operator="Equal" rightType="Constant" rightValue="-" />
-          <Condition leftType="Container" leftContainer="d17c5ad6-2007-40b5-94d0-fae8e05466dc" leftName="?S_LoggedIn" operator="NotEqual" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="49fb83dc-6284-4e9c-9ba0-9f102572eecb" name="Ej inloggad" operator="Or">
+          <Condition leftType="Container" leftContainer="fecbcf6e-d788-40fe-b3d9-f3c115abff49" leftName="?S_G_User" operator="Equal" rightType="Constant" />
+          <Condition leftType="Container" leftContainer="fecbcf6e-d788-40fe-b3d9-f3c115abff49" leftName="?S_G_User" operator="Equal" rightType="Constant" rightValue="-" />
+          <Condition leftType="Container" leftContainer="fecbcf6e-d788-40fe-b3d9-f3c115abff49" leftName="?S_LoggedIn" operator="NotEqual" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="0ead44c6-0d80-4a0d-9e69-e2f46c612933" />
+          <Condition id="49fb83dc-6284-4e9c-9ba0-9f102572eecb" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Användare" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -193,20 +225,20 @@
         <Property name="X" source="C" value="512" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
         <Property name="Width" source="C" value="240" type="double" />
-        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
         <Property name="Font" source="C" value="Arial 11" type="FontInfo" />
         <Property name="TextAlignment" source="C" value="Right Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="27 35 47" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Text" source="C" condition="0ead44c6-0d80-4a0d-9e69-e2f46c612933" value="Ej inloggad" type="string" />
-        <Property name="FontColor" source="C" condition="0ead44c6-0d80-4a0d-9e69-e2f46c612933" value="66 77 89" type="Color" />
+        <Property name="Text" source="C" condition="49fb83dc-6284-4e9c-9ba0-9f102572eecb" value="Ej inloggad" type="string" />
+        <Property name="FontColor" source="C" condition="49fb83dc-6284-4e9c-9ba0-9f102572eecb" value="66 77 89" type="Color" />
       </Properties>
     </Element>
-    <Element id="7e0ec012-a827-41c8-8f97-0c4f56506827" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Klocka">
+    <Element id="c19e4d8d-a337-4718-95f0-5847882f6664" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Klocka">
       <Properties>
         <Property name="Name" source="C" value="Klocka" type="string" />
       </Properties>
-      <Element id="1ad4fb33-a4b7-4a90-9ec6-25e847461747" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Tid">
+      <Element id="18b87c52-b3fa-4d06-bd9f-3577ae59d47b" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Tid">
         <Properties>
           <Property name="Name" source="C" value="Tid" type="string" />
           <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -215,7 +247,7 @@
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="Text" source="RV" value="S.HVC.Clock.HHMMSS" type="PcdVariableAddress" />
           <Property name="X" source="C" value="760" type="double" />
-          <Property name="Y" source="C" value="4" type="double" />
+          <Property name="Y" source="C" value="5" type="double" />
           <Property name="Width" source="C" value="96" type="double" />
           <Property name="Height" source="C" value="20" type="double" />
           <Property name="Font" source="C" value="Arial Bold 10" type="FontInfo" />
@@ -224,7 +256,7 @@
           <Property name="LockedInEditor" source="C" value="False" type="bool" />
         </Properties>
       </Element>
-      <Element id="869ef385-e726-47ff-a13b-4f33b834c8f6" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Datum">
+      <Element id="da666896-92db-4ac3-a477-9dd0388882a0" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Datum">
         <Properties>
           <Property name="Name" source="C" value="Datum" type="string" />
           <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -233,7 +265,7 @@
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
           <Property name="Text" source="RV" value="S.HVC.Clock.YYYYMMDD" type="PcdVariableAddress" />
           <Property name="X" source="C" value="760" type="double" />
-          <Property name="Y" source="C" value="24" type="double" />
+          <Property name="Y" source="C" value="25" type="double" />
           <Property name="Width" source="C" value="96" type="double" />
           <Property name="Height" source="C" value="20" type="double" />
           <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
@@ -243,67 +275,83 @@
         </Properties>
       </Element>
     </Element>
-    <Element id="7656c7a7-e185-4cca-9bea-b346daa2b1fc" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Logga ut">
+    <Element id="53713ea7-eadd-4b76-8291-e7d05deb55eb" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Logga ut">
       <Properties>
         <Property name="Name" source="C" value="Logga ut" type="string" />
       </Properties>
-      <Element id="469495a6-cb80-43d6-bf6d-3eae432112ca" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
+      <Element id="c77d986d-241a-4828-94b1-12c45aa7f557" type="365164dc-5073-11e0-8201-b603e0d72085" name="Ram">
+        <Properties>
+          <Property name="Name" source="C" value="Ram" type="string" />
+          <Property name="FillColor" source="C" value="215 217 225" type="Color" />
+          <Property name="OutlineColor" source="C" value="99 110 124" type="Color" />
+          <Property name="OutlineWidth" source="C" value="2" type="double" />
+          <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+          <Property name="X" source="C" value="875" type="double" />
+          <Property name="Y" source="C" value="5" type="double" />
+          <Property name="Width" source="C" value="40" type="double" />
+          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="HasOutline" source="C" value="True" type="bool" />
+          <Property name="LockedInEditor" source="C" value="False" type="bool" />
+          <Property name="HasFillColor" source="C" value="True" type="bool" />
+        </Properties>
+      </Element>
+      <Element id="92aff832-fd3d-474b-9a23-5735dc71d924" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Ikon">
         <Properties>
           <Property name="Name" source="C" value="Ikon" type="string" />
           <Property name="FillColor" source="C" value="223 226 234" type="Color" />
           <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
           <Property name="OutlineWidth" source="C" value="1" type="double" />
           <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-          <Property name="X" source="C" value="868" type="double" />
-          <Property name="Y" source="C" value="4" type="double" />
-          <Property name="Width" source="C" value="40" type="double" />
-          <Property name="Height" source="C" value="40" type="double" />
+          <Property name="X" source="C" value="883" type="double" />
+          <Property name="Y" source="C" value="13" type="double" />
+          <Property name="Width" source="C" value="24" type="double" />
+          <Property name="Height" source="C" value="24" type="double" />
           <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
           <Property name="LockedInEditor" source="C" value="False" type="bool" />
           <Property name="Content" source="File" type="ResourceAddress">
-            <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="Media/MWSE_LogoutButton.svg" />
+            <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="Media/MWSE_Logout.svg" />
           </Property>
         </Properties>
       </Element>
-      <Element id="21ecda6b-3440-43f3-a38b-042561604f00" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
+      <Element id="dc2a34c6-1cac-49a7-b63f-9c556dd2d037" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="Knapp">
         <Functions>
-          <Function id="d9f578ac-adc5-485f-8041-105fc0359a03" name="Logout">
+          <Function id="9358b8b6-18ff-405d-a192-c57ba3c06bfc" name="Logout">
             <Expression type="None">
               <Expression type="None">
                 <Instruction macro="WriteValueToVariable">
                   <Parameter type="Constant" name="Value" />
                   <Parameter type="Container" name="Destination">
-                    <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_TPassword" />
+                    <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_TPassword" />
                   </Parameter>
                 </Instruction>
                 <Instruction macro="WriteValueToVariable">
                   <Parameter type="Constant" name="Value" />
                   <Parameter type="Container" name="Destination">
-                    <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_TSHAPassword" />
+                    <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_TSHAPassword" />
                   </Parameter>
                 </Instruction>
                 <Instruction macro="WriteValueToVariable">
                   <Parameter type="Constant" name="Value" />
                   <Parameter type="Container" name="Destination">
-                    <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_TStartPage" />
+                    <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_TStartPage" />
                   </Parameter>
                 </Instruction>
                 <Instruction macro="WriteValueToVariable">
                   <Parameter type="Constant" name="Value" />
                   <Parameter type="Container" name="Destination">
-                    <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_TUserRights" />
+                    <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_TUserRights" />
                   </Parameter>
                 </Instruction>
                 <Instruction macro="WriteValueToVariable">
                   <Parameter type="Constant" name="Value" />
                   <Parameter type="Container" name="Destination">
-                    <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_TUser" />
+                    <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_TUser" />
                   </Parameter>
                 </Instruction>
                 <Instruction macro="WriteValueToVariable">
                   <Parameter type="Constant" name="Value" />
                   <Parameter type="Container" name="Destination">
-                    <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_G_TUser" />
+                    <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_G_TUser" />
                   </Parameter>
                 </Instruction>
               </Expression>
@@ -311,19 +359,19 @@
                 <Instruction macro="WriteValueToVariable">
                   <Parameter type="Constant" name="Value" />
                   <Parameter type="Container" name="Destination">
-                    <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="_NOINITSESSCO_18" />
+                    <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="_NOINITSESSCO_18" />
                   </Parameter>
                 </Instruction>
                 <Instruction macro="WriteValueToVariable">
                   <Parameter type="Constant" name="Value" />
                   <Parameter type="Container" name="Destination">
-                    <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="_NOINITSESSCO_19" />
+                    <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="_NOINITSESSCO_19" />
                   </Parameter>
                 </Instruction>
                 <Instruction macro="WriteValueToVariable">
                   <Parameter type="Constant" value="0" name="Value" />
                   <Parameter type="Container" name="Destination">
-                    <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_LoggedIn" />
+                    <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_LoggedIn" />
                   </Parameter>
                 </Instruction>
               </Expression>
@@ -332,97 +380,97 @@
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L0" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L0" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L1" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L1" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L2" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L2" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L3" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L3" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L4" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L4" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L5" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L5" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L6" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L6" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L7" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L7" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L8" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L8" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L9" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L9" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L10" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L10" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L11" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L11" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L12" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L12" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L13" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L13" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L14" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L14" />
                 </Parameter>
               </Instruction>
               <Instruction macro="WriteValueToVariable">
                 <Parameter type="Constant" value="0" name="Value" />
                 <Parameter type="Container" name="Destination">
-                  <Address container="d17c5ad6-2007-40b5-94d0-fae8e05466dc" name="?S_User_L15" />
+                  <Address container="fecbcf6e-d788-40fe-b3d9-f3c115abff49" name="?S_User_L15" />
                 </Parameter>
               </Instruction>
             </Expression>
@@ -433,16 +481,16 @@
         </Functions>
         <Properties>
           <Property name="Name" source="C" value="Knapp" type="string" />
-          <Property name="X" source="C" value="864" type="double" />
+          <Property name="X" source="C" value="870" type="double" />
           <Property name="Y" source="C" value="0" type="double" />
-          <Property name="Width" source="C" value="48" type="double" />
-          <Property name="Height" source="C" value="48" type="double" />
+          <Property name="Width" source="C" value="50" type="double" />
+          <Property name="Height" source="C" value="50" type="double" />
           <Property name="Use3DFrame" source="C" value="False" type="bool" />
           <Property name="HasOutline" source="C" value="False" type="bool" />
           <Property name="HasFillColor" source="C" value="False" type="bool" />
           <Property name="Content" source="C" type="string" />
           <Property name="LockedInEditor" source="C" value="False" type="bool" />
-          <Property name="MouseUp" source="C" type="Event" value="d9f578ac-adc5-485f-8041-105fc0359a03" />
+          <Property name="MouseUp" source="C" type="Event" value="9358b8b6-18ff-405d-a192-c57ba3c06bfc" />
         </Properties>
       </Element>
     </Element>

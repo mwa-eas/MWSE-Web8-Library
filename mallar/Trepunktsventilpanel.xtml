@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="5213276d-22db-4573-8fbf-429120be391f" version="1.0.0" name="Trepunktsventilpanel" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Panel\Ventil" icon="icons.template.png">
+﻿<Template type="ViewElement" id="e97c4ef4-bbb5-4ef1-84d1-0611e430ef3b" version="1.0.1" name="Trepunktsventilpanel" description="" templateNameId="_1_0_1" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Panel\Ventil" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="770" type="absolute" />
     <OffsetY value="50" type="absolute" />
@@ -15,23 +15,23 @@
   <Resources>
     <Resource name="Media/MWSE_Close.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPG1hc2sgaWQ9Im1hc2swXzE4Xzg3NSIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjRDlEOUQ5Ii8+CjwvbWFzaz4KPGcgbWFzaz0idXJsKCNtYXNrMF8xOF84NzUpIj4KPHBhdGggZD0iTTYuNCAxOUw1IDE3LjZMMTAuNiAxMkw1IDYuNEw2LjQgNUwxMiAxMC42TDE3LjYgNUwxOSA2LjRMMTMuNCAxMkwxOSAxNy42TDE3LjYgMTlMMTIgMTMuNEw2LjQgMTlaIiBmaWxsPSIjMUIyMzJGIi8+CjwvZz4KPC9zdmc+Cg==" />
   </Resources>
-  <Element id="3ecf8ae0-87f8-4194-8f19-59a01dc76ab5" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Trepunktsventilpanel">
+  <Element id="391126a5-04be-48b4-8dce-8f4b293cd3df" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Trepunktsventilpanel">
     <Conditions>
-      <ConditionLogic id="bc603119-bd74-40ea-b5fa-f008c2458a98" name="Vald" operator="And">
-        <Condition leftType="Container" leftContainer="5213276d-22db-4573-8fbf-429120be391f" leftName="valdSymbol" operator="Equal" rightType="Constant" rightValue="A.MWSE.Namn." />
+      <ConditionLogic id="cc68fba3-8aab-462f-8467-acc32868354e" name="Vald" operator="And">
+        <Condition leftType="Container" leftContainer="e97c4ef4-bbb5-4ef1-84d1-0611e430ef3b" leftName="valdSymbol" operator="Equal" rightType="Constant" rightValue="A.MWSE.Namn." />
       </ConditionLogic>
     </Conditions>
     <Properties>
       <ConditionPriority>
-        <Condition id="bc603119-bd74-40ea-b5fa-f008c2458a98" />
+        <Condition id="cc68fba3-8aab-462f-8467-acc32868354e" />
       </ConditionPriority>
       <Property name="Name" source="C" value="Trepunktsventilpanel" type="string" />
       <Property name="Hidden" source="C" value="True" type="bool" />
       <Property name="DisableEvents" source="C" value="True" type="bool" />
-      <Property name="Hidden" source="C" condition="bc603119-bd74-40ea-b5fa-f008c2458a98" value="False" type="bool" />
-      <Property name="DisableEvents" source="C" condition="bc603119-bd74-40ea-b5fa-f008c2458a98" value="False" type="bool" />
+      <Property name="Hidden" source="C" condition="cc68fba3-8aab-462f-8467-acc32868354e" value="False" type="bool" />
+      <Property name="DisableEvents" source="C" condition="cc68fba3-8aab-462f-8467-acc32868354e" value="False" type="bool" />
     </Properties>
-    <Element id="e7b0beed-26b7-4b6c-ba3a-47de9618167d" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
+    <Element id="fe675842-ca61-4c38-9d21-73aa6c89732f" type="365164dc-5073-11e0-8201-b603e0d72085" name="Bakgrund">
       <Properties>
         <Property name="Name" source="C" value="Bakgrund" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -47,7 +47,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="2a27fed0-262a-41d5-b9e1-bec8179cb61f" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+    <Element id="b633e344-fe7a-4707-981d-ea3b6f34de81" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
       <Properties>
         <Property name="Name" source="C" value="Namn" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -65,7 +65,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="dc460b9e-095f-4981-8245-f3ac79ddac37" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Tagg">
+    <Element id="13291846-1cd3-4fa2-b13d-ee10f5c122c0" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Tagg">
       <Properties>
         <Property name="Name" source="C" value="Tagg" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -83,7 +83,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="230b59e7-64af-4976-a816-513879e5283f" type="365164dc-5073-11e0-8201-b603e0d72085" name="Line">
+    <Element id="57c270e4-9604-4178-b4be-19b4e2618eb1" type="365164dc-5073-11e0-8201-b603e0d72085" name="Line">
       <Properties>
         <Property name="Name" source="C" value="Line" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -99,7 +99,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="26f1dc87-6ef9-46b7-bbb7-fdd38b3c592a" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="9671dbd1-4118-4754-aec3-25917e724486" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -117,7 +117,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="ffd552b1-aa1c-4c59-b111-acd421f6d01d" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="7971d96a-9a58-491a-ae2c-1353243fee29" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -135,7 +135,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="425a2752-39f3-4567-a686-f33cf98ed96d" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="dea4133a-ed79-4e8f-979a-f4de4cef6762" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -151,7 +151,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="ce5bf39b-eeea-4674-8e4b-b5cb27797608" type="e40ad01c-67f9-4628-9713-b529352cc0ce" name="Bar Graph">
+    <Element id="60774b1d-b490-47b7-bce4-d21e7c2d5d1a" type="e40ad01c-67f9-4628-9713-b529352cc0ce" name="Bar Graph">
       <Properties>
         <Property name="Name" source="C" value="Bar Graph" type="string" />
         <Property name="FillColor" source="C" value="0 113 27" type="Color" />
@@ -174,7 +174,7 @@
         <Property name="ShowMinValue" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="444c75eb-caf2-48d8-a2ad-58665d4287a2" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="969140b2-a6ef-4ac5-aeac-01e0111e8a36" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -192,7 +192,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="12ea0d59-d5e2-469e-87b5-03dd164bef3d" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="03169871-1064-4940-a522-7c0b507f4b4d" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -210,7 +210,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="eb48e795-94de-4169-ae22-b380ea2b272e" type="365164dc-5073-11e0-8201-b603e0d72085" name="Line">
+    <Element id="46774a39-4bb0-4ed1-a191-b4db27f70cb7" type="365164dc-5073-11e0-8201-b603e0d72085" name="Line">
       <Properties>
         <Property name="Name" source="C" value="Line" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -226,7 +226,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="73077ade-6d59-47a5-8919-fec71d4b8cab" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="0c542b21-7981-4f02-8a02-21d719ae50a1" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -244,23 +244,23 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="dda6c65f-40f2-4411-99d1-7f81db4a7dce" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="706bfd82-957b-43d8-9bdd-7b567f7a55cb" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Conditions>
-        <ConditionLogic id="10ecb5da-aa65-4238-863a-8e857b86ec53" name="Ökar" operator="And">
-          <Condition leftType="PDP" leftContainer="5213276d-22db-4573-8fbf-429120be391f" leftName="A.MWSE.Namn.IncUt" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="b5624e2d-51c8-419f-993a-7543c67dbad3" name="Ökar" operator="And">
+          <Condition leftType="PDP" leftContainer="e97c4ef4-bbb5-4ef1-84d1-0611e430ef3b" leftName="A.MWSE.Namn.IncUt" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
-        <ConditionLogic id="67e50e59-86d3-4fe0-ad9f-2f91a0687bd8" name="Minskar" operator="And">
-          <Condition leftType="PDP" leftContainer="5213276d-22db-4573-8fbf-429120be391f" leftName="A.MWSE.Namn.DecUt" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="6601c029-3cec-47a7-924f-42a76ed9121f" name="Minskar" operator="And">
+          <Condition leftType="PDP" leftContainer="e97c4ef4-bbb5-4ef1-84d1-0611e430ef3b" leftName="A.MWSE.Namn.DecUt" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
-        <ConditionLogic id="00ccab3b-f124-47ea-a2f1-e0f4f088e217" name="Kalibrerar" operator="And">
-          <Condition leftType="PDP" leftContainer="5213276d-22db-4573-8fbf-429120be391f" leftName="A.MWSE.Namn.KalUt" operator="Equal" rightType="Constant" rightValue="1" />
+        <ConditionLogic id="da1fb2a6-2ed9-4144-aaf2-af9b887075e1" name="Kalibrerar" operator="And">
+          <Condition leftType="PDP" leftContainer="e97c4ef4-bbb5-4ef1-84d1-0611e430ef3b" leftName="A.MWSE.Namn.KalUt" operator="Equal" rightType="Constant" rightValue="1" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="10ecb5da-aa65-4238-863a-8e857b86ec53" />
-          <Condition id="67e50e59-86d3-4fe0-ad9f-2f91a0687bd8" />
-          <Condition id="00ccab3b-f124-47ea-a2f1-e0f4f088e217" />
+          <Condition id="b5624e2d-51c8-419f-993a-7543c67dbad3" />
+          <Condition id="6601c029-3cec-47a7-924f-42a76ed9121f" />
+          <Condition id="da1fb2a6-2ed9-4144-aaf2-af9b887075e1" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -276,36 +276,36 @@
         <Property name="TextAlignment" source="C" value="Right Center" type="TextPosition" />
         <Property name="FontColor" source="C" value="27 35 47" type="Color" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
-        <Property name="Text" source="C" condition="10ecb5da-aa65-4238-863a-8e857b86ec53" value="Ökar" type="string" />
-        <Property name="Text" source="C" condition="67e50e59-86d3-4fe0-ad9f-2f91a0687bd8" value="Minskar" type="string" />
-        <Property name="Text" source="C" condition="00ccab3b-f124-47ea-a2f1-e0f4f088e217" value="Kalibrerar" type="string" />
+        <Property name="Text" source="C" condition="b5624e2d-51c8-419f-993a-7543c67dbad3" value="Ökar" type="string" />
+        <Property name="Text" source="C" condition="6601c029-3cec-47a7-924f-42a76ed9121f" value="Minskar" type="string" />
+        <Property name="Text" source="C" condition="da1fb2a6-2ed9-4144-aaf2-af9b887075e1" value="Kalibrerar" type="string" />
       </Properties>
     </Element>
-    <Element id="a1e985bf-1b73-4dfa-ac7d-783a40c57b0c" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Stäng">
+    <Element id="2fa2255f-034b-4c86-9cfe-1137fbcca4eb" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Stäng">
       <Properties>
         <Property name="Name" source="C" value="Stäng" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
         <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="X" source="C" value="214.0" type="double" />
-        <Property name="Y" source="C" value="12.0" type="double" />
+        <Property name="X" source="C" value="213.0" type="double" />
+        <Property name="Y" source="C" value="13.0" type="double" />
         <Property name="Width" source="C" value="24" type="double" />
         <Property name="Height" source="C" value="24" type="double" />
         <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="Content" source="File" type="ResourceAddress">
-          <Address container="5213276d-22db-4573-8fbf-429120be391f" name="Media/MWSE_Close.svg" />
+          <Address container="e97c4ef4-bbb5-4ef1-84d1-0611e430ef3b" name="Media/MWSE_Close.svg" />
         </Property>
       </Properties>
     </Element>
-    <Element id="d252daeb-adba-4554-a591-a701662e49e9" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="StängKnapp">
+    <Element id="2bb44f8c-89c0-4018-aacb-3322878cc3a8" type="34aaeab1-0303-452d-aa17-4960241de2a9" name="StängKnapp">
       <Properties>
         <Property name="Name" source="C" value="StängKnapp" type="string" />
-        <Property name="X" source="C" value="202" type="double" />
+        <Property name="X" source="C" value="200" type="double" />
         <Property name="Y" source="C" value="0" type="double" />
-        <Property name="Width" source="C" value="48" type="double" />
-        <Property name="Height" source="C" value="48" type="double" />
+        <Property name="Width" source="C" value="50" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
         <Property name="Use3DFrame" source="C" value="False" type="bool" />
         <Property name="HasOutline" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="False" type="bool" />
