@@ -11,31 +11,24 @@ Guiden beskriver hur du installerar MWSE Web8 Library (nedan biblioteket) i Saia
 dem till MWSE-FBoxar i PG5-programmet och laddar ned vyn till en PCD. Den förutsätter att du kan
 Web8 och Fupla men inte känner till biblioteket.
 
-Påståenden om hur Web8, PG5 och MWSE-FBoxarna fungerar har en källnot: Web Editor 8-hjälpen,
-Web Editor-manualen eller MWSE FBox-hjälpen med kapitel, del eller sida (se
-[avsnitt 11](#11-källor)), eller **Prövat** när påståendet bara vilar på Malthe Winje Automation
-AB:s egna tester. Testmiljön var PG5 2.3.196 med Web Editor 8, en PCD3.M5360 med COSinus 1.28.51
-och MWSE FBox-biblioteket V20.6.001 (se [2](#2-förutsättningar-i-pg5-programmet)). De mallar som kom till senast är prövade mot en
-simulerad PCD och, där labbprogrammet har FBoxen, mot PCD:n 2026-10-25. Punkter som ännu inte är prövade är markerade **Ännu inte verifierat**, med vad du gör tills
-vidare. Ett format eller beteende som bara är läst ur FBox-makrot, och inte ur någon manual, är
-markerat som slutsats.
+Prova varje vy mot anläggningens PCD innan den tas i drift.
 
 ---
 
 ## 1. Vad biblioteket innehåller
 
-Biblioteket har 86 mallar:
+Biblioteket har 91 mallar:
 
-- **15 symboler med signaler:** pump, fläkt, motor, kompressor, spjäll, brandspjäll, tre ventiler
-  (tvåväg, treväg, trepunkt), fyra givare, roterande värmeväxlare och Panelknapp. En symbol visar
-  vila, drift/aktiv och i förekommande fall fel, hand och larm. Ett klick öppnar objektets
-  faceplate.
+- **18 symboler med signaler:** pump, fläkt, motor, kompressor, spjäll, brandspjäll, tre ventiler
+  (tvåväg, treväg, trepunkt), fyra givare, roterande värmeväxlare, Panelknapp, Indikator,
+  Tryckknapp och Tidkanalknapp. En symbol visar vila, drift/aktiv och i förekommande fall fel,
+  hand och larm. Ett klick öppnar objektets faceplate; Indikator och Tidkanalknapp visar bara.
 - **14 statiska symboler:** batterier, filter, radiator, tankar, kretsar, två värmeväxlare för
   ventilation och en plattvärmeväxlare för vatten. Bara en bild och en namnetikett, utan signaler.
 - **11 faceplates** (manöverpaneler) för motor, givare, ventil, spjäll, trepunktsventil,
   regulator PI, PID och P och handstyrning.
-- **39 inställnings- och statusblock** för larmgränser, fördröjningar, skalning, regulatorer,
-  tidkanaler och handstatus, bland dem 16 kurvblock som visar börvärdeskurvans punkter i en tabell
+- **41 inställnings- och statusblock** för larmgränser, fördröjningar, skalning, regulatorer,
+  tidkanaler, medelvärde, verkningsgrad och handstatus, bland dem 16 kurvblock som visar börvärdeskurvans punkter i en tabell
   och kurvan ritad bredvid. De är alltid synliga.
 - **7 sidmallar:** larmlista, larmsummering, topplist, navigeringsmeny, sidofält, inloggning och
   inloggningsbakgrund.
@@ -50,21 +43,19 @@ Alla mallar, kategorier och signaler finns i [avsnitt 10](#10-mallar-och-fbox-si
 
 ## 2. Förutsättningar i PG5-programmet
 
-1. PCD-programmet använder MWSE FBox-biblioteket. Mallarna är byggda och prövade mot version
-   **V20.6.001**. A-symbolerna i V25.10.003 och V26.09.015 är jämförda med den: alla namn som
-   mallarna använder finns kvar. De nya versionerna har också nya FBoxar och signaler som mallarna
-   inte använder än, till exempel Verkningsgrad V2 och `GfErsätt` i Analog ingång.
+1. PCD-programmet använder MWSE FBox-biblioteket. Mallarna är byggda för version **V20.6.001**.
+   Alla A-symboler som mallarna använder finns också i V25.10.003 och V26.09.015. De nya
+   versionerna har också nya FBoxar och signaler som mallarna inte använder än, till exempel
+   `GfErsätt` i Analog ingång.
 
-   **Undantag: Givarskalningsinställning.** I V25.10.003 och V26.09.015 skapar Analog ingång
-   (`MWSE_InAnaL`) brytpunkterna `BPX1`, `BPX2`, `BPY1` och `BPY2` i två block med samma villkor,
-   FBox-version före 21.05.001; det andra blocket byter plats på `BPX2` och `BPY1`. En Analog
-   ingång av version 21.05.001 eller senare får då inga av de fyra A-symbolerna, och
-   blockets fält blir tomma. Använd Givarskalningsinställning bara med en Analog ingång från
-   V20.6.001 tills FBox-biblioteket är rättat.
+   **Medelvärdesinställning och Verkningsgradsstatus kräver V25.10.003 eller senare.** Deras
+   FBoxar, Justerat Medel, Justerat Medel Array och Verkningsgrad V2, finns inte i V20.6.001
+   ([6.7](#67-fler-inställningsblock-och-statusblock)).
 
-   *Källa: FBox-makrona i MWSEFamilyAllmant.lib, V20.6.001, V25.10.003 och V26.09.015, jämförda
-   2026-10-26. Undantaget är en slutsats ur makrot, inte prövat i ett bygge.* **Ännu inte
-   verifierat:** mallarna mot en PCD vars program är byggt med V25.10.003 eller V26.09.015.
+   **Undantag: Givarskalningsinställning.** I V25.10.003 och V26.09.015 får en Analog ingång
+   (`MWSE_InAnaL`) av version 21.05.001 eller senare inga brytpunkter `BPX1`, `BPX2`, `BPY1` och
+   `BPY2`, och blockets fält blir tomma. Använd Givarskalningsinställning bara med en Analog ingång
+   från V20.6.001 tills FBox-biblioteket är rättat.
 2. Varje objekt som ska visas har en MWSE-FBox **med namn** i Fupla. FBoxen skapar A-symbolerna
    `A.MWSE.<namn>.<signal>` först när ett namn anges på den. Ge FBoxen namnet
    `<anläggning>.<objekt>`, till exempel `VS01.P01`, så får signalerna namn som
@@ -80,13 +71,6 @@ Alla mallar, kategorier och signaler finns i [avsnitt 10](#10-mallar-och-fbox-si
    ([7.3](#73-topplist-och-sidtitel)).
 6. Web8-projektet är kopplat till PG5-devicen, så att Web8 kan slå upp symbolerna
    ([avsnitt 4.1](#41-koppla-projektet-till-pg5-devicen)).
-
-*Källa: MWSE FBox-hjälpen, sidorna Motor, Ingång analog larm, Utgång analog, Spjällstyrning,
-Larm regleravvikelse, Börvärdeskurva 5 och Pumpstart, avsnitt "A-symboler"; sidan Regulator PI,
-versionshistoriken (A-symboler skapas bara när FBoxen har ett namn); Web Editor-manualen, del 19,
-Online Alarm List: Configure The Template (larmlistans symbol skapas av larm-FBoxen och får dess
-namn). Namnformen `<anläggning>.<objekt>`: prövat. Namnet `.VG`, symbolen `<grupp>.antal` och
-klockan: lästa ur labbets GUI och program, se respektive avsnitt.*
 
 ## 3. Installation
 
@@ -115,14 +99,10 @@ Web8 importerar `.xtml`-filer en och en, flera i samma `.xtml`-fil, eller en `.z
 innehåller `.xtml`-filer. En mall som redan finns i biblioteket hoppas över, och Web8 visar ett
 felmeddelande när importen är klar. Om något går fel visas en importlogg.
 
-I ett prov med de första 21 mallarna kom alla in, och **Libraries** visade namnen med å, ä och ö
-rätt. Filnamnen i zip-filen är därför skrivna utan å, ä och ö.
+Filnamnen i zip-filen saknar å, ä och ö, men **Libraries** visar mallarnas namn med å, ä och ö.
 
-> **Ännu inte verifierat:** importen av alla 86 mallar. Tills vidare: om importen misslyckas,
-> importera de lösa filerna i `mallar/` enligt [3.2](#32-alternativ-lösa-mallfiler).
-
-*Källa: Web Editor 8-hjälpen, Windows, s. 25–26 (Libraries Window: Import..., Importing
-Templates). Importen och namnen: prövat 2026-10-23.*
+Om importen misslyckas, importera de lösa filerna i `mallar/` enligt
+[3.2](#32-alternativ-lösa-mallfiler).
 
 ### 3.2 Alternativ: lösa mallfiler
 
@@ -130,13 +110,8 @@ Templates). Importen och namnen: prövat 2026-10-23.*
   i `mallar/` som du vill ha.
 - **Kopiera:** lägg filerna i mappen `SBC\WebEditor\Templates\` under Windows gemensamma
   programdatamapp, normalt `C:\ProgramData\SBC\WebEditor\Templates\`. Web8 läser egna mallar från
-  den mappen; en mall som ligger någon annanstans visas inte i biblioteket.
-
-> **Ännu inte verifierat:** om Web8 måste startas om efter att filer kopierats in i mappen.
-> Hjälpen säger inget om det. Tills vidare: starta om Web8 efter kopiering.
-
-*Källa: Web Editor 8-hjälpen, Dialog Boxes, s. 9 (Create Template: File name). Sökvägen
-`C:\ProgramData\SBC\WebEditor\Templates\`: prövat.*
+  den mappen; en mall som ligger någon annanstans visas inte i biblioteket. Starta om Web8 efter
+  kopieringen.
 
 ### 3.3 Uppdatera till en ny version
 
@@ -144,13 +119,8 @@ Templates). Importen och namnen: prövat 2026-10-23.*
   först: markera mallarna i **Libraries**, högerklicka och välj **Delete**. Importera sedan den
   nya versionen.
 - Bara egna mallar kan tas bort; Web8:s inbyggda mallar är skrivskyddade.
-
-> **Ännu inte verifierat:** om instanser som redan är placerade i en vy följer med när mallen
-> byts ut. Hjälpen säger inget. Projektfilerna tyder på att varje instans är en fristående kopia.
-> Tills vidare: räkna med att placera om symbolen och göra om bytet i
-> [avsnitt 5.2](#52-koppla-symbolen-till-objektet).
-
-*Källa: Web Editor 8-hjälpen, Windows, s. 25–26 (Delete, Import...); Introduction, s. 6.*
+- Räkna med att instanser som redan är placerade i en vy inte följer med när mallen byts ut:
+  placera om symbolen och gör om bytet i [avsnitt 5.2](#52-koppla-symbolen-till-objektet).
 
 ## 4. Förbered Web8-projektet
 
@@ -160,9 +130,6 @@ Templates). Importen och namnen: prövat 2026-10-23.*
 **Symbol data source** med PG5-projektets device-katalog. Web8 behöver den för att slå upp
 symbolerna. Utan den kan Web8 inte heller erbjuda grupperna från PG5-programmet vid bytet i
 [avsnitt 5.2](#52-koppla-symbolen-till-objektet).
-
-*Källa: Web Editor 8-hjälpen, Dialog Boxes, s. 12–13 (Project Options: Configuration, Symbol data
-source) och s. 28 (Select Group for Find and Replace).*
 
 ### 4.2 Sätt författarnamnet
 
@@ -175,10 +142,6 @@ företagets namn, inte en persons, innan du bygger:
    därefter, om inte lösningen anger något annat.
 2. **Project > Solution Options > Author Information**: för en lösning som redan finns. Kryssa i
    rutan och fyll i formuläret; det skriver över standardvärdet för den lösningen.
-
-*Källa: Web Editor 8-hjälpen, Dialog Boxes, s. 25–27 (Solution Options: Solution Author
-Information; Web Editor Options: Author Information); Data Sources, s. 6 (Build Time Constants).
-Filen `$$DeploymentInfo.dat`: prövat; hjälpen nämner den inte.*
 
 ### 4.3 Den globala variabeln valdSymbol
 
@@ -199,13 +162,9 @@ symbol igen tömmer alltså variabeln och stänger panelen. Klick på en annan s
 grupp, eftersom Toggle börjar på det första värdet när variabeln inte har något av de två.
 
 Panelknapp fungerar likadant, för de faceplates som ingen symbol öppnar
-([5.8](#58-statiska-symboler-och-panelknapp)). Inställningsblock, statiska symboler och
-sidmallar använder inte `valdSymbol`. Sidmallarna har två egna delade variabler, `visaMeny` och
+([5.8](#58-statiska-symboler-och-panelknapp)). Inställningsblock, statiska symboler, Indikator,
+Tidkanalknapp och sidmallar använder inte `valdSymbol`. Sidmallarna har två egna delade variabler, `visaMeny` och
 `sidTitel` ([avsnitt 7](#7-sidmallar)).
-
-*Källa: Web Editor 8-hjälpen, Data Sources, s. 1 (Internal Variables); Variable Editors, s. 3–4
-(Internal Variables Editor); Windows, s. 7 (instruktionen Toggle). Att varje symbol öppnar bara
-sin egen panel: prövat 2026-10-23.*
 
 ### 4.4 Format på PCD-variabler
 
@@ -213,43 +172,28 @@ Mallarna deklarerar ett format för varje signal som har decimaler, tid eller da
 styr hur ett värde visas och hur en inmatningsruta skriver det till PCD:n. Signaler utan format
 (lägen, flaggor, antal, enheter och val i listor) visas och skrivs som heltal.
 
-| Format | Signaler | Grund |
-|---|---|---|
-| `DEC.1` | `MV_Ut`, ventilens `Min`, `Max` och `ManV`, larmgränserna `HLLarmGrL`, `HLLarmGrH`, `GfLarmGrL`, `GfLarmGrH`, `LarmGrAvv`, kurvans `BPX1`–`BPX5` och `BPY1`–`BPY5`, regulatorns `ActVal`, `SetPt`, `YOut`, `IntTime`, `Offset`, pumpstartens `StartGrD`, `StartGr`, `StoppGr` | Labbets GUI; prövat mot PCD |
-| `DEC.2` | PI- och PID-regulatorns P-faktor `PFac00` | FBox-makrot; prövat mot PCD 2026-10-25 (se nedan) |
-| `DEC` | `DTtid`, `DTLarmGr`, `DTLarmF`, `StartF_tid`, `StoppF_tid` | Labbets GUI; prövat mot PCD |
-| `DD.MM.YY` | `DTdatum` | Labbets GUI; prövat mot PCD |
-| `HH:MM:SS`, `DD.MM.YY` | Topplistens klocka `S.HVC.Clock.HHMMSS` och `S.HVC.Clock.YYYYMMDD` | Labbets GUI; prövat mot PCD 2026-10-25 |
-| `DEC` | `StartF`, `StoppF` | Slutsats ur FBox-makrot; prövat mot PCD 2026-10-25 |
-| `DEC.1` | Skalningen `BPX1`–`BPY2`, `Filtertid` och `Kalibrering`; Givarhandinställningens `ManV`; regulatorernas `PFac`, `PtIni`, `LimLow`, `LimHigh`, `ManVal` | Slutsats ur FBox-makrot; prövat mot PCD 2026-10-25 |
-| `DEC` | `LarmF_O`, `LarmF_S`, `GångtidÖ`, `GångtidM`, Drifttidsinställningens `LarmGr` och `AntalTimmar` | Slutsats: hela sekunder eller timmar i FBox-makrots inställningsfönster |
-| `DEC.1` | Kurvornas punkt 6–10, `YminV`, `YmaxV` och de sänkta värdena `BPY1n`–`BPY10n`; larmgränserna `LGr`, `HGr`, `LarmGrL`, `LarmGrH`; PID-regulatorns `DerTime`, `FT1Time`; `BeräknVärde`, `Dödzon`; Verkningsgradens `PV_Ut`; handvärdena `ManV` (Handpanel analog) och `V_Ut` (Handstatus analog) | Slutsats: tiondelar i FBox-makrot, eller samma slags värde som `MV_Ut` |
-| `HH:MM` | Tidkanalernas tider | Slutsats: registret håller TTMM (07:30 = 730), och Web8:s körning visar och skriver det så |
+| Format | Signaler |
+|---|---|
+| `DEC.1` | `MV_Ut`, ventilens `Min`, `Max` och `ManV`, larmgränserna `HLLarmGrL`, `HLLarmGrH`, `GfLarmGrL`, `GfLarmGrH`, `LarmGrAvv`, kurvans `BPX1`–`BPX5` och `BPY1`–`BPY5`, regulatorns `ActVal`, `SetPt`, `YOut`, `IntTime`, `Offset`, pumpstartens `StartGrD`, `StartGr`, `StoppGr`; skalningen `BPX1`–`BPY2`, `Filtertid` och `Kalibrering`; Givarhandinställningens `ManV`; regulatorernas `PFac`, `PtIni`, `LimLow`, `LimHigh`, `ManVal`; kurvornas punkt 6–10, `YminV`, `YmaxV` och de sänkta värdena `BPY1n`–`BPY10n`; larmgränserna `LGr`, `HGr`, `LarmGrL`, `LarmGrH`; PID-regulatorns `DerTime`, `FT1Time`; `BeräknVärde`, `Dödzon`; Verkningsgradens `PV_Ut` och `PV_Utx`; handvärdena `ManV` (Handpanel analog) och `V_Ut` (Handstatus analog) |
+| `DEC.2` | PI- och PID-regulatorns P-faktor `PFac00` (se nedan) |
+| `DEC` | `DTtid`, `DTLarmGr`, `DTLarmF`, `StartF_tid`, `StoppF_tid`, `StartF`, `StoppF`, `LarmF_O`, `LarmF_S`, `GångtidÖ`, `GångtidM`, Drifttidsinställningens `LarmGr` och `AntalTimmar` |
+| `DD.MM.YY` | `DTdatum` |
+| `HH:MM:SS`, `DD.MM.YY` | Topplistens klocka `S.HVC.Clock.HHMMSS` och `S.HVC.Clock.YYYYMMDD` |
+| `HH:MM` | Tidkanalernas tider (registret håller TTMM, 07:30 = 730) |
 
 **P-faktorn i PI- och PID-regulatorn har två decimaler.** FBoxen anger P-faktorn i
 hundradelar (`Yp = Xw·Fp/100`), så `PFac00` = 100 betyder 1,00 % per K och visas som `1.00`.
-Labbets GUI visar den med en decimal, alltså som `10.0`, tio gånger för stort; mallarna rättar
-det. Har ditt projekt redan deklarerat `PFac00` med ett annat format i **PCD Variables Editor**,
+Har ditt projekt redan deklarerat `PFac00` med ett annat format i **PCD Variables Editor**,
 gäller projektets format före mallens. Ändra det då till `DEC.2`. P-regulatorns `PFac` är
-regulatorns egen inställning i tiondelar och behåller `DEC.1`. Skalan är läst ur FBox-makrot;
-att `PFac` i PI-regulatorn följer `PFac00` 1:1: prövat mot PCD 2026-10-25. Att projektets format
-går före mallens, och att mallens `DEC.2` gäller utan egen deklaration: prövat i ett testbygge
-2026-10-26.
+regulatorns egen inställning i tiondelar och behåller `DEC.1`.
 
-> **Ännu inte verifierat:** formaten med grunden *Slutsats* som inte är prövade mot PCD.
-> Labbprogrammet har ingen av FBoxarna bakom dem (kurvor utöver Börvärdeskurva 5, larm,
-> tidkanaler, spjäll, handstyrning, Beräknat ärvärde, Verkningsgrad, Regulator PID). Tills
-> vidare: kontrollera efter nedladdning att ett inskrivet värde, till exempel 22.5, läses tillbaka
-> med rätt decimaler, och ändra formatet i **PCD Variables Editor** om det inte gör det.
+Kontrollera efter nedladdning att ett inskrivet värde, till exempel 22.5, läses tillbaka med rätt
+decimaler, och ändra formatet i **PCD Variables Editor** om det inte gör det.
 
 > **Varning:** om samma PCD-variabel används någonstans i projektet utan format kan Web8 tappa
 > mallens format. En inmatningsruta skriver då 22.5 som 22. Deklarera därför formatet för
 > variabeln i **PCD Variables Editor** (kolumnen **Format**), eller koppla variabeln för hand bara
-> med formatet satt. Iakttaget i ett testbygge 2026-10-23; ingen manual beskriver det.
-
-*Källa: Web Editor 8-hjälpen, Variable Editors, s. 1–2 (PCD Variables Editor: Format). Formaten
-är lästa ur mallfilerna; grunden för de nya formaten är läst ur FBox-makrona i
-`MWSEFamilyAllmant.lib` och deras inställningsfönster (`MWSE_V25_10_003`).*
+> med formatet satt.
 
 ## 5. Placera en symbol och koppla den
 
@@ -262,8 +206,6 @@ går före mallens, och att mallens `DEC.2` gäller utan egen deklaration: pröv
 3. Använder mallen PCD-variabler öppnar Web8 dialogen **Cross-Reference** direkt, och om
    PG5-programmet har passande grupper även **Find and Replace Template Group**. Koppla mallen
    enligt [5.2](#52-koppla-symbolen-till-objektet).
-
-*Källa: Web Editor 8-hjälpen, Windows, s. 24 (Using a template); How To, s. 9.*
 
 ### 5.2 Koppla symbolen till objektet
 
@@ -293,11 +235,6 @@ gäller Panelknapp, som saknar PCD-variabler, och Roterande värmeväxlare, som 
 
 Kontrollera bytet: skriv `A.MWSE.Namn` i fältet **Value Filter**. Inga rader ska finnas kvar.
 
-*Källa: Web Editor 8-hjälpen, Dialog Boxes, s. 5–8 (Cross-Reference: Filtering, Find and
-Replace, Find and Replace Template Group button) och s. 28 (Select Group for Find and Replace);
-Introduction, s. 13. Att dialogen bara byter PCD-variablerna, och att Replace All därefter byter
-texterna: prövat 2026-10-23.*
-
 ### 5.3 Kontrollera bytet
 
 Efter bytet ska följande gälla, här för gruppen `A.MWSE.VS01.P01.`. Rätta för hand om något står
@@ -316,20 +253,14 @@ Efter bygget visar **PCD Variables Editor** röda rader för variabler som inte 
 PG5-programmet ([avsnitt 8](#8-bygga-och-ladda-ned)). En röd rad betyder oftast ett felskrivet
 gruppnamn.
 
-*Källa: Web Editor 8-hjälpen, Windows, s. 14–18 (Condition Editor) och s. 20–21 (Actions Tab);
-How To, s. 5 (How to use Conditions); Variable Editors, s. 3 (färgerna i PCD Variables Editor).*
-
 ### 5.4 Namnetikett
 
-Under symbolen står texten `Namn`; på statiska symboler står den ovanför bilden. Markera
+Under symbolen står texten `Namn`; på statiska symboler och på Indikator, Tryckknapp och
+Tidkanalknapp står den ovanför bilden. Markera
 textelementet `Namn` i instansen och skriv objektets namn i egenskapen **Text**, till exempel
 `P01`. Etiketten är 80 px bred, så ett namn längre än ungefär 12 tecken klipps.
 
-Mallen har en intern variabel `doljNamn`; värdet `1` döljer namnetiketten.
-
-> **Ännu inte verifierat:** hur `doljNamn` sätts per instans i editorn. Hjälpen beskriver inte
-> mallarnas lokala variabler, och i ett prov i editorn hittades inget enkelt sätt. Tills vidare:
-> låt namnetiketten stå kvar, eller töm dess text.
+Ska etiketten inte synas, töm dess text.
 
 ### 5.5 Vad symbolen visar
 
@@ -341,17 +272,14 @@ Mallen har en intern variabel `doljNamn`; värdet `1` döljer namnetiketten.
 | Trepunktsventil | båda utgångarna 0 | `IncUt` eller `DecUt` = 1 | inget (FBoxen har ingen larmutgång) | värdet `BeräknVärde` |
 | Givare, Utegivare, Differensgivare, Integrerad Givare | normalt | inget | `LG_Ut`, `LL_Ut` eller `HL_Ut` | värdet `MV_Ut` |
 | Roterande värmeväxlare | `R_Ut` = 0 | `R_Ut` = 1 | `LD_Ut`, `LDT_Ut` eller låg verkningsgrad `VG.LAL_Ut` | verkningsgraden `VG.PV_Ut` |
+| Indikator | `StaUt` = 0 | `StaUt` = 1 | `LrmUt` = 1 | – |
+| Tryckknapp | `ManV` = 0 | `ManV` = 1 | inget | – |
+| Tidkanalknapp | `V_Ut` = 0 | `V_Ut` = 1 | inget | – |
 
 Handindikeringen visas när `Man` = 1; Trepunktsventil har ingen, eftersom FBoxen saknar
-handläge. Spjällen visar Öppet när `R_Ut` = 1, eftersom Spjällstyrnings `R_Ut` är manöversignalen
+handläge, och inte heller Indikator och Tidkanalknapp
+([5.9](#59-indikator-tryckknapp-och-tidkanalknapp)). Spjällen visar Öppet när `R_Ut` = 1, eftersom Spjällstyrnings `R_Ut` är manöversignalen
 ut.
-
-*Källa: MWSE FBox-hjälpen, sidorna Motor, Spjällstyrning, Utgång analog, Ingång analog larm och
-Beräknat ärvärde, öka/minska (utgångarna Öka, Minska och KAL, ingen larmutgång), avsnitt
-"A-symboler" och "Beskrivning"; MWSE FBox-hjälpen `verkningsgrad.html` (Verkningsgrad). Lägena för
-pump, ventil och givare: prövat mot PCD 2026-10-23. Trepunktsventil och Roterande värmeväxlare:
-prövat mot en simulerad PCD 2026-10-23; **Ännu inte verifierat** mot PCD, eftersom labbprogrammet
-saknar Beräknat ärvärde och Verkningsgrad.*
 
 ### 5.6 Enhet på värdefält
 
@@ -359,14 +287,8 @@ Givare och ventiler visar sitt värde med en decimal. Enheten (till exempel `°C
 inte en del av mallen. I Web8 sätts enheten per PCD-variabel: öppna projektets `.wvar`-fil, sidan
 **PCD Variables Editor**, och fyll i kolumnen **Units** för `A.MWSE.<grupp>.MV_Ut` (för
 Trepunktsventil `BeräknVärde`, för Roterande värmeväxlare `VG.PV_Ut`). Texten visas efter värdet i
-webbläsaren. Flera rader kan markeras och få samma enhet på en gång. Kurvblockens signaler ska
-däremot inte ha någon enhet ([6.9](#69-kurvblock)).
-
-> **Ännu inte verifierat:** om ett nytt projekt visar någon enhet utan detta steg. I testmiljön
-> visades `°C` bara för att projektet redan hade enheten satt. Tills vidare: sätt enheten för
-> varje givare och ventil.
-
-*Källa: Web Editor 8-hjälpen, Variable Editors, s. 1–2 (PCD Variables Editor: Format, Units).*
+webbläsaren. Flera rader kan markeras och få samma enhet på en gång. Sätt enheten för varje givare
+och ventil. Kurvblockens signaler ska däremot inte ha någon enhet ([6.9](#69-kurvblock)).
 
 ### 5.7 Roterande värmeväxlare: två grupper
 
@@ -380,8 +302,8 @@ och värde 80 × 250 px; kanalerna möter bilden 40 och 210 px ner i mallen) bin
 
 Ge Verkningsgrad-FBoxen motorns namn plus `.VG`: motorn `LB01.VVX1`, verkningsgraden
 `LB01.VVX1.VG`. Då byter ett och samma byte av `A.MWSE.Namn.` båda grupperna. Ge inte båda
-FBoxarna samma namn: Motor och Verkningsgrad har båda en symbol som heter `Status`, och de skulle
-sannolikt krocka (slutsats ur FBox-makrona).
+FBoxarna samma namn: Motor och Verkningsgrad har båda en symbol som heter `Status`, och de kan
+krocka.
 
 Dialogen **Find and Replace Template Group** klarar inte en mall som refererar mer än en grupp.
 Koppla därför så här:
@@ -394,24 +316,17 @@ Koppla därför så här:
 4. Kontrollera med **Value Filter** `A.MWSE.Namn` att inga rader finns kvar, och att
    verkningsgradens rader nu heter `A.MWSE.LB01.VVX1.VG.PV_Ut` och `...VG.LAL_Ut`.
 
+Står `VG`-raderna kvar, byt dem i ett andra steg med **Find what** `A.MWSE.Namn.VG.` och
+**Replace with** `A.MWSE.LB01.VVX1.VG.`.
+
 Ett klick på symbolen öppnar den `Motorpanel` som är kopplad till motorns grupp. Symbolen har
 ingen egen faceplate.
-
-> **Ännu inte verifierat:** att Replace All i editorn byter båda grupperna i ett steg. Tills
-> vidare: om `VG`-raderna står kvar, byt dem i ett andra steg med **Find what**
-> `A.MWSE.Namn.VG.` och **Replace with** `A.MWSE.LB01.VVX1.VG.`.
-
-*Källa: Web Editor-manualen, del 14, Cross-Reference: Replacing symbol group names in a template
-("This procedure cannot be used if the template references more than one group") och Find and
-Replace Template Group button; del 17, Select Group for Find and Replace dialog box; MWSE
-FBox-hjälpen, sidan Motor och `verkningsgrad.html`. Signalerna under `VG`: lästa ur FBox-makrot
-`MWSE_VGRAD1` i `MWSEFamilyAllmant.lib`.*
 
 ### 5.8 Statiska symboler och Panelknapp
 
 **Statiska symboler** (kategori `MWSE\Symbol\Statisk`) har inga signaler, inga lägen och inget
-klick. De behöver ingen koppling: placera, skriv namnet i `Namn` och dölj det vid behov med
-`doljNamn` ([5.4](#54-namnetikett)). Bilderna har sin storlek från MWSE-Symbols:
+klick. De behöver ingen koppling: placera dem och skriv namnet i `Namn`, eller töm texten om ingen
+etikett ska synas ([5.4](#54-namnetikett)). Bilderna har följande storlek:
 
 | Mall | Storlek (px) |
 |---|---|
@@ -445,8 +360,9 @@ den vågräta tilloppsledningen som går in i kretsens framledningsben, inte bre
 ventilernas bilder är ritade för vågrät ledning, och kretsens ben är lodräta.
 
 **Panelknapp** (kategori `MWSE\Symbol\Knapp`, 230 × 40 px) öppnar den faceplate som är kopplad
-till samma grupp, för de faceplates som ingen symbol öppnar: de tre regulatorpanelerna, Handpanel digital,
-Handpanel analog och Digitalsignalpanel. Den fungerar som en symbol: klicket skriver gruppen till
+till samma grupp, för de faceplates som ingen symbol öppnar: de tre regulatorpanelerna, Handpanel digital
+när ingen Tryckknapp öppnar den ([5.9](#59-indikator-tryckknapp-och-tidkanalknapp)), Handpanel analog
+och Digitalsignalpanel. Den fungerar som en symbol: klicket skriver gruppen till
 `valdSymbol`, och knappen markeras som vald. Skriv knappens text i `Namn`, till exempel `Reg`.
 Knappen har ingen pil: pilen betyder att man går till en annan vy, som i menyn. Lägg
 panelknapparna i sidofältet under panelerna ([7.6](#76-placering-och-lagerordning)).
@@ -455,10 +371,31 @@ Panelknapp har inga PCD-variabler, så knappen **Find and Replace Template Group
 Koppla den med den handskrivna vägen i [5.2](#52-koppla-symbolen-till-objektet): **Find what**
 `A.MWSE.Namn.`, **Replace with** panelens grupp, till exempel `A.MWSE.VS01.Reg.`, **Replace All**.
 
-*Källa: Web Editor-manualen, del 14, Find and Replace Template Group button ("The button is
-disabled ... if the template does not use PCD variables"). Storlekarna: lästa ur mallfilerna.
-Att Panelknapp öppnar bara sin egen panel och att krysset stänger den: prövat mot en simulerad
-PCD 2026-10-23.*
+### 5.9 Indikator, Tryckknapp och Tidkanalknapp
+
+Tre små symboler för digitala signaler. Mallen är 80 × 80 px: bilden är 50 × 50 px mitt i en
+ruta på 60 × 60 px, med mitten 40 px in och 50 px ner, och namnet står ovanför
+([5.4](#54-namnetikett)). Koppla dem som andra symboler ([5.2](#52-koppla-symbolen-till-objektet)).
+
+- **Indikator** (kategori `MWSE\Symbol\Indikator`) visar en driftfelsövervakning, FBoxen Larm,
+  driftfel (`MWSE_DRIFTFEL2`): vila när driftsvaret är från (`StaUt` = 0), drift när det är till
+  (`StaUt` = 1) och fel med larmmärke när driftfelslarmet är aktivt (`LrmUt` = 1). Den har inget
+  klick och ingen faceplate; fördröjningen ställs i Driftfelsinställning
+  ([6.7](#67-fler-inställningsblock-och-statusblock)).
+- **Tryckknapp** (kategori `MWSE\Symbol\Knapp`) visar utsignalen från en Auto/Hand, digital
+  (`MWSE_AHdi`, `MWSE_AHdigS` eller `MWSE_AHdigS2`): aktiv när utsignalen är till (`ManV` = 1),
+  med handmärke när den är i Hand (`Man` = 1). Handmärket står till höger om bilden, utanför
+  valmarkeringen. Ett klick väljer symbolen och öppnar den Handpanel digital som är kopplad till
+  samma grupp; där ställs läge och utsignal. Symbolen skriver ingenting själv. Placera därför en
+  Handpanel digital per Tryckknapp i lagret `Paneler` och koppla den till samma grupp, som andra
+  faceplates ([6.2](#62-motorpanel), [6.5](#65-fler-faceplates)).
+- **Tidkanalknapp** (kategori `MWSE\Symbol\Tidkanal`) visar utsignalen från en Tidkanal, veckodag
+  (`MWSE_TKM`): aktiv när kanalen är till (`V_Ut` = 1). Den har inget klick och ingen faceplate;
+  tiderna ställs i Veckodagsinställning, kopplad till samma grupp
+  ([6.7](#67-fler-inställningsblock-och-statusblock)).
+
+Indikator och Tidkanalknapp har ingen klickyta och ingen markering, så raderna för `Knapp` och
+`Vald` i [5.3](#53-kontrollera-bytet) gäller inte dem.
 
 ## 6. Faceplates och inställningsblock
 
@@ -472,9 +409,6 @@ symbol eller Panelknapp. Alla faceplates är 250 × 350 px, så att de öppnas p
 
 Ett inställningsblock är alltid synligt ([6.6](#66-inställningsblock)).
 
-*Källa: prövat 2026-10-23: varje symbol öppnar bara sin egen panel, och dolda paneler tar inte
-emot klick.*
-
 ### 6.1 Lager för faceplates
 
 1. Skapa ett nytt lager med **Edit > Layer > New**, till exempel med namnet `Paneler`.
@@ -483,10 +417,7 @@ emot klick.*
 3. Lägg alla faceplates i det lagret. De kan ligga på samma plats, eftersom bara en i taget är
    synlig.
 
-Har vyn en Navigeringsmeny ska den ligga ovanför panelerna ([7.6](#76-placering-och-lagerordning)).
-
-*Källa: Web Editor 8-hjälpen, Menus, s. 2–3 (Edit > Layer); Windows, s. 5 (Layers Window); How
-To, s. 4–5 (How to use Layers).*
+Navigeringsmeny ligger i förgrundsvyn och därmed ovanför panelerna ([7.6](#76-placering-och-lagerordning)).
 
 ### 6.2 Motorpanel
 
@@ -517,11 +448,6 @@ grupper på fliken **Actions**.
 Taggraden står med avslutande punkt (`A.MWSE.VS01.P01.`) på alla faceplates, eftersom samma
 Find and Replace byter raden. Raden är bara text och påverkar inte funktionen.
 
-*Källa: MWSE FBox-hjälpen, sidan Motor, avsnitt "A-symboler" (Man: indikering handkörning, ManV:
-värde vid handkörning, DTtid, DTstarter, LD_Ut, LDT_Ut); Web Editor 8-hjälpen, Windows, s. 21
-(Actions Tab, åtkomstbegränsning). Att knapparna skriver bara objektets egna `Man` och `ManV`:
-prövat mot PCD 2026-10-23.*
-
 ### 6.3 Givarpanel
 
 `Givarpanel` (kategori `MWSE\Panel\Givare`) används för alla objekt på FBoxen Ingång, analog,
@@ -537,9 +463,6 @@ Panelen visar:
 
 Givarpanel **skriver ingenting** till PCD:n. Larmgränserna ändras i inställningsblocket
 `Givarinställning` ([6.6](#66-inställningsblock)).
-
-*Källa: MWSE FBox-hjälpen, sidan Ingång analog larm, avsnitt "A-symboler". Visningen av värde och
-larm: prövat mot PCD 2026-10-23.*
 
 ### 6.4 Ventilpanel
 
@@ -559,10 +482,6 @@ Panelen visar:
 Knapparna Hand och Auto och rutan Handvärde **skriver** till PCD:n, till `Man` och `ManV`.
 Åtkomst begränsas som för Motorpanel.
 
-*Källa: MWSE FBox-hjälpen, sidan Utgång analog, avsnitt "A-symboler" (Min och Max: lägsta och
-högsta värde vid skalering, Man, ManV, MV_Ut). Att Hand, Auto och Handvärde skriver bara
-objektets egna `Man` och `ManV`: prövat mot PCD 2026-10-23.*
-
 ### 6.5 Fler faceplates
 
 Placering och koppling som för Motorpanel ([6.2](#62-motorpanel)). Alla har taggrad, rubrik i
@@ -575,7 +494,7 @@ Placering och koppling som för Motorpanel ([6.2](#62-motorpanel)). Alla har tag
 | Regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Mätvärde (`ActVal`), Börvärde (`SetPt`), Utsignal (`YOut`), Läge Hand/Auto (`Mode`), Handvärde (`ManVal`), P-faktor (`PFac00`), I-tid (`IntTime`) | `Mode`, `ManVal`, `PFac00`, `IntTime` | 250 × 350 |
 | PID-regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Som Regulatorpanel, och D-tid (`DerTime`) | `Mode`, `ManVal`, `PFac00`, `IntTime`, `DerTime` | 250 × 350 |
 | P-regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Mätvärde, Börvärde och Utsignal som Regulatorpanel, Läge, Handvärde, P-faktor (`PFac`), Arbetspunkt (`PtIni`) | `Mode`, `ManVal`, `PFac`, `PtIni` | 250 × 350 |
-| Handpanel digital | `MWSE\Panel\Hand` | Panelknapp | Läge Hand/Auto (`Man`), Utsignal Till/Från (`ManV`) | `Man`, `ManV` | 250 × 350 |
+| Handpanel digital | `MWSE\Panel\Hand` | Tryckknapp, Panelknapp | Läge Hand/Auto (`Man`), Utsignal Till/Från (`ManV`) | `Man`, `ManV` | 250 × 350 |
 | Handpanel analog | `MWSE\Panel\Hand` | Panelknapp | Läge Hand/Auto (`Man`), Utsignal som inmatningsruta (`ManV`) | `Man`, `ManV` | 250 × 350 |
 | Digitalsignalpanel | `MWSE\Panel\Hand` | Panelknapp | Läge och Utsignal som Handpanel digital, Invertering, till- och frånslagsfördröjning med enhet | `Man`, `ManV`, `Invertering`, `StartF_tid`, `StartF_enhet`, `StoppF_tid`, `StoppF_enhet` | 250 × 350 |
 
@@ -588,11 +507,10 @@ Binda och använda:
   `A.MWSE.VS01.Reg.`.
 - **Börvärdet går inte att ändra i panelen.** `SetPt` är FBoxens ingång W, så panelen visar det
   bara. Ändra det där det kommer ifrån, till exempel i börvärdeskurvan
-  ([6.9](#69-kurvblock)) eller i det register som är kopplat till ingången W (slutsats ur
-  FBox-makrot: `SetPt EQU cons`, där `cons` är ingången W).
+  ([6.9](#69-kurvblock)) eller i det register som är kopplat till ingången W.
 - **Läge och Handvärde** fungerar som i Ventilpanel: handvärdet går att skriva i bara i Hand.
   Det är regulatorns handläge; ventilens eget handläge styrs fortfarande i Ventilpanel. FBoxen
-  återställer `Mode` till Auto vid omstart (slutsats ur FBox-makrot).
+  återställer `Mode` till Auto vid omstart.
 - **Inställningarna** är samma symboler som i inställningsblocket och har samma format;
   P-faktorn `PFac00` har två decimaler ([4.4](#44-format-på-pcd-variabler)). Offset och PID:ns
   filtertid finns bara i inställningsblocket ([6.6](#66-inställningsblock),
@@ -600,33 +518,13 @@ Binda och använda:
 - **Handpanel digital och analog** gäller alla tre varianterna av Auto/Hand, digital
   (`MWSE_AHdi`, `MWSE_AHdigS`, `MWSE_AHdigS2`) respektive analog (`MWSE_AHan`, `MWSE_AHanaS`,
   `MWSE_AHanaS2`). I Auto kopierar FBoxen sin ingång till `ManV`, så rutan och knapparna visar
-  utsignalen i båda lägena (slutsats ur FBox-makrot). Utsignalen går att ändra bara i Hand; i
-  Auto är den ritad som inaktiv.
+  utsignalen i båda lägena. Utsignalen går att ändra bara i Hand; i Auto är den ritad som inaktiv.
 - **Trepunktsventilpanel** skriver ingenting: FBoxen har inget handläge. Ge inte en Utgång,
   analog och en Beräknat ärvärde samma FBox-namn; då öppnas Ventilpanel och Trepunktsventilpanel
-  samtidigt.
+  samtidigt. Ge varje FBox ett eget namn.
 - Enheten i Digitalsignalpanels listor är s, min eller h (sekunder, minuter, timmar).
 
-**Prövat mot PCD 2026-10-25:** Regulatorpanel på labbets PI-regulator `VS01.Reg`, i den tidigare
-utformningen med bara utsignal, Läge och Handvärde. Värdena visades med rätt decimaler, och
-skrivningarna nådde bara regulatorns egna symboler. De tre regulatorpanelerna i nuvarande
-utformning är prövade mot en simulerad PCD 2026-10-26: varje skrivning nådde bara sin egen symbol,
-och P-faktorn 1,25 skrevs som 125.
-
-> **Ännu inte verifierat** på PCD: Spjällpanel, Trepunktsventilpanel, Handpanel digital och
-> analog, Digitalsignalpanel och regulatorpanelerna i nuvarande utformning. Labbprogrammet har ingen Spjällstyrning, Beräknat ärvärde,
-> Auto/Hand- eller Digital signal-FBox; de är prövade bara mot en simulerad PCD. Om PG5 alls
-> tillåter samma FBox-namn på en Utgång, analog och en Beräknat ärvärde är inte heller prövat.
-> Tills vidare: ge varje FBox ett eget namn, och prova knapparna i en anläggning som inte är i
-> drift.
-
-*Källa: MWSE FBox-hjälpen, sidorna Spjällstyrning (Part 15–16), Beräknat ärvärde, öka/minska
-(Part 02), Auto/Hand, analog, analog 2, analog S, digital, digital 2 och digital S (Part 01–02)
-och Digital signal (Part 10), avsnitt "A-symboler". Regulator PI, PID och P (Part 15): hjälpen
-listar inte A-symbolerna; namnen och beteendet i Auto och Hand är lästa ur FBox-makrona i
-`MWSEFamilyAllmant.lib`; att `SetPt` är ingången W: makrot `MWSE_hea_reg_pid` (`SetPt EQU cons`).
-Visningen och vad knapparna skriver: prövat mot en simulerad PCD 2026-10-23 och, för
-regulatorpanelerna, 2026-10-26; för Regulatorpanel mot PCD 2026-10-25.*
+Prova panelernas knappar i en anläggning som inte är i drift.
 
 ### 6.6 Inställningsblock
 
@@ -649,15 +547,7 @@ direkt till PCD:n. Listorna
 för enhet har valen Sekunder, Minuter och Timmar. Knappen Återställ nollställer drifttimmar och
 starter. Kurvblocken, också Kurvinställning för Börvärdeskurva 5, står i
 [6.9](#69-kurvblock). Kontrollera formaten enligt [4.4](#44-format-på-pcd-variabler) innan du låter någon skriva i
-blocken. Regulatorinställningens P-faktor visas tio gånger den verkliga förstärkningen i % per K
-([4.4](#44-format-på-pcd-variabler)).
-
-*Källa: MWSE FBox-hjälpen, avsnitt "A-symboler" på sidorna Ingång analog larm, Motor (DTreset:
-reset av drifttimmar och starter), Larm regleravvikelse och Pumpstart. Regulator PI: hjälpen listar inte
-A-symbolerna; namnen är lästa ur FBox-makrot i `MWSEFamilyAllmant.lib` (`MWSE_V25_10_003`) och
-prövade. Att blocken visar PCD:ns värden med rätt decimaler: prövat mot PCD 2026-10-23. Att varje
-block skriver bara till sin egen grupp: prövat mot en simulerad PCD 2026-10-23, och för
-Regulatorinställning mot PCD 2026-10-25.*
+blocken.
 
 ### 6.7 Fler inställningsblock och statusblock
 
@@ -680,33 +570,25 @@ eller trycka på skriver direkt till PCD:n. Signalerna står i
   `BPX1`, `BPX2`, `BPY1` och `BPY2` på fyra register i ordningen X1, Y1, X2, Y2. `BPX2` håller
   alltså Y1 och `BPY1` håller X2. Etiketten *Skalning, utvärde min (Y1)* är därför bunden till
   `BPX2`, och *Skalning, invärde max (X2)* till `BPY1`. Byt inte bindningarna. Det gäller både
-  Givarskalnings- och Ventilskalningsinställning. Läst ur FBox-makrona, deras inställningstexter
-  och labbprogrammets länkkarta; prövat mot PCD 2026-10-25 på ventilen SV21.
+  Givarskalnings- och Ventilskalningsinställning.
 - **Givarhandinställning** handstyr givarens värde: i Hand är `MV_Ut` handvärdet, inte
   mätvärdet. Placera blocket bara där någon ska få göra det.
-
-*Källa: MWSE FBox-hjälpen, sidorna Motor (Part 14), Ingång, analog, larm (Part 11), Utgång,
-analog (Part 21), Beräknat ärvärde, öka/minska (Part 02) och Spjällstyrning (Part 16), avsnitt
-"A-symboler" och "Inställningsparametrar". Storlekarna: lästa ur mallfilerna.*
 
 **Tidkanaler**
 
 | Mall | FBox | Innehåll | Storlek (px) |
 |---|---|---|---|
 | Veckoschemainställning | Tidkanal m. referens (`MWSE_TKref`) eller m. ingångar (`MWSE_TKing`) | Till och Från för måndag–söndag, dag före helg och helgdag | 640 × 330 |
-| Veckodagsinställning | Tidkanal, veckodag (`MWSE_TKM`) | Dag, Tid till, Tid från | 310 × 200 |
-| Veckopulsinställning | Veckopuls (`MWSE_Vpuls`) | Dag, Tid till, Pulslängd, Enhet | 310 × 200 |
+| Veckodagsinställning | Tidkanal, veckodag (`MWSE_TKM`) | Dag, Tid till, Tid från; Utsignal Till/Från | 310 × 250 |
+| Veckopulsinställning | Veckopuls (`MWSE_Vpuls`) | Dag, Tid till, Pulslängd; Enhet visas | 310 × 200 |
 
-- Tiderna skrivs som TT:MM, till exempel 07:30. Formatet `HH:MM` är en slutsats
-  ([4.4](#44-format-på-pcd-variabler)).
+- Tiderna skrivs som TT:MM, till exempel 07:30 ([4.4](#44-format-på-pcd-variabler)).
 - Veckodagsinställningens Dag har valen måndag–söndag och Permanent från. Permanent stänger av
-  tidkanalen.
-- Veckopulsinställningens Dag har valen måndag–söndag och Alla dagar; Enhet har 1/10 sekunder,
-  Sekunder, Minuter och Timmar. Texten *1/10 sekunder* går ända fram till listans pil.
-
-*Källa: MWSE FBox-hjälpen, sidorna Tidkanal m. referens och Tidkanal m. ingångar (Part 17–18),
-Tidkanal, veckodag (Part 20; hjälpen listar inga A-symboler, namnen är lästa ur FBox-makrot) och
-Veckopuls (Part 21).*
+  tidkanalen. Raden Utsignal visar kanalens utsignal (`V_Ut`), Till eller Från, och går inte att
+  ändra. Samma utsignal visar Tidkanalknapp ([5.9](#59-indikator-tryckknapp-och-tidkanalknapp)).
+- Veckopulsinställningens Dag har valen måndag–söndag och Alla dagar. Enhet visar pulslängdens
+  enhet, 1/10 sekunder, Sekunder, Minuter eller Timmar, och går inte att ändra i blocket: den
+  ställs i FBoxens inställningar i Fupla och gäller när programmet byggs.
 
 **Larm**
 
@@ -718,14 +600,10 @@ Veckopuls (Part 21).*
 | Drifttidsinställning | Larm, drifttid (`MWSE_heaCtW2`) | Larmgräns för drifttid; visar drifttimmar och antal starter; knappen Återställ | 310 × 250 |
 
 - Driftfelets larmvärde (`LarmVal`) är en inställning på FBoxen när programmet byggs, inte ett
-  värde i PCD:n, och finns inte i blocket (slutsats ur FBox-makrot).
+  värde i PCD:n, och finns inte i blocket.
 - Drifttidsinställningens Återställ skriver till `ResetDT`. Hjälpen kallar signalen `Reset`, men
-  FBox-makrot publicerar `ResetDT`.
+  FBoxen publicerar `ResetDT`.
 - FBoxarnas larmutgångar visas inte i blocken.
-
-*Källa: MWSE FBox-hjälpen, sidorna Larm, driftfel (Part 11) och Larm, drifttid, Larm HögLåg och
-Larm, frysvakt (Part 12), avsnitt "A-symboler". `ResetDT` och `LarmVal`: lästa ur FBox-makrona i
-`MWSEFamilyAllmant.lib`.*
 
 **Regulatorer**
 
@@ -734,19 +612,11 @@ Larm, frysvakt (Part 12), avsnitt "A-symboler". `ResetDT` och `LarmVal`: lästa 
 | PID-regulatorinställning | Regulator PID (`MWSE_heaPID3`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac00`), I-tid, D-tid, filtertid, offset | 310 × 450 |
 | P-regulatorinställning | Regulator P (`MWSE_heaPP2`) | Mätvärde, börvärde, utsignal | P-faktor (`PFac`), arbetspunkt (`PtIni`) | 310 × 360 |
 
-Hjälpen listar inte regulatorernas A-symboler; namnen är lästa ur FBox-makrot. Faceplates med
-Auto/Hand och inställningarna: Regulatorpanel, PID-regulatorpanel och P-regulatorpanel
-([6.5](#65-fler-faceplates)).
+Faceplates med Auto/Hand och inställningarna: Regulatorpanel, PID-regulatorpanel och
+P-regulatorpanel ([6.5](#65-fler-faceplates)).
 
 - **Koppla PID-regulatorinställning bara till en Regulator PID.** På en PI-regulator visar D-tid
-  och filtertid (`DerTime`, `FT1Time`) `null`, eftersom PI-regulatorn inte har dem. Prövat mot
-  PCD 2026-10-25.
-- P-faktorn visas tio gånger den verkliga förstärkningen i % per K, i båda blocken
-  ([4.4](#44-format-på-pcd-variabler)).
-
-*Källa: MWSE FBox-hjälpen, sidorna Regulator PID och Regulator P (Part 15), versionshistoriken
-(A-symboler skapas bara när FBoxen har ett namn); signalerna ur `MWSE_hea_reg_pid` i
-`MWSEFamilyAllmant.lib`.*
+  och filtertid (`DerTime`, `FT1Time`) `null`, eftersom PI-regulatorn inte har dem.
 
 **Status för handstyrning**
 
@@ -761,20 +631,31 @@ Auto/Hand och inställningarna: Regulatorpanel, PID-regulatorpanel och P-regulat
 - I Handstatus jämför FBoxen ingången S med registervärdena; Läge visar Hand när utsignalen är
   handstyrd.
 
-*Källa: MWSE FBox-hjälpen, sidorna Auto/Hand MNG, Analog AHstyrn via R och Digital AHstyrn via R
-(Part 01–02), avsnitt "Sammanfattning" och "A-symboler". Att FBoxen nollställer `TillAuto`: läst
-ur FBox-makrot.*
+**Medelvärde och verkningsgrad**
 
-**Prövat mot PCD 2026-10-25** på labbets FBoxar: Givarskalningsinställning (GT11, GT41),
-Givarhandinställning (GT11, GT31), Ventilskalningsinställning (SV21), Motorfördröjningsinställning
-(P01) och P-regulatorinställning (`VS01.Reg`). Alla värden visades med rätt decimaler, och varje
-skrivning nådde bara sin egen symbol.
+Båda kräver MWSE FBox-biblioteket V25.10.003 eller senare ([avsnitt 2](#2-förutsättningar-i-pg5-programmet)).
 
-> **Ännu inte verifierat** på PCD: övriga block i det här avsnittet. Labbprogrammet har ingen
-> Beräknat ärvärde, Spjällstyrning, Regulator PID, tidkanal,
-> larm-FBox eller Auto/Hand-FBox; blocken är prövade bara mot en simulerad PCD 2026-10-23. Tills
-> vidare: kontrollera efter nedladdning att blocket visar FBoxens värden och att ett ändrat värde
-> läses tillbaka rätt ([4.4](#44-format-på-pcd-variabler)).
+| Mall | Kategori | FBox | Innehåll | Storlek (px) |
+|---|---|---|---|---|
+| Medelvärdesinställning | `MWSE\Inställning\Medelvärde` | Justerat Medel (`MWSE_JUSTERAT_MEDEL`) eller Justerat Medel Array (`MWSE_JUSTERAT_MEDEL_ARRAY`) | Högvärde, Lågvärde, Utvärde vid fel | 310 × 270 |
+| Verkningsgradsstatus | `MWSE\Inställning\Värmeväxlare` | Verkningsgrad V2 (`MWSE_VGRAD1_V2`) | Varför larm inte kan genereras; aktuell verkningsgrad (%) | 440 × 190 |
+
+- **Medelvärdesinställning** gäller båda FBoxarna, som har samma signaler. **Högvärde** är hur
+  många av de högsta värdena som tas bort innan medelvärdet räknas, **Lågvärde** hur många av de
+  lägsta. **Utvärde vid fel** är det värde FBoxen ger ut vid fel, när den är inställd att ge
+  utvärdet vid fel; det valet görs på FBoxen i Fupla och finns inte i blocket. Alla tre är heltal.
+- **Verkningsgradsstatus** skriver ingenting. Raden *Larm kan inte genereras pga:* visar FBoxens
+  status som text: *Larm kan genereras* när inget blockerar larmet, annars orsaken med FBoxens
+  egna texter, till exempel `RVVX < Larmblockering, VVX`, `UteT > Gräns utetemp start` eller
+  `Valfel`, ensamma eller kombinerade. En okänd statuskod visas som *Okänd status*. Under den står
+  aktuell verkningsgrad i procent med en decimal (`PV_Utx`), oavsett larmstatus.
+- **Koppla Verkningsgradsstatus till verkningsgrads-FBoxens eget namn**, till exempel
+  `A.MWSE.LB01.VVX1.VG.` för FBoxen `LB01.VVX1.VG`, inte till motorns grupp. Blocket kan ligga
+  bredvid en Roterande värmeväxlare ([5.7](#57-roterande-värmeväxlare-två-grupper)), som också
+  fungerar med Verkningsgrad V2: den har samma signaler `PV_Ut` och `LAL_Ut`.
+
+Kontrollera efter nedladdning att varje block visar FBoxens värden och att ett ändrat värde läses
+tillbaka rätt ([4.4](#44-format-på-pcd-variabler)).
 
 ### 6.8 Rekommenderat: avmarkera när vyn lämnas
 
@@ -790,9 +671,6 @@ tillbaka till vyn. Töm variabeln när vyn lämnas och när man klickar på tom 
 
 En vyhändelse behåller bara sin första instruktion i bygget ([7.3](#73-topplist-och-sidtitel)).
 Behöver vyn fler åtgärder i samma händelse, lägg dem i en funktion.
-
-*Källa: Web Editor 8-hjälpen, Windows, s. 7 (instruktionen Write) och s. 20–21 (Actions Tab).
-Händelsens och fältens namn i editorn: prövat 2026-10-23.*
 
 ### 6.9 Kurvblock
 
@@ -827,34 +705,23 @@ eller 4 punkter.
 
 **Grafen**
 
-- Grafen är lika stor i alla kurvblock, 250 × 240 px, och står till höger om tabellen.
-- Utetemperaturen går längs botten, fast från −30 till +20 °C. Framledningen går uppåt från Fram
-  min till Fram max. Etiketterna vid ändarna visar Fram min och Fram max, och etiketten i mitten
-  deras medelvärde, med en decimal.
+- Grafen är lika stor i alla kurvblock, 240 × 240 px, och står till höger om tabellen.
+- Utetemperaturen går längs botten, från kurvans kallaste punkt till vänster till dess varmaste
+  till höger. Framledningen går uppåt från Fram min till Fram max. På båda axlarna visar
+  etiketterna vid ändarna gränserna och etiketten i mitten deras medelvärde, med en decimal.
+  Axlarna följer värdena när de ändras.
 - Kurvan är heldragen med punkter; den sänkta kurvan är streckad.
-- **En punkt utanför axlarna döljs**, liksom kurvdelarna till och från den: ute under −30 eller
-  över +20 °C, fram under Fram min eller över Fram max.
-- **Är Fram max lika med eller lägre än Fram min ritas ingen kurva.** Bara rutnätet och
-  etiketterna syns tills gränserna är rätt.
+- **En punkt under Fram min eller över Fram max döljs**, liksom kurvdelarna till och från den.
+  Alla punkter får plats längs utetemperaturen.
+- **Är Fram max lika med eller lägre än Fram min, eller har alla punkter samma utetemperatur,
+  ritas ingen kurva.** Bara rutnätet och etiketterna syns tills värdena är rätt.
 - Grafen ritas om inom ungefär en sekund när ett värde ändras.
 - Grafen visar ingen aktuell driftpunkt. Kurv-FBoxarna publicerar inte sin ingång
   (utetemperaturen) eller utgång (börvärdet) som A-symboler.
-- Mittetiketten räknas fram i blocket och förutsätter att gränserna är positiva (slutsats).
+- Mittetiketten räknas fram i blocket och förutsätter att gränserna är positiva.
 
-**Prövat** 2026-10-26 i HTML5-visningen mot en simulerad PCD: alla 16 block visas, och i
-Kurvinställning 2 och 3 och med sänkning 5, 7 och 10 når varje skrivning bara sin egen symbol
-och grafen ritas om.
-
-> **Ännu inte verifierat:** mot PCD (version 2.0.0 är inte prövad på labbet), i TEQ och andra
-> visningar än HTML5, och placering och Find and Replace i editorn. Tills vidare: kontrollera
-> efter nedladdning att tabellen visar FBoxens värden och att kurvan står där tabellen säger.
-
-*Källa: MWSE FBox-hjälpen, sidorna Börvärdeskurva 5 (`BvK5.html`), Börvärdeskurva 2–10 och
-Börvärdesk. m. sänkning 2 och 5–10 (Part 03–09), avsnitten "Beskrivning" (fallande ordning) och
-"A-symboler"; att `MWSE_BvK5` också publicerar `YminV` och `YmaxV`: testprogrammets symbolfil.
-Grafen: Web Editor-manualen, Part 29 ("Event Box": On Refresh; "X/Y Offset" och "Width/Height
-Offset") och Part 09 (räkneinstruktionerna). Enheten: Part 13 ("PCD Variables Editor": Units visas
-efter värdet).*
+Kontrollera efter nedladdning att tabellen visar FBoxens värden och att kurvan står där tabellen
+säger.
 
 ## 7. Sidmallar
 
@@ -873,36 +740,23 @@ inloggning. De binder inte under `A.MWSE.Namn.`:
 
 Larmlista bygger på Saias Online Alarm List (generation 1), med MWSE:s färger och svenska texter.
 
-Larmlista, Larmsummering, Topplist och Navigeringsmeny är prövade mot PCD 2026-10-25; Inloggning
-bara mot en simulerad PCD. Vad som återstår står i varje avsnitt.
-
 ### 7.1 Koppla en sidmall
 
 **Larmlista och Larmsummering** binder under `Namn.`, som byts mot larm-FBoxens namn med punkt.
 Namnet ska ha **exakt samma stora och små bokstäver** som i PG5-programmet. Gör bytet för varje
-sidmall för sig när namnen skiljer sig åt. I labbprogrammet heter larm-FBoxen `Larmlista`, men
-antalssymbolen `LARMLISTA.antal`. Larmlista kopplas då till `Larmlista.` och Larmsummering till
+sidmall för sig när namnen skiljer sig åt. Heter larm-FBoxen till exempel `Larmlista` men
+antalssymbolen `LARMLISTA.antal`, kopplas Larmlista till `Larmlista.` och Larmsummering till
 `LARMLISTA.` ([7.2](#72-larmlista-och-larmsummering)).
 
 **Vyerna som sidmallarna öppnar** står som vynamn i instruktionen Open View (ShowView). Har
 projektet inte vyer med just de namnen, rikta om dem i fliken **Actions**: markera elementet,
-välj händelsen och ändra vynamnet.
+välj händelsen och ändra vynamnet. Skriv vynamnen exakt som i projektets vylista.
 
 | Mall | Element | Vynamn i mallen |
 |---|---|---|
 | Larmsummering | `Knapp` (MouseUp) | `Larm` |
 | Navigeringsmeny | raderna Översikt, Larm, Inställningar, Info, Inloggning, `Knapp` (MouseUp, funktionen `Navigera`) | `Start`, `Larm`, `Inställningar`, `Info`, `login` |
 | Topplist | `Logga ut` (MouseUp, funktionen `Logout`) | `login` |
-
-Bundna med exakt samma bokstäver fungerade båda på PCD:n: Larmlista mot `Larmlista` och
-Larmsummering mot `LARMLISTA.antal` (prövat 2026-10-25).
-
-> **Ännu inte verifierat:** om körningen misslyckas när bokstäverna skiljer sig, och att vynamnen
-> går att rikta om i editorns Actions som beskrivet. På PCD:n var vyerna riktade om av ett skript,
-> inte i editorn. Tills vidare: skriv namnen exakt som i PG5-programmet och i projektets vylista.
-
-*Källa: Web Editor-manualen, del 8, Function instructions: Open View ("Jumps to the specified
-view") och Jump Back. Namnen i labbprogrammet: lästa ur dess symbolfil och Fupla-sida.*
 
 ### 7.2 Larmlista och Larmsummering
 
@@ -914,8 +768,7 @@ plats under Topplist i en vy på 1020 × 600; placera den på (10, 60).
 
 1. Placera `Larmlista` i larmvyn, den vy som Larmsummering och menyn öppnar.
 2. Markera mallen, öppna fliken **Template** i Properties och sätt **Alarm List PPO Name** till
-   larmlistans symbol, till exempel `A.Alarm.Larmlista.MyName`. Det går också att byta
-   `A.Alarm.Namn.` mot `A.Alarm.Larmlista.` med **Replace All** i Cross-Reference.
+   larmlistans symbol, till exempel `A.Alarm.Larmlista.MyName`.
 3. Sätt **Alarm List Size** till **antalet larm i larmlistan plus 1** (mallen har 10). Har
    PCD:ns lista 10 larm, sätt 11. Den styr bara hur många texttaggar Web8 skapar: taggarna heter
    `_0` till `_<storlek−1>`, men listan hämtar texten för larm nummer 1 till N. Med storlek 10
@@ -925,11 +778,9 @@ plats under Topplist i en vy på 1020 × 600; placera den på (10, 60).
    gång, så skapas taggarna, till exempel `A.Alarm.Larmlista.MyName_1`. Skriv larmtexten för
    tagg 1 till N i CSV-filen; tagg `_0` används inte. Utan text visar listan taggen.
 
-   **Prövat** mot PCD:n 2026-10-26: med storlek 10 saknade larm 10 sin text, med 11 fanns den.
-
 **Fler larm än tio.** Larmlistan finns i PCD:n och skapas av FBoxen Alarm PCD init. Dess
 flaggfält (Flags, och Ack, Del och Text om de används) är fält i den lokala symboltabellen, och
-fältets storlek är det största antalet larm. Labbets larmlista har `F1001[10]`, alltså tio. För
+fältets storlek är det största antalet larm. Ett fält som `F1001[10]` rymmer alltså tio larm. För
 fler larm:
 
 1. Gör fälten större i PG5, alla lika stora, till exempel `[30]`.
@@ -937,11 +788,6 @@ fler larm:
    ett eget nummer (**Idx**) från 1 till fältets storlek.
 3. Sätt **Alarm List Size** i Web8 till fältets storlek plus 1, bygg och skriv texterna för de
    nya taggarna.
-
-*Källa: Alarming-FBoxarnas hjälp (`Alarming_en.chm`), sidorna Alarm PCD init ("The size of this
-array defines the max. number of alarms") och 10 alarms ("The first index number is 1, and the
-last is the Number of alarms entered into the Init FBox"); Web Editor 8-hjälpen, Library, Online
-Alarm List, steg 4 (CSV-taggarna `{Alarm-PPO-Name}_[0..N]`).*
 
 Kolumnerna heter ID, Larmtext, Kommande, Gående och Kvitt. Raderna är 38 px höga, så att en
 rad går att välja med fingret, och en lång larmtext bryts till två rader. Knapparna:
@@ -953,17 +799,15 @@ rad går att välja med fingret, och en lång larmtext bryts till två rader. Kn
   clear acceptance** på FBoxen Alarm PCD init till **Off** eller **Ack&Off**, så rensar knappen
   bara återgångna larm. Med **All** rensas även aktiva larm.
 
-  *Källa: Alarming-FBoxarnas hjälp, sidan Alarm PCD init (System clear acceptance, Remove alarms
-  automatically when); Web Editor 8-hjälpen, Library, Online Alarm List (Delete Alarm List).*
-
 Sorteringen är **Sort** = Active Time Sorted (egenskapen `SortMode` = 1): det larm som senast
 kom överst, efter Kommande-tiden. Aktiva larm sorteras inte före gångna; ett larm som kommer igen
 flyttas upp. Filtret är **Filter Default Value** = Active or NAK Alarms (egenskapen
 `FilterMode` = 3): listan visar bara aktiva larm och gångna larm som inte är kvitterade; normala
-larm syns inte. Sorteringen och filtret görs i PCD:n, inte i webbläsaren.
+larm syns inte. Sorteringen och filtret görs i PCD:n, inte i webbläsaren. Kontrollera efter
+nedladdning, med två larm, att det senaste står överst.
 
-**Prövat** mot PCD:n 2026-10-26.
-Mallen har inga knappar för filter, sortering eller kolumner, som labbets förenklade larmlista. Ska kolumnerna flyttas, gör det i egenskapen **Columns** på fliken **Template**.
+Mallen har inga knappar för filter, sortering eller kolumner. Ska kolumnerna flyttas, gör det i
+egenskapen **Columns** på fliken **Template**.
 
 En rad i taget kan väljas. Kvitt-kolumnen visar körningens egna `NAK` och `ACK`, och den valda
 raden ritas svart med vit text. Text i en rad står överst i raden. Allt detta kommer från Web8:s
@@ -974,33 +818,11 @@ larmfärg när det är större. Ett klick öppnar vyn `Larm`. Den läser symbole
 
 1. I Fupla: koppla larm-FBoxens antal (utgången Num) till ett register med symbolen
    `<grupp>.antal`, till exempel `LARMLISTA.antal`.
-2. Placera `Larmsummering` i varje vy, gärna i Topplist ([7.6](#76-placering-och-lagerordning)).
+2. Placera `Larmsummering` på Topplist i projektets förgrundsvy ([7.6](#76-placering-och-lagerordning)).
 3. Byt `Namn.antal` mot `<grupp>.antal`: med **Find and Replace Template Group** om dialogen
    erbjuder gruppen, annars **Find what** `Namn.antal`, **Replace with** `LARMLISTA.antal`,
    **Replace All**.
 4. Rikta om vyn `Larm` om larmvyn heter något annat ([7.1](#71-koppla-en-sidmall)).
-
-**Prövat mot PCD 2026-10-25** (förra utförandet, med filter och sortering som knappar): larm som
-löser ut och går tillbaka via ingångar visas och försvinner, `antal` följer (1, 2, 1) och larmens
-status ändras efter Kvittera vald och Kvittera alla. Larmsummering räknar på `LARMLISTA.antal`,
-visar larmläget över 0, och ett klick öppnar larmvyn. Det nya utförandet är prövat mot en
-simulerad PCD 2026-10-26: listan begär sorteringen 1, och kvittering, radering och bläddring
-fram och tillbaka fungerar.
-
-> **Ännu inte verifierat:** det nya utförandet på PCD:n, däribland att PCD:n sorterar det senaste
-> larmet överst och bläddrar i den ordningen; att Replace All i editorn når mallens egenskap
-> Alarm List PPO Name; och Larmsummerings läge vid 0 larm, som inte syntes på PCD:n eftersom ett
-> gammalt larm stod kvar. Tills vidare: sätt egenskapen direkt på fliken **Template** enligt steg
-> 2, och kontrollera ordningen med två larm efter nedladdning.
-
-*Källa: Web Editor-manualen, del 19, Online Alarm List: Configure The Template (Alarm List PPO
-Name, till exempel `A.Alarm.ThisAlarmList.MyName`; symbolen skapas av larm-FBoxen och får dess
-namn) och Configure Alarm Texts (CSV-taggen för varje larmtext har formen
-`{Alarm-PPO-Name}_[0..N]`; bygg först för att skapa taggarna); del 18, Defining the Alarm Texts.
-Sortering: del 19, Sort Mode ("Active Time Sorted: Show the newest alarm on top"); körningen
-skickar valet till PCD:n i larmförfrågan. Kolumnerna: del 19, Configure Table Columns.
-Utgången Num och `LARMLISTA.antal`: lästa ur labbprogrammet. `NAK`/`ACK` och den svarta raden:
-prövat mot PCD 2026-10-25.*
 
 ### 7.3 Topplist och sidtitel
 
@@ -1026,19 +848,7 @@ klocka och Logga ut. Längst till höger, från x = 920, finns plats för Larmsu
    samma händelse, till exempel också tömma `valdSymbol`, lägg alla i en funktion och låt
    händelsen anropa den.
 
-**Prövat mot PCD 2026-10-25:** klockan visar PCD:ns tid och datum (`03:07:50`, `25.10.26`), och
-Användare visar *Ej inloggad* när ingen är inloggad.
-
-> **Ännu inte verifierat:** om deklarationen ensam räcker för att skrivningen ska komma med, och
-> menyvägen i editorn. Tills vidare: deklarera `sidTitel` och kontrollera titeln i webbläsaren
-> efter bygget.
-
-*Källa: Web Editor-manualen, del 3, Internal Variables: `@CURRENT_PAGE` ("Name of the current
-TEQ view"); del 8, Function editor och Function instructions: Jump Back; del 29–30, Actions
-Properties: On View Open; del 33, Logout Button. Klockans symboler och format: lästa ur labbets
-GUI (top_bar.wev, `$variables.$dat`) och prövade mot PCD; ingen manual i källorna namnger dem.
-Att bygget tar bort skrivningen utan deklaration och behåller bara första instruktionen: prövat i ett testbygge
-2026-10-23.*
+Kontrollera titeln i webbläsaren efter bygget.
 
 ### 7.4 Navigeringsmeny
 
@@ -1049,15 +859,9 @@ tonar ned sidan. Ett klick på gardinen eller på krysset stänger menyn.
 Raderna är Översikt, Larm, Inställningar, Info och Inloggning. Varje rad öppnar sin vy och
 stänger menyn. Rikta om vyerna enligt [7.1](#71-koppla-en-sidmall).
 
-`visaMeny` delas mellan mallarna genom namnet, som `valdSymbol`. En vy har därför en meny.
-
-> **Ännu inte verifierat:** om `visaMeny` når båda mallarna när Topplist och Navigeringsmeny
-> ligger i en förgrundsvy (foreground view) som flera vyer delar. Tills vidare: placera dem i varje
-> vy.
-
-*Källa: Web Editor-manualen, del 1, Default foreground/background view; del 8, Function
-instructions: Open View. Att menyn öppnas och att en rad byter vy och stänger menyn: prövat mot
-PCD 2026-10-25.*
+`visaMeny` delas mellan mallarna genom namnet, som `valdSymbol`. Placera Topplist och
+Navigeringsmeny en gång, i projektets förgrundsvy, så finns de på alla vyer
+([7.6](#76-placering-och-lagerordning)).
 
 ### 7.5 Inloggning
 
@@ -1067,25 +871,27 @@ grupperna, och Web8 hoppar till användarens startsida. Mallen använder Saias s
 för inloggningen (bland annat `_NOINITSESSCO_18` och `_NOINITSESSCO_19`, och de som börjar på
 `?S_`). Använd dem inte till något annat.
 
-Ge **varje användare en startsida**. Mallen behåller labbets logik, som sätter felmarkeringen
-(`felInloggning`) även efter en lyckad inloggning. Utan startsida står rutan kvar med fälten
-markerade som fel.
+Ge **varje användare en startsida**. Mallen sätter felmarkeringen (`felInloggning`) även efter en
+lyckad inloggning. Utan startsida står rutan kvar med fälten markerade som fel.
 
-> **Ännu inte verifierat:** en riktig inloggning på PCD, rättigheterna, hoppet till startsidan och
-> felmarkeringen efter en lyckad inloggning. Ingen loggade in under provet på PCD:n. Tills vidare:
-> prova inloggningen med en testanvändare innan anläggningen tas i drift.
-
-*Källa: Web Editor-manualen, del 32, Login Dialog (användardatabasen, språk, de 16 grupperna,
-startsidan, sessionsvariablerna som ska vara reserverade); del 12, User access. `felInloggning`:
-läst ur labbets login.wev; prövat mot en simulerad PCD 2026-10-23.*
+Prova inloggningen med en testanvändare innan anläggningen tas i drift.
 
 ### 7.6 Placering och lagerordning
 
-En sida med alla sidmallar, för en vy på 1020 × 600 px:
+Det som är lika på alla sidor ligger i två egna vyer: en förgrundsvy (foreground view) och en
+bakgrundsvy (background view). Gör förgrundsvyn till projektets standard under **Project
+Options**. Nya vyer har egenskaperna för förgrunds- och bakgrundsvy satt till **Project Default**
+och får då förgrundsvyn utan att du lägger något i dem. En vy som inte ska ha listen, som
+inloggningsvyn, får ingen förgrundsvy. Förgrundsvyn ritas efter vyn och ligger därför ovanpå
+vyns faceplates.
 
-1. **Topplist** överst i vyn, på (0, 0).
-2. **Larmsummering** på (920, 0) relativt topplisten, i samma lager och **efter** Topplist, så att
-   den ritas ovanpå.
+För vyer på 1020 × 600 px:
+
+1. I förgrundsvyn: **Topplist** på (0, 0), sedan **Larmsummering** på (920, 0), **efter**
+   Topplist så att den ritas ovanpå, och sist **Navigeringsmeny** på (0, 50), direkt under
+   topplisten. Menyn och gardinen räcker till nederkanten av en vy som är upp till 1080 px hög.
+   I en lägre vy går de utanför vyn i editorn, men i körningen skärs de av vid vyns kant.
+2. I bakgrundsvyn: det som ska ligga under allt på sidan, till exempel en bakgrundsbild.
 3. **Sidofält** på (770, 50), i ett lager under `Paneler`, på varje vy som har faceplates eller
    panelknappar. Vyer utan dem, som larmvyn, använder hela bredden. I sidofältet öppnas alla
    faceplates överst, på (770, 50) i lagret `Paneler`
@@ -1094,11 +900,7 @@ En sida med alla sidmallar, för en vy på 1020 × 600 px:
    i sidofältet.
 4. Vyns symboler och inställningsblock under topplisten och till vänster om sidofältet, x under
    770.
-5. **Navigeringsmeny** på (0, 50), direkt under topplisten, och **sist**: efter alla faceplates i
-   det översta lagret, eller i ett eget lager överst. Annars ritas en öppen faceplate ovanpå menyns
-   gardin. Menyn och gardinen räcker till nederkanten av en vy som är upp till 1080 px hög. I en
-   lägre vy går de utanför vyn i editorn, men i körningen skärs de av vid vyns kant.
-6. **Larmlista** i larmvyn. I inloggningsvyn: **Bakgrund** på (0, 0) först och **Inloggning**
+5. **Larmlista** i larmvyn. I inloggningsvyn: **Bakgrund** på (0, 0) först och **Inloggning**
    ovanpå den.
 
 Låt knapparnas utseende säga vad de gör, på alla vyer:
@@ -1107,11 +909,6 @@ Låt knapparnas utseende säga vad de gör, på alla vyer:
 - **Öppnar en faceplate:** Panelknapp, utan pil, i sidofältet.
 - **Byter mellan undersidor på samma sida**, till exempel inställningssidor: flikar i en rad
   överst, utan pil, där fliken för den sida som visas är markerad som vald.
-
-*Källa: Web Editor-manualen, del 7, Document Outline Window (det översta elementet i översikten
-är överst i körningen) och Layer Window. Platserna: lästa ur mallfilerna. Att en faceplate annars
-ritas ovanpå gardinen: prövat mot en simulerad PCD 2026-10-23. Att menyn skärs av vid vyns kant:
-prövat mot en simulerad PCD 2026-10-26.*
 
 ## 8. Bygga och ladda ned
 
@@ -1130,10 +927,6 @@ prövat mot en simulerad PCD 2026-10-26.*
 
 Var försiktig med nedladdningsvalet **Delete files in destination not belonging to project**:
 det tar bort alla filer på målet som inte hör till projektet.
-
-*Källa: Web Editor 8-hjälpen, Dialog Boxes, s. 14 (Build Options, Build Platform), s. 20–21
-(Up/Download Targets, Download Options); Menus, s. 5 (Build, Run); How To, s. 9 (Build the
-Project, How to download the Project); Variable Editors, s. 3 (färgerna i PCD Variables Editor).*
 
 ## 9. Exempel: pump, ventil och givare
 
@@ -1233,6 +1026,9 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Integrerad Givare | `MWSE\Symbol\Givare` | Ingång, analog, larm ³ | `MV_Ut`, `LG_Ut`, `LL_Ut`, `HL_Ut`, `Man` | 2.1.0 |
 | Roterande värmeväxlare | `MWSE\Symbol\Värmeväxlare` | Motor och, under `VG.`, Verkningsgrad (`MWSE_VGRAD1`) | `R_Ut`, `LD_Ut`, `LDT_Ut`, `Man`, `VG.PV_Ut`, `VG.LAL_Ut` | 1.1.0 |
 | Panelknapp | `MWSE\Symbol\Knapp` | – (gruppen för panelen den öppnar) | – | 1.1.0 |
+| Indikator | `MWSE\Symbol\Indikator` | Larm, driftfel (`MWSE_DRIFTFEL2`) | `StaUt`, `LrmUt` | 1.0.0 |
+| Tryckknapp | `MWSE\Symbol\Knapp` | Auto/Hand, digital (`MWSE_AHdi`, `MWSE_AHdigS`, `MWSE_AHdigS2`) | `ManV`, `Man` | 1.0.0 |
+| Tidkanalknapp | `MWSE\Symbol\Tidkanal` | Tidkanal, veckodag (`MWSE_TKM`) | `V_Ut` | 1.0.0 |
 | Värmebatteri, Kylbatteri, Kombibatteri, Filter, Radiator, Värmetank, Krets, Krets med bypass, Krets med backventil, Tank, Liten tank, Värmeväxlare X, Värmeväxlare V, Plattvärmeväxlare | `MWSE\Symbol\Statisk` | – | – | 1.1.0 (kretsarna), 1.0.1 (batterierna, Radiator, tankarna), 1.0.0 (Filter, växlarna) |
 
 **Faceplates**
@@ -1267,13 +1063,13 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Regulatorinställning | `MWSE\Inställning\Regulator` | Regulator PI (`MWSE_heaPI3`) | `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `Offset` | 1.1.0 |
 | PID-regulatorinställning | `MWSE\Inställning\Regulator` | Regulator PID (`MWSE_heaPID3`) | `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `DerTime`, `FT1Time`, `Offset` | 1.1.0 |
 | P-regulatorinställning | `MWSE\Inställning\Regulator` | Regulator P (`MWSE_heaPP2`) | `ActVal`, `SetPt`, `YOut`, `PFac`, `PtIni` | 1.1.0 |
-| Kurvinställning | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva 5 (`MWSE_BvK5`) | `BPX1`–`BPX5`, `BPY1`–`BPY5`, `YminV`, `YmaxV` | 2.1.0 |
-| Kurvinställning 2, 3, 4, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva *n* (`MWSE_BvK<n>`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `YminV`, `YmaxV` | 2.1.0 |
-| Kurvinställning med sänkning 2, 5, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdesk. m. sänkning *n* (`MWSE_BvK<n>s`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `BPY1n`–`BPY<n>n`, `YminV`, `YmaxV` | 2.1.0 |
+| Kurvinställning | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva 5 (`MWSE_BvK5`) | `BPX1`–`BPX5`, `BPY1`–`BPY5`, `YminV`, `YmaxV` | 2.2.0 |
+| Kurvinställning 2, 3, 4, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdeskurva *n* (`MWSE_BvK<n>`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `YminV`, `YmaxV` | 2.2.0 |
+| Kurvinställning med sänkning 2, 5, 6, 7, 8, 9, 10 | `MWSE\Inställning\Börvärdeskurva` | Börvärdesk. m. sänkning *n* (`MWSE_BvK<n>s`) | `BPX1`–`BPX<n>`, `BPY1`–`BPY<n>`, `BPY1n`–`BPY<n>n`, `YminV`, `YmaxV` | 2.2.0 |
 | Pumpstartinställning | `MWSE\Inställning\Pumpstart` | Pumpstart (`MWSE_Pumpst`) | `StartGrD`, `StartGr`, `StartF_tid`, `StartF_enhet`, `StoppGr`, `StoppF_tid`, `StoppF_enhet` | 1.1.0 |
 | Veckoschemainställning | `MWSE\Inställning\Tidkanal` | Tidkanal m. referens eller m. ingångar (`MWSE_TKref`, `MWSE_TKing`) | `månTill`, `månFrån`, `tisTill`, `tisFrån`, `onsTill`, `onsFrån`, `torsTill`, `torsFrån`, `freTill`, `freFrån`, `lörTill`, `lörFrån`, `sönTill`, `sönFrån`, `dfhTill`, `dfhFrån`, `hdTill`, `hdFrån` | 1.1.0 |
-| Veckodagsinställning | `MWSE\Inställning\Tidkanal` | Tidkanal, veckodag (`MWSE_TKM`) | `Dag`, `TidT`, `TidF` | 1.1.0 |
-| Veckopulsinställning | `MWSE\Inställning\Tidkanal` | Veckopuls (`MWSE_Vpuls`) | `Dag`, `TidTill`, `Pulslängd`, `Tidsenhet` | 1.1.0 |
+| Veckodagsinställning | `MWSE\Inställning\Tidkanal` | Tidkanal, veckodag (`MWSE_TKM`) | `Dag`, `TidT`, `TidF`, `V_Ut` | 1.2.0 |
+| Veckopulsinställning | `MWSE\Inställning\Tidkanal` | Veckopuls (`MWSE_Vpuls`) | `Dag`, `TidTill`, `Pulslängd`, `Tidsenhet` | 1.2.0 |
 | Frysvaktsinställning | `MWSE\Inställning\Larm` | Larm, frysvakt (`MWSE_LFrV`) | `LGr`, `HGr`, `LarmF`, `Enhet` | 1.1.0 |
 | Hög-låglarminställning | `MWSE\Inställning\Larm` | Larm HögLåg (`MWSE_RHL`) | `LarmGrL`, `LarmGrH`, `TidsF`, `Enhet` | 1.1.0 |
 | Driftfelsinställning | `MWSE\Inställning\Larm` | Larm, driftfel (`MWSE_DRIFTFEL2`) | `LarmF` | 1.1.0 |
@@ -1281,6 +1077,8 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Handsummering | `MWSE\Inställning\Status` | Auto/Hand MNG (`MWSE_AH_MNG`) | `AntalHand`, `TillAuto` | 1.1.0 |
 | Handstatus analog | `MWSE\Inställning\Status` | Auto/Hand, analog via R (`MWSE_MwStatI_`) | `Man_Ut`, `V_Ut`, `RegisterV1`, `RegisterV2` | 1.1.0 |
 | Handstatus digital | `MWSE\Inställning\Status` | Auto/Hand, digital via R (`MWSE_StatB`) | `ManUt`, `V_Ut`, `RegisterV1`, `RegisterV2`, `RegisterV3` | 1.1.0 |
+| Medelvärdesinställning | `MWSE\Inställning\Medelvärde` | Justerat Medel (`MWSE_JUSTERAT_MEDEL`), Justerat Medel Array (`MWSE_JUSTERAT_MEDEL_ARRAY`) | `Högvärde`, `Lågvärde`, `Utvärde` | 1.0.0 |
+| Verkningsgradsstatus | `MWSE\Inställning\Värmeväxlare` | Verkningsgrad V2 (`MWSE_VGRAD1_V2`) | `StatusText`, `PV_Utx` | 1.0.0 |
 
 **Sidmallar**
 
@@ -1290,16 +1088,14 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Larmsummering | `MWSE\Sida\Larm` | `Namn.antal` | 1.1.0 |
 | Topplist | `MWSE\Sida\Navigering` | `S.HVC.Clock.HHMMSS`, `S.HVC.Clock.YYYYMMDD`; interna `visaMeny`, `sidTitel`; Web8:s inloggningsvariabler | 1.1.0 |
 | Navigeringsmeny | `MWSE\Sida\Navigering` | intern `visaMeny` | 1.1.0 |
+| Sidofält | `MWSE\Sida\Sidofält` | – | 1.1.0 |
 | Inloggning | `MWSE\Sida\Inloggning` | projektets användardatabas och Web8:s inloggningsvariabler | 1.1.0 |
+| Bakgrund | `MWSE\Sida\Inloggning` | – | 1.0.0 |
 
-Alla symboler, Panelknapp och faceplates använder dessutom den interna variabeln `valdSymbol`;
-symbolerna och de statiska symbolerna även `doljNamn`.
+Alla symboler utom Indikator och Tidkanalknapp, Panelknapp och faceplates använder dessutom den
+interna variabeln `valdSymbol`; symbolerna och de statiska symbolerna även `doljNamn`.
 
-**Hur säker kopplingen till FBoxen är.** Varje malls signaler finns på FBoxens sida i
-MWSE-hjälpen, utom för regulatorerna, Tidkanal veckodag och Verkningsgrad, vars signaler är lästa
-ur FBox-makrona. De första 21 mallarna är prövade mot PCD, och Pump, Tvåvägsventil, Givare,
-Utegivare, de tre första faceplates och de sex första inställningsblocken är dessutom
-kontrollerade mot ett Fupla-program som använder FBoxarna. För de markerade mallarna gäller:
+**Att välja FBox.** För de markerade mallarna gäller:
 
 1. **Kompressor och Brandspjäll:** MWSE har ingen egen FBox för kompressor eller brandspjäll.
    Motor och Spjällstyrning är de som passar bäst, och mallarna fungerar när objektet styrs med
@@ -1309,52 +1105,18 @@ kontrollerade mot ett Fupla-program som använder FBoxarna. För de markerade ma
 2. **Trevägsventil:** passar ett ställdon 0–10 V som styrs med Utgång, analog. Ett
    trelägesställdon (öka/minska) styrs med FBoxen Beräknat ärvärde, öka/minska; använd då
    `Trepunktsventil`.
-3. **Differensgivare och Integrerad Givare:** sannolikt rätt, eftersom de är givare på Ingång,
-   analog, larm som Givare, men inte kontrollerade mot ett program som använder dem. Kontrollera
-   efter bygget att PCD Variables Editor inte visar några röda rader för dem.
+3. **Differensgivare och Integrerad Givare:** givare på Ingång, analog, larm, som Givare.
 
-De 60 mallar som kom till 2026-10-23 efter de första 21 är prövade mot en simulerad PCD och i ett
-testbygge utan fel. Mot PCD 2026-10-25 är de prövade som har en FBox i labbprogrammet:
-Givarskalnings-, Givarhand-, Ventilskalnings- och Motorfördröjningsinställning, Regulatorpanel
-(i den tidigare utformningen),
-P-regulatorinställning, Larmlista, Larmsummering, Topplist och Navigeringsmeny. **Ännu inte
-verifierat:** de övriga mot PCD, eftersom labbprogrammet saknar deras FBoxar. Kontrollera för dem
-efter bygget att PCD Variables Editor inte visar några röda rader. Kurvinställning är sedan
-version 2.0.0 ett kurvblock och prövad bara mot en simulerad PCD ([6.9](#69-kurvblock)).
+Kontrollera efter bygget att PCD Variables Editor inte visar några röda rader för mallarnas
+signaler ([avsnitt 8](#8-bygga-och-ladda-ned)).
 
-*Källa: signalnamnen finns på sidorna Motor, Spjällstyrning, Utgång analog, Ingång analog larm,
-Larm regleravvikelse, Börvärdeskurva 5 och Pumpstart i MWSE FBox-hjälpen, avsnitt "A-symboler",
-och för de nya mallarna på de sidor som står i avsnitt 6.5–6.7; Beräknat ärvärde, öka/minska på
-sidan med samma namn. Kontrollen mot Fupla-programmet: prövat 2026-10-23. Kategorier, versioner
-och signaler är lästa ur mallfilerna.*
+## 11. Mer att läsa
 
-## 11. Källor
-
-**Web Editor 8-hjälpen.** Hjälpen som installeras med Saia PG5 (prövad version: PG5 2.3.196).
-Sidnumren avser hjälpens kapitel utskrivna som PDF: Data Sources, Dialog Boxes, How To,
-Introduction, Menus, Variable Editors och Windows.
-
-**Web Editor-manualen.** Saia PG5 Web Editor Manual, samma innehåll som hjälpen, i Malthe Winje
-Automation AB:s utgåva i 37 delar. Delnumren avser den utgåvan; avsnittsrubriken står med, så att
-avsnittet går att hitta i hjälpen.
-
-**MWSE FBox-hjälpen.** `MWSE.chm` ur biblioteket `MWSE_V25_10_003`, sidorna Motor
-(`Motor.html`), Ingång analog larm (`inAna.html`), Utgång analog (`utAna.html`), Spjällstyrning
-(`Spjall.html`), Larm regleravvikelse (`LarmRavv.html`), Regulator PI (`PI.html`),
-Börvärdeskurva 5 (`BvK5.html`), Pumpstart (`pumpstart.html`), Beräknat ärvärde, öka/minska
-(`barom.html`) och Verkningsgrad (`verkningsgrad.html`). Övriga sidor anges med namn och del i
-Malthe Winje Automation AB:s utgåva av hjälpen i 22 delar (MWSE FBox Library Documentation).
-
-**FBox-makrona.** `MWSEFamilyAllmant.lib` med inställningsfönstren i `MWSEFamilyAllmant.def` och
-`MWSEFamilyAllmant_en.idx`, ur `MWSE_V25_10_003`. Det som bara är läst där är markerat som
-slutsats.
-
-**Prövat.** Malthe Winje Automation AB:s egna tester, med PG5 2.3.196 och Web Editor 8, en
-PCD3.M5360 med COSinus 1.28.51 och MWSE FBox-biblioteket V20.6.001. Prov mot PCD gjordes
-2026-10-23 med de första 21 mallarna och 2026-10-25 med dem vars FBox labbprogrammet har. De
-övriga prövades 2026-10-26 mot PCD:n med ett testprogram som har en av varje MWSE-FBox som
-biblioteket använder ([avsnitt 10](#10-mallar-och-fbox-signaler)). De 16 kurvblocken i version
-2.0.0 är prövade 2026-10-26 bara mot en simulerad PCD ([6.9](#69-kurvblock)).
+- **Web Editor 8-hjälpen**, som installeras med Saia PG5: mallar och biblioteket, Cross-Reference,
+  PCD Variables Editor, Condition Editor, Actions, interna variabler, Online Alarm List, Login
+  Dialog och bygge och nedladdning.
+- **MWSE FBox-hjälpen**, som följer med MWSE FBox-biblioteket: varje FBox sida, med avsnitten
+  "Beskrivning" och "A-symboler".
 
 ## 12. Fel och förslag
 

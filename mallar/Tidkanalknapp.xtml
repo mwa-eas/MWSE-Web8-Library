@@ -1,0 +1,77 @@
+﻿<Template type="ViewElement" id="e9177d6a-d328-4313-82ac-c6a241da7f9a" version="1.0.0" name="Tidkanalknapp" description="" templateNameId="_1_0_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Symbol\Tidkanal" icon="icons.template.png">
+  <InitialLayout>
+    <OffsetX value="0" type="absolute" />
+    <OffsetY value="0" type="absolute" />
+  </InitialLayout>
+  <LocalVariables>
+    <LocalVariable name="doljNamn" value="0" />
+  </LocalVariables>
+  <RemoteVariables>
+    <RemoteVariable name="A.MWSE.Namn.V_Ut" />
+  </RemoteVariables>
+  <Resources>
+    <Resource name="Media/MWSE_TimerButton_Idle.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMTQiIHk9IjE0IiB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIGZpbGw9IiNFN0VCRjAiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjI1IiBjeT0iMjUiIHI9IjciIGZpbGw9IiNFN0VCRjAiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxsaW5lIHgxPSIyNSIgeTE9IjE4IiB4Mj0iMjUiIHkyPSIyNiIgc3Ryb2tlPSIjNjM2RTdDIiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjI0IiB5MT0iMjUiIHgyPSIzMiIgeTI9IjI1IiBzdHJva2U9IiM2MzZFN0MiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
+    <Resource name="Media/MWSE_TimerButton_Active.svg" source="96ed7492-fe0f-4a7d-875c-88b6add7f5d6" type="cf4f37e5-fc93-485a-bf14-fcfee03449e8" format="Base64" data="PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMTQiIHk9IjE0IiB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIGZpbGw9IiNFN0VCRjAiIHN0cm9rZT0iIzYzNkU3QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjI1IiBjeT0iMjUiIHI9IjciIGZpbGw9IiM5QkNGOUMiIHN0cm9rZT0iIzAwNzExQiIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxsaW5lIHgxPSIyNSIgeTE9IjE4IiB4Mj0iMjUiIHkyPSIyNiIgc3Ryb2tlPSIjMDA3MTFCIiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjI0IiB5MT0iMjUiIHgyPSIzMiIgeTI9IjI1IiBzdHJva2U9IiMwMDcxMUIiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" />
+  </Resources>
+  <Element id="7a694357-8671-44e4-9999-0437b09922e9" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Tidkanalknapp">
+    <Properties>
+      <Property name="Name" source="C" value="Tidkanalknapp" type="string" />
+    </Properties>
+    <Element id="60a19016-a2b2-4938-ae09-2cb1c9a2923c" type="a697ee1e-a0a6-4e22-a9e1-134a629a57f7" name="Symbol">
+      <Conditions>
+        <ConditionLogic id="7ea81198-1801-4b4a-a517-3d1bf0061c90" name="Till" operator="And">
+          <Condition leftType="PDP" leftContainer="e9177d6a-d328-4313-82ac-c6a241da7f9a" leftName="A.MWSE.Namn.V_Ut" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="7ea81198-1801-4b4a-a517-3d1bf0061c90" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Symbol" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="15" type="double" />
+        <Property name="Y" source="C" value="25" type="double" />
+        <Property name="Width" source="C" value="50" type="double" />
+        <Property name="Height" source="C" value="50" type="double" />
+        <Property name="ScaleMode" source="C" value="Original" type="ScaleMode" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Content" source="File" type="ResourceAddress">
+          <Address container="e9177d6a-d328-4313-82ac-c6a241da7f9a" name="Media/MWSE_TimerButton_Idle.svg" />
+        </Property>
+        <Property name="Content" source="File" condition="7ea81198-1801-4b4a-a517-3d1bf0061c90" type="ResourceAddress">
+          <Address container="e9177d6a-d328-4313-82ac-c6a241da7f9a" name="Media/MWSE_TimerButton_Active.svg" />
+        </Property>
+      </Properties>
+    </Element>
+    <Element id="9a570ad4-fa01-4565-af9f-b57fd608fbc5" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Namn">
+      <Conditions>
+        <ConditionLogic id="8ef1b668-ef0f-4af4-b062-0d2993e76988" name="Dold" operator="And">
+          <Condition leftType="Container" leftContainer="e9177d6a-d328-4313-82ac-c6a241da7f9a" leftName="doljNamn" operator="Equal" rightType="Constant" rightValue="1" />
+        </ConditionLogic>
+      </Conditions>
+      <Properties>
+        <ConditionPriority>
+          <Condition id="8ef1b668-ef0f-4af4-b062-0d2993e76988" />
+        </ConditionPriority>
+        <Property name="Name" source="C" value="Namn" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="C" value="Namn" type="string" />
+        <Property name="X" source="C" value="0" type="double" />
+        <Property name="Y" source="C" value="0" type="double" />
+        <Property name="Width" source="C" value="80" type="double" />
+        <Property name="Height" source="C" value="20" type="double" />
+        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
+        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
+        <Property name="FontColor" source="C" value="25 27 30" type="Color" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+        <Property name="Hidden" source="C" condition="8ef1b668-ef0f-4af4-b062-0d2993e76988" value="True" type="bool" />
+      </Properties>
+    </Element>
+  </Element>
+</Template>

@@ -4,6 +4,33 @@
 A-symbolerna i MWSE FBox-biblioteket. Rubriken anger paketets version. Varje mall har dessutom
 en egen version, som visas i Web8:s mallbibliotek.
 
+## 0.9.0-beta.3 (tidig åtkomst, 2026-11-02)
+
+Tredje förhandsversionen. Integratörsguiden är omskriven till en ren användarguide.
+
+Tre nya symboler, 80 × 80 px: bilden är 50 × 50 px mitt i en ruta på 60 × 60 px, med mitten
+40 px in och 50 px ner, och namnet ovanför.
+
+| Mall | Kategori i Web8 | Mallversion | Binds till |
+|---|---|---|---|
+| Indikator | `MWSE\Symbol\Indikator` | 1.0.0 | Driftfel (`MWSE_DRIFTFEL2`): grön när `StaUt` är 1, röd med larmmärke när `LrmUt` är 1; bara visning |
+| Tryckknapp | `MWSE\Symbol\Knapp` | 1.0.0 | Handstyrning digital (`MWSE_AHdi`, `MWSE_AHdigS`, `MWSE_AHdigS2`): grön när `ManV` är 1, handmärke när `Man` är 1; ett klick öppnar Handpanel digital på samma objekt |
+| Tidkanalknapp | `MWSE\Symbol\Tidkanal` | 1.0.0 | Tidkanal (`MWSE_TKM`): grön när `V_Ut` är 1; bara visning |
+
+Två nya inställningsblock för FBoxar som finns från MWSE V25.10.003. Båda binds under `A.MWSE.Namn.`.
+
+| Mall | Kategori i Web8 | Mallversion | Storlek | Binds till |
+|---|---|---|---|---|
+| Medelvärdesinställning | `MWSE\Inställning\Medelvärde` | 1.0.0 | 310 × 270 px | Justerat Medel (`MWSE_JUSTERAT_MEDEL`) och Justerat Medel Array (`MWSE_JUSTERAT_MEDEL_ARRAY`), samma namn: `Högvärde`, `Lågvärde`, `Utvärde` |
+| Verkningsgradsstatus | `MWSE\Inställning\Värmeväxlare` | 1.0.0 | 440 × 190 px | Verkningsgrad V2 (`MWSE_VGRAD1_V2`): `StatusText` som text, en text per kod 0–7 och "Okänd status" för övriga koder, samt `PV_Utx`; bara visning. Binds till verkningsgrads-FBoxens eget namn, t.ex. `LB01.VVX1.VG` |
+
+- Veckodagsinställning 1.2.0 är 310 × 250 px och visar kanalens utsignal (`V_Ut`) som Till eller Från.
+- Kurvblocken 2.2.0: grafens utetemperaturaxel går från kurvans kallaste till dess varmaste punkt i
+  stället för fast −30 till +20 °C, så att ingen punkt döljs. Axeln har etiketter vid ändarna och
+  i mitten, som framledningsaxeln. Grafen är 240 × 240 px; blockens storlek är oförändrad.
+- Veckopulsinställning 1.2.0 visar Enhet som text i stället för en lista. FBoxen tar enheten från
+  sina inställningar i Fupla och skriver över ett ändrat värde direkt, så den ställs där.
+
 ## 0.9.0-beta.2 (tidig åtkomst, 2026-10-27)
 
 Andra förhandsversionen. Paketet har nu också `NOTICE` med villkoren för Larmlistas delar från

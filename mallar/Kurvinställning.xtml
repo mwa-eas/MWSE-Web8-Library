@@ -1,4 +1,4 @@
-﻿<Template type="ViewElement" id="d38d44b3-b40d-4c65-8ba0-a027702105d8" version="2.1.0" name="Kurvinställning" description="" templateNameId="_2_1_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Inställning\Börvärdeskurva" icon="icons.template.png">
+﻿<Template type="ViewElement" id="5a321b92-0a80-40cb-95b9-defb099f156b" version="2.2.0" name="Kurvinställning" description="" templateNameId="_2_2_0" creator="Malthe Winje Automation AB" copyright="" _category="MWSE\Inställning\Börvärdeskurva" icon="icons.template.png">
   <InitialLayout>
     <OffsetX value="20" type="absolute" />
     <OffsetY value="110" type="absolute" />
@@ -10,6 +10,16 @@
     <LocalVariable name="mittHel" value="0" />
     <LocalVariable name="mittRest" value="0" />
     <LocalVariable name="mittText" value="0" />
+    <LocalVariable name="utMin" value="0" />
+    <LocalVariable name="utMax" value="0" />
+    <LocalVariable name="spannX" value="0" />
+    <LocalVariable name="skalaX" value="0" />
+    <LocalVariable name="utMittSumma" value="0" />
+    <LocalVariable name="utMittTiondel" value="0" />
+    <LocalVariable name="utMittHel" value="0" />
+    <LocalVariable name="utMittRest" value="0" />
+    <LocalVariable name="utMittText" value="0" />
+    <LocalVariable name="utMittTecken" value="0" />
     <LocalVariable name="punktX1" value="0" />
     <LocalVariable name="punktX2" value="0" />
     <LocalVariable name="punktX3" value="0" />
@@ -43,11 +53,11 @@
     <RemoteVariable name="A.MWSE.Namn.YminV" format="DEC.1" />
     <RemoteVariable name="A.MWSE.Namn.YmaxV" format="DEC.1" />
   </RemoteVariables>
-  <Element id="fd2fae0a-3863-4a02-bccb-a6db45a2abba" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Kurvinställning">
+  <Element id="48813296-99c4-4c16-a1ec-e42772e32630" type="ded97c0f-a102-46e0-b0f3-c2d6e661fea0" name="Kurvinställning">
     <Properties>
       <Property name="Name" source="C" value="Kurvinställning" type="string" />
     </Properties>
-    <Element id="a739a556-40ee-441b-92d6-51afeb68365c" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="5142bf1e-56b6-4757-a2ad-8773a6ffe211" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="223 226 234" type="Color" />
@@ -63,7 +73,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="937c93e7-7479-491c-abf9-8bf48682dc00" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="53a06c93-88b6-4d5a-9498-c5c1e5ff3562" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="219 222 230" type="Color" />
@@ -79,7 +89,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="e97e7bc6-3a87-4ad1-81a3-2cb7ff968dc7" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="c4db8355-dfcd-47a5-9f44-b844b05e39cc" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -97,7 +107,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="dd4c3066-fc9a-48d9-bb79-959880938077" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="0095fb2f-0dff-4d7e-8883-7f5e2929b6c8" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -115,7 +125,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="e5647387-2002-4ca2-a574-7ffeca58728a" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="3d79db84-85b9-42b6-b9f6-b0641314478a" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -133,7 +143,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="181bf2e9-6257-4cb1-8549-8b4594171d02" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="9feaf070-e00c-4521-b357-25bb429c3ea8" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -151,7 +161,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="8253b3d9-a68b-4cc6-a88b-ef1607c9ba8d" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="2006b1d0-4556-4147-932d-0f678adc3ef8" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -169,7 +179,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="03fce5b6-338b-43c6-b0e6-c1e2ffb05146" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="35a0d29f-1a90-408e-8414-9b7146f5631e" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -187,7 +197,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="34c3f34f-6de7-4c3f-bdc3-95a9bd62643b" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="0e7fedb2-f10e-4c9c-a0d9-ea6c67567aac" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -205,7 +215,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="77ed32bb-6276-4764-92de-b8e56af17914" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="840b6a28-b2e4-48ae-8f5c-3c46a8b8572f" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -223,7 +233,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="65b043ad-cea8-446d-a5a7-0c3a3f01bcb2" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="06aa74d2-201f-435a-a5d3-0733502cebb6" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -241,7 +251,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="ada51a4e-4d0d-4369-96ca-199f1835e3c5" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="bf95ff1b-df8a-43d6-91c9-9cf445d8390a" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -257,7 +267,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="3c340c38-0b60-42c6-985c-246e1d3d522a" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="51655eac-4d34-4307-b529-447c2a331162" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -275,7 +285,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="10e3b100-01c8-4f52-8220-2920d009dbd9" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
+    <Element id="2b7b02e8-f970-4878-ae39-40cceeec0f7b" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Text">
       <Properties>
         <Property name="Name" source="C" value="Text" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -293,7 +303,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="53f7ac62-740f-4caa-9aad-451aa40043d1" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="956a8fd1-840e-4d43-b526-1653c4e98a6b" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -309,7 +319,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="40af64cc-b114-48f6-a429-7adcc3869fbf" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="6784fbf5-fc18-478a-a345-f6e7793e6733" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -330,7 +340,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPX1" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="78861911-1fb0-4ec3-b8f2-0574bc63803b" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="e6e2960b-07b4-46f2-8be8-905eb1d35de8" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -346,7 +356,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="17807c88-0878-4e56-a2d8-5e811fad435f" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="e1d29f99-b888-4efe-b063-bd0582e9bfc9" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -367,7 +377,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPY1" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="e41bfd7e-57f1-4995-84c6-73c6ea309cbf" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="f557e0f1-51fc-4327-8c77-a748e0e2deeb" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -383,7 +393,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="a37e8279-cd6f-4102-985d-0c917b7e23cb" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="b0a9287c-5c5d-4a99-8598-cafd0ff3dea7" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -404,7 +414,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPX2" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="da73d793-a258-42a8-bd15-0db807a99ed9" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="06f9bead-cbcb-4a8f-81ae-74e7dca5c28a" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -420,7 +430,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="c0782974-8e22-484a-b571-f4c9ca067635" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="714a9294-5303-42b1-b30c-0caafd3efd87" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -441,7 +451,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPY2" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="8cd260de-2b82-48e2-b041-c22fd5469290" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="86c9d866-e0f0-4cec-b85f-e1bff8433cf4" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -457,7 +467,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="9370513d-310b-44de-a025-aafa9fc80a4b" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="ef9f036c-0699-4022-b4e9-00e089deca3b" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -478,7 +488,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPX3" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="311a40eb-7c18-4a6f-b008-fbde16ef2485" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="a2d095d6-596b-4f82-a5d0-86b43802ac6b" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -494,7 +504,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="aef8262f-f95f-46d4-967a-561677926b69" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="f844bc17-c054-40cb-a6be-1b2186150d24" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -515,7 +525,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPY3" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="cecedf07-c862-4fa5-be64-1bf930880b4a" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="68eb45a0-bca8-4a1d-8b4f-d0956aac3cbf" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -531,7 +541,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="28d486da-88ce-422b-b584-0382a4480a10" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="b172dcb1-26b3-46f2-97a3-dc1efe0d83dc" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -552,7 +562,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPX4" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="6f850536-b99c-4586-b752-5fa902a78cb3" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="32c1175a-cf25-483a-b5b3-4883ce608019" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -568,7 +578,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="7adbcd0d-d34f-4ed7-b898-2e8c13f9da9e" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="e3ee05eb-1269-4d32-8158-5ed7ce617570" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -589,7 +599,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPY4" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="7c0453ed-6a14-46a8-a244-220db6008bbf" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="5249e1d5-2e46-4ef8-bc4d-a42b855e95ae" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -605,7 +615,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="9cb46e7e-cc1c-4c47-ba02-ae11cb04cd98" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="e49efd1d-c671-4205-9f63-3415baa65f31" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -626,7 +636,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPX5" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="4a7abb40-487b-475f-b6f7-ec6cedbfd58b" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="5b01f15c-e961-4397-93dc-17061b63d7da" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -642,7 +652,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="16523265-fea8-476d-9654-9dbe44419264" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="18c6cf5a-02d4-410d-9f87-7ebd06cfe1fa" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -663,7 +673,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.BPY5" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="48674614-f0d0-49f0-8a33-39d89bdafa02" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="2693cd3a-0043-40fc-8d50-85582e86edcd" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -679,7 +689,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="50765a79-0e79-45fe-bac3-464e81b34af0" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="4f11eab8-0eeb-4869-bf8a-963842d48a04" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -700,7 +710,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.YminV" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="826f185e-8fdc-41b4-9385-f136fbe382ba" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
+    <Element id="ceab4d62-ad47-4175-b85e-b8b2e5f1fd9c" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rectangle">
       <Properties>
         <Property name="Name" source="C" value="Rectangle" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -716,7 +726,7 @@
         <Property name="HasFillColor" source="C" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="6a4255a8-d49d-47d9-ae48-596e68dce366" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
+    <Element id="24c5d062-1e38-4673-9729-abe9f1e2d9bd" type="751edf36-ea50-4f05-ad94-2712b7118c6a" name="Edit Box">
       <Properties>
         <Property name="Name" source="C" value="Edit Box" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -737,7 +747,7 @@
         <Property name="Text" source="RV" value="A.MWSE.Namn.YmaxV" type="PcdVariableAddress" />
       </Properties>
     </Element>
-    <Element id="3ee349e7-2e9a-43eb-a3c1-845e1abac7c4" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="09b0a86e-4fe5-4b18-a7ac-5a2dce1bb039" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -753,14 +763,16 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="1c9f432d-4980-4a87-bef1-d29932d01b95" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
+    <Element id="a712b656-ae64-4b4f-b665-1059b6db50f9" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
       <Properties>
         <Property name="Name" source="C" value="Etikett" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
         <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="Text" source="C" value="-30" type="string" />
+        <Property name="Text" source="LV" type="InternalVariableAddress">
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+        </Property>
         <Property name="X" source="C" value="420" type="double" />
         <Property name="Y" source="C" value="330" type="double" />
         <Property name="Width" source="C" value="40" type="double" />
@@ -771,14 +783,14 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="bc57f19d-1324-4413-9811-c7a3d535220f" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="ffdbad41-9f2f-4919-9526-a15ef2d3bc47" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
         <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="X" source="C" value="490" type="double" />
+        <Property name="X" source="C" value="500" type="double" />
         <Property name="Y" source="C" value="80" type="double" />
         <Property name="Width" source="C" value="1" type="double" />
         <Property name="Height" source="C" value="241" type="double" />
@@ -787,49 +799,33 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="39cf9b19-ea9f-4cc2-9e23-9f6d24e5ed73" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
-      <Properties>
-        <Property name="Name" source="C" value="Etikett" type="string" />
-        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
-        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
-        <Property name="OutlineWidth" source="C" value="1" type="double" />
-        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="Text" source="C" value="-20" type="string" />
-        <Property name="X" source="C" value="470" type="double" />
-        <Property name="Y" source="C" value="330" type="double" />
-        <Property name="Width" source="C" value="40" type="double" />
-        <Property name="Height" source="C" value="18" type="double" />
-        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
-        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-        <Property name="FontColor" source="C" value="66 77 89" type="Color" />
-        <Property name="LockedInEditor" source="C" value="False" type="bool" />
-      </Properties>
-    </Element>
-    <Element id="68d06255-c748-4e2a-bbf6-0f6f0fa21eab" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="42e147eb-e10e-43fe-bc63-5f24ab7490ca" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
         <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="560" type="double" />
+        <Property name="Y" source="C" value="80" type="double" />
+        <Property name="Width" source="C" value="1" type="double" />
+        <Property name="Height" source="C" value="241" type="double" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="15c122a0-142f-49a3-82e6-d1ed3c6a349f" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
+      <Properties>
+        <Property name="Name" source="C" value="Etikett" type="string" />
+        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
+        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="Text" source="LV" type="InternalVariableAddress">
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittText" />
+        </Property>
         <Property name="X" source="C" value="540" type="double" />
-        <Property name="Y" source="C" value="80" type="double" />
-        <Property name="Width" source="C" value="1" type="double" />
-        <Property name="Height" source="C" value="241" type="double" />
-        <Property name="HasOutline" source="C" value="False" type="bool" />
-        <Property name="HasFillColor" source="C" value="True" type="bool" />
-        <Property name="LockedInEditor" source="C" value="False" type="bool" />
-      </Properties>
-    </Element>
-    <Element id="54a4cb84-79cb-4767-b228-ada4fc49540f" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
-      <Properties>
-        <Property name="Name" source="C" value="Etikett" type="string" />
-        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
-        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
-        <Property name="OutlineWidth" source="C" value="1" type="double" />
-        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="Text" source="C" value="-10" type="string" />
-        <Property name="X" source="C" value="520" type="double" />
         <Property name="Y" source="C" value="330" type="double" />
         <Property name="Width" source="C" value="40" type="double" />
         <Property name="Height" source="C" value="18" type="double" />
@@ -839,82 +835,14 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="09db682b-f784-4577-b837-845f2f4571a3" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="3768331f-73ae-4650-a7d7-1258ba4fadcd" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
         <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="X" source="C" value="590" type="double" />
-        <Property name="Y" source="C" value="80" type="double" />
-        <Property name="Width" source="C" value="1" type="double" />
-        <Property name="Height" source="C" value="241" type="double" />
-        <Property name="HasOutline" source="C" value="False" type="bool" />
-        <Property name="HasFillColor" source="C" value="True" type="bool" />
-        <Property name="LockedInEditor" source="C" value="False" type="bool" />
-      </Properties>
-    </Element>
-    <Element id="b4075f6a-20a6-4897-8bc4-0250d0c09768" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
-      <Properties>
-        <Property name="Name" source="C" value="Etikett" type="string" />
-        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
-        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
-        <Property name="OutlineWidth" source="C" value="1" type="double" />
-        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="Text" source="C" value="0" type="string" />
-        <Property name="X" source="C" value="570" type="double" />
-        <Property name="Y" source="C" value="330" type="double" />
-        <Property name="Width" source="C" value="40" type="double" />
-        <Property name="Height" source="C" value="18" type="double" />
-        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
-        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-        <Property name="FontColor" source="C" value="66 77 89" type="Color" />
-        <Property name="LockedInEditor" source="C" value="False" type="bool" />
-      </Properties>
-    </Element>
-    <Element id="e00ac5a1-1d9a-448b-91ed-636462e9c618" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
-      <Properties>
-        <Property name="Name" source="C" value="Rutnat" type="string" />
-        <Property name="FillColor" source="C" value="159 170 185" type="Color" />
-        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
-        <Property name="OutlineWidth" source="C" value="1" type="double" />
-        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="X" source="C" value="640" type="double" />
-        <Property name="Y" source="C" value="80" type="double" />
-        <Property name="Width" source="C" value="1" type="double" />
-        <Property name="Height" source="C" value="241" type="double" />
-        <Property name="HasOutline" source="C" value="False" type="bool" />
-        <Property name="HasFillColor" source="C" value="True" type="bool" />
-        <Property name="LockedInEditor" source="C" value="False" type="bool" />
-      </Properties>
-    </Element>
-    <Element id="60960745-f3c0-4622-a7ee-7428e88ec69e" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
-      <Properties>
-        <Property name="Name" source="C" value="Etikett" type="string" />
-        <Property name="FillColor" source="C" value="255 255 255" type="Color" />
-        <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
-        <Property name="OutlineWidth" source="C" value="1" type="double" />
-        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="Text" source="C" value="+10" type="string" />
         <Property name="X" source="C" value="620" type="double" />
-        <Property name="Y" source="C" value="330" type="double" />
-        <Property name="Width" source="C" value="40" type="double" />
-        <Property name="Height" source="C" value="18" type="double" />
-        <Property name="Font" source="C" value="Arial 10" type="FontInfo" />
-        <Property name="TextAlignment" source="C" value="Center Center" type="TextPosition" />
-        <Property name="FontColor" source="C" value="66 77 89" type="Color" />
-        <Property name="LockedInEditor" source="C" value="False" type="bool" />
-      </Properties>
-    </Element>
-    <Element id="b75565f3-6bfd-4f1c-af4e-47727e9e669b" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
-      <Properties>
-        <Property name="Name" source="C" value="Rutnat" type="string" />
-        <Property name="FillColor" source="C" value="159 170 185" type="Color" />
-        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
-        <Property name="OutlineWidth" source="C" value="1" type="double" />
-        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="X" source="C" value="690" type="double" />
         <Property name="Y" source="C" value="80" type="double" />
         <Property name="Width" source="C" value="1" type="double" />
         <Property name="Height" source="C" value="241" type="double" />
@@ -923,15 +851,33 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="105632b7-c492-45d1-9260-8b1bf0782022" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
+    <Element id="26de2b7e-5731-4939-8cf2-d8e7edccb218" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+      <Properties>
+        <Property name="Name" source="C" value="Rutnat" type="string" />
+        <Property name="FillColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineColor" source="C" value="159 170 185" type="Color" />
+        <Property name="OutlineWidth" source="C" value="1" type="double" />
+        <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
+        <Property name="X" source="C" value="680" type="double" />
+        <Property name="Y" source="C" value="80" type="double" />
+        <Property name="Width" source="C" value="1" type="double" />
+        <Property name="Height" source="C" value="241" type="double" />
+        <Property name="HasOutline" source="C" value="False" type="bool" />
+        <Property name="HasFillColor" source="C" value="True" type="bool" />
+        <Property name="LockedInEditor" source="C" value="False" type="bool" />
+      </Properties>
+    </Element>
+    <Element id="930ad7d1-0d09-442a-87c4-7d99a80b5c8b" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
       <Properties>
         <Property name="Name" source="C" value="Etikett" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
         <Property name="OutlineColor" source="C" value="0 0 0" type="Color" />
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
-        <Property name="Text" source="C" value="+20" type="string" />
-        <Property name="X" source="C" value="670" type="double" />
+        <Property name="Text" source="LV" type="InternalVariableAddress">
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMax" />
+        </Property>
+        <Property name="X" source="C" value="660" type="double" />
         <Property name="Y" source="C" value="330" type="double" />
         <Property name="Width" source="C" value="40" type="double" />
         <Property name="Height" source="C" value="18" type="double" />
@@ -941,7 +887,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="b9ed0270-d301-443d-9b6b-662ba41a5e8c" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="2370ab17-ecff-420b-9303-4577d4786cc2" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -950,14 +896,14 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="440" type="double" />
         <Property name="Y" source="C" value="320" type="double" />
-        <Property name="Width" source="C" value="251" type="double" />
+        <Property name="Width" source="C" value="241" type="double" />
         <Property name="Height" source="C" value="1" type="double" />
         <Property name="HasOutline" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="3b1df527-d6fa-49a2-adc6-0118acc35359" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="2e2f323b-aea9-40ad-bd5d-fb02d78acd70" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -966,14 +912,14 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="440" type="double" />
         <Property name="Y" source="C" value="260" type="double" />
-        <Property name="Width" source="C" value="251" type="double" />
+        <Property name="Width" source="C" value="241" type="double" />
         <Property name="Height" source="C" value="1" type="double" />
         <Property name="HasOutline" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="7c8d9e0b-5c54-4e2b-9f9b-30005b2541c3" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="5f90a0c2-c0bc-4696-a859-f00c3abff480" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -982,14 +928,14 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="440" type="double" />
         <Property name="Y" source="C" value="200" type="double" />
-        <Property name="Width" source="C" value="251" type="double" />
+        <Property name="Width" source="C" value="241" type="double" />
         <Property name="Height" source="C" value="1" type="double" />
         <Property name="HasOutline" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="320fd891-500c-4c91-a683-415316102b93" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="a3063027-ceec-4c84-9aa3-a5c09b8b3fa9" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -998,14 +944,14 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="440" type="double" />
         <Property name="Y" source="C" value="140" type="double" />
-        <Property name="Width" source="C" value="251" type="double" />
+        <Property name="Width" source="C" value="241" type="double" />
         <Property name="Height" source="C" value="1" type="double" />
         <Property name="HasOutline" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="5649d096-e8c8-41fe-a808-3860864330b8" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
+    <Element id="33e12673-611a-433c-85b2-64ef732aa8a3" type="365164dc-5073-11e0-8201-b603e0d72085" name="Rutnat">
       <Properties>
         <Property name="Name" source="C" value="Rutnat" type="string" />
         <Property name="FillColor" source="C" value="159 170 185" type="Color" />
@@ -1014,14 +960,14 @@
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="X" source="C" value="440" type="double" />
         <Property name="Y" source="C" value="80" type="double" />
-        <Property name="Width" source="C" value="251" type="double" />
+        <Property name="Width" source="C" value="241" type="double" />
         <Property name="Height" source="C" value="1" type="double" />
         <Property name="HasOutline" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="26bf3700-e5fc-4b8b-97c2-5c131b43e6d0" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
+    <Element id="e301bafb-64c1-42f5-97cd-501bfaa00e11" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
       <Properties>
         <Property name="Name" source="C" value="Etikett" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -1039,7 +985,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="d315334d-f23c-4545-9e73-06b4fc7e4738" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
+    <Element id="73f5b72a-3a32-413f-a06c-fdbfc9b918da" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
       <Properties>
         <Property name="Name" source="C" value="Etikett" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -1047,7 +993,7 @@
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittText" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittText" />
         </Property>
         <Property name="X" source="C" value="380" type="double" />
         <Property name="Y" source="C" value="191" type="double" />
@@ -1059,7 +1005,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="2098ad35-4d6c-48fb-8b52-51d959181b23" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
+    <Element id="bc19c7f0-69e9-4ed3-81fe-6664cc41c35f" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
       <Properties>
         <Property name="Name" source="C" value="Etikett" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -1077,7 +1023,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="10e9d542-95e5-4c55-bb63-2924ceac8679" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
+    <Element id="ed804519-0802-4473-93e1-d9fe15d57a9f" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
       <Properties>
         <Property name="Name" source="C" value="Etikett" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -1095,7 +1041,7 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="7187e00a-980c-4d21-b574-621582b0a50a" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
+    <Element id="e74ccc8c-b6c4-4d61-b0bf-97a38dac3431" type="f00ee843-54bd-4756-9e06-b02f9f995214" name="Etikett">
       <Properties>
         <Property name="Name" source="C" value="Etikett" type="string" />
         <Property name="FillColor" source="C" value="255 255 255" type="Color" />
@@ -1103,7 +1049,7 @@
         <Property name="OutlineWidth" source="C" value="1" type="double" />
         <Property name="OutlineStyle" source="C" value="Solid" type="LineStyle" />
         <Property name="Text" source="C" value="Ute °C" type="string" />
-        <Property name="X" source="C" value="570" type="double" />
+        <Property name="X" source="C" value="560" type="double" />
         <Property name="Y" source="C" value="350" type="double" />
         <Property name="Width" source="C" value="140" type="double" />
         <Property name="Height" source="C" value="18" type="double" />
@@ -1113,348 +1059,608 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
       </Properties>
     </Element>
-    <Element id="dd1d5664-7277-4680-a5f9-89a58208e0b8" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Kurvberakning">
+    <Element id="dc211126-77db-49ba-81a4-db9f25f10450" type="39bbd61d-e0c1-46a6-98bb-dcf49970cfbe" name="Kurvberakning">
+      <Conditions>
+        <ConditionLogic id="d0c2fab0-6a75-4ad8-91f9-a0cad7f7038f" name="UteUnderMin2" operator="And">
+          <Condition leftType="PDP" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="A.MWSE.Namn.BPX2" operator="Lesser" rightType="Container" rightContainer="5a321b92-0a80-40cb-95b9-defb099f156b" rightName="utMin" />
+        </ConditionLogic>
+        <ConditionLogic id="091d7cf4-6e77-4983-8af2-188bd9def760" name="UteOverMax2" operator="And">
+          <Condition leftType="PDP" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="A.MWSE.Namn.BPX2" operator="Greater" rightType="Container" rightContainer="5a321b92-0a80-40cb-95b9-defb099f156b" rightName="utMax" />
+        </ConditionLogic>
+        <ConditionLogic id="344769aa-5794-409b-8412-698955e163b6" name="UteUnderMin3" operator="And">
+          <Condition leftType="PDP" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="A.MWSE.Namn.BPX3" operator="Lesser" rightType="Container" rightContainer="5a321b92-0a80-40cb-95b9-defb099f156b" rightName="utMin" />
+        </ConditionLogic>
+        <ConditionLogic id="baae181a-24ec-423b-9fef-08668980be78" name="UteOverMax3" operator="And">
+          <Condition leftType="PDP" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="A.MWSE.Namn.BPX3" operator="Greater" rightType="Container" rightContainer="5a321b92-0a80-40cb-95b9-defb099f156b" rightName="utMax" />
+        </ConditionLogic>
+        <ConditionLogic id="65a86352-0c2d-4a16-b5a9-ee02afca68cf" name="UteUnderMin4" operator="And">
+          <Condition leftType="PDP" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="A.MWSE.Namn.BPX4" operator="Lesser" rightType="Container" rightContainer="5a321b92-0a80-40cb-95b9-defb099f156b" rightName="utMin" />
+        </ConditionLogic>
+        <ConditionLogic id="8b22efdf-6533-4d6d-8f00-b370d07a4d6b" name="UteOverMax4" operator="And">
+          <Condition leftType="PDP" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="A.MWSE.Namn.BPX4" operator="Greater" rightType="Container" rightContainer="5a321b92-0a80-40cb-95b9-defb099f156b" rightName="utMax" />
+        </ConditionLogic>
+        <ConditionLogic id="6bb3c10c-bcd1-4d52-badb-5d6b3a1e4fa4" name="UteUnderMin5" operator="And">
+          <Condition leftType="PDP" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="A.MWSE.Namn.BPX5" operator="Lesser" rightType="Container" rightContainer="5a321b92-0a80-40cb-95b9-defb099f156b" rightName="utMin" />
+        </ConditionLogic>
+        <ConditionLogic id="48bd553c-861d-4755-811f-69c87315ffcd" name="UteOverMax5" operator="And">
+          <Condition leftType="PDP" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="A.MWSE.Namn.BPX5" operator="Greater" rightType="Container" rightContainer="5a321b92-0a80-40cb-95b9-defb099f156b" rightName="utMax" />
+        </ConditionLogic>
+        <ConditionLogic id="8433b8c6-4c7f-4c29-a481-1ded50389588" name="UteMittNegativ" operator="And">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="utMittSumma" operator="Lesser" rightType="Constant" rightValue="0" />
+        </ConditionLogic>
+        <ConditionLogic id="d61dd4ab-13da-4bb6-8c47-8108e9eb979f" name="UteMittMinus" operator="And">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="utMittSumma" operator="LesserEqual" rightType="Constant" rightValue="-0.5" />
+        </ConditionLogic>
+      </Conditions>
       <Functions>
-        <Function id="8984e085-05a6-4101-a827-99fcb3cd917c" name="Kurvberakning">
+        <Function id="639dc77f-6a54-44ba-9872-302d3409fe87" name="Kurvberakning">
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="PDP" value="A.MWSE.Namn.YminV" name="FirstValue" />
             <Parameter type="PDP" value="A.MWSE.Namn.YmaxV" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="spannY" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="spannY" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteDivisionResultToVariable">
             <Parameter type="Constant" value="-240" name="FirstValue" />
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="spannY" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="spannY" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="skalaY" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaY" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteAddResultToVariable">
             <Parameter type="PDP" value="A.MWSE.Namn.YminV" name="FirstValue" />
             <Parameter type="PDP" value="A.MWSE.Namn.YmaxV" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittTiondel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittTiondel" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittTiondel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittTiondel" />
             </Parameter>
             <Parameter type="Constant" value="5" name="Value" />
           </Instruction>
           <Instruction macro="WriteAddResultToVariable">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittTiondel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittTiondel" />
             </Parameter>
             <Parameter type="Constant" value="0.5" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittTiondel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittTiondel" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteDivisionResultToVariableInt">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittTiondel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittTiondel" />
             </Parameter>
             <Parameter type="Constant" value="1" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittTiondel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittTiondel" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteDivisionResultToVariableInt">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittTiondel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittTiondel" />
             </Parameter>
             <Parameter type="Constant" value="10" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittHel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittHel" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteModuloResultToVariable">
             <Parameter type="Constant" value="10" name="FirstValue" />
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittTiondel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittTiondel" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittRest" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittRest" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteValueToVariable">
             <Parameter type="Container" name="Value">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittHel" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittHel" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittText" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittText" />
             </Parameter>
           </Instruction>
           <Instruction macro="AppendValueToDestination">
             <Parameter type="Constant" value="." name="Value" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittText" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittText" />
             </Parameter>
           </Instruction>
           <Instruction macro="AppendValueToDestination">
             <Parameter type="Container" name="Value">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittRest" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittRest" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="mittText" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="mittText" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="PDP" value="A.MWSE.Namn.BPX1" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="PDP" value="A.MWSE.Namn.BPX1" name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMax" />
+            </Parameter>
+          </Instruction>
+          <Expression type="IfCondition" condition="d0c2fab0-6a75-4ad8-91f9-a0cad7f7038f" value="True">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="PDP" value="A.MWSE.Namn.BPX2" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="IfCondition" condition="091d7cf4-6e77-4983-8af2-188bd9def760" value="True">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="PDP" value="A.MWSE.Namn.BPX2" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMax" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="IfCondition" condition="344769aa-5794-409b-8412-698955e163b6" value="True">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="PDP" value="A.MWSE.Namn.BPX3" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="IfCondition" condition="baae181a-24ec-423b-9fef-08668980be78" value="True">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="PDP" value="A.MWSE.Namn.BPX3" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMax" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="IfCondition" condition="65a86352-0c2d-4a16-b5a9-ee02afca68cf" value="True">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="PDP" value="A.MWSE.Namn.BPX4" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="IfCondition" condition="8b22efdf-6533-4d6d-8f00-b370d07a4d6b" value="True">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="PDP" value="A.MWSE.Namn.BPX4" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMax" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="IfCondition" condition="6bb3c10c-bcd1-4d52-badb-5d6b3a1e4fa4" value="True">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="PDP" value="A.MWSE.Namn.BPX5" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Expression type="IfCondition" condition="48bd553c-861d-4755-811f-69c87315ffcd" value="True">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="PDP" value="A.MWSE.Namn.BPX5" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMax" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Instruction macro="WriteSubtractResultToVariable">
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+            </Parameter>
+            <Parameter type="Container" name="SecondValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMax" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="spannX" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteDivisionResultToVariable">
+            <Parameter type="Constant" value="240" name="FirstValue" />
+            <Parameter type="Container" name="SecondValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="spannX" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaX" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteAddResultToVariable">
-            <Parameter type="PDP" value="A.MWSE.Namn.BPX1" name="FirstValue" />
-            <Parameter type="Constant" value="30" name="SecondValue" />
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+            </Parameter>
+            <Parameter type="Container" name="SecondValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMax" />
+            </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX1" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittSumma" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX1" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittSumma" />
             </Parameter>
             <Parameter type="Constant" value="5" name="Value" />
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Container" name="Value">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittSumma" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTiondel" />
+            </Parameter>
+          </Instruction>
+          <Expression type="IfCondition" condition="8433b8c6-4c7f-4c29-a481-1ded50389588" value="True">
+            <Instruction macro="MultiplyVariableWithValue">
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTiondel" />
+              </Parameter>
+              <Parameter type="Constant" value="-1" name="Value" />
+            </Instruction>
+          </Expression>
+          <Instruction macro="WriteAddResultToVariable">
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTiondel" />
+            </Parameter>
+            <Parameter type="Constant" value="0.5" name="SecondValue" />
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTiondel" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteDivisionResultToVariableInt">
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTiondel" />
+            </Parameter>
+            <Parameter type="Constant" value="1" name="SecondValue" />
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTiondel" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteDivisionResultToVariableInt">
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTiondel" />
+            </Parameter>
+            <Parameter type="Constant" value="10" name="SecondValue" />
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittHel" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteModuloResultToVariable">
+            <Parameter type="Constant" value="10" name="FirstValue" />
+            <Parameter type="Container" name="SecondValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTiondel" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittRest" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="WriteValueToVariable">
+            <Parameter type="Container" name="Value">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittHel" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittText" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="AppendValueToDestination">
+            <Parameter type="Constant" value="." name="Value" />
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittText" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="AppendValueToDestination">
+            <Parameter type="Container" name="Value">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittRest" />
+            </Parameter>
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittText" />
+            </Parameter>
+          </Instruction>
+          <Expression type="IfCondition" condition="d61dd4ab-13da-4bb6-8c47-8108e9eb979f" value="True">
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Constant" value="-" name="Value" />
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTecken" />
+              </Parameter>
+            </Instruction>
+            <Instruction macro="AppendValueToDestination">
+              <Parameter type="Container" name="Value">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittText" />
+              </Parameter>
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTecken" />
+              </Parameter>
+            </Instruction>
+            <Instruction macro="WriteValueToVariable">
+              <Parameter type="Container" name="Value">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittTecken" />
+              </Parameter>
+              <Parameter type="Container" name="Destination">
+                <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMittText" />
+              </Parameter>
+            </Instruction>
+          </Expression>
+          <Instruction macro="WriteSubtractResultToVariable">
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+            </Parameter>
+            <Parameter type="PDP" value="A.MWSE.Namn.BPX1" name="SecondValue" />
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX1" />
+            </Parameter>
+          </Instruction>
+          <Instruction macro="MultiplyVariableWithValue">
+            <Parameter type="Container" name="Destination">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX1" />
+            </Parameter>
+            <Parameter type="Container" name="Value">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaX" />
+            </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="PDP" value="A.MWSE.Namn.YminV" name="FirstValue" />
             <Parameter type="PDP" value="A.MWSE.Namn.BPY1" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY1" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY1" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY1" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY1" />
             </Parameter>
             <Parameter type="Container" name="Value">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="skalaY" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaY" />
             </Parameter>
           </Instruction>
-          <Instruction macro="WriteAddResultToVariable">
-            <Parameter type="PDP" value="A.MWSE.Namn.BPX2" name="FirstValue" />
-            <Parameter type="Constant" value="30" name="SecondValue" />
+          <Instruction macro="WriteSubtractResultToVariable">
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+            </Parameter>
+            <Parameter type="PDP" value="A.MWSE.Namn.BPX2" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX2" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX2" />
             </Parameter>
-            <Parameter type="Constant" value="5" name="Value" />
+            <Parameter type="Container" name="Value">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaX" />
+            </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="PDP" value="A.MWSE.Namn.YminV" name="FirstValue" />
             <Parameter type="PDP" value="A.MWSE.Namn.BPY2" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY2" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY2" />
             </Parameter>
             <Parameter type="Container" name="Value">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="skalaY" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaY" />
             </Parameter>
           </Instruction>
-          <Instruction macro="WriteAddResultToVariable">
-            <Parameter type="PDP" value="A.MWSE.Namn.BPX3" name="FirstValue" />
-            <Parameter type="Constant" value="30" name="SecondValue" />
+          <Instruction macro="WriteSubtractResultToVariable">
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+            </Parameter>
+            <Parameter type="PDP" value="A.MWSE.Namn.BPX3" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX3" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX3" />
             </Parameter>
-            <Parameter type="Constant" value="5" name="Value" />
+            <Parameter type="Container" name="Value">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaX" />
+            </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="PDP" value="A.MWSE.Namn.YminV" name="FirstValue" />
             <Parameter type="PDP" value="A.MWSE.Namn.BPY3" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY3" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY3" />
             </Parameter>
             <Parameter type="Container" name="Value">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="skalaY" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaY" />
             </Parameter>
           </Instruction>
-          <Instruction macro="WriteAddResultToVariable">
-            <Parameter type="PDP" value="A.MWSE.Namn.BPX4" name="FirstValue" />
-            <Parameter type="Constant" value="30" name="SecondValue" />
+          <Instruction macro="WriteSubtractResultToVariable">
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+            </Parameter>
+            <Parameter type="PDP" value="A.MWSE.Namn.BPX4" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX4" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX4" />
             </Parameter>
-            <Parameter type="Constant" value="5" name="Value" />
+            <Parameter type="Container" name="Value">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaX" />
+            </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="PDP" value="A.MWSE.Namn.YminV" name="FirstValue" />
             <Parameter type="PDP" value="A.MWSE.Namn.BPY4" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY4" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY4" />
             </Parameter>
             <Parameter type="Container" name="Value">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="skalaY" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaY" />
             </Parameter>
           </Instruction>
-          <Instruction macro="WriteAddResultToVariable">
-            <Parameter type="PDP" value="A.MWSE.Namn.BPX5" name="FirstValue" />
-            <Parameter type="Constant" value="30" name="SecondValue" />
+          <Instruction macro="WriteSubtractResultToVariable">
+            <Parameter type="Container" name="FirstValue">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="utMin" />
+            </Parameter>
+            <Parameter type="PDP" value="A.MWSE.Namn.BPX5" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX5" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX5" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX5" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX5" />
             </Parameter>
-            <Parameter type="Constant" value="5" name="Value" />
+            <Parameter type="Container" name="Value">
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaX" />
+            </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="PDP" value="A.MWSE.Namn.YminV" name="FirstValue" />
             <Parameter type="PDP" value="A.MWSE.Namn.BPY5" name="SecondValue" />
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY5" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY5" />
             </Parameter>
           </Instruction>
           <Instruction macro="MultiplyVariableWithValue">
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY5" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY5" />
             </Parameter>
             <Parameter type="Container" name="Value">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="skalaY" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="skalaY" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX1" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX1" />
             </Parameter>
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX2" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegX1" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegX1" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY1" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY1" />
             </Parameter>
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY2" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegY1" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegY1" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX2" />
             </Parameter>
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX3" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegX2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegX2" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY2" />
             </Parameter>
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY3" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegY2" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegY2" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX3" />
             </Parameter>
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX4" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegX3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegX3" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY3" />
             </Parameter>
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY4" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegY3" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegY3" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX4" />
             </Parameter>
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX5" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX5" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegX4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegX4" />
             </Parameter>
           </Instruction>
           <Instruction macro="WriteSubtractResultToVariable">
             <Parameter type="Container" name="FirstValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY4" />
             </Parameter>
             <Parameter type="Container" name="SecondValue">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY5" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY5" />
             </Parameter>
             <Parameter type="Container" name="Destination">
-              <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegY4" />
+              <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegY4" />
             </Parameter>
           </Instruction>
         </Function>
       </Functions>
       <Properties>
         <Property name="Name" source="C" value="Kurvberakning" type="string" />
-        <Property name="Repaint" source="C" value="8984e085-05a6-4101-a827-99fcb3cd917c" type="Event" />
+        <Property name="Repaint" source="C" value="639dc77f-6a54-44ba-9872-302d3409fe87" type="Event" />
       </Properties>
     </Element>
-    <Element id="109604d8-0a9e-4fa9-9212-f861f2ad01a7" type="68a5b471-e0a5-47ed-a571-d2330c2a23b1" name="Linje1">
+    <Element id="7d642415-7d9a-4772-b572-198159e47ce3" type="68a5b471-e0a5-47ed-a571-d2330c2a23b1" name="Linje1">
       <Conditions>
-        <ConditionLogic id="4a1d58d1-aabf-407b-89e3-0792eaa2acd2" name="Utanfor" operator="Or">
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX1" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX1" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY1" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY1" operator="Lesser" rightType="Constant" rightValue="-240.5" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX2" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX2" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY2" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY2" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+        <ConditionLogic id="540e79c8-c076-4d82-bc85-f7231d9f443c" name="Utanfor" operator="Or">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannX" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY1" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY1" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY2" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY2" operator="Lesser" rightType="Constant" rightValue="-240.5" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="4a1d58d1-aabf-407b-89e3-0792eaa2acd2" />
+          <Condition id="540e79c8-c076-4d82-bc85-f7231d9f443c" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Linje1" type="string" />
         <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
@@ -1469,38 +1675,35 @@
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="OffsetX" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX1" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX1" />
         </Property>
         <Property name="OffsetY" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY1" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY1" />
         </Property>
         <Property name="WidthOffset" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegX1" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegX1" />
         </Property>
         <Property name="HeightOffset" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegY1" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegY1" />
         </Property>
         <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="4a1d58d1-aabf-407b-89e3-0792eaa2acd2" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="540e79c8-c076-4d82-bc85-f7231d9f443c" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="6fd9ca24-a048-46f2-9bcd-c9a08427279d" type="68a5b471-e0a5-47ed-a571-d2330c2a23b1" name="Linje2">
+    <Element id="1a8cf731-17e7-4f30-b14c-76e859ecaf57" type="68a5b471-e0a5-47ed-a571-d2330c2a23b1" name="Linje2">
       <Conditions>
-        <ConditionLogic id="503365a4-42e1-4783-96e7-f4f7453fbe79" name="Utanfor" operator="Or">
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX2" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX2" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY2" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY2" operator="Lesser" rightType="Constant" rightValue="-240.5" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX3" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX3" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY3" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY3" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+        <ConditionLogic id="b15c115c-16dd-4a1d-a208-72e1c2239ca1" name="Utanfor" operator="Or">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannX" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY2" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY2" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY3" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY3" operator="Lesser" rightType="Constant" rightValue="-240.5" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="503365a4-42e1-4783-96e7-f4f7453fbe79" />
+          <Condition id="b15c115c-16dd-4a1d-a208-72e1c2239ca1" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Linje2" type="string" />
         <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
@@ -1515,38 +1718,35 @@
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="OffsetX" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX2" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX2" />
         </Property>
         <Property name="OffsetY" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY2" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY2" />
         </Property>
         <Property name="WidthOffset" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegX2" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegX2" />
         </Property>
         <Property name="HeightOffset" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegY2" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegY2" />
         </Property>
         <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="503365a4-42e1-4783-96e7-f4f7453fbe79" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="b15c115c-16dd-4a1d-a208-72e1c2239ca1" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="26b1ed92-c588-4be7-b499-188daa313fed" type="68a5b471-e0a5-47ed-a571-d2330c2a23b1" name="Linje3">
+    <Element id="94b10d88-db6d-41d7-a0e8-19eee2e2ae0e" type="68a5b471-e0a5-47ed-a571-d2330c2a23b1" name="Linje3">
       <Conditions>
-        <ConditionLogic id="284eb5d9-cc87-4578-a128-aeb6a1c18336" name="Utanfor" operator="Or">
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX3" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX3" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY3" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY3" operator="Lesser" rightType="Constant" rightValue="-240.5" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX4" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX4" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY4" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY4" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+        <ConditionLogic id="08a72ca7-30bc-4b11-8e15-887a402e7a76" name="Utanfor" operator="Or">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannX" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY3" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY3" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY4" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY4" operator="Lesser" rightType="Constant" rightValue="-240.5" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="284eb5d9-cc87-4578-a128-aeb6a1c18336" />
+          <Condition id="08a72ca7-30bc-4b11-8e15-887a402e7a76" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Linje3" type="string" />
         <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
@@ -1561,38 +1761,35 @@
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="OffsetX" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX3" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX3" />
         </Property>
         <Property name="OffsetY" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY3" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY3" />
         </Property>
         <Property name="WidthOffset" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegX3" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegX3" />
         </Property>
         <Property name="HeightOffset" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegY3" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegY3" />
         </Property>
         <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="284eb5d9-cc87-4578-a128-aeb6a1c18336" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="08a72ca7-30bc-4b11-8e15-887a402e7a76" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="fe84da2e-c0ef-43a7-a0bb-bb112278d02b" type="68a5b471-e0a5-47ed-a571-d2330c2a23b1" name="Linje4">
+    <Element id="2934a68b-4b7f-44e8-a9ac-fa9866b11fa6" type="68a5b471-e0a5-47ed-a571-d2330c2a23b1" name="Linje4">
       <Conditions>
-        <ConditionLogic id="9a83e64b-2d7b-42ce-a4bb-72bc11ff3630" name="Utanfor" operator="Or">
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX4" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX4" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY4" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY4" operator="Lesser" rightType="Constant" rightValue="-240.5" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX5" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX5" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY5" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY5" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+        <ConditionLogic id="a790847f-4169-4a8f-90ae-5dd89f52f607" name="Utanfor" operator="Or">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannX" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY4" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY4" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY5" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY5" operator="Lesser" rightType="Constant" rightValue="-240.5" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="9a83e64b-2d7b-42ce-a4bb-72bc11ff3630" />
+          <Condition id="a790847f-4169-4a8f-90ae-5dd89f52f607" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Linje4" type="string" />
         <Property name="OutlineColor" source="C" value="27 35 47" type="Color" />
@@ -1607,34 +1804,33 @@
         <Property name="HasOutline" source="C" value="True" type="bool" />
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="OffsetX" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX4" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX4" />
         </Property>
         <Property name="OffsetY" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY4" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY4" />
         </Property>
         <Property name="WidthOffset" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegX4" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegX4" />
         </Property>
         <Property name="HeightOffset" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="stegY4" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="stegY4" />
         </Property>
         <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="9a83e64b-2d7b-42ce-a4bb-72bc11ff3630" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="a790847f-4169-4a8f-90ae-5dd89f52f607" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="8dbfcc12-3940-44f9-a230-05a4a999075f" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt1">
+    <Element id="1d6b1392-dcb5-48da-8484-f50a802b7fcc" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt1">
       <Conditions>
-        <ConditionLogic id="9c420b73-801f-4f06-aa5f-5344a84ac929" name="Utanfor" operator="Or">
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX1" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX1" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY1" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY1" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+        <ConditionLogic id="b4fe5aef-b881-48bf-9c31-248ecbbddd4f" name="Utanfor" operator="Or">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannX" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY1" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY1" operator="Lesser" rightType="Constant" rightValue="-240.5" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="9c420b73-801f-4f06-aa5f-5344a84ac929" />
+          <Condition id="b4fe5aef-b881-48bf-9c31-248ecbbddd4f" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Punkt1" type="string" />
         <Property name="FillColor" source="C" value="27 35 47" type="Color" />
@@ -1649,28 +1845,27 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="OffsetX" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX1" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX1" />
         </Property>
         <Property name="OffsetY" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY1" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY1" />
         </Property>
         <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="9c420b73-801f-4f06-aa5f-5344a84ac929" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="b4fe5aef-b881-48bf-9c31-248ecbbddd4f" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="6f994c94-0dec-455e-8d7c-83dc4267966a" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt2">
+    <Element id="b7903323-20b8-4ce7-b976-5f2fc6221dc1" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt2">
       <Conditions>
-        <ConditionLogic id="aa248f1a-6665-43b2-bfbf-1413e786e9d8" name="Utanfor" operator="Or">
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX2" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX2" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY2" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY2" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+        <ConditionLogic id="829e3930-bc95-457b-90ba-b10d71a86d40" name="Utanfor" operator="Or">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannX" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY2" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY2" operator="Lesser" rightType="Constant" rightValue="-240.5" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="aa248f1a-6665-43b2-bfbf-1413e786e9d8" />
+          <Condition id="829e3930-bc95-457b-90ba-b10d71a86d40" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Punkt2" type="string" />
         <Property name="FillColor" source="C" value="27 35 47" type="Color" />
@@ -1685,28 +1880,27 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="OffsetX" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX2" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX2" />
         </Property>
         <Property name="OffsetY" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY2" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY2" />
         </Property>
         <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="aa248f1a-6665-43b2-bfbf-1413e786e9d8" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="829e3930-bc95-457b-90ba-b10d71a86d40" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="9b2a576d-a3ef-45d9-8f02-684716ec28fe" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt3">
+    <Element id="37a39610-48d2-4cbf-9aac-842d93eb89f6" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt3">
       <Conditions>
-        <ConditionLogic id="72fcaaff-aa73-48aa-8244-44a57b54b1f5" name="Utanfor" operator="Or">
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX3" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX3" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY3" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY3" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+        <ConditionLogic id="b9163412-a69e-44d1-a70b-81c193c1854a" name="Utanfor" operator="Or">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannX" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY3" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY3" operator="Lesser" rightType="Constant" rightValue="-240.5" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="72fcaaff-aa73-48aa-8244-44a57b54b1f5" />
+          <Condition id="b9163412-a69e-44d1-a70b-81c193c1854a" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Punkt3" type="string" />
         <Property name="FillColor" source="C" value="27 35 47" type="Color" />
@@ -1721,28 +1915,27 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="OffsetX" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX3" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX3" />
         </Property>
         <Property name="OffsetY" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY3" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY3" />
         </Property>
         <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="72fcaaff-aa73-48aa-8244-44a57b54b1f5" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="b9163412-a69e-44d1-a70b-81c193c1854a" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="4e22a5e1-f532-42b5-aafa-e75173dd7fcd" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt4">
+    <Element id="a81451c6-a7ca-40eb-805d-95afd4c73938" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt4">
       <Conditions>
-        <ConditionLogic id="e4451576-55bb-4719-a958-a90c488826f8" name="Utanfor" operator="Or">
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX4" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX4" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY4" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY4" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+        <ConditionLogic id="5ee3a850-c991-46e5-b6e5-49c1a140bd36" name="Utanfor" operator="Or">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannX" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY4" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY4" operator="Lesser" rightType="Constant" rightValue="-240.5" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="e4451576-55bb-4719-a958-a90c488826f8" />
+          <Condition id="5ee3a850-c991-46e5-b6e5-49c1a140bd36" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Punkt4" type="string" />
         <Property name="FillColor" source="C" value="27 35 47" type="Color" />
@@ -1757,28 +1950,27 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="OffsetX" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX4" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX4" />
         </Property>
         <Property name="OffsetY" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY4" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY4" />
         </Property>
         <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="e4451576-55bb-4719-a958-a90c488826f8" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="5ee3a850-c991-46e5-b6e5-49c1a140bd36" value="True" type="bool" />
       </Properties>
     </Element>
-    <Element id="88ded9e8-10ad-4eae-b731-4513d337ad10" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt5">
+    <Element id="6a7010e0-a5af-4295-846d-09f9ff2aefea" type="2c660857-c0d7-490b-8081-e87180f82c70" name="Punkt5">
       <Conditions>
-        <ConditionLogic id="6502adb2-a285-47ae-8a86-11b1386ca6de" name="Utanfor" operator="Or">
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX5" operator="Lesser" rightType="Constant" rightValue="-30" />
-          <Condition leftType="PDP" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="A.MWSE.Namn.BPX5" operator="Greater" rightType="Constant" rightValue="20" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY5" operator="Greater" rightType="Constant" rightValue="0.5" />
-          <Condition leftType="Container" leftContainer="d38d44b3-b40d-4c65-8ba0-a027702105d8" leftName="punktY5" operator="Lesser" rightType="Constant" rightValue="-240.5" />
+        <ConditionLogic id="11b5b1a0-0cd7-471c-b157-c4e4ff6aa457" name="Utanfor" operator="Or">
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannY" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="spannX" operator="LesserEqual" rightType="Constant" rightValue="0" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY5" operator="Greater" rightType="Constant" rightValue="0.5" />
+          <Condition leftType="Container" leftContainer="5a321b92-0a80-40cb-95b9-defb099f156b" leftName="punktY5" operator="Lesser" rightType="Constant" rightValue="-240.5" />
         </ConditionLogic>
       </Conditions>
       <Properties>
         <ConditionPriority>
-          <Condition id="6502adb2-a285-47ae-8a86-11b1386ca6de" />
+          <Condition id="11b5b1a0-0cd7-471c-b157-c4e4ff6aa457" />
         </ConditionPriority>
         <Property name="Name" source="C" value="Punkt5" type="string" />
         <Property name="FillColor" source="C" value="27 35 47" type="Color" />
@@ -1793,13 +1985,13 @@
         <Property name="LockedInEditor" source="C" value="False" type="bool" />
         <Property name="HasFillColor" source="C" value="True" type="bool" />
         <Property name="OffsetX" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktX5" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktX5" />
         </Property>
         <Property name="OffsetY" source="LV" type="InternalVariableAddress">
-          <Address container="d38d44b3-b40d-4c65-8ba0-a027702105d8" name="punktY5" />
+          <Address container="5a321b92-0a80-40cb-95b9-defb099f156b" name="punktY5" />
         </Property>
         <Property name="Hidden" source="C" value="False" type="bool" />
-        <Property name="Hidden" source="C" condition="6502adb2-a285-47ae-8a86-11b1386ca6de" value="True" type="bool" />
+        <Property name="Hidden" source="C" condition="11b5b1a0-0cd7-471c-b157-c4e4ff6aa457" value="True" type="bool" />
       </Properties>
     </Element>
   </Element>
