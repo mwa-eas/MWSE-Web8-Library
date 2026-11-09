@@ -17,12 +17,14 @@ Prova varje vy mot anläggningens PCD innan den tas i drift.
 
 ## 1. Vad biblioteket innehåller
 
-Biblioteket har 91 mallar:
+Biblioteket har 94 mallar:
 
 - **18 symboler med signaler:** pump, fläkt, motor, kompressor, spjäll, brandspjäll, tre ventiler
   (tvåväg, treväg, trepunkt), fyra givare, roterande värmeväxlare, Panelknapp, Indikator,
   Tryckknapp och Tidkanalknapp. En symbol visar vila, drift/aktiv och i förekommande fall fel,
   hand och larm. Ett klick öppnar objektets faceplate; Indikator och Tidkanalknapp visar bara.
+- **3 värdespår:** hur ett värde har rört sig sedan sidan öppnades, som en linje med värdet
+  bredvid, för 2, 3 eller 15 minuter. Ingen trendlogg.
 - **14 statiska symboler:** batterier, filter, radiator, tankar, kretsar, två värmeväxlare för
   ventilation och en plattvärmeväxlare för vatten. Bara en bild och en namnetikett, utan signaler.
 - **11 faceplates** (manöverpaneler) för motor, givare, ventil, spjäll, trepunktsventil,
@@ -396,6 +398,66 @@ ruta på 60 × 60 px, med mitten 40 px in och 50 px ner, och namnet står ovanf�
 
 Indikator och Tidkanalknapp har ingen klickyta och ingen markering, så raderna för `Knapp` och
 `Vald` i [5.3](#53-kontrollera-bytet) gäller inte dem.
+
+### 5.10 Värdespår
+
+Värdespår ritar hur ett värde har rört sig sedan sidan öppnades, som en linje med en liten kula på
+den senaste punkten. Det finns en mall per tidsfönster, och namnet säger fönstret. Överst står
+objektets namn till vänster och värdet till höger, ovanför linjens slut. Till vänster om linjen står skalans ändar, i liten grå text, i höjd med linjens
+över- och nederkant. Under linjen visar en tidsrad hur långt tillbaka linjen når, till exempel
+"−2 min" under linjens början och "nu" under kulan. Kategorin är `MWSE\Symbol\Värdespår`. Mallen
+har inget klick, ingen faceplate och inga inställningar. Namnet skriver du in, eller tömmer, som
+på symbolerna ([5.4](#54-namnetikett)).
+
+**Värdespår är ingen trendlogg.** Den visar bara vad som har hänt sedan sidan öppnades och är borta
+när man byter sida. Historik över längre tid visar du med en HDLog-trend från PCD:n.
+
+| Mall | Storlek | Visar | Punkter |
+|---|---|---|---|
+| Värdespår 2 min | 170 × 70 px | de senaste 2 minuterna | en i sekunden |
+| Värdespår 3 min | 230 × 70 px | de senaste 3 minuterna | en i sekunden |
+| Värdespår 15 min | 230 × 70 px | de senaste 15 minuterna | en var femte sekund; kulan följer värdet varje sekund |
+
+Placera mallen i processbilden, bredvid givaren eller regulatorn den visar.
+
+**Koppla**
+
+Mallen läser `A.MWSE.Namn.MV_Ut`, ärvärdet från en givare.
+
+- **En givares ärvärde:** byt gruppen som för andra symboler
+  ([5.2](#52-koppla-symbolen-till-objektet)), till exempel `A.MWSE.Namn.` mot `A.MWSE.VS01.GT11.`.
+- **Ett annat värde,** till exempel regulatorns utsignal: byt hela namnet. Skriv i
+  Cross-Reference **Find what**: `A.MWSE.Namn.MV_Ut` och **Replace with**: värdets fullständiga
+  namn, till exempel `A.MWSE.VS01.Reg.YOut`, ta bort alla filter och klicka **Replace All**. Byts
+  bara gruppen, läser mallen `MV_Ut` i den nya gruppen.
+
+Kontrollera bytet med `A.MWSE.Namn` i **Value Filter**, som i 5.2.
+
+**Skalan**
+
+Skalan ställer sig själv. Vid första punkten läggs den kring värdet, minst 2 enheter bred eller 10 %
+av värdet om det är mer, till exempel 19,9–22,1 för 21 °C eller 760–840 för 800 ppm. Hamnar ett
+värde utanför skalan vidgas den åt det hållet, med lite marginal. Den krymper aldrig medan sidan är
+öppen, så en enstaka topp gör resten av linjen flackare tills sidan öppnas på nytt. Ändarna
+avrundas utåt till jämna steg.
+
+**Vad den visar**
+
+- Den senaste punkten är kulan längst till höger. I Värdespår 15 min sparas en punkt var femte
+  sekund, men kulan och linjens sista bit följer värdet varje sekund, så linjen står aldrig still.
+  Tiden räknas i vyns uppdateringar, en per sekund med Web8:s standard för **Refresh Time**; har
+  projektet en annan uppdateringstid ändras tiden i samma proportion.
+- Linjen börjar tom varje gång sidan öppnas. En prickad linje längs linjens nederkant visar den del
+  som ännu inte har fyllts; den krymper för varje punkt som sparas. Värdespår 15 min fylls alltså
+  först när sidan har varit öppen i 15 minuter, och är borta vid sidbyte som de andra. Inget sparas
+  i PCD:n.
+- Värdet till höger visas med en decimal och den enhet som är satt för variabeln i PCD Variables
+  Editor ([5.6](#56-enhet-på-värdefält)).
+- Kan PCD:n inte leverera värdet, till exempel för att namnet är felstavat, ritas ingen linje och
+  värdet ersätts av ett streck (–).
+- **Värdespår ser inte om förbindelsen till PCD:n bryts.** Webbläsaren behåller det senaste värdet,
+  och linjen fortsätter rakt som om värdet stod still. Bara runtimens egen felmarkering visar att
+  förbindelsen är bruten. Använd inte Värdespår för att avgöra om ett värde är aktuellt.
 
 ## 6. Faceplates och inställningsblock
 
@@ -1029,6 +1091,7 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Indikator | `MWSE\Symbol\Indikator` | Larm, driftfel (`MWSE_DRIFTFEL2`) | `StaUt`, `LrmUt` | 1.0.0 |
 | Tryckknapp | `MWSE\Symbol\Knapp` | Auto/Hand, digital (`MWSE_AHdi`, `MWSE_AHdigS`, `MWSE_AHdigS2`) | `ManV`, `Man` | 1.0.0 |
 | Tidkanalknapp | `MWSE\Symbol\Tidkanal` | Tidkanal, veckodag (`MWSE_TKM`) | `V_Ut` | 1.0.0 |
+| Värdespår 2 min, Värdespår 3 min, Värdespår 15 min | `MWSE\Symbol\Värdespår` | Ingång, analog, larm, eller valfritt värde ([5.10](#510-värdespår)) | `MV_Ut` | 1.0.0 |
 | Värmebatteri, Kylbatteri, Kombibatteri, Filter, Radiator, Värmetank, Krets, Krets med bypass, Krets med backventil, Tank, Liten tank, Värmeväxlare X, Värmeväxlare V, Plattvärmeväxlare | `MWSE\Symbol\Statisk` | – | – | 1.1.0 (kretsarna), 1.0.1 (batterierna, Radiator, tankarna), 1.0.0 (Filter, växlarna) |
 
 **Faceplates**

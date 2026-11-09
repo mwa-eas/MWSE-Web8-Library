@@ -4,6 +4,25 @@
 A-symbolerna i MWSE FBox-biblioteket. Rubriken anger paketets version. Varje mall har dessutom
 en egen version, som visas i Web8:s mallbibliotek.
 
+Paketets version följer Semantic Versioning (semver.org). Före lanseringen som 1.0.0 höjs
+mellansiffran när mallar läggs till eller ändras och sista siffran när bara fel rättas.
+
+## 0.9.0 (tidig åtkomst, ej utgiven)
+
+Den utgåva som förhandsversionerna 0.9.0-beta.1 till 0.9.0-beta.3 ledde fram till.
+
+Tre nya mallar, Värdespår, en per tidsfönster, som ritar hur ett värde har rört sig sedan sidan
+öppnades: en linje med en kula på den senaste punkten, namn och värde överst, skalans ändar till vänster
+om linjen och en tidsrad under den ("−2 min" till "nu"). Skalan ställer sig själv och vidgas vid
+behov; mallarna har inga inställningar. Värdespår är ingen trendlogg: linjen är borta när man byter
+sida.
+
+| Mall | Kategori i Web8 | Mallversion | Storlek | Visar | Binds till |
+|---|---|---|---|---|---|
+| Värdespår 2 min | `MWSE\Symbol\Värdespår` | 1.0.0 | 170 × 70 px | 2 minuter, en punkt i sekunden | `MV_Ut` under `A.MWSE.Namn.`, eller ett annat värde genom att hela namnet byts |
+| Värdespår 3 min | `MWSE\Symbol\Värdespår` | 1.0.0 | 230 × 70 px | 3 minuter, en punkt i sekunden | som Värdespår 2 min |
+| Värdespår 15 min | `MWSE\Symbol\Värdespår` | 1.0.0 | 230 × 70 px | 15 minuter, en punkt var femte sekund; kulan följer värdet varje sekund | som Värdespår 2 min |
+
 ## 0.9.0-beta.3 (tidig åtkomst, 2026-11-02)
 
 Tredje förhandsversionen. Integratörsguiden är omskriven till en ren användarguide.
