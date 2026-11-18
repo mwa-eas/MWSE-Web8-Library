@@ -847,6 +847,30 @@ varför.
 Förslaget räknas med SIMC-reglerna (Skogestad, 2003) från en modell med förstärkning, dödtid och
 tidskonstant, som panelen anpassar till stegsvaret.
 
+**Så räknas förslaget**
+
+1. **Modellen.** Panelen läser av två tider efter steget: när mätvärdet har gått 28,3 % av sin
+   ändring (t28) och 63,2 % (t63). Ändringen räknas mot medelvärdet av de fem sista
+   mätpunkterna, och tiderna läses med linjär interpolation mellan punkterna.
+   - Tidskonstant: T = 1,5 × (t63 − t28)
+   - Dödtid: L = max(0, t63 − T)
+   - Förstärkning: K = ändring i mätvärde / ändring i utsignal, i mätvärdets enhet per %
+2. **Inställningarna (SIMC).** Med τc = max(L, 10 s):
+   - P-faktor: Kc = T / (|K| × (τc + L))
+   - I-tid: Ti = min(T, 4 × (τc + L)) sekunder
+3. **Registren.** `PFac00` = 100 × Kc, avrundat och begränsat till 1–100000 (0,01–1000,00).
+   `IntTime` = 10 × Ti, avrundat, eftersom registret räknar tiondels sekunder. D-tiden ändras
+   inte.
+
+Exempel: K = 0,5, L = 20 s och T = 60 s ger τc = 20 s, Kc = 60 / (0,5 × 40) = 3,00 och
+Ti = min(60, 160) = 60 s, alltså `PFac00` = 300 och `IntTime` = 600.
+
+Inget förslag ges om mätvärdet eller utsignalen ändrades mindre än 1,0, eller om svaret var
+snabbare än panelens avstånd mellan mätpunkter.
+
+Källa: S. Skogestad, "Simple analytic rules for model reduction and PID controller tuning",
+*Journal of Process Control* 13 (2003), s. 291–309.
+
 **Förutsättningar**
 
 - **P-faktorn räknas som förstärkning** (FBoxens val Fp, förvalet; A-symbolen `Factor` är då 2).

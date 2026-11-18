@@ -7,6 +7,11 @@ en egen version, som visas i Web8:s mallbibliotek.
 Paketets version följer Semantic Versioning (semver.org). Före lanseringen som 1.0.0 höjs
 mellansiffran när mallar läggs till eller ändras och sista siffran när bara fel rättas.
 
+## 0.10.1 (tidig åtkomst, 2026-11-18)
+
+Integratörsguidens avsnitt 6.10 visar nu hur Regleroptimering räknar fram sitt förslag: modellen
+från stegsvaret, SIMC-reglerna och omräkningen till register, med ett räknat exempel.
+
 ## 0.10.0 (tidig åtkomst, 2026-11-18)
 
 En ny mall, Regleroptimering, och en rättning av ett säkerhetsfel i inloggningen.
