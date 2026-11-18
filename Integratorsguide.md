@@ -17,7 +17,7 @@ Prova varje vy mot anläggningens PCD innan den tas i drift.
 
 ## 1. Vad biblioteket innehåller
 
-Biblioteket har 94 mallar:
+Biblioteket har 95 mallar:
 
 - **18 symboler med signaler:** pump, fläkt, motor, kompressor, spjäll, brandspjäll, tre ventiler
   (tvåväg, treväg, trepunkt), fyra givare, roterande värmeväxlare, Panelknapp, Indikator,
@@ -28,7 +28,8 @@ Biblioteket har 94 mallar:
 - **14 statiska symboler:** batterier, filter, radiator, tankar, kretsar, två värmeväxlare för
   ventilation och en plattvärmeväxlare för vatten. Bara en bild och en namnetikett, utan signaler.
 - **11 faceplates** (manöverpaneler) för motor, givare, ventil, spjäll, trepunktsventil,
-  regulator PI, PID och P och handstyrning.
+  regulator PI, PID och P och handstyrning, och **en testpanel**, Regleroptimering, som föreslår
+  P-faktor och I-tid för regulator PI och PID.
 - **41 inställnings- och statusblock** för larmgränser, fördröjningar, skalning, regulatorer,
   tidkanaler, medelvärde, verkningsgrad och handstatus, bland dem 16 kurvblock som visar börvärdeskurvans punkter i en tabell
   och kurvan ritad bredvid. De är alltid synliga.
@@ -553,8 +554,8 @@ Placering och koppling som för Motorpanel ([6.2](#62-motorpanel)). Alla har tag
 |---|---|---|---|---|---|
 | Spjällpanel | `MWSE\Panel\Spjäll` | Spjäll, Brandspjäll | Lägesfel (`LA_Ut`), Läge Hand/Auto (`Man`), Handkommando Öppna/Stäng (`ManV`) | `Man`, `ManV` | 250 × 350 |
 | Trepunktsventilpanel | `MWSE\Panel\Ventil` | Trepunktsventil | Beräknat ärvärde som värde och stapel 0–100 % (`BeräknVärde`), Manöver: Ökar, Minskar, Kalibrerar eller Stilla (`IncUt`, `DecUt`, `KalUt`) | inget | 250 × 350 |
-| Regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Mätvärde (`ActVal`), Börvärde (`SetPt`), Utsignal (`YOut`), Läge Hand/Auto (`Mode`), Handvärde (`ManVal`), P-faktor (`PFac00`), I-tid (`IntTime`) | `Mode`, `ManVal`, `PFac00`, `IntTime` | 250 × 350 |
-| PID-regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Som Regulatorpanel, och D-tid (`DerTime`) | `Mode`, `ManVal`, `PFac00`, `IntTime`, `DerTime` | 250 × 350 |
+| Regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Mätvärde (`ActVal`), Börvärde (`SetPt`), Utsignal (`YOut`), Läge Hand/Auto (`Mode`), Handvärde (`ManVal`), P-faktor (`PFac00`), I-tid (`IntTime`); knappen Optimera under panelen ([6.10](#610-regleroptimering)) | `Mode`, `ManVal`, `PFac00`, `IntTime` | 250 × 350 |
+| PID-regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Som Regulatorpanel, och D-tid (`DerTime`); knappen Optimera | `Mode`, `ManVal`, `PFac00`, `IntTime`, `DerTime` | 250 × 350 |
 | P-regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Mätvärde, Börvärde och Utsignal som Regulatorpanel, Läge, Handvärde, P-faktor (`PFac`), Arbetspunkt (`PtIni`) | `Mode`, `ManVal`, `PFac`, `PtIni` | 250 × 350 |
 | Handpanel digital | `MWSE\Panel\Hand` | Tryckknapp, Panelknapp | Läge Hand/Auto (`Man`), Utsignal Till/Från (`ManV`) | `Man`, `ManV` | 250 × 350 |
 | Handpanel analog | `MWSE\Panel\Hand` | Panelknapp | Läge Hand/Auto (`Man`), Utsignal som inmatningsruta (`ManV`) | `Man`, `ManV` | 250 × 350 |
@@ -610,6 +611,13 @@ för enhet har valen Sekunder, Minuter och Timmar. Knappen Återställ nollstäl
 starter. Kurvblocken, också Kurvinställning för Börvärdeskurva 5, står i
 [6.9](#69-kurvblock). Kontrollera formaten enligt [4.4](#44-format-på-pcd-variabler) innan du låter någon skriva i
 blocken.
+
+**Spara ändrade värden i Fupla.** Ett värde som skrivs från ett block hamnar bara i PCD:ns minne,
+inte i Fupla-filen. Nästa gång programmet laddas ned får FBoxen tillbaka värdena från Fupla, och
+ändringen är borta. Läs därför in värdena i Fupla innan programmet byggs och laddas ned igen: gå
+online i Fupla och välj **Online > Read FBox Adjust Parameters**, eller spara en FBox i taget
+från dess Adjust Window (Saia PG5 User Manual, avsnitt 6.13.6). Detsamma gäller värden som
+skrivs från kurvblocken och från Regleroptimering.
 
 ### 6.7 Fler inställningsblock och statusblock
 
@@ -785,6 +793,102 @@ eller 4 punkter.
 Kontrollera efter nedladdning att tabellen visar FBoxens värden och att kurvan står där tabellen
 säger.
 
+### 6.10 Regleroptimering
+
+**Regleroptimering** är en testpanel som föreslår P-faktor och I-tid för Regulator PI
+(`MWSE_heaPI3`) och Regulator PID (`MWSE_heaPID3`). Den ställer regulatorn i Hand, ändrar
+utsignalen ett steg, mäter hur mätvärdet svarar och räknar fram nya inställningar. Testen körs i
+webbläsaren; PG5-programmet ändras inte. De nya värdena skrivs först när användaren trycker
+**Använd**. Regulator P stöds inte, och P-regulatorpanel har ingen Optimera-knapp.
+
+| Mall | Kategori | Öppnas av | Läser | Skriver | Storlek (px) |
+|---|---|---|---|---|---|
+| Regleroptimering | `MWSE\Panel\Regulator` | Optimera i Regulatorpanel och PID-regulatorpanel | `ActVal`, `YOut`, `Mode`, `LimLow`, `LimHigh`, `PFac00`, `IntTime` | `Mode` och `ManVal` under testen, `PFac00` och `IntTime` när användaren trycker Använd | 250 × 350 |
+
+**Placera och koppla**
+
+1. Placera Regleroptimering på (770, 50) i lagret `Paneler`, i samma vy som regulatorpanelen.
+2. Koppla den till regulatorns grupp, samma som regulatorpanelen, till exempel
+   `A.MWSE.VS01.Reg.` ([5.2](#52-koppla-symbolen-till-objektet)). En Regleroptimering per
+   regulator.
+3. Regulatorpanel och PID-regulatorpanel har knappen **Optimera** under panelen, på
+   panelknapparnas första plats (780, 410). Den syns bara när regulatorpanelen är öppen och
+   täcker då den panelknapp som ligger där. Lägg därför regulatorns egen panelknapp först i
+   kolumnen ([7.6](#76-placering-och-lagerordning)).
+
+**Använda**
+
+1. Logga in. **Start** är inaktiv tills en användare är inloggad.
+2. Ställ in testen:
+   - **Steg %**: hur mycket utsignalen ändras, 1–50 %, förval 10. Under 50 % går steget uppåt,
+     annars nedåt, och aldrig utanför regulatorns min- och maxgräns (`LimLow`, `LimHigh`).
+   - **Tid min**: längsta tid efter steget, 3–30 minuter, förval 30. Panelen sparar 180
+     mätpunkter över tiden, en var tionde sekund vid 30 minuter, och grafen visar hela tiden.
+     Välj en tid som räcker för att mätvärdet ska hinna stabilisera sig med marginal: med en för
+     kort tid kan ett långsamt svar bedömas som stabilt för tidigt, och förslaget blir sämre.
+   - **Gräns ±**: hur långt mätvärdet får gå från startvärdet, i mätvärdets enhet, förval 5.
+     Går det längre avbryts testen och regulatorn återställs.
+
+   Välj ett steg som flyttar mätvärdet tydligt, minst 1 enhet, men inte ända ut till gränsen.
+3. Tryck **Start**. Panelen mäter först mätvärdet i 60 sekunder med regulatorn i sitt vanliga
+   läge. Medelvärdet blir startvärdet. Sedan ställs regulatorn i Hand och utsignalen ändras.
+   Grafen visar svaret mellan startvärdet minus och plus gränsen. **Avbryt** återställer
+   regulatorn när som helst.
+4. När mätvärdet har stabiliserat sig återställs regulatorn: först utsignalen till värdet före
+   steget, sedan läget till det läge regulatorn hade före testen. Panelen visar processens
+   förstärkning, dödtid och tidskonstant, och nuvarande och föreslagen P-faktor och I-tid.
+5. Tryck **Använd** för att skriva förslaget, eller **Ny test** för att börja om. D-tid på
+   PID-regulatorn ändras inte.
+
+Panelen ger inget förslag om mätvärdet ändrades mindre än 1 enhet, om svaret inte stabiliserade
+sig inom tidsgränsen eller om svaret var snabbare än panelens mätintervall. Den säger då
+varför.
+
+Förslaget räknas med SIMC-reglerna (Skogestad, 2003) från en modell med förstärkning, dödtid och
+tidskonstant, som panelen anpassar till stegsvaret.
+
+**Förutsättningar**
+
+- **P-faktorn räknas som förstärkning** (FBoxens val Fp, förvalet; A-symbolen `Factor` är då 2).
+  Använd inte förslaget på en regulator som har P-faktorn som proportionalband (Xp, `Factor` 1).
+- **Regulatorns riktning** (FBoxens val för inverterad eller direkt verkan) måste stämma med
+  processen. Förslaget bygger på hur stor förstärkningen är, inte på dess tecken.
+- **Kör testen i ett lugnt driftfall**, när mätvärdet ligger stilla och inget annat påverkar
+  det. En störning under testen ger en felaktig modell.
+- **Låt sidan vara öppen och synlig under hela testen.** Panelen räknar tiden i sidans
+  uppdateringar, en i sekunden. En webbläsare som lägger fliken i bakgrunden kan uppdatera den
+  mer sällan, och då blir tiderna fel.
+- En annan faceplate kan öppnas under testen; testen fortsätter.
+
+**Om sidan stängs under testen**
+
+- **Byter man till en annan vy** under testen återställs regulatorn direkt, till utsignal och läge
+  från före testen. När vyn öppnas igen visar panelen "Vyn stängdes. Återställt.".
+- **Stängs webbläsaren eller laddas sidan om** under testen står regulatorn kvar i Hand med
+  testens utsignal. Webbläsaren kan inte återställa den, och panelen vet efteråt inte att en
+  test pågick. Ställ tillbaka regulatorn i regulatorpanelen: Handvärde till utsignalen före
+  testen och Läge till Auto.
+- Visar panelen att testen avbröts när vyn stängdes, ger **Återställ** tillbaka läge och
+  utsignal från före testen.
+
+**Spara de nya värdena i programmet**
+
+**Använd** skriver P-faktor och I-tid bara till PCD:ns minne. Nästa nedladdning av programmet
+ger regulatorn tillbaka värdena från Fupla. Läs in de nya värdena i Fupla innan dess, som i
+[6.6](#66-inställningsblock).
+
+**Kräva en högre behörighet**
+
+Som standard får alla inloggade användare köra en test. Så kräver du en viss användargrupp:
+
+1. Markera knapparna **Start** och **Använd** i den placerade Regleroptimering.
+2. Välj gruppen eller grupperna under **Access limited to** i fliken **Access** under
+   **Properties**. Användare utanför grupperna kan då inte trycka på knapparna.
+3. Vill du dölja testen helt för dem, gör samma sak med knappen Optimera i regulatorpanelen och
+   kryssa i **Hide if not accessible**.
+
+Grupperna sätts vid inloggningen ([7.5](#75-inloggning)).
+
 ## 7. Sidmallar
 
 Sidmallarna bygger själva sidan: larmlista, larmsummering, topplist, meny, sidofält och
@@ -929,12 +1033,13 @@ Navigeringsmeny en gång, i projektets förgrundsvy, så finns de på alla vyer
 
 **Inloggning** är en inloggningsruta mot projektets användardatabas, som du fyller i Web8:s
 användareditor. Efter inloggningen sätts användarens språk, rättigheterna jämförs med de 16
-grupperna, och Web8 hoppar till användarens startsida. Mallen använder Saias sessionsvariabler
+grupperna, och Web8 hoppar till användarens startsida. Allt detta sker bara när lösenordet
+stämmer. Ett misslyckat försök visar felmeddelandet och lämnar sessionen utloggad, även om någon
+var inloggad före försöket. Mallen använder Saias sessionsvariabler
 för inloggningen (bland annat `_NOINITSESSCO_18` och `_NOINITSESSCO_19`, och de som börjar på
 `?S_`). Använd dem inte till något annat.
 
-Ge **varje användare en startsida**. Mallen sätter felmarkeringen (`felInloggning`) även efter en
-lyckad inloggning. Utan startsida står rutan kvar med fälten markerade som fel.
+Ge **varje användare en startsida**. Utan startsida står rutan kvar efter en lyckad inloggning.
 
 Prova inloggningen med en testanvändare innan anläggningen tas i drift.
 
@@ -958,7 +1063,9 @@ För vyer på 1020 × 600 px:
    panelknappar. Vyer utan dem, som larmvyn, använder hela bredden. I sidofältet öppnas alla
    faceplates överst, på (770, 50) i lagret `Paneler`
    ([6.1](#61-lager-för-faceplates)), och panelknapparna läggs under dem, från (780, 410) och
-   50 px nedåt per knapp, så att de har 10 px luft mot sidofältets kanter, panelen och varandra. Vyns länk till sina inställningar (en knapp med pil) ligger längst ner
+   50 px nedåt per knapp, så att de har 10 px luft mot sidofältets kanter, panelen och varandra.
+   Regulatorpanelernas knapp Optimera tar den första platsen medan panelen är öppen
+   ([6.10](#610-regleroptimering)). Vyns länk till sina inställningar (en knapp med pil) ligger längst ner
    i sidofältet.
 4. Vyns symboler och inställningsblock under topplisten och till vänster om sidofältet, x under
    770.
@@ -1103,8 +1210,9 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Ventilpanel | `MWSE\Panel\Ventil` | Utgång, analog | `MV_Ut`, `Min`, `Max`, `Man`, `ManV` | 1.0.2 |
 | Spjällpanel | `MWSE\Panel\Spjäll` | Spjällstyrning | `LA_Ut`, `Man`, `ManV` | 1.0.2 |
 | Trepunktsventilpanel | `MWSE\Panel\Ventil` | Beräknat ärvärde, öka/minska | `BeräknVärde`, `IncUt`, `DecUt`, `KalUt` | 1.0.1 |
-| Regulatorpanel | `MWSE\Panel\Regulator` | Regulator PI (`MWSE_heaPI3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime` | 1.0.2 |
-| PID-regulatorpanel | `MWSE\Panel\Regulator` | Regulator PID (`MWSE_heaPID3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `DerTime` | 1.0.2 |
+| Regulatorpanel | `MWSE\Panel\Regulator` | Regulator PI (`MWSE_heaPI3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime` | 1.1.0 |
+| PID-regulatorpanel | `MWSE\Panel\Regulator` | Regulator PID (`MWSE_heaPID3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `DerTime` | 1.1.0 |
+| Regleroptimering | `MWSE\Panel\Regulator` | Regulator PI (`MWSE_heaPI3`), Regulator PID (`MWSE_heaPID3`) | `ActVal`, `YOut`, `Mode`, `ManVal`, `LimLow`, `LimHigh`, `PFac00`, `IntTime` | 1.0.0 |
 | P-regulatorpanel | `MWSE\Panel\Regulator` | Regulator P (`MWSE_heaPP2`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac`, `PtIni` | 1.0.2 |
 | Handpanel digital | `MWSE\Panel\Hand` | Auto/Hand, digital (`MWSE_AHdi`, `MWSE_AHdigS`, `MWSE_AHdigS2`) | `Man`, `ManV` | 1.0.2 |
 | Handpanel analog | `MWSE\Panel\Hand` | Auto/Hand, analog (`MWSE_AHan`, `MWSE_AHanaS`, `MWSE_AHanaS2`) | `Man`, `ManV` | 1.0.2 |
@@ -1152,7 +1260,7 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Topplist | `MWSE\Sida\Navigering` | `S.HVC.Clock.HHMMSS`, `S.HVC.Clock.YYYYMMDD`; interna `visaMeny`, `sidTitel`; Web8:s inloggningsvariabler | 1.1.0 |
 | Navigeringsmeny | `MWSE\Sida\Navigering` | intern `visaMeny` | 1.1.0 |
 | Sidofält | `MWSE\Sida\Sidofält` | – | 1.1.0 |
-| Inloggning | `MWSE\Sida\Inloggning` | projektets användardatabas och Web8:s inloggningsvariabler | 1.1.0 |
+| Inloggning | `MWSE\Sida\Inloggning` | projektets användardatabas och Web8:s inloggningsvariabler | 1.1.1 |
 | Bakgrund | `MWSE\Sida\Inloggning` | – | 1.0.0 |
 
 Alla symboler utom Indikator och Tidkanalknapp, Panelknapp och faceplates använder dessutom den

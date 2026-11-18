@@ -7,7 +7,34 @@ en egen version, som visas i Web8:s mallbibliotek.
 Paketets version följer Semantic Versioning (semver.org). Före lanseringen som 1.0.0 höjs
 mellansiffran när mallar läggs till eller ändras och sista siffran när bara fel rättas.
 
-## 0.9.0 (tidig åtkomst, ej utgiven)
+## 0.10.0 (tidig åtkomst, 2026-11-18)
+
+En ny mall, Regleroptimering, och en rättning av ett säkerhetsfel i inloggningen.
+
+Regleroptimering är en testpanel som föreslår P-faktor och I-tid för Regulator PI och PID. Den
+ställer regulatorn i Hand, ändrar utsignalen ett steg, mäter svaret och återställer regulatorn,
+också när användaren byter vy mitt i testen. Förslaget skrivs först när användaren trycker
+Använd. Den öppnas med knappen Optimera under
+regulatorpanelen. Se integratörsguidens avsnitt 6.10.
+
+Integratörsguiden säger nu att värden som skrivs från inställningsblock, kurvblock och
+Regleroptimering bara finns i PCD:ns minne och ska läsas in i Fupla före nästa nedladdning
+(avsnitt 6.6 och 6.10).
+
+| Mall | Kategori i Web8 | Mallversion | Storlek | Binds till |
+|---|---|---|---|---|
+| Regleroptimering | `MWSE\Panel\Regulator` | 1.0.0 | 250 × 350 px | regulatorns grupp under `A.MWSE.Namn.`, som Regulatorpanel |
+
+| Mall | Mallversion | Ändring |
+|---|---|---|
+| Regulatorpanel | 1.1.0 | Knappen Optimera under panelen, på panelknapparnas första plats, öppnar Regleroptimering. Byt ut mallen och placera om den (avsnitt 3.3). |
+| PID-regulatorpanel | 1.1.0 | Som Regulatorpanel. |
+
+| Mall | Mallversion | Rättning |
+|---|---|---|
+| Inloggning | 1.1.1 | Ett fel lösenord loggade in ändå: användarnamnet, rättigheterna, språket och sessionen sattes för det inskrivna namnet innan lösenordet var kontrollerat, så topplisten visade namnet och ett befintligt användarnamn fick den användarens rättigheter. Nu sätts de bara när lösenordet stämmer. Ett misslyckat försök visar felmeddelandet och lämnar sessionen utloggad. Felmarkeringen står inte längre kvar efter en lyckad inloggning. Byt ut mallen och placera om den (avsnitt 3.3). |
+
+## 0.9.0 (tidig åtkomst, 2026-11-09)
 
 Den utgåva som förhandsversionerna 0.9.0-beta.1 till 0.9.0-beta.3 ledde fram till.
 
