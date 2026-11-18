@@ -17,7 +17,7 @@ Prova varje vy mot anläggningens PCD innan den tas i drift.
 
 ## 1. Vad biblioteket innehåller
 
-Biblioteket har 95 mallar:
+Biblioteket har 94 mallar:
 
 - **18 symboler med signaler:** pump, fläkt, motor, kompressor, spjäll, brandspjäll, tre ventiler
   (tvåväg, treväg, trepunkt), fyra givare, roterande värmeväxlare, Panelknapp, Indikator,
@@ -28,8 +28,8 @@ Biblioteket har 95 mallar:
 - **14 statiska symboler:** batterier, filter, radiator, tankar, kretsar, två värmeväxlare för
   ventilation och en plattvärmeväxlare för vatten. Bara en bild och en namnetikett, utan signaler.
 - **11 faceplates** (manöverpaneler) för motor, givare, ventil, spjäll, trepunktsventil,
-  regulator PI, PID och P och handstyrning, och **en testpanel**, Regleroptimering, som föreslår
-  P-faktor och I-tid för regulator PI och PID.
+  regulator PI, PID och P och handstyrning. Panelerna för regulator PI och PID har en
+  testpanel inbyggd, Regleroptimering, som föreslår P-faktor och I-tid.
 - **41 inställnings- och statusblock** för larmgränser, fördröjningar, skalning, regulatorer,
   tidkanaler, medelvärde, verkningsgrad och handstatus, bland dem 16 kurvblock som visar börvärdeskurvans punkter i en tabell
   och kurvan ritad bredvid. De är alltid synliga.
@@ -554,7 +554,7 @@ Placering och koppling som för Motorpanel ([6.2](#62-motorpanel)). Alla har tag
 |---|---|---|---|---|---|
 | Spjällpanel | `MWSE\Panel\Spjäll` | Spjäll, Brandspjäll | Lägesfel (`LA_Ut`), Läge Hand/Auto (`Man`), Handkommando Öppna/Stäng (`ManV`) | `Man`, `ManV` | 250 × 350 |
 | Trepunktsventilpanel | `MWSE\Panel\Ventil` | Trepunktsventil | Beräknat ärvärde som värde och stapel 0–100 % (`BeräknVärde`), Manöver: Ökar, Minskar, Kalibrerar eller Stilla (`IncUt`, `DecUt`, `KalUt`) | inget | 250 × 350 |
-| Regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Mätvärde (`ActVal`), Börvärde (`SetPt`), Utsignal (`YOut`), Läge Hand/Auto (`Mode`), Handvärde (`ManVal`), P-faktor (`PFac00`), I-tid (`IntTime`); knappen Optimera under panelen ([6.10](#610-regleroptimering)) | `Mode`, `ManVal`, `PFac00`, `IntTime` | 250 × 350 |
+| Regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Mätvärde (`ActVal`), Börvärde (`SetPt`), Utsignal (`YOut`), Läge Hand/Auto (`Mode`), Handvärde (`ManVal`), P-faktor (`PFac00`), I-tid (`IntTime`); knappen Optimera under panelen, som öppnar testpanelen Regleroptimering ([6.10](#610-regleroptimering)) | `Mode`, `ManVal`, `PFac00`, `IntTime` | 250 × 350 |
 | PID-regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Som Regulatorpanel, och D-tid (`DerTime`); knappen Optimera | `Mode`, `ManVal`, `PFac00`, `IntTime`, `DerTime` | 250 × 350 |
 | P-regulatorpanel | `MWSE\Panel\Regulator` | Panelknapp | Mätvärde, Börvärde och Utsignal som Regulatorpanel, Läge, Handvärde, P-faktor (`PFac`), Arbetspunkt (`PtIni`) | `Mode`, `ManVal`, `PFac`, `PtIni` | 250 × 350 |
 | Handpanel digital | `MWSE\Panel\Hand` | Tryckknapp, Panelknapp | Läge Hand/Auto (`Man`), Utsignal Till/Från (`ManV`) | `Man`, `ManV` | 250 × 350 |
@@ -796,25 +796,27 @@ säger.
 ### 6.10 Regleroptimering
 
 **Regleroptimering** är en testpanel som föreslår P-faktor och I-tid för Regulator PI
-(`MWSE_heaPI3`) och Regulator PID (`MWSE_heaPID3`). Den ställer regulatorn i Hand, ändrar
-utsignalen ett steg, mäter hur mätvärdet svarar och räknar fram nya inställningar. Testen körs i
-webbläsaren; PG5-programmet ändras inte. De nya värdena skrivs först när användaren trycker
-**Använd**. Regulator P stöds inte, och P-regulatorpanel har ingen Optimera-knapp.
+(`MWSE_heaPI3`) och Regulator PID (`MWSE_heaPID3`). Den är inbyggd i Regulatorpanel och
+PID-regulatorpanel och öppnas med deras knapp **Optimera**. Den ställer regulatorn i Hand,
+ändrar utsignalen ett steg, mäter hur mätvärdet svarar och räknar fram nya inställningar. Testen
+körs i webbläsaren; PG5-programmet ändras inte. De nya värdena skrivs först när användaren
+trycker **Använd**. Regulator P stöds inte, och P-regulatorpanel har ingen Optimera-knapp.
 
-| Mall | Kategori | Öppnas av | Läser | Skriver | Storlek (px) |
-|---|---|---|---|---|---|
-| Regleroptimering | `MWSE\Panel\Regulator` | Optimera i Regulatorpanel och PID-regulatorpanel | `ActVal`, `YOut`, `Mode`, `LimLow`, `LimHigh`, `PFac00`, `IntTime` | `Mode` och `ManVal` under testen, `PFac00` och `IntTime` när användaren trycker Använd | 250 × 350 |
+Testpanelen läser `ActVal`, `YOut`, `Mode`, `LimLow`, `LimHigh`, `PFac00` och `IntTime`. Den
+skriver `Mode` och `ManVal` under testen och `PFac00` och `IntTime` när användaren trycker
+Använd. Den är 250 × 350 px och visas på regulatorpanelens plats.
 
 **Placera och koppla**
 
-1. Placera Regleroptimering på (770, 50) i lagret `Paneler`, i samma vy som regulatorpanelen.
-2. Koppla den till regulatorns grupp, samma som regulatorpanelen, till exempel
-   `A.MWSE.VS01.Reg.` ([5.2](#52-koppla-symbolen-till-objektet)). En Regleroptimering per
-   regulator.
-3. Regulatorpanel och PID-regulatorpanel har knappen **Optimera** under panelen, på
-   panelknapparnas första plats (780, 410). Den syns bara när regulatorpanelen är öppen och
-   täcker då den panelknapp som ligger där. Lägg därför regulatorns egen panelknapp först i
-   kolumnen ([7.6](#76-placering-och-lagerordning)).
+1. Det finns ingen egen mall att placera: placera och koppla Regulatorpanel eller
+   PID-regulatorpanel som vanligt ([6.5](#65-fler-faceplates)), en per regulator. Testpanelen
+   följer med och binds till samma grupp.
+2. Knappen **Optimera** ligger under regulatorpanelen, på panelknapparnas första plats
+   (780, 410). Den syns bara när regulatorpanelen är öppen och täcker då den panelknapp som
+   ligger där. Lägg därför regulatorns egen panelknapp först i kolumnen
+   ([7.6](#76-placering-och-lagerordning)).
+3. **Från version 0.10:** där Regleroptimering var placerad som egen mall, ta bort den och byt
+   ut regulatorpanelerna ([3.3](#33-uppdatera-till-en-ny-version)).
 
 **Använda**
 
@@ -905,13 +907,25 @@ ger regulatorn tillbaka värdena från Fupla. Läs in de nya värdena i Fupla in
 
 Som standard får alla inloggade användare köra en test. Så kräver du en viss användargrupp:
 
-1. Markera knapparna **Start** och **Använd** i den placerade Regleroptimering.
+1. Markera knapparna **Start** och **Använd** i testpanelen i den placerade regulatorpanelen.
 2. Välj gruppen eller grupperna under **Access limited to** i fliken **Access** under
    **Properties**. Användare utanför grupperna kan då inte trycka på knapparna.
 3. Vill du dölja testen helt för dem, gör samma sak med knappen Optimera i regulatorpanelen och
    kryssa i **Hide if not accessible**.
 
 Grupperna sätts vid inloggningen ([7.5](#75-inloggning)).
+
+**Anläggning utan regleroptimering**
+
+Ska testen inte finnas på en anläggning, dölj knappen Optimera i varje placerad Regulatorpanel
+och PID-regulatorpanel:
+
+1. Markera knappens tre delar i den placerade panelen: ramen `Optimera`, texten `OptimeraNamn`
+   och klickytan `OptimeraKnapp`.
+2. I fliken **Access** under **Properties**, välj under **Access limited to** en användargrupp
+   som ingen användare är med i, och kryssa i **Hide if not accessible**.
+
+Knappen syns då inte, och testpanelen kan inte öppnas.
 
 ## 7. Sidmallar
 
@@ -1234,9 +1248,8 @@ exempel `R_Ut` i `A.MWSE.VS01.P01.R_Ut`.
 | Ventilpanel | `MWSE\Panel\Ventil` | Utgång, analog | `MV_Ut`, `Min`, `Max`, `Man`, `ManV` | 1.0.2 |
 | Spjällpanel | `MWSE\Panel\Spjäll` | Spjällstyrning | `LA_Ut`, `Man`, `ManV` | 1.0.2 |
 | Trepunktsventilpanel | `MWSE\Panel\Ventil` | Beräknat ärvärde, öka/minska | `BeräknVärde`, `IncUt`, `DecUt`, `KalUt` | 1.0.1 |
-| Regulatorpanel | `MWSE\Panel\Regulator` | Regulator PI (`MWSE_heaPI3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime` | 1.1.0 |
-| PID-regulatorpanel | `MWSE\Panel\Regulator` | Regulator PID (`MWSE_heaPID3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `DerTime` | 1.1.0 |
-| Regleroptimering | `MWSE\Panel\Regulator` | Regulator PI (`MWSE_heaPI3`), Regulator PID (`MWSE_heaPID3`) | `ActVal`, `YOut`, `Mode`, `ManVal`, `LimLow`, `LimHigh`, `PFac00`, `IntTime` | 1.0.0 |
+| Regulatorpanel, med testpanelen Regleroptimering | `MWSE\Panel\Regulator` | Regulator PI (`MWSE_heaPI3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `LimLow`, `LimHigh` | 1.2.0 |
+| PID-regulatorpanel, med testpanelen Regleroptimering | `MWSE\Panel\Regulator` | Regulator PID (`MWSE_heaPID3`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac00`, `IntTime`, `DerTime`, `LimLow`, `LimHigh` | 1.2.0 |
 | P-regulatorpanel | `MWSE\Panel\Regulator` | Regulator P (`MWSE_heaPP2`) | `Mode`, `ManVal`, `ActVal`, `SetPt`, `YOut`, `PFac`, `PtIni` | 1.0.2 |
 | Handpanel digital | `MWSE\Panel\Hand` | Auto/Hand, digital (`MWSE_AHdi`, `MWSE_AHdigS`, `MWSE_AHdigS2`) | `Man`, `ManV` | 1.0.2 |
 | Handpanel analog | `MWSE\Panel\Hand` | Auto/Hand, analog (`MWSE_AHan`, `MWSE_AHanaS`, `MWSE_AHanaS2`) | `Man`, `ManV` | 1.0.2 |

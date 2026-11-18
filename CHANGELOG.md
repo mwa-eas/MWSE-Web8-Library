@@ -7,6 +7,18 @@ en egen version, som visas i Web8:s mallbibliotek.
 Paketets version följer Semantic Versioning (semver.org). Före lanseringen som 1.0.0 höjs
 mellansiffran när mallar läggs till eller ändras och sista siffran när bara fel rättas.
 
+## 0.11.0 (tidig åtkomst, 2026-11-18)
+
+Regleroptimering är nu inbyggd i Regulatorpanel och PID-regulatorpanel i stället för att vara en
+egen mall, och den kostar mycket mindre i webbläsaren när ingen test körs. Ta bort varje placerad
+Regleroptimering och byt ut regulatorpanelerna (avsnitt 3.3).
+
+| Mall | Mallversion | Ändring |
+|---|---|---|
+| Regulatorpanel | 1.2.0 | Testpanelen Regleroptimering ingår i mallen och öppnas med knappen Optimera, som förut. Den kostar mindre när ingen test körs: testens funktion gör inget mellan testerna och grafen har 36 delar i stället för 180. Integratörsguiden visar hur knappen döljs på en anläggning som inte ska ha testen (avsnitt 6.10). |
+| PID-regulatorpanel | 1.2.0 | Som Regulatorpanel. |
+| Regleroptimering | – | Borttagen som egen mall: den ingår i regulatorpanelerna. |
+
 ## 0.10.1 (tidig åtkomst, 2026-11-18)
 
 Integratörsguidens avsnitt 6.10 visar nu hur Regleroptimering räknar fram sitt förslag: modellen
